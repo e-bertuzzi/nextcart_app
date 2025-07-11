@@ -1,9 +1,3 @@
 export * from './lib/ui-auth';
 export * from './lib/context/user-context';
-export * from '../../ui-forms/src/lib/user-form/fields/address-field';
-export * from '../../ui-forms/src/lib/user-form/fields/date-birth-field';
-export * from '../../ui-forms/src/lib/user-form/fields/email-field';
-export * from '../../ui-forms/src/lib/user-form/fields/gender-field';
-export * from '../../ui-forms/src/lib/user-form/fields/name-field';
-export * from '../../ui-forms/src/lib/user-form/fields/surname-field';
-export * from '../../ui-forms/src/lib/user-form/fields/place-of-birth-field';
+

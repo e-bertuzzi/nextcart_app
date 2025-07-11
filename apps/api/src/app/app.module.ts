@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Consumer } from '@nextcart/models';
 import { AuthModule } from '@nextcart/api-auth';
 import { ProfileModule } from '@nextcart/profile';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
@@ -21,7 +22,10 @@ import { ProfileModule } from '@nextcart/profile';
       logger: 'advanced-console',
     }),
     AuthModule,
-    ProfileModule
+    ProfileModule,
+    ConfigModule.forRoot({
+      isGlobal: true, // disponibile ovunque
+    }),
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -20,6 +20,7 @@
       "@nextcart/consumer": ["libs/api/consumer/src/index.ts"],
       "@nextcart/dto": ["libs/config/dto/src/index.ts"],
       "@nextcart/enum": ["libs/config/enum/src/index.ts"],
+      "@nextcart/http": ["libs/api/http/src/index.ts"],
       "@nextcart/models": ["libs/api/models/src/index.ts"],
       "@nextcart/profile": ["libs/api/profile/src/index.ts"],
       "@nextcart/token": ["libs/api/token/src/index.ts"],

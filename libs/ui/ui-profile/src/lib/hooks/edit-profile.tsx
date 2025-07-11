@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { api } from '@nextcart/http'; // il file dove hai configurato axios con interceptor
 import { useUser } from '@nextcart/ui-auth';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Gender } from '@nextcart/enum';
@@ -34,9 +35,8 @@ export function useEditProfile() {
       if (!user) return;
       setLoading(true);
       try {
-        const res = await axios.get('http://localhost:3000/api/profile/profile', {
-          headers: { Authorization: `Bearer ${token}` },
-        });
+        console.log(token)
+        const res = await api.get('/profile/profile');
         const data = res.data;
         setFormData({
           name: data.name || '',
@@ -63,9 +63,7 @@ export function useEditProfile() {
     setLoading(true);
     setMessage(null);
     try {
-      await axios.put('http://localhost:3000/api/profile/edit', formData, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
+      await api.put('profile/edit', formData);
       setMessage({ type: 'success', content: 'Profilo aggiornato con successo!' });
     } catch {
       setMessage({ type: 'error', content: 'Errore durante l’aggiornamento del profilo.' });

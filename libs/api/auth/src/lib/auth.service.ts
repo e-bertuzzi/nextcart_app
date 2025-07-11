@@ -40,7 +40,7 @@ export class AuthService {
     const payload = { email: user.email, sub: user.consumerId };
 
     const accessToken = this.jwtService.sign(payload, {
-      expiresIn: '15m', // access token breve
+      expiresIn: '10s', // access token breve
     });
 
     const refreshToken = this.jwtService.sign(payload, {
