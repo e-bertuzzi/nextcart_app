@@ -1,5 +1,5 @@
 import { Box, Button, Container, Header, SpaceBetween, Flashbar } from '@cloudscape-design/components';
-import { UserFormFieldsGroup, SharedFormData } from './components/profile-fields-group';
+import { EditUserFieldsGroup, SharedFormData } from './components/profile-fields-group';
 import { useEditProfile } from './hooks/edit-profile';
 
 export function UiEditProfile() {
@@ -28,7 +28,7 @@ export function UiEditProfile() {
             />
           )}
 
-          <UserFormFieldsGroup formData={formData} onChange={onChange} disabled={loading} />
+          <EditUserFieldsGroup formData={formData} onChange={onChange} disabled={loading} />
 
           <Button onClick={handleSubmit} loading={loading} variant="primary">
             Salva modifiche

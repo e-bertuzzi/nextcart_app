@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { Gender } from '@nextcart/enum';
 
 export function useRegisterForm() {
   const [formData, setFormData] = useState({
@@ -10,7 +12,7 @@ export function useRegisterForm() {
     confirmPassword: '',
     dateOfBirth: '',
     placeOfBirth: '',
-    gender: 'Male',
+    gender: Gender.isMale,
     address: '',
   });
 
@@ -84,7 +86,7 @@ export function useRegisterForm() {
         confirmPassword: '',
         dateOfBirth: '',
         placeOfBirth: '',
-        gender: 'Male',
+        gender: Gender.isMale,
         address: '',
       });
 

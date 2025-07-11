@@ -16,8 +16,7 @@ import { ProfileModule } from '@nextcart/profile';
       password: 'utente123',
       database: 'nextcart',
       entities: [Consumer],
-      synchronize: true, // IMPORTANTISSIMO: usa false in produzione
-      //migrations: ['apps/backend/migrations/*.ts'],
+      synchronize: true,
       logging: true,
       logger: 'advanced-console',
     }),

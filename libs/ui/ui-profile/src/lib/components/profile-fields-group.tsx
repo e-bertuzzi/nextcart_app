@@ -1,10 +1,10 @@
 import { SpaceBetween } from '@cloudscape-design/components';
-import { NameField } from '@nextcart/ui-auth';
-import { SurnameField } from '@nextcart/ui-auth';
-import { DateOfBirthField } from '@nextcart/ui-auth';
-import { PlaceOfBirthField } from '@nextcart/ui-auth';
-import { AddressField } from '@nextcart/ui-auth';
-import { GenderField } from '@nextcart/ui-auth';
+import { NameField } from '@nextcart/ui-forms';
+import { SurnameField } from '@nextcart/ui-forms';
+import { DateOfBirthField } from '@nextcart/ui-forms';
+import { PlaceOfBirthField } from '@nextcart/ui-forms';
+import { AddressField } from '@nextcart/ui-forms';
+import { GenderField } from '@nextcart/ui-forms';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Gender } from '@nextcart/enum';
@@ -24,7 +24,7 @@ interface Props {
   disabled?: boolean;
 }
 
-export function UserFormFieldsGroup({ formData, onChange }: Props) {
+export function EditUserFieldsGroup({ formData, onChange }: Props) {
   return (
     <SpaceBetween size="m">
       <NameField value={formData.name} onChange={(v) => onChange('name', v)} />
