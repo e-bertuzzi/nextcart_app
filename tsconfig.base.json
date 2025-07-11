@@ -14,7 +14,21 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nextcart/api-auth": ["libs/api/auth/src/index.ts"],
+      "@nextcart/commons": ["libs/ui/commons/src/index.ts"],
+      "@nextcart/consumer": ["libs/api/consumer/src/index.ts"],
+      "@nextcart/dto": ["libs/config/dto/src/index.ts"],
+      "@nextcart/enum": ["libs/config/enum/src/index.ts"],
+      "@nextcart/models": ["libs/api/models/src/index.ts"],
+      "@nextcart/profile": ["libs/api/profile/src/index.ts"],
+      "@nextcart/token": ["libs/api/token/src/index.ts"],
+      "@nextcart/ui-auth": ["libs/ui/ui-auth/src/index.ts"],
+      "@nextcart/ui-commons": ["libs/ui/ui-commons/src/index.ts"],
+      "@nextcart/ui-home": ["libs/ui/ui-home/src/index.ts"],
+      "@nextcart/ui-profile": ["libs/ui/ui-profile/src/index.ts"],
+      "@nextcart/web-auth": ["libs/web/auth/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
