@@ -3,6 +3,7 @@ import { ConsumerService } from '@nextcart/consumer';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import { ConsumerDTO, CreateConsumerDTO } from '@nextcart/dto';
+import { jwtConstants } from './auth.constants';
 
 @Injectable()
 export class AuthService {
@@ -40,11 +41,13 @@ export class AuthService {
     const payload = { email: user.email, sub: user.consumerId };
 
     const accessToken = this.jwtService.sign(payload, {
-      expiresIn: '10s', // access token breve
+      //expiresIn: '10s', // access token breve
+      expiresIn: jwtConstants.accessTokenExpiration,
     });
 
     const refreshToken = this.jwtService.sign(payload, {
-      expiresIn: '7d', // refresh token lungo
+      //expiresIn: '7d', // refresh token lungo
+      expiresIn: jwtConstants.refreshTokenExpiration,
     });
 
     return {

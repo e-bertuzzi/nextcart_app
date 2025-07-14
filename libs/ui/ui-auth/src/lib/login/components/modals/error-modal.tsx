@@ -18,7 +18,7 @@ export default function ErrorModal({ visible, message, onDismiss }: ErrorModalPr
           variant="primary"
           className="!bg-emerald-600 hover:!bg-emerald-700 !text-white rounded"
         >
-          Chiudi
+          Close
         </Button>
       }
     >

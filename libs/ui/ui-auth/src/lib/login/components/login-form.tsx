@@ -47,12 +47,12 @@ export default function LoginForm() {
           </Button>
 
           <div className="mt-2 text-center text-sm">
-            <span>Non hai un account? </span>
+            <span>Don't have an account? </span>
             <Link
               to="/register"
               className="text-emerald-700 font-semibold underline hover:text-emerald-800"
             >
-              Registrati
+              Registration
             </Link>
           </div>
         </SpaceBetween>

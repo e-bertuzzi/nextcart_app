@@ -3,6 +3,8 @@ import { Box } from '@cloudscape-design/components';
 import { useUser } from '@nextcart/ui-auth';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { api } from '@nextcart/http'
 
 import Logo from '../components/logo';
 import GuestNav from '../components/guest-nav';
@@ -16,14 +18,23 @@ export default function Navbar() {
 
   const isLoggedIn = !!user;
 
-  const handleLogout = () => {
+  const handleLogout = async () => {
+    try {
+      await api.post('/auth/logout', {}, { withCredentials: true });
+    } catch (error) {
+      console.error('Error during logout: ', error);
+      // puoi comunque proseguire anche se fallisce
+    }
+
     logout();
     setModalVisible(true);
+
     setTimeout(() => {
       setModalVisible(false);
       navigate('/homepage');
     }, 2000);
   };
+
 
   return (
     <>

@@ -2,9 +2,9 @@ import { FormField, Select, SelectProps } from '@cloudscape-design/components';
 import type { NonCancelableCustomEvent } from '@cloudscape-design/components';
 
 const genderOptions = [
-  { value: 'Male', label: 'Maschio' },
-  { value: 'Female', label: 'Femmina' },
-  { value: 'Other', label: 'Altro' },
+  { value: 'Male', label: 'Male' },
+  { value: 'Female', label: 'Female' },
+  { value: 'Other', label: 'Other' },
 ];
 
 type GenderFieldProps = {
@@ -21,7 +21,7 @@ export function GenderField({ value, onChange, disabled }: GenderFieldProps) {
   };
 
   return (
-    <FormField label="Genere *">
+    <FormField label="Gender *">
       <Select
         selectedOption={genderOptions.find(opt => opt.value === value) ?? null}
         options={genderOptions}

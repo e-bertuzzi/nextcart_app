@@ -29,18 +29,24 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = localStorage.getItem('authToken');
-    if (token) {
-      try {
-        const decoded: any = jwtDecode(token);
-        setUser({ email: decoded.email, id: decoded.sub, token });
-      } catch {
-        localStorage.removeItem('authToken');
-        setUser(null);
+    const loadUser = async () => {
+      const token = localStorage.getItem('authToken');
+      if (token) {
+        try {
+          const decoded: any = jwtDecode(token);
+          setUser({ email: decoded.email, id: decoded.sub, token });
+        } catch (err) {
+          console.error('Token decoding failed:', err);
+          localStorage.removeItem('authToken');
+          setUser(null);
+        }
       }
-    }
-    setLoading(false);
+      setLoading(false);
+    };
+
+    loadUser();
   }, []);
+
 
   const login = (token: string) => {
     localStorage.setItem('authToken', token);

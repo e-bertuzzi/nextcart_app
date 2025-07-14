@@ -11,7 +11,7 @@ type DateOfBirthFieldProps = {
 
 export function DateOfBirthField({ value, onChange, disabled }: DateOfBirthFieldProps) {
   return (
-    <FormField label="Data di nascita *">
+    <FormField label="Date of birth *">
       <DatePicker
         value={value}
         onChange={(event: DateChangeEvent) => onChange(event.detail.value ?? '')}

@@ -11,7 +11,7 @@ type NameFieldProps = {
 
 export function NameField({ value, onChange, disabled }: NameFieldProps) {
   return (
-    <FormField label="Nome *">
+    <FormField label="Name *">
       <Input
         value={value}
         onChange={(event: InputChangeEvent) => onChange(event.detail.value)}

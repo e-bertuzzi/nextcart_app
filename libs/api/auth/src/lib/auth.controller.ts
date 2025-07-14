@@ -5,6 +5,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { Request } from 'express';
 import { Response } from 'express';
 import { JwtService } from '@nestjs/jwt';
+import { jwtConstants } from './auth.constants';
 
 
 
@@ -68,7 +69,8 @@ export class AuthController {
 
       const newAccessToken = this.jwtService.sign(
         { email: user.email, sub: user.consumerId },
-        { expiresIn: '10s' }, //TODO: METTERE I TEMPI NELL'ENV E SISTEMARE ANCHE CONSTANTS E JWT_SECRET
+        //{ expiresIn: '10s' }, //TODO: METTERE I TEMPI NELL'ENV E SISTEMARE ANCHE CONSTANTS E JWT_SECRET
+        { expiresIn:  jwtConstants.accessTokenExpiration },
       );
 
       return { accessToken: newAccessToken };
@@ -83,6 +85,23 @@ export class AuthController {
     console.log('User in request:', req.user);
     return req.user;
   }*/
+
+  @Post('logout')
+  @HttpCode(200)
+  async logout(@Res({ passthrough: true }) res: Response) {
+    // Se salvi i token nel DB, puoi aggiungere logica per invalidarlo qui
+    // es: await this.authService.revokeRefreshToken(userId)
+
+    res.clearCookie('refreshToken', {
+      httpOnly: true,
+      secure: process.env['NODE_ENV'] === 'production',
+      sameSite: 'lax',
+      path: '/',
+    });
+
+    return { message: 'Logout effettuato con successo' };
+  }
+
 
     
 

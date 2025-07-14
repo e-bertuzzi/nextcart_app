@@ -11,10 +11,10 @@ export default function LogoutModal({ visible, onClose }: LogoutModalProps) {
     <Modal
       visible={visible}
       onDismiss={onClose}
-      header="Logout riuscito"
+      header="Logout successful"
       footer={null}
     >
-      <p>Sei stato disconnesso con successo. Verrai reindirizzato alla homepage...</p>
+      <p>You've been successfully logged out. You'll be redirected to the homepage...</p>
     </Modal>
   );
 }

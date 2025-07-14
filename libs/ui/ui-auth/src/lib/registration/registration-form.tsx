@@ -23,7 +23,7 @@ export default function RegisterForm() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-emerald-50 to-green-100 px-4">
       <div className="w-full max-w-lg">
-        <Container header={<span className="text-2xl font-bold text-emerald-700">Registrati</span>}>
+        <Container header={<span className="text-2xl font-bold text-emerald-700">Registration</span>}>
           <Form>
             <SpaceBetween size="m">
               <RegisterFieldsGroup
@@ -37,16 +37,16 @@ export default function RegisterForm() {
                 onClick={handleRegister}
                 className="!bg-emerald-600 !hover:bg-emerald-700 !text-white rounded-full shadow"
               >
-                Registrati
+                Registration
               </Button>
 
               <div className="text-center mt-2 text-sm">
-                <span>Hai già un account? </span>
+                <span>Already have an account? </span>
                 <Link
                   to="/login"
                   className="text-emerald-700 underline font-semibold hover:text-emerald-800"
                 >
-                  Accedi
+                  Login
                 </Link>
               </div>
             </SpaceBetween>

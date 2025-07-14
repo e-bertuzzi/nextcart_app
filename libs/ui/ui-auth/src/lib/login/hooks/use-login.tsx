@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../context/user-context';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { api } from '@nextcart/http';
 
 export default function useLogin() {
   const [email, setEmail] = useState('');
@@ -14,24 +16,22 @@ export default function useLogin() {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch('/api/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
+      const response = await api.post('/auth/login', { email, password }, {
+        withCredentials: true, 
       });
 
-      if (!response.ok) throw new Error('Login fallito');
-
-      const data = await response.json();
-      login(data.accessToken);
+      const { accessToken } = response.data;
+      login(accessToken);
       setSuccessModalVisible(true);
 
       setTimeout(() => {
         setSuccessModalVisible(false);
         navigate('/homepage');
       }, 2000);
-    } catch (error) {
-      setErrorMessage('Credenziali errate o errore di connessione.');
+    } catch (error: any) {
+      console.error('Login error:', error);
+      const message = error.response?.data?.message || 'Errore di connessione o credenziali errate.';
+      setErrorMessage(message);
       setErrorModalVisible(true);
     }
   };
@@ -46,6 +46,6 @@ export default function useLogin() {
     errorMessage,
     handleLogin,
     closeErrorModal: () => setErrorModalVisible(false),
-    closeSuccessModal: () => setSuccessModalVisible(false)
+    closeSuccessModal: () => setSuccessModalVisible(false),
   };
 }

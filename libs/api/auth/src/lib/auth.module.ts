@@ -7,6 +7,7 @@ import { PassportModule } from '@nestjs/passport';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import { TokenModule } from '@nextcart/token';
 import { ConfigModule, ConfigService } from '@nestjs/config'
+import { jwtConstants } from './auth.constants';
 
 @Module({
   imports: [
@@ -24,7 +25,8 @@ import { ConfigModule, ConfigService } from '@nestjs/config'
         console.log('JWT_SECRET letto:', secret);  // <-- qui
         return {
           secret,
-          signOptions: { expiresIn: '10s' },
+          //signOptions: { expiresIn: '10s' },
+          signOptions: { expiresIn: jwtConstants.accessTokenExpiration },
         };
       },
       inject: [ConfigService],

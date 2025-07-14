@@ -20,10 +20,10 @@ export default function UserMenu({ user, onLogout }: UserMenuProps) {
       content={
         <SpaceBetween size="xs">
           <span className="text-gray-600 text-sm">
-            Accesso come <strong>{user.email}</strong>
+            Login as <strong>{user.email}</strong>
           </span>
           <a href="/edit-profile" className="text-emerald-600 hover:underline text-sm">
-            Profilo
+            Profile
           </a>
           <button onClick={onLogout} className="text-red-600 hover:text-red-700 text-sm text-left">
             Logout

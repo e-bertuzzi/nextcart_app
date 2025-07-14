@@ -47,7 +47,7 @@ export function useEditProfile() {
           address: data.address || '',
         });
       } catch {
-        setMessage({ type: 'error', content: 'Errore nel caricamento dei dati utente.' });
+        setMessage({ type: 'error', content: 'Error loading user data.' });
       } finally {
         setLoading(false);
       }
@@ -64,9 +64,9 @@ export function useEditProfile() {
     setMessage(null);
     try {
       await api.put('profile/edit', formData);
-      setMessage({ type: 'success', content: 'Profilo aggiornato con successo!' });
+      setMessage({ type: 'success', content: 'Profile updated successfully!' });
     } catch {
-      setMessage({ type: 'error', content: 'Errore durante l’aggiornamento del profilo.' });
+      setMessage({ type: 'error', content: 'Error updating profile.' });
     } finally {
       setLoading(false);
     }

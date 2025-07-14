@@ -10,7 +10,7 @@ export function UiProfile() {
       <Container
         header={
           <Header variant="h2" className="text-emerald-700 font-bold text-xl">
-            Modifica dati personali
+            Edit personal data
           </Header>
         }
       >
@@ -31,7 +31,7 @@ export function UiProfile() {
           <EditUserFieldsGroup formData={formData} onChange={onChange} disabled={loading} />
 
           <Button onClick={handleSubmit} loading={loading} variant="primary">
-            Salva modifiche
+            Save changes
           </Button>
         </SpaceBetween>
       </Container>

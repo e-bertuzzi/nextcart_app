@@ -11,7 +11,7 @@ type PlaceOfBirthFieldProps = {
 
 export function PlaceOfBirthField({ value, onChange, disabled }: PlaceOfBirthFieldProps) {
   return (
-    <FormField label="Luogo di nascita">
+    <FormField label="Place of birth">
       <Input
         value={value}
         onChange={(event: InputChangeEvent) => onChange(event.detail.value)}

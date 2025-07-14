@@ -10,10 +10,10 @@ export default function SuccessModal({ visible, onDismiss }: SuccessModalProps) 
     <Modal
       visible={visible}
       onDismiss={onDismiss}
-      header="Login riuscito"
+      header="Login successful"
       footer={null}
     >
-      <p>Accesso effettuato con successo! Verrai reindirizzato alla homepage...</p>
+      <p>Login successful! You'll be redirected to the homepage...</p>
     </Modal>
   );
 }

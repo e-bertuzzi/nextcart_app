@@ -1,22 +1,31 @@
-import { UserProvider } from '@nextcart/ui-auth';
+import { PrivateRoute, UserProvider } from '@nextcart/ui-auth';
 import LoginPage from './auth-pages/login-pages/login';
 import RegistrationPage from './auth-pages/registration-pages/registration';
 import LayoutPage from './common-pages/navbar-page';
 import HomePage from './home-pages/home';
-import NxWelcome from './nx-welcome';
 
-import { Route, Routes, Link } from 'react-router-dom';
+import { Route, Routes, Link, Navigate } from 'react-router-dom';
 import EditProfilePage from './profile-pages/edit-profile';
+import DashboardPage from './dashboard-pages/dashboard-page';
+import NotFoundPage from './common-pages/not-found-page';
 
 export function App() {
   return (
     <UserProvider>
       <Routes>
         <Route element={<LayoutPage />}>
+          <Route path="/" element={<Navigate to="/homepage" />} />
           <Route path="/homepage" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegistrationPage />} />
-          <Route path="/edit-profile" element={<EditProfilePage />} />
+
+          {/* Rotte protette */}
+          <Route element={<PrivateRoute />}>
+            <Route path="/edit-profile" element={<EditProfilePage />} />
+            <Route path="/dashboard" element={<DashboardPage />} />
+          </Route>
+
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </UserProvider>

@@ -11,7 +11,7 @@ type AddressFieldProps = {
 
 export function AddressField({ value, onChange, disabled }: AddressFieldProps) {
   return (
-    <FormField label="Indirizzo">
+    <FormField label="Address">
       <Input
         value={value}
         onChange={(event: InputChangeEvent) => onChange(event.detail.value)}

@@ -8,7 +8,7 @@ export default function GuestNav() {
         Login
       </a>
       <a href="/register" className={navItemClass}>
-        Registrazione
+        Registration
       </a>
     </>
   );
