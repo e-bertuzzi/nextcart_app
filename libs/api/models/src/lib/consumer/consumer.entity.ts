@@ -2,9 +2,12 @@ import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
+  ManyToMany,
+  JoinTable,
   //ManyToOne,
 } from 'typeorm';
 import { Gender, Role } from '@nextcart/enum';
+import { HealthCondition } from '../health-condition/health-condition.entity';
 
 @Entity()
 export class Consumer {
@@ -46,6 +49,13 @@ export class Consumer {
   @Column({ nullable: true })
   address?: string;
 
+  @ManyToMany(() => HealthCondition, (condition) => condition.consumers, {
+    cascade: true, // opzionale: salva automaticamente relazioni nuove
+  })
+  @JoinTable() // Necessario solo su un lato per indicare la tabella pivot
+    healthConditions: HealthCondition[] | undefined;
+  }
+
   //@ManyToOne(() => Family, (family) => family.members, { nullable: true })
   //family?: Family;
-}
+

@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Consumer } from '@nextcart/models';
+import { Consumer, HealthCondition } from '@nextcart/models';
 import { AuthModule } from '@nextcart/api-auth';
 import { ProfileModule } from '@nextcart/profile';
 import { ConfigModule } from '@nestjs/config';
@@ -16,7 +16,7 @@ import { ConfigModule } from '@nestjs/config';
       username: 'utente',
       password: 'utente123',
       database: 'nextcart',
-      entities: [Consumer],
+      entities: [Consumer, HealthCondition],
       synchronize: true,
       logging: true,
       logger: 'advanced-console',
