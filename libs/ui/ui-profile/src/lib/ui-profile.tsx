@@ -9,7 +9,7 @@ export function UiProfile() {
     <Box padding="l" className="bg-gradient-to-b from-white via-emerald-50 to-green-100 min-h-screen">
       <div className="flex justify-center">
         <Container
-          className="w-full max-w-2xl"
+          className="w-full max-w-xl"
           header={
             <Header variant="h2" className="text-emerald-700 font-bold text-xl">
               Edit personal data

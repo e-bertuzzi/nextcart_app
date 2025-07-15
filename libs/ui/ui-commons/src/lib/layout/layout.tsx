@@ -4,17 +4,18 @@ import { Breadcrumbs } from '../breadcrumb/breadcrumb';
 
 export default function Layout() {
   const location = useLocation();
-
-  // Pagine dove non vuoi mostrare il breadcrumb
   const hideBreadcrumbOn = ['/homepage', '/register', '/', '/login', '/dashboard'];
-
   const shouldShowBreadcrumb = !hideBreadcrumbOn.includes(location.pathname);
 
   return (
     <>
       <Navbar />
-      <main style={{ paddingTop: '64px' }}>
-        {shouldShowBreadcrumb && <Breadcrumbs />}
+      <main className="mx-auto w-full max-w-[1800px] px-4" style={{ paddingTop: '64px' }}>
+        {shouldShowBreadcrumb && (
+          <div className="mx-auto w-full max-w-[1400px]">
+            <Breadcrumbs />
+          </div>
+        )}
         <Outlet />
       </main>
     </>

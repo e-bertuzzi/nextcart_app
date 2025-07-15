@@ -1,9 +1,8 @@
-export function UiForms() {
+import React from 'react';
+import { HealthForm } from '../lib/health-conditions-form/health-conditions-form';
+
+export function UiHealthPage() {
   return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiForms!</h1>
-    </div>
+    <HealthForm />
   );
 }
-
-export default UiForms;

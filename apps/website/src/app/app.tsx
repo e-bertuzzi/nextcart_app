@@ -8,6 +8,7 @@ import { Route, Routes, Link, Navigate } from 'react-router-dom';
 import EditProfilePage from './profile-pages/edit-profile';
 import DashboardPage from './dashboard-pages/dashboard-page';
 import NotFoundPage from './common-pages/not-found-page';
+import HealthPage from './health-pages/health-page';
 
 export function App() {
   return (
@@ -26,6 +27,7 @@ export function App() {
           <Route element={<PrivateRoute />}>
             <Route path="/edit-profile" element={<EditProfilePage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
+            <Route path="/health" element={<HealthPage />} />
           </Route>
 
           <Route path="*" element={<NotFoundPage />} />
