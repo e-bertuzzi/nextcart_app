@@ -1,4 +1,4 @@
-import { PrivateRoute, UserProvider } from '@nextcart/ui-auth';
+import { PrivateRoute, PublicRoute, UserProvider } from '@nextcart/ui-auth';
 import LoginPage from './auth-pages/login-pages/login';
 import RegistrationPage from './auth-pages/registration-pages/registration';
 import LayoutPage from './common-pages/navbar-page';
@@ -16,8 +16,11 @@ export function App() {
         <Route element={<LayoutPage />}>
           <Route path="/" element={<Navigate to="/homepage" />} />
           <Route path="/homepage" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegistrationPage />} />
+
+          <Route element={<PublicRoute />}>
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegistrationPage />} />
+          </Route>
 
           {/* Rotte protette */}
           <Route element={<PrivateRoute />}>

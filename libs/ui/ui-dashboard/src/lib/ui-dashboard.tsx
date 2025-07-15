@@ -23,7 +23,7 @@ export function UiDashboard() {
               <DashboardCard
                 label="Personal Data"
                 iconName="user-profile"
-                href="/profile"
+                href="/edit-profile"
                 description="Manage your personal data"
               />
               <DashboardCard
