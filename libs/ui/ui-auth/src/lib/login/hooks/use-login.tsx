@@ -30,7 +30,7 @@ export default function useLogin() {
       }, 2000);
     } catch (error: any) {
       console.error('Login error:', error);
-      const message = error.response?.data?.message || 'Errore di connessione o credenziali errate.';
+      const message = 'Connection error or wrong credentials.';
       setErrorMessage(message);
       setErrorModalVisible(true);
     }

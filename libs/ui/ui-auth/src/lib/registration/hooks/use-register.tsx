@@ -38,17 +38,17 @@ export function useRegisterForm() {
       !formData.dateOfBirth ||
       !formData.gender
     ) {
-      setErrorMessage('Compila tutti i campi obbligatori contrassegnati con *');
+      setErrorMessage('Please fill in all required fields marked with *');
       setErrorModalVisible(true);
       return false;
     }
     if (!isValidEmail(formData.email)) {
-      setErrorMessage('Inserisci un indirizzo email valido');
+      setErrorMessage('Please enter a valid email address');
       setErrorModalVisible(true);
       return false;
     }
     if (formData.password !== formData.confirmPassword) {
-      setErrorMessage('Le password non coincidono');
+      setErrorMessage('The passwords do not match');
       setErrorModalVisible(true);
       return false;
     }
@@ -74,7 +74,7 @@ export function useRegisterForm() {
         }),
       });
 
-      if (!response.ok) throw new Error('Registrazione fallita');
+      if (!response.ok) throw new Error('Registration failed');
 
       await response.json();
 
@@ -96,7 +96,7 @@ export function useRegisterForm() {
         navigate('/login');
       }, 3000);
     } catch (error) {
-      setErrorMessage('Errore durante la registrazione');
+      setErrorMessage('Error during registration');
       setErrorModalVisible(true);
     }
   };

@@ -1,16 +1,9 @@
 {
   "name": "enum",
-  "root": "libs/config/enum",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/config/enum/src",
   "projectType": "library",
-  "targets": {
-    "build": {
-      "executor": "@nrwl/js:tsc",
-      "options": {
-        "outputPath": "dist/libs/config/enum",
-        "tsConfig": "libs/config/enum/tsconfig.lib.json",
-        "main": "libs/config/enum/src/index.ts"
-      }
-    }
-  }
+  "tags": [],
+  "// targets": "to see all targets run: nx show project enum --web",
+  "targets": {}
 }

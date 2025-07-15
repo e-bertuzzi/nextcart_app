@@ -11,7 +11,7 @@ export default function ErrorModal({ visible, message, onDismiss }: ErrorModalPr
     <Modal
       visible={visible}
       onDismiss={onDismiss}
-      header="Errore Login"
+      header="Login error"
       footer={
         <Button
           onClick={onDismiss}

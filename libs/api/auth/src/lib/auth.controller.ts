@@ -60,7 +60,7 @@ export class AuthController {
     const refreshToken = req.cookies?.refreshToken;
 
     if (!refreshToken) {
-      throw new UnauthorizedException('Token mancante');
+      throw new UnauthorizedException('Error during login');
     }
 
     try {

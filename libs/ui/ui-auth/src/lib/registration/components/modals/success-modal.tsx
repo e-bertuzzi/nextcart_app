@@ -25,7 +25,7 @@ export default function SuccessModal({
     <Modal
       visible={visible}
       onDismiss={onDismiss}
-      header="Successo"
+      header="Success"
       footer={
         <Button
           onClick={handleClick}

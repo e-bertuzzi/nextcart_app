@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:16
+    restart: always
+    environment:
+      POSTGRES_USER: utente
+      POSTGRES_PASSWORD: utente123
+      POSTGRES_DB: nextcart
+    ports:
+      - '5432:5432'
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  backend:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    environment:
+      DATABASE_URL: postgres://user:password@db:5432/nextcart
+    depends_on:
+      - db
+    ports:
+      - '3000:3000'
+
+  frontend:
+    build:
+      context: .
+      dockerfile: apps/website/Dockerfile
+    ports:
+      - '4200:80'
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

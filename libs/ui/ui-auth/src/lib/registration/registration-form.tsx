@@ -61,7 +61,7 @@ export default function RegisterForm() {
 
         <SuccessModal
           visible={successModalVisible}
-          message="Registrazione avvenuta con successo! Verrai reindirizzato alla pagina di login..."
+          message="Registration successful! You will be redirected to the login page..."
           onDismiss={() => setSuccessModalVisible(false)}
           onButtonClick={() => {
             setSuccessModalVisible(false);
