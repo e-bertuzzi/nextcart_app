@@ -43,11 +43,16 @@ api.interceptors.response.use(
         originalRequest.headers.Authorization = `Bearer ${newAccessToken}`;
         return api(originalRequest);
       } catch (e) {
-        // Token non valido → logout
-        localStorage.removeItem('authToken');
-        window.location.href = '/login';
+        console.log('Refresh token fallito:', e);
+
+        // Solo se NON sei nella pagina di login, fai redirect
+        if (!window.location.pathname.includes('/login')) {
+          window.location.href = '/login';
+        }
+
         return Promise.reject(e);
       }
+
     }
 
     return Promise.reject(error);

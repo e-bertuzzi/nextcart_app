@@ -1,13 +1,15 @@
-import { useUser } from '../context/user-context'; // o dove tieni il contesto utente
-import { Navigate, Outlet } from 'react-router-dom';
+import { useLocation, Navigate, Outlet } from 'react-router-dom';
+import { useUser } from '../context/user-context';
 
 export function PrivateRoute() {
   const { user, loading } = useUser();
-
-  console.log('loading:', loading, 'user:', user);
+  const location = useLocation();
 
   if (loading) return <div>Loading...</div>;
-  if (!user) return <Navigate to="/login" replace />;
+
+  if (!user && location.pathname !== '/login') {
+    return <Navigate to="/login" replace />;
+  }
 
   return <Outlet />;
 }
