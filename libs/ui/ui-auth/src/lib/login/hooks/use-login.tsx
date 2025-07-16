@@ -14,25 +14,28 @@ export default function useLogin() {
   const navigate = useNavigate();
   const { login } = useUser();
 
-  const handleLogin = async () => {
+  const handleLogin = async (): Promise<boolean> => {
     try {
-      const response = await api.post('/auth/login', { email, password }, {
-        withCredentials: true, 
-      });
+      const response = await api.post(
+        '/auth/login',
+        { email, password },
+        { withCredentials: true }
+      );
 
       const { accessToken } = response.data;
-      login(accessToken);
       setSuccessModalVisible(true);
+      console.log('Success modal visible set to true');
 
+      // Delay login to let modal appear
       setTimeout(() => {
-        setSuccessModalVisible(false);
-        navigate('/homepage');
+        login(accessToken);
       }, 2000);
-    } catch (error: any) {
-      console.error('Login error:', error);
-      const message = 'Connection error or wrong credentials.';
-      setErrorMessage(message);
+
+      return true;
+    } catch (error) {
+      setErrorMessage('Connection error or wrong credentials.');
       setErrorModalVisible(true);
+      return false;
     }
   };
 

@@ -81,107 +81,110 @@ export function HealthForm() {
     options.find(option => option.id === id)?.label || '';
 
   return (
-    <Box padding="l" className="bg-gradient-to-b from-white via-emerald-50 to-green-100 min-h-screen">
+  <div className="bg-gradient-to-b from-white via-emerald-50 to-green-100 min-h-screen">
+    <Box padding="l">
       <div className="flex justify-center mt-6">
         <Container
-          className="w-full max-w-2xl"
           header={<h2 className="text-emerald-700 font-bold text-xl mb-4 text-center">Health Form</h2>}
+          // Rimuovi className su Container
         >
-          <form onSubmit={handleSubmit}>
-            <div className="space-y-6">
+        <form onSubmit={handleSubmit}>
+          <div className="space-y-6">
 
-              {/* Age & Gender Group */}
-              <div className="mt-4">
-                <fieldset>
-                  <legend className="font-semibold text-gray-800 mb-2">Age and Gender Group</legend>
-                  <div className="grid grid-cols-2 gap-2">
-                    {ageSexOptions.map(opt => (
-                      <label key={opt.id} className="flex items-center space-x-2">
-                        <input
-                          type="radio"
-                          name="ageSex"
-                          checked={selectedAgeSex === opt.id}
-                          onChange={() => setSelectedAgeSex(opt.id)}
-                        />
-                        <span>{opt.label}</span>
-                      </label>
-                    ))}
-                  </div>
-                </fieldset>
-              </div>
-
-              {/* Health Conditions */}
+            {/* Age & Gender Group */}
+            <div className="mt-4">
               <fieldset>
-                <legend className="font-semibold text-gray-800 mb-2">Health Conditions</legend>
+                <legend className="font-semibold text-gray-800 mb-2">Age and Gender Group</legend>
                 <div className="grid grid-cols-2 gap-2">
-                  {healthConditionsOptions.map(opt => (
+                  {ageSexOptions.map(opt => (
                     <label key={opt.id} className="flex items-center space-x-2">
                       <input
-                        type="checkbox"
-                        name="healthConditions"
-                        checked={selectedConditions.includes(opt.id)}
-                        onChange={() => handleConditionChange(opt.id)}
+                        type="radio"
+                        name="ageSex"
+                        checked={selectedAgeSex === opt.id}
+                        onChange={() => setSelectedAgeSex(opt.id)}
                       />
                       <span>{opt.label}</span>
                     </label>
                   ))}
                 </div>
               </fieldset>
-
-              {/* Physiological States */}
-              <fieldset>
-                <legend className="font-semibold text-gray-800 mb-2">Physiological States</legend>
-                <div className="grid grid-cols-2 gap-2">
-                  {physiologicalStatesOptions.map(opt => (
-                    <label key={opt.id} className="flex items-center space-x-2">
-                      <input
-                        type="checkbox"
-                        name="physiologicalStates"
-                        checked={selectedPhysStates.includes(opt.id)}
-                        onChange={() => handlePhysStateChange(opt.id)}
-                      />
-                      <span>{opt.label}</span>
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
-
-              {/* Submit Button */}
-              <div className="pt-2 flex justify-center">
-                <button
-                  type="submit"
-                  className="px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700"
-                >
-                  Save
-                </button>
-              </div>
-
-              {/* Summary */}
-              <div className="bg-white rounded-md p-4 border border-emerald-200 shadow-sm">
-                <h3 className="text-emerald-700 font-semibold mb-2">Selection Summary</h3>
-                <ul className="space-y-1 text-gray-700 text-sm">
-                  <li>
-                    <strong>Age/Sex:</strong>{' '}
-                    {selectedAgeSex !== null ? getLabelById(selectedAgeSex, ageSexOptions) : 'Not selected'}
-                  </li>
-                  <li>
-                    <strong>Health Conditions:</strong>{' '}
-                    {selectedConditions.length > 0
-                      ? selectedConditions.map(id => getLabelById(id, healthConditionsOptions)).join(', ')
-                      : 'None selected'}
-                  </li>
-                  <li>
-                    <strong>Physiological States:</strong>{' '}
-                    {selectedPhysStates.length > 0
-                      ? selectedPhysStates.map(id => getLabelById(id, physiologicalStatesOptions)).join(', ')
-                      : 'None selected'}
-                  </li>
-                </ul>
-              </div>
             </div>
-          </form>
-        </Container>
-      </div>
-    </Box>
-  );
+
+            {/* Health Conditions */}
+            <fieldset>
+              <legend className="font-semibold text-gray-800 mb-2">Health Conditions</legend>
+              <div className="grid grid-cols-2 gap-2">
+                {healthConditionsOptions.map(opt => (
+                  <label key={opt.id} className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      name="healthConditions"
+                      checked={selectedConditions.includes(opt.id)}
+                      onChange={() => handleConditionChange(opt.id)}
+                    />
+                    <span>{opt.label}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+
+            {/* Physiological States */}
+            <fieldset>
+              <legend className="font-semibold text-gray-800 mb-2">Physiological States</legend>
+              <div className="grid grid-cols-2 gap-2">
+                {physiologicalStatesOptions.map(opt => (
+                  <label key={opt.id} className="flex items-center space-x-2">
+                    <input
+                      type="checkbox"
+                      name="physiologicalStates"
+                      checked={selectedPhysStates.includes(opt.id)}
+                      onChange={() => handlePhysStateChange(opt.id)}
+                    />
+                    <span>{opt.label}</span>
+                  </label>
+                ))}
+              </div>
+            </fieldset>
+
+            {/* Submit Button */}
+            <div className="pt-2 flex justify-center">
+              <button
+                type="submit"
+                className="px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700"
+              >
+                Save
+              </button>
+            </div>
+
+            {/* Summary */}
+            <div className="bg-white rounded-md p-4 border border-emerald-200 shadow-sm">
+              <h3 className="text-emerald-700 font-semibold mb-2">Selection Summary</h3>
+              <ul className="space-y-1 text-gray-700 text-sm">
+                <li>
+                  <strong>Age/Sex:</strong>{' '}
+                  {selectedAgeSex !== null ? getLabelById(selectedAgeSex, ageSexOptions) : 'Not selected'}
+                </li>
+                <li>
+                  <strong>Health Conditions:</strong>{' '}
+                  {selectedConditions.length > 0
+                    ? selectedConditions.map(id => getLabelById(id, healthConditionsOptions)).join(', ')
+                    : 'None selected'}
+                </li>
+                <li>
+                  <strong>Physiological States:</strong>{' '}
+                  {selectedPhysStates.length > 0
+                    ? selectedPhysStates.map(id => getLabelById(id, physiologicalStatesOptions)).join(', ')
+                    : 'None selected'}
+                </li>
+              </ul>
+            </div>
+          </div>
+        </form>
+      </Container>
+    </div>
+  </Box>
+  </div>
+);
+
 }

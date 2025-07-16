@@ -1,5 +1,6 @@
+import { useEffect, useState } from 'react';
 import { Form, FormField, Input, Button, SpaceBetween } from '@cloudscape-design/components';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useLogin from '../hooks/use-login';
 import SuccessModal from './modals/success-modal';
 import ErrorModal from './modals/error-modal';
@@ -11,12 +12,30 @@ export default function LoginForm() {
     password,
     setPassword,
     errorModalVisible,
-    successModalVisible,
     errorMessage,
     handleLogin,
     closeErrorModal,
-    closeSuccessModal
   } = useLogin();
+
+  const [successModalVisible, setSuccessModalVisible] = useState(false);
+  const navigate = useNavigate();
+
+  const onLoginClick = async () => {
+    const success = await handleLogin();
+    if (success) {
+      setSuccessModalVisible(true);
+    }
+  };
+
+  useEffect(() => {
+    if (successModalVisible) {
+      const timer = setTimeout(() => {
+        setSuccessModalVisible(false);
+        navigate('/homepage');
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [successModalVisible, navigate]);
 
   return (
     <>
@@ -38,13 +57,15 @@ export default function LoginForm() {
             />
           </FormField>
 
-          <Button
-            variant="primary"
-            onClick={handleLogin}
-            className="!bg-emerald-600 hover:!bg-emerald-700 !text-white rounded-full shadow"
-          >
-            Login
-          </Button>
+          <div className="rounded-full shadow overflow-hidden w-fit">
+            <Button
+              variant="primary"
+              onClick={onLoginClick}
+              data-testid="login-button"
+            >
+              Login
+            </Button>
+          </div>
 
           <div className="mt-2 text-center text-sm">
             <span>Don't have an account? </span>
@@ -58,15 +79,15 @@ export default function LoginForm() {
         </SpaceBetween>
       </Form>
 
-      <ErrorModal 
-        visible={errorModalVisible} 
+      <ErrorModal
+        visible={errorModalVisible}
         message={errorMessage}
         onDismiss={closeErrorModal}
       />
-      
-      <SuccessModal 
+
+      <SuccessModal
         visible={successModalVisible}
-        onDismiss={closeSuccessModal}
+        onDismiss={() => setSuccessModalVisible(false)}
       />
     </>
   );

@@ -13,13 +13,12 @@ export default function ErrorModal({ visible, message, onDismiss }: ErrorModalPr
       onDismiss={onDismiss}
       header="Login error"
       footer={
-        <Button
-          onClick={onDismiss}
-          variant="primary"
-          className="!bg-emerald-600 hover:!bg-emerald-700 !text-white rounded"
-        >
-          Close
-        </Button>
+        // Wrappa il Button in un div con stili Tailwind
+        <div className="rounded shadow overflow-hidden w-fit mx-auto">
+          <Button onClick={onDismiss} variant="primary" data-testid="close-error-button">
+            Close
+          </Button>
+        </div>
       }
     >
       <p>{message}</p>

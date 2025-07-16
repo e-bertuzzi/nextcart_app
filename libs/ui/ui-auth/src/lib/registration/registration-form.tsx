@@ -32,13 +32,11 @@ export default function RegisterForm() {
                 disabled={false}
               />
 
-              <Button
-                variant="primary"
-                onClick={handleRegister}
-                className="!bg-emerald-600 !hover:bg-emerald-700 !text-white rounded-full shadow"
-              >
-                Registration
-              </Button>
+              <div className="mx-auto w-fit rounded-full shadow overflow-hidden">
+                <Button variant="primary" onClick={handleRegister}>
+                  Registration
+                </Button>
+              </div>
 
               <div className="text-center mt-2 text-sm">
                 <span>Already have an account? </span>
@@ -50,6 +48,7 @@ export default function RegisterForm() {
                 </Link>
               </div>
             </SpaceBetween>
+
           </Form>
         </Container>
 

@@ -27,13 +27,11 @@ export default function SuccessModal({
       onDismiss={onDismiss}
       header="Success"
       footer={
-        <Button
-          onClick={handleClick}
-          variant="primary"
-          className="!bg-emerald-600 hover:!bg-emerald-700 !text-white rounded"
-        >
-          OK
-        </Button>
+        <div className="mx-auto w-fit rounded shadow overflow-hidden">
+          <Button onClick={handleClick} variant="primary">
+            OK
+          </Button>
+        </div>
       }
     >
       {typeof message === 'string' ? <p>{message}</p> : message}
