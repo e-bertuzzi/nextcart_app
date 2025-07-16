@@ -56,7 +56,7 @@ export class AuthController {
   @Post('refresh')
   @HttpCode(200)
   async refresh(@Req() req: Request, @Res({ passthrough: true }) res: Response) {
-    console.log('Endpoint /auth/refresh chiamato');
+    console.log(`[${new Date().toLocaleTimeString()}] Endpoint /auth/refresh chiamato`);
     const refreshToken = req.cookies?.refreshToken;
 
     if (!refreshToken) {
