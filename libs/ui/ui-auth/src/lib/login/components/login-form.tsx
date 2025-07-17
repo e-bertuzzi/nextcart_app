@@ -57,7 +57,7 @@ export default function LoginForm() {
             />
           </FormField>
 
-          <div className="rounded-full shadow overflow-hidden w-fit">
+          <div className="mx-auto rounded-full shadow overflow-hidden w-fit">
             <Button
               variant="primary"
               onClick={onLoginClick}

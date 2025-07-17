@@ -6,6 +6,7 @@ interface User {
   email: string;
   id: string;
   token: string;
+  role: string;
 }
 
 interface UserContextType {
@@ -33,7 +34,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     if (token) {
       try {
         const decoded: any = jwtDecode(token);
-        setUser({ email: decoded.email, id: decoded.sub, token });
+        setUser({ email: decoded.email, id: decoded.sub, token, role: decoded.role });
       } catch {
         localStorage.removeItem('authToken');
         setUser(null);
@@ -45,7 +46,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   const login = (token: string) => {
     localStorage.setItem('authToken', token);
     const decoded: any = jwtDecode(token);
-    setUser({ email: decoded.email, id: decoded.sub, token });
+    setUser({ email: decoded.email, id: decoded.sub, token, role: decoded.role });
   };
 
   const logout = () => {

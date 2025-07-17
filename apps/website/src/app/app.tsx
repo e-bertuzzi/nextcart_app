@@ -9,6 +9,7 @@ import EditProfilePage from './profile-pages/edit-profile';
 import DashboardPage from './dashboard-pages/dashboard-page';
 import NotFoundPage from './common-pages/not-found-page';
 import HealthPage from './health-pages/health-page';
+import HealthEdit from './health-pages/health-edit';
 
 export function App() {
   return (
@@ -28,6 +29,7 @@ export function App() {
             <Route path="/edit-profile" element={<EditProfilePage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/health" element={<HealthPage />} />
+            <Route path="/health/edit" element={<HealthEdit />} />
           </Route>
 
           <Route path="*" element={<NotFoundPage />} />
