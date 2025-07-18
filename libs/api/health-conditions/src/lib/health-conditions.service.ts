@@ -1,7 +1,12 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, Consumer } from '@nextcart/models';
+import {
+  HealthCondition,
+  HealthConditionCategory,
+  HealthConditionIncompatibility,
+  Consumer,
+} from '@nextcart/models';
 import { FilterHealthConditionsDto } from '@nextcart/dto';
 
 @Injectable()
@@ -13,8 +18,8 @@ export class HealthConditionsService {
     private healthConditionRepository: Repository<HealthCondition>,
     @InjectRepository(HealthConditionIncompatibility)
     private incompatibilityRepository: Repository<HealthConditionIncompatibility>,
-     @InjectRepository(Consumer)
-    private readonly consumerRepo: Repository<Consumer>,
+    @InjectRepository(Consumer)
+    private readonly consumerRepo: Repository<Consumer>
   ) {}
 
   async getAllCategories() {
@@ -33,27 +38,26 @@ export class HealthConditionsService {
     });
   }
 
-  // Metodo importante per il filtro
   async filterHealthConditions(dto: FilterHealthConditionsDto) {
     const { selectedConditionIds = [], categoryCode } = dto;
 
     const qb = this.healthConditionRepository
-        .createQueryBuilder('hc')
-        .leftJoin('hc.category', 'category')
-        .where('category.code = :categoryCode', { categoryCode });
+      .createQueryBuilder('hc')
+      .leftJoin('hc.category', 'category')
+      .where('category.code = :categoryCode', { categoryCode });
 
     if (selectedConditionIds.length > 0) {
-        qb.andWhere(
+      qb.andWhere(
         (qb) =>
-            `NOT EXISTS (
+          `NOT EXISTS (
             SELECT 1 FROM health_condition_incompatibility inc
             WHERE
                 (inc.condition_id = hc.healthConditionId AND inc.incompatible_with_id IN (:...selectedConditionIds))
                 OR
                 (inc.incompatible_with_id = hc.healthConditionId AND inc.condition_id IN (:...selectedConditionIds))
             )`,
-        { selectedConditionIds },
-        );
+        { selectedConditionIds }
+      );
     }
 
     return qb.getMany();
@@ -61,53 +65,62 @@ export class HealthConditionsService {
 
   async getUserHealthConditions(userId: number) {
     return this.healthConditionRepository
-        .createQueryBuilder('hc')
-        .innerJoin(
+      .createQueryBuilder('hc')
+      .innerJoin(
         'consumer_health_conditions_health_condition',
         'link',
-        'link.healthConditionHealthConditionId = hc.healthConditionId',
-        )
-        .leftJoinAndSelect('hc.category', 'category')  // <-- aggiungi questa riga
-        .where('link.consumerConsumerId = :userId', { userId })
-        .getMany();
+        'link.healthConditionHealthConditionId = hc.healthConditionId'
+      )
+      .leftJoinAndSelect('hc.category', 'category') // <-- aggiungi questa riga
+      .where('link.consumerConsumerId = :userId', { userId })
+      .getMany();
   }
 
-
-  async getUserHealthCondition(userId: number, conditionId: number): Promise<HealthCondition | null> {
+  async getUserHealthCondition(
+    userId: number,
+    conditionId: number
+  ): Promise<HealthCondition | null> {
     return this.healthConditionRepository
-        .createQueryBuilder('hc')
-        .innerJoin(
-            'consumer_health_conditions_health_condition',
-            'link',
-            'link.healthConditionHealthConditionId = hc.healthConditionId',
-        )
-        .leftJoinAndSelect('hc.category', 'category') // JOIN con categoria
-        .where('link.consumerConsumerId = :userId', { userId })
-        .andWhere('hc.healthConditionId = :conditionId', { conditionId })
-        .getOne();
+      .createQueryBuilder('hc')
+      .innerJoin(
+        'consumer_health_conditions_health_condition',
+        'link',
+        'link.healthConditionHealthConditionId = hc.healthConditionId'
+      )
+      .leftJoinAndSelect('hc.category', 'category') // JOIN con categoria
+      .where('link.consumerConsumerId = :userId', { userId })
+      .andWhere('hc.healthConditionId = :conditionId', { conditionId })
+      .getOne();
   }
 
-  async removeUserHealthCondition(userId: number, conditionId: number): Promise<{ deleted: boolean }> {
+  async removeUserHealthCondition(
+    userId: number,
+    conditionId: number
+  ): Promise<{ deleted: boolean }> {
     await this.healthConditionRepository.query(
-        `DELETE FROM consumer_health_conditions_health_condition
+      `DELETE FROM consumer_health_conditions_health_condition
         WHERE "consumerConsumerId" = $1 AND "healthConditionHealthConditionId" = $2`,
-        [userId, conditionId],
+      [userId, conditionId]
     );
 
     return { deleted: true };
-    }
+  }
 
-
-  async updateUserHealthConditions(consumerId: number, healthConditionIds: number[]) {
+  async updateUserHealthConditions(
+    consumerId: number,
+    healthConditionIds: number[]
+  ) {
     const user = await this.consumerRepo.findOne({
       where: { consumerId: consumerId },
-      relations: ['healthConditions'], // assicurati che la relazione si chiami così
+      relations: ['healthConditions'],
     });
 
     if (!user) throw new NotFoundException('User not found');
 
     // Prendi le condizioni selezionate
-    const selectedConditions = await this.healthConditionRepository.findByIds(healthConditionIds);
+    const selectedConditions = await this.healthConditionRepository.findByIds(
+      healthConditionIds
+    );
 
     // Aggiorna le condizioni dell'utente
     user.healthConditions = selectedConditions;
@@ -119,15 +132,14 @@ export class HealthConditionsService {
   }
 
   async getPathologies() {
-  // Recupera solo le health conditions con categoryId = 5 (pathology)
+    // Recupera solo le health conditions con categoryId = 5 (pathology)
     return this.healthConditionRepository.find({
-    where: {
+      where: {
         category: {
-        label: 'pathology'  // o qualsiasi nome tu voglia filtrare
-        }
-    },
-    relations: ['category'],  // serve per fare il join
+          label: 'pathology', // o qualsiasi nome tu voglia filtrare
+        },
+      },
+      relations: ['category'], // serve per fare il join
     });
   }
-
 }

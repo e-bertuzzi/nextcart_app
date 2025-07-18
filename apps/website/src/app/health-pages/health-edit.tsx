@@ -1,5 +1,5 @@
 import { UiHealthEdit } from '@nextcart/ui-forms';
 
-export default function HealthPage() {
+export default function HealthEdit() {
   return <UiHealthEdit />;
 }

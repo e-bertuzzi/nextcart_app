@@ -5,3 +5,5 @@ export * from './lib/token/interfaces/tokens.interface';
 export * from './lib/health-condition/health-condition.entity';
 export * from './lib/health-condition/category/health-condition-category.entity'
 export * from './lib/health-condition/incompatibility/health-condition-incompatibility.entity'
+export * from './lib/diet/diet.entity';
+export * from './lib/diet/incompatibility/diet-incompatibility.entity';

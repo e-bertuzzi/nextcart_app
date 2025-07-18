@@ -2,11 +2,13 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Consumer, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility } from '@nextcart/models';
+import { Consumer, Diet, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, DietIncompatibility } from '@nextcart/models';
 import { AuthModule } from '@nextcart/api-auth';
 import { ProfileModule } from '@nextcart/profile';
 import { HealthConditionModule } from '@nextcart/health-conditions'; 
 import { ConfigModule } from '@nestjs/config';
+import { DietModule } from '@nextcart/diet'
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -16,7 +18,9 @@ import { ConfigModule } from '@nestjs/config';
       username: 'utente',
       password: 'utente123',
       database: 'nextcart',
-      entities: [Consumer, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility],
+      entities: [Consumer, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, Diet,
+        DietIncompatibility
+      ],
       synchronize: true,
       logging: true,
       logger: 'advanced-console',
@@ -24,6 +28,7 @@ import { ConfigModule } from '@nestjs/config';
     AuthModule,
     ProfileModule,
     HealthConditionModule,
+    DietModule,
     ConfigModule.forRoot({
       isGlobal: true, // disponibile ovunque
     }),

@@ -8,6 +8,7 @@ import {
 } from 'typeorm';
 import { Gender, Role } from '@nextcart/enum';
 import { HealthCondition } from '../health-condition/health-condition.entity';
+import { Diet } from '../diet/diet.entity';
 
 @Entity()
 export class Consumer {
@@ -53,9 +54,14 @@ export class Consumer {
     cascade: true, // opzionale: salva automaticamente relazioni nuove
   })
   @JoinTable() // Necessario solo su un lato per indicare la tabella pivot
-    healthConditions: HealthCondition[] | undefined;
-  }
+  healthConditions: HealthCondition[] | undefined;
+
+  @ManyToMany(() => Diet, (diet) => diet.consumers, {
+    cascade: true, // opzionale: salva automaticamente relazioni nuove
+  })
+  @JoinTable() // Necessario solo su un lato per indicare la tabella pivot
+  diets: Diet[] | undefined;
 
   //@ManyToOne(() => Family, (family) => family.members, { nullable: true })
   //family?: Family;
-
+}

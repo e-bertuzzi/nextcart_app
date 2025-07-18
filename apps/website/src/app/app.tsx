@@ -10,6 +10,8 @@ import DashboardPage from './dashboard-pages/dashboard-page';
 import NotFoundPage from './common-pages/not-found-page';
 import HealthPage from './health-pages/health-page';
 import HealthEdit from './health-pages/health-edit';
+import DietPage from './diet-pages/diet-page';
+import DietEdit from './diet-pages/diet-edit';
 
 export function App() {
   return (
@@ -30,6 +32,8 @@ export function App() {
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/health" element={<HealthPage />} />
             <Route path="/health/edit" element={<HealthEdit />} />
+            <Route path="/diet" element={<DietPage/>} />
+            <Route path="/diet/edit" element={<DietEdit/>} />
           </Route>
 
           <Route path="*" element={<NotFoundPage />} />

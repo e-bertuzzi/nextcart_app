@@ -18,6 +18,7 @@
       "@nextcart/api-auth": ["libs/api/auth/src/index.ts"],
       "@nextcart/commons": ["libs/ui/commons/src/index.ts"],
       "@nextcart/consumer": ["libs/api/consumer/src/index.ts"],
+      "@nextcart/diet": ["libs/api/diet/src/index.ts"],
       "@nextcart/dto": ["libs/config/dto/src/index.ts"],
       "@nextcart/enum": ["libs/config/enum/src/index.ts"],
       "@nextcart/health-conditions": [

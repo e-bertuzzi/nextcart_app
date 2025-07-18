@@ -8,10 +8,10 @@ export function HealthSummary() {
   const navigate = useNavigate();
 
   return (
-    <Container header={<h1>Riepilogo condizioni salute</h1>}>
+    <Container header={<h1>Health conditions summary</h1>}>
       <Box margin="m">
         {userHealthConditions.length === 0 ? (
-          <p>Nessuna condizione selezionata.</p>
+          <p>No conditions selected.</p>
         ) : (
           <UserHealthConditionsTable
             conditions={userHealthConditions}
