@@ -19,5 +19,5 @@
     "**/*.spec.jsx",
     "**/*.test.jsx"
   ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "../ui-navigation/src/lib/navbar/components/guest-nav.tsx", "../ui-navigation/src/lib/navbar/components/logo.tsx", "../ui-navigation/src/lib/navbar/components/user-menu.tsx"]
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
 }

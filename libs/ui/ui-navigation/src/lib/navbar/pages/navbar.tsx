@@ -6,10 +6,10 @@ import { useNavigate } from 'react-router-dom';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { api } from '@nextcart/http'
 
-import Logo from '../components/logo';
+import Logo from '..//components/logo';
 import GuestNav from '../components/guest-nav';
 import UserMenu from '../components/user-menu';
-import LogoutModal from '../../modals/components/logout-modals';
+import { UiLogoutModal }from '@nextcart/ui-commons';
 
 export default function Navbar() {
   const { user, logout } = useUser();
@@ -52,7 +52,7 @@ export default function Navbar() {
         </div>
       </Box>
 
-      <LogoutModal visible={modalVisible} onClose={() => setModalVisible(false)} />
+      <UiLogoutModal visible={modalVisible} onClose={() => setModalVisible(false)} />
     </>
   );
 }
