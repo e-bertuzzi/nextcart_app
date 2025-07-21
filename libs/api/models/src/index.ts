@@ -7,3 +7,4 @@ export * from './lib/health-condition/category/health-condition-category.entity'
 export * from './lib/health-condition/incompatibility/health-condition-incompatibility.entity'
 export * from './lib/diet/diet.entity';
 export * from './lib/diet/incompatibility/diet-incompatibility.entity';
+export * from './lib/body-composition/body-composition.entity';

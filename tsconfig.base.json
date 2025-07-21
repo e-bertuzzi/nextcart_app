@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@nextcart/api-auth": ["libs/api/auth/src/index.ts"],
+      "@nextcart/body-composition": ["libs/api/body-composition/src/index.ts"],
       "@nextcart/commons": ["libs/ui/commons/src/index.ts"],
       "@nextcart/consumer": ["libs/api/consumer/src/index.ts"],
       "@nextcart/diet": ["libs/api/diet/src/index.ts"],

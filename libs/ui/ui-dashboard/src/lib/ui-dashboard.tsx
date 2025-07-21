@@ -65,7 +65,7 @@ export function UiDashboard() {
               <DashboardCard
                 label="Body Composition"
                 iconName="scale"
-                href="/body"
+                href="/body-composition"
                 description="Analyze your body metrics"
               />
             </DashboardGrid>

@@ -3,6 +3,8 @@ import { HealthSummary } from '../lib/health-conditions-form/health-conditions-s
 import { HealthForm } from './health-conditions-form/health-conditions-form';
 import { DietForm } from './diet-form/diet-form';
 import { DietSummary } from './diet-form/diet-summary';
+import { BodyCompositionSummary } from './body-compositions-form/body-compositions-summary';
+import { BodyCompositionForm } from './body-compositions-form/body-composition-form';
 
 export function UiHealthPage() {
   return (
@@ -25,5 +27,17 @@ export function UiDietPage() {
 export function UiDietEdit() {
   return (
     <DietForm />
+  );
+}
+
+export function UiBodyPage() {
+  return (
+    <BodyCompositionSummary />
+  );
+}
+
+export function UiBodyForm() {
+  return (
+    <BodyCompositionForm />
   );
 }

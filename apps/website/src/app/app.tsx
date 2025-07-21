@@ -12,6 +12,8 @@ import HealthPage from './health-pages/health-page';
 import HealthEdit from './health-pages/health-edit';
 import DietPage from './diet-pages/diet-page';
 import DietEdit from './diet-pages/diet-edit';
+import BodyPage from './body-pages/body-page';
+import BodyEdit from './body-pages/body-edit';
 
 export function App() {
   return (
@@ -34,6 +36,8 @@ export function App() {
             <Route path="/health/edit" element={<HealthEdit />} />
             <Route path="/diet" element={<DietPage/>} />
             <Route path="/diet/edit" element={<DietEdit/>} />
+            <Route path="/body-composition" element={<BodyPage/>} />
+            <Route path="/body-composition/edit" element={<BodyEdit/>} />
           </Route>
 
           <Route path="*" element={<NotFoundPage />} />
