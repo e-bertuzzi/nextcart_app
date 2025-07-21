@@ -73,7 +73,6 @@ export class DietService {
       this.dietRepository
         .createQueryBuilder('d')
         .innerJoin('consumer_diets_diet', 'link', 'link.dietDietId = d.dietId')
-        // .leftJoinAndSelect('d.category', 'category') // decommenta se Diet ha una categoria
         .where('link.consumerConsumerId = :userId', { userId })
         .getMany()
     );

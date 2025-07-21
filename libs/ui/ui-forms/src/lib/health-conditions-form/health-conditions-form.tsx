@@ -32,24 +32,16 @@ export function HealthForm() {
 
   return (
     <Box margin="l">
-      <Container header={<b>Health Condition Selection</b>}>
-      <div style={{ marginBottom: '16px' }}>
-        <h2>Warning: All previously selected conditions will be overwritten.</h2>
-      </div>
+      <Container header={
+        <h1 style={{ color: 'green', fontWeight: 'bold' }}>
+          Health conditions selection
+        </h1>}>
+        <Box margin={{ bottom: 'm' }}>
+          <h2>Warning: All previously selected conditions will be overwritten.</h2>
+        </Box>
 
         <Form>
-          <SpaceBetween size="l">
-            {message && (
-              <Flashbar
-                items={[{
-                  type: message.type,
-                  content: message.content,
-                  dismissible: true,
-                  onDismiss: () => setMessage(null),
-                }]}
-              />
-            )}
-
+          <FormLayout message={message} setMessage={setMessage}>
             <AgeConditionSelect
               selected={selectedAgeCondition}
               options={ageConditions}
@@ -81,14 +73,47 @@ export function HealthForm() {
               />
             )}
 
-            {(step === 3) && (
-              <Button variant="primary" onClick={saveSelectedConditions} disabled={!selectedAgeCondition}>
+            {step === 3 && (
+              <Button
+                variant="primary"
+                onClick={saveSelectedConditions}
+                disabled={!selectedAgeCondition}
+              >
                 Save
               </Button>
             )}
-          </SpaceBetween>
+          </FormLayout>
         </Form>
       </Container>
     </Box>
+  );
+}
+
+// Shared layout wrapper for consistency with HealthSummary
+function FormLayout({
+  children,
+  message,
+  setMessage,
+}: {
+  children: React.ReactNode;
+  message: any;
+  setMessage: (msg: any) => void;
+}) {
+  return (
+    <SpaceBetween size="l">
+      {message && (
+        <Flashbar
+          items={[
+            {
+              type: message.type,
+              content: message.content,
+              dismissible: true,
+              onDismiss: () => setMessage(null),
+            },
+          ]}
+        />
+      )}
+      {children}
+    </SpaceBetween>
   );
 }

@@ -8,7 +8,6 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 @Module({
   imports: [
     TypeOrmModule.forFeature([Diet, DietIncompatibility, Consumer]),
-    //ConsumerModule, // 👈 importa qui
   ],
   providers: [DietService],
   controllers: [DietController],

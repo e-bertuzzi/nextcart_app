@@ -12,7 +12,10 @@ export function DietForm() {
   } = useDiets();
 
   return (
-    <Container header={<h1>Manage Diets</h1>}>
+    <Container header={
+    <h1 style={{ color: 'green', fontWeight: 'bold' }}>
+      Manage diets
+    </h1>}>
       {message && (
         <Flashbar
           items={[{

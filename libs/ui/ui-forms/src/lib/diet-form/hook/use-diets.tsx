@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react';
 import {
   getUserDiets,
+  getAllDiets,
   saveUserDiets,
   removeUserDiet,
 } from '../service/diets-service';
 import { SelectProps } from '@cloudscape-design/components';
 import { useNavigate } from 'react-router-dom';
 
-import { api } from '@nextcart/http'
- 
 export function useDiets(userId = 1) {
   const [selectedDiets, setSelectedDiets] = useState<SelectProps.Option[]>([]);
   const [availableDiets, setAvailableDiets] = useState<SelectProps.Option[]>([]);
@@ -16,17 +15,15 @@ export function useDiets(userId = 1) {
 
   const navigate = useNavigate();
 
-  // Carica tutte le diete disponibili
-  const fetchAllDiets = async () => {
+  const fetchAvailableDiets = async () => {
     try {
-      const res = await api.get('/diet');
-      setAvailableDiets(res.data.map((d: any) => ({ label: d.description, value: d.dietId })));
+      const diets = await getAllDiets();
+      setAvailableDiets(diets);
     } catch {
       setMessage({ type: 'error', content: 'Failed to load diets.' });
     }
   };
 
-  // Carica diete già selezionate dall'utente
   const fetchUserDiets = async () => {
     try {
       const data = await getUserDiets(userId);
@@ -36,7 +33,6 @@ export function useDiets(userId = 1) {
     }
   };
 
-  // Salva le diete selezionate per l'utente
   const saveSelectedDiets = async () => {
     try {
       const dietIds = selectedDiets.map(d => Number(d.value));
@@ -49,7 +45,6 @@ export function useDiets(userId = 1) {
     }
   };
 
-  // Rimuove una dieta dall'utente
   const removeDiet = async (dietId: number) => {
     try {
       await removeUserDiet(userId, dietId);
@@ -61,7 +56,7 @@ export function useDiets(userId = 1) {
   };
 
   useEffect(() => {
-    fetchAllDiets();
+    fetchAvailableDiets();
     fetchUserDiets();
   }, []);
 

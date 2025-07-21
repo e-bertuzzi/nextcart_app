@@ -9,7 +9,7 @@ export function UiLayout() {
   const hideBreadcrumbOn = ['/homepage', '/register', '/', '/login', '/dashboard'];
   const shouldShowBreadcrumb = !hideBreadcrumbOn.includes(location.pathname);
 
-  const showBackButtonOn = ['/health', '/health/edit', '/diet', '/diet/edit'];
+  const showBackButtonOn = ['/health', '/health/edit', '/diet', '/diet/edit', '/edit-profile'];
   const shouldShowBackButton = showBackButtonOn.includes(location.pathname);
 
   return (
