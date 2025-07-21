@@ -9,57 +9,47 @@ interface BodyComposition {
 interface Props {
   compositions: BodyComposition[];
   onRemove: (date: string) => void;
+  onEdit: (record: any) => void;
 }
 
-export function UserBodyCompositionsTable({ compositions, onRemove }: Props) {
+export function UserBodyCompositionsTable({
+  compositions,
+  onRemove,
+  onEdit,
+}: Props) {
   return (
-    <Box>
-      <Table
-        items={compositions}
-        trackBy="date"
-        variant="embedded"
-        stickyHeader
-        header="Body Composition History"
-        columnDefinitions={[
-          {
-            id: 'date',
-            header: 'Date',
-            cell: (item) => new Date(item.date).toLocaleDateString(),
+    <Table
+      items={compositions}
+      columnDefinitions={[
+        { id: 'date', header: 'Date', cell: (item) => item.date },
+        {
+          id: 'weight',
+          header: 'Weight',
+          cell: (item) => {
+            const weightNum = Number(item.weight);
+            return !isNaN(weightNum) ? weightNum.toFixed(2) : '-';
           },
-          {
-            header: 'Weight (kg)',
-            cell: (item) => {
-              const w = Number(item.weight);
-              return isNaN(w) ? '-' : w.toFixed(2);
-            },
+        },
+        {
+          id: 'height',
+          header: 'Height',
+          cell: (item) => {
+            const heightNum = Number(item.height);
+            return !isNaN(heightNum) ? heightNum.toFixed(2) : '-';
           },
-          {
-            header: 'Height (cm)',
-            cell: (item) => {
-              const h = Number(item.height);
-              return isNaN(h) ? '-' : h.toFixed(2);
-            },
-          },
-          {
-            id: 'actions',
-            header: 'Actions',
-            cell: (item) => (
-              <Button variant="inline-link" onClick={() => onRemove(item.date)}>
-                Remove
-              </Button>
-            ),
-            width: 120,
-          },
-        ]}
-        resizableColumns
-        wrapLines
-        stripedRows
-        empty={
-          <Box textAlign="center" padding="s">
-            No body composition records available.
-          </Box>
-        }
-      />
-    </Box>
+        },
+        {
+          id: 'actions',
+          header: 'Actions',
+          cell: (item) => (
+            <>
+              <Button onClick={() => onEdit(item)}>Edit</Button>
+              <Button onClick={() => onRemove(item.date)}>Remove</Button>
+            </>
+          ),
+        },
+      ]}
+      // altre props della tabella
+    />
   );
 }

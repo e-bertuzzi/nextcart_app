@@ -1,7 +1,19 @@
-import { Multiselect, Button, Container, Box, Flashbar } from '@cloudscape-design/components';
+import {
+  Multiselect,
+  Button,
+  Container,
+  Box,
+  Flashbar,
+  Spinner,
+} from '@cloudscape-design/components';
 import { useDiets } from './hook/use-diets';
+import { useUser } from '@nextcart/ui-auth';
+import { Navigate } from 'react-router-dom';
 
 export function DietForm() {
+  const { user, loading } = useUser();
+  const userId = user?.id; // userId può essere undefined se user è null
+
   const {
     selectedDiets,
     setSelectedDiets,
@@ -9,32 +21,47 @@ export function DietForm() {
     saveSelectedDiets,
     message,
     setMessage,
-  } = useDiets();
+  } = useDiets(userId);
+
+  if (loading) return <Spinner />; // oppure <div>Loading...</div>
+
+  if (!user) {
+    return <Navigate to="/login" />;
+  }
 
   return (
-    <Container header={
-    <h1 style={{ color: 'green', fontWeight: 'bold' }}>
-      Manage diets
-    </h1>}>
+    <Container
+      header={
+        <h1 style={{ color: 'green', fontWeight: 'bold' }}>Manage diets</h1>
+      }
+    >
       {message && (
         <Flashbar
-          items={[{
-            type: message.type,
-            content: message.content,
-            dismissible: true,
-            onDismiss: () => setMessage(null),
-          }]}
+          items={[
+            {
+              type: message.type,
+              content: message.content,
+              dismissible: true,
+              onDismiss: () => setMessage(null),
+            },
+          ]}
         />
       )}
       <Box margin="m">
         <Multiselect
           options={availableDiets}
           selectedOptions={selectedDiets}
-          onChange={({ detail }) => setSelectedDiets([...detail.selectedOptions])}
+          onChange={({ detail }) =>
+            setSelectedDiets([...detail.selectedOptions])
+          }
           placeholder="Select diets"
         />
       </Box>
-      <Button variant="primary" onClick={saveSelectedDiets} disabled={selectedDiets.length === 0}>
+      <Button
+        variant="primary"
+        onClick={saveSelectedDiets}
+        disabled={selectedDiets.length === 0}
+      >
         Save Diets
       </Button>
     </Container>

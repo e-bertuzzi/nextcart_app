@@ -5,6 +5,7 @@ import {
   Button,
   Box,
   Flashbar,
+  Spinner,
 } from '@cloudscape-design/components';
 import { useState } from 'react';
 import { useHealthConditions } from './hook/use-health-conditions';
@@ -12,7 +13,14 @@ import { AgeConditionSelect } from './components/age-condition-select';
 import { PathologyMultiselect } from './components/pathology-multi-select';
 import { PhysiologicalStateMultiselect } from './components/physiological-state-multi-select';
 
+import { useUser } from '@nextcart/ui-auth'
+import { Navigate } from 'react-router-dom';
+
 export function HealthForm() {
+
+  const { user, loading } = useUser();
+  const userId = user?.id;  // userId può essere undefined se user è null
+
   const {
     selectedAgeCondition,
     setSelectedAgeCondition,
@@ -26,9 +34,15 @@ export function HealthForm() {
     saveSelectedConditions,
     message,
     setMessage,
-  } = useHealthConditions();
+  } = useHealthConditions(userId);
 
   const [step, setStep] = useState(1);
+
+  if (loading) return <Spinner />; // oppure <div>Loading...</div>
+  
+    if (!user) {
+      return <Navigate to="/login" />;
+    }
 
   return (
     <Box margin="l">

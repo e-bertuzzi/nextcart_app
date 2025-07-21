@@ -6,7 +6,7 @@ import {
 } from '../service/body-compositions-service'; // aggiorna il path se necessario
 import { useNavigate } from 'react-router-dom';
 
-export function useBodyCompositions(userId = 1) {
+export function useBodyCompositions(userId: number | undefined) {
   const [compositions, setCompositions] = useState<any[]>([]);
   const [message, setMessage] = useState<any>(null);
 

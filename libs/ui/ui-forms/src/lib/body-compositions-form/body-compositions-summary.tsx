@@ -6,12 +6,31 @@ import {
   Box,
   Flashbar,
   SpaceBetween,
+  Spinner,
 } from '@cloudscape-design/components';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/ui-auth';
 
 export function BodyCompositionSummary() {
-  const { compositions, removeComposition, message, setMessage } = useBodyCompositions();
+  const { user, loading } = useUser();
+  const userId = user?.id ?? 0; // o gestisci undefined in altro modo
+
+  const { compositions, removeComposition, message, setMessage } =
+    useBodyCompositions(userId);
+
   const navigate = useNavigate();
+
+  const handleEdit = (record: any) => {
+    // Naviga alla pagina di modifica passando i dati da modificare, per esempio con state o query params
+    navigate('/body-composition/edit', { state: { record } });
+  };
+
+  if (loading) return <Spinner />; // oppure <div>Loading...</div>
+
+  if (!user) {
+    return <Navigate to="/login" />;
+  }  
 
   return (
     <Box margin="l">
@@ -29,10 +48,14 @@ export function BodyCompositionSummary() {
             <UserBodyCompositionsTable
               compositions={compositions}
               onRemove={removeComposition}
+              onEdit={handleEdit}
             />
           )}
 
-          <Button variant="primary" onClick={() => navigate('/body-composition/edit')}>
+          <Button
+            variant="primary"
+            onClick={() => navigate('/body-composition/edit')}
+          >
             Add or Edit Record
           </Button>
         </FormLayout>

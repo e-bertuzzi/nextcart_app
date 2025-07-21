@@ -19,5 +19,5 @@
     "**/*.spec.jsx",
     "**/*.test.jsx"
   ],
-  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx"]
+  "include": ["src/**/*.js", "src/**/*.jsx", "src/**/*.ts", "src/**/*.tsx", "../ui-auth/src/lib/registration/components/fields-group/fields/address-field.tsx", "../ui-auth/src/lib/registration/components/fields-group/fields/date-birth-field.tsx", "../ui-auth/src/lib/registration/components/fields-group/fields/email-field.tsx", "../ui-auth/src/lib/registration/components/fields-group/fields/gender-field.tsx", "../ui-auth/src/lib/registration/components/fields-group/fields/name-field.tsx", "../ui-auth/src/lib/registration/components/fields-group/fields/password-field.tsx", "../ui-auth/src/lib/registration/components/fields-group/fields/place-of-birth-field.tsx", "../ui-auth/src/lib/registration/components/fields-group/fields/surname-field.tsx"]
 }

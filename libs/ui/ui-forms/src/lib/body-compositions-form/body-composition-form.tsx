@@ -8,8 +8,11 @@ import {
   SpaceBetween,
   DatePicker,
   Flashbar,
+  Spinner,
 } from '@cloudscape-design/components';
 import { useBodyCompositions } from './hook/use-body-compositions';
+import { Navigate, useLocation } from 'react-router-dom';
+import { useUser } from '@nextcart/ui-auth';
 
 interface BodyCompositionFormData {
   date: string;
@@ -18,16 +21,22 @@ interface BodyCompositionFormData {
 }
 
 export function BodyCompositionForm() {
+  const location = useLocation();
+  const editRecord = location.state?.record;
+  const { user, loading } = useUser();
+
+  const userId = user?.id;  // userId può essere undefined se user è null
+
   const {
     saveComposition,
     message,
     setMessage,
-  } = useBodyCompositions();
+  } = useBodyCompositions(userId);
 
   const [formData, setFormData] = useState<BodyCompositionFormData>({
-    date: '',
-    weight: '',
-    height: '',
+    date: editRecord?.date || '',
+    weight: editRecord?.weight?.toString() || '',
+    height: editRecord?.height?.toString() || '',
   });
 
   const [errors, setErrors] = useState<{ [key in keyof BodyCompositionFormData]?: string }>({});
@@ -59,6 +68,12 @@ export function BodyCompositionForm() {
 
     saveComposition(dto);
   };
+
+  if (loading) return <Spinner />; // oppure <div>Loading...</div>
+
+  if (!user) {
+    return <Navigate to="/login" />;
+  }
 
   return (
     <Box margin="l">

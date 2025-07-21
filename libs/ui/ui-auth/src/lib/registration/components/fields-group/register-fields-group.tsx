@@ -1,14 +1,12 @@
 import { SpaceBetween } from '@cloudscape-design/components';
-import {
-  NameField,
-  SurnameField,
-  DateOfBirthField,
-  PlaceOfBirthField,
-  AddressField,
-  GenderField,
-  EmailField,
-  PasswordField,
-} from '@nextcart/ui-forms';
+import { AddressField } from './fields/address-field';
+import { NameField } from './fields/name-field';
+import { SurnameField } from './fields/surname-field';
+import { DateOfBirthField } from './fields/date-birth-field';
+import { PlaceOfBirthField } from './fields/place-of-birth-field';
+import { GenderField } from './fields/gender-field';
+import { EmailField } from './fields/email-field';
+import { PasswordField } from './fields/password-field';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Gender } from '@nextcart/enum';

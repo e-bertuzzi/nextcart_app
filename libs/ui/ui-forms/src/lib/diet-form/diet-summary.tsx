@@ -1,16 +1,26 @@
-import { Container, Box, Button, Flashbar } from '@cloudscape-design/components';
+import { Container, Box, Button, Flashbar, Spinner } from '@cloudscape-design/components';
 import { useDiets } from './hook/use-diets';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import { UserDietsTable } from './components/user-diet-table';
+import { useUser } from '@nextcart/ui-auth';
 
 export function DietSummary() {
-  const { selectedDiets, removeDiet, message, setMessage } = useDiets();
+  const { user, loading } = useUser();
+  const userId = user?.id;  // userId può essere undefined se user è null
+
+  const { selectedDiets, removeDiet, message, setMessage } = useDiets(userId);
   const navigate = useNavigate();
 
   const normalizedDiets = selectedDiets.map(diet => ({
     label: diet.label ?? 'N/A',
     value: Number(diet.value),
   }));
+
+  if (loading) return <Spinner />; // oppure <div>Loading...</div>
+  
+    if (!user) {
+      return <Navigate to="/login" />;
+    }
 
   return (
     <Container header={

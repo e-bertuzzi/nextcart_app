@@ -1,11 +1,21 @@
 import { useHealthConditions } from '../health-conditions-form/hook/use-health-conditions';
 import { UserHealthConditionsTable } from '../health-conditions-form/components/user-health-condition-table';
-import { Button, Container, Box, Flashbar, SpaceBetween } from '@cloudscape-design/components';
-import { useNavigate } from 'react-router-dom';
+import { Button, Container, Box, Flashbar, SpaceBetween, Spinner } from '@cloudscape-design/components';
+import { Navigate, useNavigate } from 'react-router-dom';
+import { useUser } from '@nextcart/ui-auth'
 
 export function HealthSummary() {
-  const { userHealthConditions, removeCondition, message, setMessage } = useHealthConditions();
+  const { user, loading } = useUser();
+  const userId = user?.id;  // userId può essere undefined se user è null
+  
+  const { userHealthConditions, removeCondition, message, setMessage } = useHealthConditions(userId);
   const navigate = useNavigate();
+
+  if (loading) return <Spinner />; // oppure <div>Loading...</div>
+  
+    if (!user) {
+      return <Navigate to="/login" />;
+    }
 
   return (
     <Box margin="l">

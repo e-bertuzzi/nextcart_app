@@ -39,9 +39,8 @@ export function App() {
             <Route path="/body-composition" element={<BodyPage/>} />
             <Route path="/body-composition/edit" element={<BodyEdit/>} />
           </Route>
-
-          <Route path="*" element={<NotFoundPage />} />
         </Route>
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </UserProvider>
   );

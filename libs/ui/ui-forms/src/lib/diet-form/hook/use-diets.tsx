@@ -8,7 +8,7 @@ import {
 import { SelectProps } from '@cloudscape-design/components';
 import { useNavigate } from 'react-router-dom';
 
-export function useDiets(userId = 1) {
+export function useDiets(userId: number | undefined) {
   const [selectedDiets, setSelectedDiets] = useState<SelectProps.Option[]>([]);
   const [availableDiets, setAvailableDiets] = useState<SelectProps.Option[]>([]);
   const [message, setMessage] = useState<any>(null);

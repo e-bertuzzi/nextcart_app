@@ -1,17 +1,17 @@
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { api } from '@nextcart/http';
 
-export async function getUserBodyCompositions(userId: number) {
+export async function getUserBodyCompositions(userId: number | undefined) {
   const res = await api.get(`/body-composition/users/${userId}`);
   return res.data;
 }
 
-export async function getBodyCompositionByDate(userId: number, date: string) {
+export async function getBodyCompositionByDate(userId: number | undefined, date: string) {
   const res = await api.get(`/body-composition/users/${userId}/${date}`);
   return res.data;
 }
 
-export async function createOrUpdateBodyComposition(userId: number, dto: {
+export async function createOrUpdateBodyComposition(userId: number | undefined, dto: {
   date: string | Date;
   weight?: number;
   height?: number;
@@ -19,6 +19,6 @@ export async function createOrUpdateBodyComposition(userId: number, dto: {
   return api.post(`/body-composition/users/${userId}`, dto);
 }
 
-export async function deleteBodyCompositionByDate(userId: number, date: string) {
+export async function deleteBodyCompositionByDate(userId: number | undefined, date: string) {
   return api.delete(`/body-composition/users/${userId}/${date}`);
 }

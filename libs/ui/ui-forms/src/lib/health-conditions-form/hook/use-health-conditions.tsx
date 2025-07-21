@@ -8,7 +8,7 @@ import {
 import { SelectProps } from '@cloudscape-design/components';
 import { useNavigate } from 'react-router-dom';
 
-export function useHealthConditions(userId = 1) {
+export function useHealthConditions(userId: number | undefined) {
   const [selectedAgeCondition, setSelectedAgeCondition] = useState<SelectProps.Option | null>(null);
   const [selectedPathologies, setSelectedPathologies] = useState<SelectProps.Option[]>([]);
   const [selectedPhysStates, setSelectedPhysStates] = useState<SelectProps.Option[]>([]);
