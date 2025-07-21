@@ -8,6 +8,7 @@ import { ProfileModule } from '@nextcart/profile';
 import { HealthConditionModule } from '@nextcart/health-conditions'; 
 import { ConfigModule } from '@nestjs/config';
 import { DietModule } from '@nextcart/diet'
+import { BodyComposition } from 'libs/api/models/src/lib/body-composition/body-composition.entity';
 
 @Module({
   imports: [
@@ -19,7 +20,7 @@ import { DietModule } from '@nextcart/diet'
       password: 'utente123',
       database: 'nextcart',
       entities: [Consumer, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, Diet,
-        DietIncompatibility
+        DietIncompatibility, BodyComposition
       ],
       synchronize: true,
       logging: true,

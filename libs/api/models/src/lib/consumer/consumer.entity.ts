@@ -4,11 +4,13 @@ import {
   PrimaryGeneratedColumn,
   ManyToMany,
   JoinTable,
+  OneToMany
   //ManyToOne,
 } from 'typeorm';
 import { Gender, Role } from '@nextcart/enum';
 import { HealthCondition } from '../health-condition/health-condition.entity';
 import { Diet } from '../diet/diet.entity';
+import { BodyComposition } from '../body-composition/body-composition.entity';
 
 @Entity()
 export class Consumer {
@@ -61,6 +63,9 @@ export class Consumer {
   })
   @JoinTable() // Necessario solo su un lato per indicare la tabella pivot
   diets: Diet[] | undefined;
+
+  @OneToMany(() => BodyComposition, (bc) => bc.consumer)
+  bodyCompositions?: BodyComposition[];
 
   //@ManyToOne(() => Family, (family) => family.members, { nullable: true })
   //family?: Family;
