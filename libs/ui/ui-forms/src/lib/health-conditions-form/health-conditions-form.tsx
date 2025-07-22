@@ -70,16 +70,23 @@ export function HealthForm() {
             {step >= 2 && (
               <PathologyMultiselect
                 selected={selectedPathologies}
-                options={pathologies}
+                options={[{ value: '0', label: 'No pathology' }, ...pathologies]}
                 onChange={(opts) => {
-                  setSelectedPathologies(opts);
+                  const hasNone = opts.some(o => o.value === '0');
+
+                  if (hasNone) {
+                    setSelectedPathologies([opts.find(o => o.value === '0')!]);
+                  } else {
+                    setSelectedPathologies(opts.filter(o => o.value !== '0'));
+                  }
                   setStep(3);
                   setSelectedPhysStates([]);
                 }}
               />
+
             )}
 
-            {step >= 3 && (
+            {step >= 3 && physStates.length > 0 && (
               <PhysiologicalStateMultiselect
                 selected={selectedPhysStates}
                 options={physStates}
