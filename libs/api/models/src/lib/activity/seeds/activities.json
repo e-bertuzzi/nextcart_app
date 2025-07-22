@@ -1,0 +1,4916 @@
+[
+  {
+    "activityId": 1003,
+    "met": 14.0,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, montagna, in salita, sforzo vigoroso"
+  },
+  {
+    "activityId": 1004,
+    "met": 16.0,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, montagna, corsa"
+  },
+  {
+    "activityId": 1008,
+    "met": 8.5,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, BMX"
+  },
+  {
+    "activityId": 1009,
+    "met": 8.5,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, montagna, generale"
+  },
+  {
+    "activityId": 1010,
+    "met": 4.0,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, <16 km/h, ricreativo, per recarsi a lavoro o per piacere (Codice Taylor 115)"
+  },
+  {
+    "activityId": 1011,
+    "met": 6.8,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, da/verso il posto di lavoro, al proprio ritmo"
+  },
+  {
+    "activityId": 1013,
+    "met": 5.8,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, su sterrato o strada agricola, ritmo moderato"
+  },
+  {
+    "activityId": 1015,
+    "met": 7.5,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, generale"
+  },
+  {
+    "activityId": 1018,
+    "met": 3.5,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, ricreativo, 9"
+  },
+  {
+    "activityId": 1019,
+    "met": 5.8,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, ricreativo, 15 km/h"
+  },
+  {
+    "activityId": 1020,
+    "met": 6.8,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, 16–19,2 km/h, ricreativo, lentamente, sforzo leggero"
+  },
+  {
+    "activityId": 1030,
+    "met": 8.0,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, 19,3–22,4 km/h, ricreativo, sforzo moderato"
+  },
+  {
+    "activityId": 1040,
+    "met": 10.0,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, 22,6–25,6 km/h, corsa o per piacere, veloce, sforzo vigoroso"
+  },
+  {
+    "activityId": 1050,
+    "met": 12.0,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, 25,7–30,6 km/h, corsa/no drafting o >30,6 km/h drafting, molto veloce, gara generale"
+  },
+  {
+    "activityId": 1060,
+    "met": 15.8,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, >32 km/h,"
+  },
+  {
+    "activityId": 1065,
+    "met": 8.5,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, 19,3 km/h, seduto, con le mani poste sui copricomandi o in impugnatura bassa, 80 rpm"
+  },
+  {
+    "activityId": 1066,
+    "met": 9.0,
+    "activityType": "Ciclismo",
+    "specificActivity": "Ciclismo, 19,3 km/h, in piedi, con"
+  },
+  {
+    "activityId": 1070,
+    "met": 5.0,
+    "activityType": "Ciclismo",
+    "specificActivity": "Andare in monociclo"
+  },
+  {
+    "activityId": 2001,
+    "met": 2.3,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Attività realizzate con l’ausilio di videogiochi (es. Wii Fit), sforzo leggero (es. esercizi di equilibrio, yoga)"
+  },
+  {
+    "activityId": 2003,
+    "met": 3.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Attività realizzate con l’ausilio di videogiochi (es. Wii Fit), sforzo moderato (es. aerobica, esercizi di resistenza)"
+  },
+  {
+    "activityId": 2005,
+    "met": 7.2,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Attività realizzate con l’ausilio dei videogiochi e sale da gioco (es. Exergaming, Dance Dance Revolution) sforzo vigoroso"
+  },
+  {
+    "activityId": 2008,
+    "met": 5.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Percorsi ad ostacoli come quelli utilizzati nell’addestramento militare, programma di allenamento all’aperto"
+  },
+  {
+    "activityId": 2010,
+    "met": 7.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Ciclismo, stazionario, generale"
+  },
+  {
+    "activityId": 2011,
+    "met": 3.5,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Ciclismo, stazionario, 30-50 watt, sforzo molto leggero"
+  },
+  {
+    "activityId": 2012,
+    "met": 6.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Ciclismo, stazionario, 90-100 watt, sforzo da moderato a vigoroso"
+  },
+  {
+    "activityId": 2013,
+    "met": 8.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Ciclismo, stazionario, 101-160 watt, sforzo"
+  },
+  {
+    "activityId": 2014,
+    "met": 11.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Ciclismo, stazionario, 161-200 watt, sforzo vigoroso"
+  },
+  {
+    "activityId": 2015,
+    "met": 14.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Ciclismo, stazionario, 201-270 watt, sforzo molto vigoroso"
+  },
+  {
+    "activityId": 2017,
+    "met": 4.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Ciclismo, stazionario, 51-89 watt, sforzo da leggero a moderato"
+  },
+  {
+    "activityId": 2019,
+    "met": 8.5,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Ciclismo, stazionario, RPM/spinning"
+  },
+  {
+    "activityId": 2020,
+    "met": 8.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Calistenici, (es. piegamenti sulle braccia, addominali sit up, trazioni, jumping jacks), sforzo vigoroso"
+  },
+  {
+    "activityId": 2022,
+    "met": 3.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Calistenici, (es. piegamenti, addominali sit up, trazioni, affondi), sforzo moderato"
+  },
+  {
+    "activityId": 2024,
+    "met": 2.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Calistenici, (es. addominali sit up, addominali crunch), sforzo leggero"
+  },
+  {
+    "activityId": 2030,
+    "met": 3.5,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Calistenici, sforzo leggero o moderato, generale (ad esempio esercizi per la schiena), andando su e giù dal pavimento (Codice Taylor 150)"
+  },
+  {
+    "activityId": 2035,
+    "met": 4.3,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Circuit training, sforzo moderato"
+  },
+  {
+    "activityId": 2040,
+    "met": 8.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Circuit training, con kettlebell, esercizi aerobici svolti con un breve recupero, generale, intensità vigorosa"
+  },
+  {
+    "activityId": 2045,
+    "met": 3.5,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "CurvesTM programma di esercizi per donne"
+  },
+  {
+    "activityId": 2048,
+    "met": 5.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Ellittica, sforzo moderato"
+  },
+  {
+    "activityId": 2050,
+    "met": 6.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Allenamento di resistenza (sollevamento pesi, pesi liberi, nautilus o universale), power lifting o body building, sforzo vigoroso (Codice Taylor 210)"
+  },
+  {
+    "activityId": 2052,
+    "met": 5.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Allenamento di resistenza (incremento massa), squat, contrazioni lente o esplosive"
+  },
+  {
+    "activityId": 2054,
+    "met": 3.5,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Allenamento di resistenza (incremento massa), esercizi diversi, 8-15 rip. a carico variabile"
+  },
+  {
+    "activityId": 2060,
+    "met": 5.5,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Esercizi eseguiti in un centro fitness, generale (Codice Taylor 160)"
+  },
+  {
+    "activityId": 2061,
+    "met": 5.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Esercizi eseguiti in un centro fitness, generale, fitness/allenamento con i pesi in un’unica seduta"
+  },
+  {
+    "activityId": 2062,
+    "met": 7.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Esercizi in un centro benessere, attività di condizionamento"
+  },
+  {
+    "activityId": 2064,
+    "met": 3.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Esercizi a casa, generale"
+  },
+  {
+    "activityId": 2065,
+    "met": 9.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Stepper - tapis roulant, generale"
+  },
+  {
+    "activityId": 2068,
+    "met": 12.3,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Saltelli con la corda, generale"
+  },
+  {
+    "activityId": 2070,
+    "met": 6.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Vogatore, ergometro stazionario, generale, sforzo vigoroso"
+  },
+  {
+    "activityId": 2071,
+    "met": 4.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Vogatore, stazionario, generale, sforzo moderato"
+  },
+  {
+    "activityId": 2072,
+    "met": 7.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Vogatore, stazionario, 100 watt, sforzo moderato"
+  },
+  {
+    "activityId": 2073,
+    "met": 8.5,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Vogatore, stazionario, 150 watt, sforzo vigoroso"
+  },
+  {
+    "activityId": 2074,
+    "met": 12.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Vogatore, stazionario, 200 watt, sforzo estremamente vigoroso"
+  },
+  {
+    "activityId": 2080,
+    "met": 6.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Simulatore di sci, generale"
+  },
+  {
+    "activityId": 2085,
+    "met": 11.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Tappeto per scivolamenti laterali, generale"
+  },
+  {
+    "activityId": 2090,
+    "met": 6.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Slimnastics, jazzercise"
+  },
+  {
+    "activityId": 2101,
+    "met": 2.3,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Stretching, dolce"
+  },
+  {
+    "activityId": 2105,
+    "met": 3.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Pilates, generale"
+  },
+  {
+    "activityId": 2110,
+    "met": 6.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Insegnare esercizi ad un gruppo (es. aerobica, acquagym)"
+  },
+  {
+    "activityId": 2112,
+    "met": 2.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Esercizi terapeutici con palla, esercizi con la fitball"
+  },
+  {
+    "activityId": 2115,
+    "met": 2.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Esercizi con la parte superiore del corpo, ergometro a braccia"
+  },
+  {
+    "activityId": 2117,
+    "met": 4.3,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Esercizi con la parte superiore del corpo, cyclette – Airdyne (solo braccia) 40 rpm, intensità moderata"
+  },
+  {
+    "activityId": 2120,
+    "met": 5.3,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Aerobica in acqua, calistenici in acqua, esercizi in acqua"
+  },
+  {
+    "activityId": 2135,
+    "met": 1.3,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Idromassaggio, seduto"
+  },
+  {
+    "activityId": 2140,
+    "met": 2.3,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Video allenamenti, programmi TV di fitness, esercizi di condizionamento (es. yoga, stretching), sforzo leggero"
+  },
+  {
+    "activityId": 2143,
+    "met": 4.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Video allenamenti, programmi TV di fitness, esercizi di condizionamento (es. allenamento cardio-polmonare), sforzo moderato"
+  },
+  {
+    "activityId": 2146,
+    "met": 6.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Video allenamenti, programmi TV di fitness, esercizi di condizionamento (es. allenamento cardio-polmonare), sforzo intenso"
+  },
+  {
+    "activityId": 2150,
+    "met": 2.5,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Yoga, Hata"
+  },
+  {
+    "activityId": 2160,
+    "met": 4.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Yoga, Power"
+  },
+  {
+    "activityId": 2170,
+    "met": 2.0,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Yoga, Nadisodhana"
+  },
+  {
+    "activityId": 2180,
+    "met": 3.3,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Yoga, Surya Namaskar"
+  },
+  {
+    "activityId": 2200,
+    "met": 5.3,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Attività motorie tipiche della Nuova Zelanda, (es. Haka Powhiri, Moteatea, Waita Tira, Whakawatea, ecc.), generale, sforzo moderato"
+  },
+  {
+    "activityId": 2205,
+    "met": 6.8,
+    "activityType": "Esercizi di condizionamento",
+    "specificActivity": "Attività motorie tipiche della Nuova Zelanda (es. Haka, Taiahab) generale, sforzo vigoroso"
+  },
+  {
+    "activityId": 3010,
+    "met": 5.0,
+    "activityType": "Danza",
+    "specificActivity": "Danza classica, moderna o jazz, generale, prove o lezione"
+  },
+  {
+    "activityId": 3012,
+    "met": 6.8,
+    "activityType": "Danza",
+    "specificActivity": "Danza classica, moderna o jazz, rappresentazione, sforzo vigoroso"
+  },
+  {
+    "activityId": 3014,
+    "met": 4.8,
+    "activityType": "Danza",
+    "specificActivity": "Tip tap"
+  },
+  {
+    "activityId": 3015,
+    "met": 7.3,
+    "activityType": "Danza",
+    "specificActivity": "Aerobica, generale"
+  },
+  {
+    "activityId": 3016,
+    "met": 7.5,
+    "activityType": "Danza",
+    "specificActivity": "Aerobica, step, con uno step alto da 15 a 20 cm"
+  },
+  {
+    "activityId": 3017,
+    "met": 9.5,
+    "activityType": "Danza",
+    "specificActivity": "Aerobica, step, con uno step alto da 25 a 30 cm"
+  },
+  {
+    "activityId": 3018,
+    "met": 5.5,
+    "activityType": "Danza",
+    "specificActivity": "Aerobica, step, con uno step alto 10 cm"
+  },
+  {
+    "activityId": 3019,
+    "met": 8.5,
+    "activityType": "Danza",
+    "specificActivity": "Lezione di step, generale"
+  },
+  {
+    "activityId": 3020,
+    "met": 5.0,
+    "activityType": "Danza",
+    "specificActivity": "Aerobica, a basso impatto"
+  },
+  {
+    "activityId": 3021,
+    "met": 7.3,
+    "activityType": "Danza",
+    "specificActivity": "Aerobica, ad alto impatto"
+  },
+  {
+    "activityId": 3022,
+    "met": 10.0,
+    "activityType": "Danza",
+    "specificActivity": "Danza aerobica, sostenendo un peso di 4,5-7 kg"
+  },
+  {
+    "activityId": 3030,
+    "met": 5.5,
+    "activityType": "Danza",
+    "specificActivity": "Ballo da sala, veloce (Codice Taylor 125)"
+  },
+  {
+    "activityId": 3031,
+    "met": 7.8,
+    "activityType": "Danza",
+    "specificActivity": "Danza generale (es. disco, folk, step dancing irlandese, balli di gruppo, polka, contra, country)"
+  },
+  {
+    "activityId": 3038,
+    "met": 11.3,
+    "activityType": "Danza",
+    "specificActivity": "Ballo liscio, competizione, generale"
+  },
+  {
+    "activityId": 3040,
+    "met": 3.0,
+    "activityType": "Danza",
+    "specificActivity": "Ballo liscio, lento (es. valzer, foxtrot, balli lenti, samba, tango, balli del 19° secolo, mambo, chacha)"
+  },
+  {
+    "activityId": 3050,
+    "met": 5.5,
+    "activityType": "Danza",
+    "specificActivity": "Anishinaabe Jingle ballo"
+  },
+  {
+    "activityId": 3060,
+    "met": 3.5,
+    "activityType": "Danza",
+    "specificActivity": "Balli caraibici (Abakua, Beguine, Bellair, Bongo, Brukin’s, Caribbean Quadrills, Dinki Mini, Gere, Gumbay, Ibo, Jonkonnu, Kumina, Oreisha, Jambu)"
+  },
+  {
+    "activityId": 4001,
+    "met": 3.5,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca, generale"
+  },
+  {
+    "activityId": 4005,
+    "met": 4.5,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca, pesca del granchio"
+  },
+  {
+    "activityId": 4007,
+    "met": 4.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca, catturare il pesce con le mani"
+  },
+  {
+    "activityId": 4010,
+    "met": 4.3,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Attività connesse alla pesca, scavare per trovare i vermi, con vanga"
+  },
+  {
+    "activityId": 4020,
+    "met": 4.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca in riva al fiume e camminare"
+  },
+  {
+    "activityId": 4030,
+    "met": 2.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca dalla barca o in canoa, seduto"
+  },
+  {
+    "activityId": 4040,
+    "met": 3.5,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca in riva al fiume, in piedi (Codice Taylor 660)"
+  },
+  {
+    "activityId": 4050,
+    "met": 6.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca nel fiume, nel guado (Codice Taylor 670)"
+  },
+  {
+    "activityId": 4060,
+    "met": 2.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca sul ghiaccio, seduti"
+  },
+  {
+    "activityId": 4061,
+    "met": 1.8,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca, a mosca o lenza, in piedi, generale"
+  },
+  {
+    "activityId": 4062,
+    "met": 3.5,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca con guadino, posizionarlo e recuperare il pesce, generale"
+  },
+  {
+    "activityId": 4063,
+    "met": 3.8,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca con rete, posizionarla e recuperare il pesce, generale"
+  },
+  {
+    "activityId": 4064,
+    "met": 3.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca con rete a mulinello, posizionare la rete e recuperare il pesce, generale"
+  },
+  {
+    "activityId": 4065,
+    "met": 2.3,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Pesca con lancia, in piedi"
+  },
+  {
+    "activityId": 4070,
+    "met": 2.5,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia, arco e frecce o balestra"
+  },
+  {
+    "activityId": 4080,
+    "met": 6.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia cervi, alci, selvaggina di grandi dimensioni (caccia grossa) (Codice Taylor 170)"
+  },
+  {
+    "activityId": 4081,
+    "met": 11.3,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia grossa, trascinare la carcassa"
+  },
+  {
+    "activityId": 4083,
+    "met": 4.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia di animali marini di grandi dimensioni"
+  },
+  {
+    "activityId": 4085,
+    "met": 2.5,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia grossa, da una postazione di caccia, movimenti limitati"
+  },
+  {
+    "activityId": 4086,
+    "met": 2.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia selvaggina di grosse dimensioni, da una macchina, da un aereo o in barca"
+  },
+  {
+    "activityId": 4090,
+    "met": 2.5,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia all’anatra, nel guado"
+  },
+  {
+    "activityId": 4095,
+    "met": 3.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia, volpe volante, scoiattolo"
+  },
+  {
+    "activityId": 4100,
+    "met": 5.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia, generale"
+  },
+  {
+    "activityId": 4110,
+    "met": 6.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia, fagiani o pernici (Codice Taylor 680)"
+  },
+  {
+    "activityId": 4115,
+    "met": 3.3,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia, uccelli"
+  },
+  {
+    "activityId": 4120,
+    "met": 5.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia, conigli, scoiattoli, polli ruspanti, procioni, piccola selvaggina (Codice Taylor 690)"
+  },
+  {
+    "activityId": 4123,
+    "met": 3.3,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia, cinghiale"
+  },
+  {
+    "activityId": 4124,
+    "met": 2.0,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Intrappolare, generale"
+  },
+  {
+    "activityId": 4125,
+    "met": 9.5,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Caccia, escursioni trasportando l’attrezzatura da caccia"
+  },
+  {
+    "activityId": 4130,
+    "met": 2.5,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Tiro con la pistola o tiro al piattello, in piedi"
+  },
+  {
+    "activityId": 4140,
+    "met": 2.3,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Esercitazione di tiro con fucile, disteso"
+  },
+  {
+    "activityId": 4145,
+    "met": 2.5,
+    "activityType": "Pesca e caccia",
+    "specificActivity": "Esercitazione di tiro con fucile, in ginocchio o in piedi"
+  },
+  {
+    "activityId": 5010,
+    "met": 3.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Pulizie, spazzare il tappeto, pulizia pavimenti, generale"
+  },
+  {
+    "activityId": 5011,
+    "met": 2.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Pulizie, spazzare, lentamente, sforzo leggero"
+  },
+  {
+    "activityId": 5012,
+    "met": 3.8,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Pulizie, spazzare, lentamente, sforzo moderato"
+  },
+  {
+    "activityId": 5020,
+    "met": 3.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Pulizie, grandi o maggiori (es. lavare auto, lavare vetri, lavare il garage), sforzo moderato"
+  },
+  {
+    "activityId": 5021,
+    "met": 3.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Pulizie, passare lo straccio, lavare, asciugare, sforzo moderato"
+  },
+  {
+    "activityId": 5022,
+    "met": 3.2,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Pulizia finestre, lavaggio finestre, generale"
+  },
+  {
+    "activityId": 5023,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Passare lo straccio per lavare o asciugare, sforzo leggero"
+  },
+  {
+    "activityId": 5024,
+    "met": 4.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Lucidare i pavimenti, camminando lentamente, utilizzando una macchina lucida pavimenti"
+  },
+  {
+    "activityId": 5025,
+    "met": 2.8,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Svolgere tutte le faccende domestiche in una volta sola, sforzo leggero"
+  },
+  {
+    "activityId": 5026,
+    "met": 3.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Svolgere tutte le faccende domestiche in una volta sola, sforzo"
+  },
+  {
+    "activityId": 5027,
+    "met": 4.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Svolgere tutte le faccende domestiche in una volta sola, sforzo vigoroso"
+  },
+  {
+    "activityId": 5030,
+    "met": 3.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Pulizie, casa o bungalow, generale, sforzo moderato"
+  },
+  {
+    "activityId": 5032,
+    "met": 2.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Spolverare o lucidare i mobili, generale"
+  },
+  {
+    "activityId": 5035,
+    "met": 3.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Attività di cucina (es. cucinare, lavare i piatti) sforzo moderato"
+  },
+  {
+    "activityId": 5040,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Pulizie, generale (spolverare, sistemare, cambio biancheria, spazzare il pavimento)"
+  },
+  {
+    "activityId": 5041,
+    "met": 1.8,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Lavare i piatti, in piedi o in generale (non suddiviso nella componente in movimento/da fermi)"
+  },
+  {
+    "activityId": 5042,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Lavare i piatti, sparecchiare il tavolo , muovendosi, sforzo leggero"
+  },
+  {
+    "activityId": 5043,
+    "met": 3.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Passare l’aspirapolvere"
+  },
+  {
+    "activityId": 5044,
+    "met": 3.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Macellare animali, piccoli"
+  },
+  {
+    "activityId": 5045,
+    "met": 6.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Macellare animali, grandi, sforzo vigoroso"
+  },
+  {
+    "activityId": 5046,
+    "met": 2.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Tagliare e affumicare il pesce, mettere ad essiccare pesce o carne"
+  },
+  {
+    "activityId": 5048,
+    "met": 4.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Conciare, generale"
+  },
+  {
+    "activityId": 5049,
+    "met": 3.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Cottura e preparazione degli alimenti, sforzo moderato"
+  },
+  {
+    "activityId": 5050,
+    "met": 2.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Cottura o preparazione degli alimenti - in piedi o seduti o in generale (non suddiviso nella componente in movimento/da fermi), utilizzando apparecchiature elettriche, sforzo leggero)"
+  },
+  {
+    "activityId": 5051,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Servire gli alimenti, apparecchiare la tavola, muovendosi o in piedi"
+  },
+  {
+    "activityId": 5052,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Cottura o preparazione dei cibi, muovendosi"
+  },
+  {
+    "activityId": 5053,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Dar da mangiare agli animali domestici"
+  },
+  {
+    "activityId": 5055,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Fare la spesa (es. trasportare i generi alimentari, fare la spesa senza carrello), trasportarele buste della spesa"
+  },
+  {
+    "activityId": 5056,
+    "met": 7.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Trasportare la spesa su per le scale"
+  },
+  {
+    "activityId": 5057,
+    "met": 3.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Cuocere il pane indiano fuori all’aperto su una brace"
+  },
+  {
+    "activityId": 5060,
+    "met": 2.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Fare la spesa"
+  },
+  {
+    "activityId": 5065,
+    "met": 2.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Fare la spesa non di alimenti, in piedi o camminando"
+  },
+  {
+    "activityId": 5070,
+    "met": 1.8,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Stirare"
+  },
+  {
+    "activityId": 5080,
+    "met": 1.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Lavorare a maglia, cucire, confezionare regali, seduta"
+  },
+  {
+    "activityId": 5082,
+    "met": 2.8,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Cucire, lavoro a macchina"
+  },
+  {
+    "activityId": 5090,
+    "met": 2.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Fare il bucato, piegare o appendere i vestiti , mettere i vestiti nella lavatrice o nella valigia, lavare i panni a mano, in piedi, sforzo leggero"
+  },
+  {
+    "activityId": 5092,
+    "met": 4.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Fare il bucato, lavare i panni a mano, sforzo moderato"
+  },
+  {
+    "activityId": 5095,
+    "met": 2.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Fare il bucato,"
+  },
+  {
+    "activityId": 5100,
+    "met": 3.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Rifare il letto, cambio biancheria"
+  },
+  {
+    "activityId": 5110,
+    "met": 5.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Raccogliere e produrre lo sciroppo d’acero (trasportando secchi in legno)"
+  },
+  {
+    "activityId": 5120,
+    "met": 5.8,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Spostare mobili, oggetti domestici, trasportare scatole"
+  },
+  {
+    "activityId": 5121,
+    "met": 5.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Spostare, sollevare carichi leggeri"
+  },
+  {
+    "activityId": 5125,
+    "met": 4.8,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Riordinare una camera"
+  },
+  {
+    "activityId": 5130,
+    "met": 3.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Strofinare pavimenti, reggendosi sulle mani e sulle ginocchia, lavare il bagno, la vasca da bagno, sforzo moderato"
+  },
+  {
+    "activityId": 5131,
+    "met": 2.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Strofinare pavimenti, reggendosi sulle mani e sulle ginocchia, lavare il bagno, la vasca da bagno, sforzo leggero"
+  },
+  {
+    "activityId": 5132,
+    "met": 6.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Strofinare pavimenti, mantenendosi sulle mani e sulle ginocchia, lavare il bagno, la vasca da bagno, sforzo vigoroso"
+  },
+  {
+    "activityId": 5140,
+    "met": 4.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Spazzare il garage, il marciapiede o lo spazio antistante la propria abitazione"
+  },
+  {
+    "activityId": 5146,
+    "met": 3.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Imballare/disimballare scatole, in piedi, sollevando occasionalmente oggetti domestici leggeri, caricare o scaricare oggetti dall’automobile, sforzo moderato"
+  },
+  {
+    "activityId": 5147,
+    "met": 3.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Muovendosi, riporre oggetti domestici, sforzo moderato"
+  },
+  {
+    "activityId": 5148,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Annaffiare le piante"
+  },
+  {
+    "activityId": 5149,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Accendere il camino"
+  },
+  {
+    "activityId": 5150,
+    "met": 9.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Trasporto di oggetti domestici al piano superiore , scatole o arredamenti"
+  },
+  {
+    "activityId": 5160,
+    "met": 2.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "In piedi, lavori di manutenzione (es. cambiare il tubo del gas, la lampadina, ecc.), sforzo leggero"
+  },
+  {
+    "activityId": 5165,
+    "met": 3.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Muovendosi, sforzi di intensità moderata, non di pulizie (predisporre per uscire di casa, chiudere/bloccare le porte, le finestre, ecc.)"
+  },
+  {
+    "activityId": 5170,
+    "met": 2.2,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Seduta, giocare con il/i bambino(i) , sforzo leggero, riferito solo al periodo di impegno effettivo"
+  },
+  {
+    "activityId": 5171,
+    "met": 2.8,
+    "activityType": "Attività domestiche",
+    "specificActivity": "In piedi, giocare con il/i bambino(i) , sforzo leggero, riferito solo al periodo di impegno effettivo"
+  },
+  {
+    "activityId": 5175,
+    "met": 3.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Camminare/correre, giocare con il/i bambino(i), ,"
+  },
+  {
+    "activityId": 5180,
+    "met": 5.8,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Camminare/correre, giocare con il/i bambino(i),"
+  },
+  {
+    "activityId": 5181,
+    "met": 3.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Camminare tendendo in braccio un bambino piccolo,"
+  },
+  {
+    "activityId": 5182,
+    "met": 2.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Camminare tenendo in braccio un bambino piccolo, peso del bambino inferiore a 7 kg"
+  },
+  {
+    "activityId": 5183,
+    "met": 2.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "In piedi, tendendo in braccio un bambino"
+  },
+  {
+    "activityId": 5184,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Accudire i bambini, neonato, generale"
+  },
+  {
+    "activityId": 5185,
+    "met": 2.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Accudire i bambini, seduti/in ginocchio (vestirli, fargli il bagno, prendersene cura, farli mangiare, prenderli in braccio occasionalmente) generale, sforzo leggero"
+  },
+  {
+    "activityId": 5186,
+    "met": 3.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Accudire i bambini, in piedi"
+  },
+  {
+    "activityId": 5188,
+    "met": 1.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Stare sdraiati con un bambino"
+  },
+  {
+    "activityId": 5189,
+    "met": 2.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Allattare, sedute o sdraiate"
+  },
+  {
+    "activityId": 5190,
+    "met": 2.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Seduta, giocare con gli animali, riferito solo al periodo di impegno effettivo, sforzo leggero"
+  },
+  {
+    "activityId": 5191,
+    "met": 2.8,
+    "activityType": "Attività domestiche",
+    "specificActivity": "In piedi, giocare con gli animali, riferito solo al periodo di impegno effettivo, sforzo"
+  },
+  {
+    "activityId": 5192,
+    "met": 3.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Camminare/correre, giocare con gli animali, riferito solo ai periodi di impegno effettivo, sforzo leggero"
+  },
+  {
+    "activityId": 5193,
+    "met": 4.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Camminare/correre, giocare con gli animali, riferito solo ai periodi di impegno effettivo, sforzo moderato"
+  },
+  {
+    "activityId": 5194,
+    "met": 5.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Camminare/correre, giocare con gli animali, riferito solo ai periodi di impegno effettivo, sforzo vigoroso"
+  },
+  {
+    "activityId": 5195,
+    "met": 3.5,
+    "activityType": "Attività domestiche",
+    "specificActivity": "In piedi, fare il bagno al cane"
+  },
+  {
+    "activityId": 5197,
+    "met": 2.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Accudire gli animali domestici, generale"
+  },
+  {
+    "activityId": 5200,
+    "met": 4.0,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Accudire gli anziani, adulti disabili, accompagnali in bagno, aiutarli a scendere e salire dal letto, riferito solo ai periodi di impegno effettivo"
+  },
+  {
+    "activityId": 5205,
+    "met": 2.3,
+    "activityType": "Attività domestiche",
+    "specificActivity": "Accudire gli anziani, adulti disabili, aiutarli a nutrirsi, pettinarli, riferito solo ai periodi di impegno effettivo, sforzo leggero"
+  },
+  {
+    "activityId": 6010,
+    "met": 3.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Riparazione aereo"
+  },
+  {
+    "activityId": 6020,
+    "met": 4.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Manutenzione carrozzeria automobile"
+  },
+  {
+    "activityId": 6030,
+    "met": 3.3,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Riparazione automobili, sforzo leggero o moderato"
+  },
+  {
+    "activityId": 6040,
+    "met": 3.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Carpenteria, nella bottega, generale (Codice Taylor 620)"
+  },
+  {
+    "activityId": 6050,
+    "met": 6.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Carpenteria, all’aperto, installazione di grondaie (Codice Taylor 640), carpenteria, costruire una recinzione"
+  },
+  {
+    "activityId": 6052,
+    "met": 3.8,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Carpenteria, all’aperto, costruire una recinzione"
+  },
+  {
+    "activityId": 6060,
+    "met": 3.3,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Falegnameria, finitura o restauro mobili"
+  },
+  {
+    "activityId": 6070,
+    "met": 6.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Falegnameria, segare un legno massiccio"
+  },
+  {
+    "activityId": 6072,
+    "met": 4.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Carpenteria, lavori di ristrutturazione della casa, sforzo moderato"
+  },
+  {
+    "activityId": 6074,
+    "met": 2.3,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Carpenteria, lavori di ristrutturazione della casa, sforzo leggero"
+  },
+  {
+    "activityId": 6080,
+    "met": 5.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Calafataggio, di costruzione in legno (baita)"
+  },
+  {
+    "activityId": 6090,
+    "met": 4.5,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Calafataggio, solo parte esterna"
+  },
+  {
+    "activityId": 6100,
+    "met": 5.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Pulizia grondaie"
+  },
+  {
+    "activityId": 6110,
+    "met": 5.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Scavare un garage (box di sabbia)"
+  },
+  {
+    "activityId": 6120,
+    "met": 5.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Mettere le doppie finestre"
+  },
+  {
+    "activityId": 6122,
+    "met": 5.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Mettere il cartongesso in casa"
+  },
+  {
+    "activityId": 6124,
+    "met": 3.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Martellare chiodi"
+  },
+  {
+    "activityId": 6126,
+    "met": 2.5,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Riparazioni domestiche, generale, sforzo leggero"
+  },
+  {
+    "activityId": 6127,
+    "met": 4.5,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Riparazioni domestiche, generale, sforzo moderato"
+  },
+  {
+    "activityId": 6128,
+    "met": 6.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Riparazioni domestiche, generale, sforzo vigoroso"
+  },
+  {
+    "activityId": 6130,
+    "met": 4.5,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Posa o rimozione di una moquette"
+  },
+  {
+    "activityId": 6140,
+    "met": 3.8,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Posa di piastrelle o di linoleum, riparazione elettrodomestici"
+  },
+  {
+    "activityId": 6144,
+    "met": 3.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Riparazione di elettrodomestici"
+  },
+  {
+    "activityId": 6150,
+    "met": 5.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Tinteggiare, parte esterna dell’abitazione (Codice Taylor 650)"
+  },
+  {
+    "activityId": 6160,
+    "met": 3.3,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Tinteggiare, in casa, tappezzare, raschiare la vernice"
+  },
+  {
+    "activityId": 6165,
+    "met": 4.5,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Tinteggiare (Codice Taylor 630)"
+  },
+  {
+    "activityId": 6167,
+    "met": 3.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Idraulica, generale"
+  },
+  {
+    "activityId": 6170,
+    "met": 3.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Mettere o togliere un telo-vela"
+  },
+  {
+    "activityId": 6180,
+    "met": 6.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Porre la copertura al tetto"
+  },
+  {
+    "activityId": 6190,
+    "met": 4.5,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Levigare i pavimenti con una levigatrice"
+  },
+  {
+    "activityId": 6200,
+    "met": 4.5,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Raschiare e verniciare una barca a vela o un motoscafo"
+  },
+  {
+    "activityId": 6205,
+    "met": 2.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Affilare utensili"
+  },
+  {
+    "activityId": 6210,
+    "met": 5.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Spargere la terra con una pala"
+  },
+  {
+    "activityId": 6220,
+    "met": 4.5,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Lavare e mettere la cera allo scafo di una barca a vela o ad un aereo"
+  },
+  {
+    "activityId": 6225,
+    "met": 2.0,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Lavare e mettere la cera all’automobile"
+  },
+  {
+    "activityId": 6230,
+    "met": 4.5,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Pulire la recinzione, tinteggiare la recinzione, sforzo moderato"
+  },
+  {
+    "activityId": 6240,
+    "met": 3.3,
+    "activityType": "Riparazioni domestiche",
+    "specificActivity": "Cablaggio, posizionare-collegare"
+  },
+  {
+    "activityId": 7010,
+    "met": 1.0,
+    "activityType": "Inattività",
+    "specificActivity": "Stare sdraiati in silenzio e guardare la televisione"
+  },
+  {
+    "activityId": 7011,
+    "met": 1.3,
+    "activityType": "Inattività",
+    "specificActivity": "Stare sdraiati in silenzio, senza far niente,"
+  },
+  {
+    "activityId": 7020,
+    "met": 1.3,
+    "activityType": "Inattività",
+    "specificActivity": "Stare seduti in silenzio"
+  },
+  {
+    "activityId": 7021,
+    "met": 1.3,
+    "activityType": "Inattività",
+    "specificActivity": "Stare seduti in silenzio, generale"
+  },
+  {
+    "activityId": 7022,
+    "met": 1.5,
+    "activityType": "Inattività",
+    "specificActivity": "Stare seduti in silenzio, muoversi, generale, giocherellare con le mani"
+  },
+  {
+    "activityId": 7023,
+    "met": 1.8,
+    "activityType": "Inattività",
+    "specificActivity": "Stare seduti, giocherellando con i piedi"
+  },
+  {
+    "activityId": 7024,
+    "met": 1.3,
+    "activityType": "Inattività",
+    "specificActivity": "Stare seduti, fumare"
+  },
+  {
+    "activityId": 7025,
+    "met": 1.5,
+    "activityType": "Inattività",
+    "specificActivity": "Stare seduti, ascoltare la musica (senza parlare o leggere) o guardare un film al cinema"
+  },
+  {
+    "activityId": 7026,
+    "met": 1.3,
+    "activityType": "Inattività",
+    "specificActivity": "Stare seduti ad una scrivania tenendo la testa appoggiata tra le mani"
+  },
+  {
+    "activityId": 7030,
+    "met": 1.0,
+    "activityType": "Inattività",
+    "specificActivity": "Dormire"
+  },
+  {
+    "activityId": 7040,
+    "met": 1.3,
+    "activityType": "Inattività",
+    "specificActivity": "Stare in piedi in silenzio, in piedi in fila"
+  },
+  {
+    "activityId": 7041,
+    "met": 1.8,
+    "activityType": "Inattività",
+    "specificActivity": "Stare in piedi, agitarsi"
+  },
+  {
+    "activityId": 7050,
+    "met": 1.3,
+    "activityType": "Inattività",
+    "specificActivity": "Stare reclinati, scrivere"
+  },
+  {
+    "activityId": 7060,
+    "met": 1.3,
+    "activityType": "Inattività",
+    "specificActivity": "Stare reclinati, conversare o parlare al telefono"
+  },
+  {
+    "activityId": 7070,
+    "met": 1.3,
+    "activityType": "Inattività",
+    "specificActivity": "Stare reclinati, leggere"
+  },
+  {
+    "activityId": 7075,
+    "met": 1.0,
+    "activityType": "Inattività",
+    "specificActivity": "Meditare"
+  },
+  {
+    "activityId": 8009,
+    "met": 3.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Trasportare, caricare o accatastare la legna, caricare/scaricare o trasportare il legname, sforzo da leggero a moderato"
+  },
+  {
+    "activityId": 8010,
+    "met": 5.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Trasportare, caricare o accatastare la legna, caricare/scaricare o trasportare il legname"
+  },
+  {
+    "activityId": 8019,
+    "met": 4.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Tagliare la legna, spaccare i tronchi, sforzo moderato"
+  },
+  {
+    "activityId": 8020,
+    "met": 6.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Tagliare la legna, spaccare i tronchi, sforzo vigoroso"
+  },
+  {
+    "activityId": 8025,
+    "met": 3.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Pulire con una spazzola leggera, tosatura giardino, sforzo moderato"
+  },
+  {
+    "activityId": 8030,
+    "met": 6.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Rastrellare, ripulire il giardino, trasportare detriti o terra, rami, utilizzando una carriola, sforzo vigoroso"
+  },
+  {
+    "activityId": 8040,
+    "met": 5.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Creare una sabbionaia, spalare la sabbia"
+  },
+  {
+    "activityId": 8045,
+    "met": 3.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Scavare, spalare, riempire il giardino, disseminare il concime, sforzo da leggero a moderato"
+  },
+  {
+    "activityId": 8050,
+    "met": 5.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Scavare, spalare, riempire il giardino, disseminare il concime (Codice Taylor 590)"
+  },
+  {
+    "activityId": 8052,
+    "met": 7.8,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Scavare, spalare, riempire il giardino, disseminare il concime, sforzo vigoroso"
+  },
+  {
+    "activityId": 8055,
+    "met": 2.8,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Guidare il trattore"
+  },
+  {
+    "activityId": 8057,
+    "met": 8.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Abbattere alberi di grandi dimensioni"
+  },
+  {
+    "activityId": 8058,
+    "met": 5.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Abbattere alberi di piccole-medie dimensioni"
+  },
+  {
+    "activityId": 8060,
+    "met": 5.8,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Fare giardinaggio con macchine utensili pesanti, coltivare il giardino, utilizzare una motosega"
+  },
+  {
+    "activityId": 8065,
+    "met": 2.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Fare giardinaggio, utilizzando dei contenitori, persone di età >60 anni"
+  },
+  {
+    "activityId": 8070,
+    "met": 4.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Canali di irrigazione, apertura e chiusura condotte"
+  },
+  {
+    "activityId": 8080,
+    "met": 6.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Posa del pietrisco"
+  },
+  {
+    "activityId": 8090,
+    "met": 5.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Posa di zolle erbose"
+  },
+  {
+    "activityId": 8095,
+    "met": 5.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Tosare il prato, generale"
+  },
+  {
+    "activityId": 8100,
+    "met": 2.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Tosare il prato, guidare un tosaerba (Codice Taylor 550)"
+  },
+  {
+    "activityId": 8110,
+    "met": 6.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Tosare il prato, camminare, spingere un tosaerba (Codice Taylor 570)"
+  },
+  {
+    "activityId": 8120,
+    "met": 5.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Falciare il prato, camminare, condurre un tosaerba a motore, sforzo moderato o vigoroso"
+  },
+  {
+    "activityId": 8125,
+    "met": 4.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Falciare il prato, condurre un tosaerba a motore, sforzo leggero o moderato (Codice Taylor 590)"
+  },
+  {
+    "activityId": 8130,
+    "met": 2.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Condurre uno spalaneve, camminare"
+  },
+  {
+    "activityId": 8135,
+    "met": 2.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Seminare, rinvasare, piantine o piante, sforzo leggero"
+  },
+  {
+    "activityId": 8140,
+    "met": 4.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Porre a dimora, arbusti, stando curvi, sforzo moderato"
+  },
+  {
+    "activityId": 8145,
+    "met": 4.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Piantare le colture o il prato, stando curvi, sforzo moderato"
+  },
+  {
+    "activityId": 8150,
+    "met": 4.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Piantare alberi"
+  },
+  {
+    "activityId": 8160,
+    "met": 3.8,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Rastrellare le foglie o il prato, sforzo moderato"
+  },
+  {
+    "activityId": 8165,
+    "met": 4.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Rastrellare il prato (Codice Taylor 600)"
+  },
+  {
+    "activityId": 8170,
+    "met": 4.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Togliere la neve dal tetto con un rastrello"
+  },
+  {
+    "activityId": 8180,
+    "met": 3.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Guidare uno spazzaneve"
+  },
+  {
+    "activityId": 8190,
+    "met": 4.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Raccogliere l’erba in un sacco, foglie"
+  },
+  {
+    "activityId": 8192,
+    "met": 5.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Spalare la terra o il fango"
+  },
+  {
+    "activityId": 8195,
+    "met": 5.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Spalare la neve, a mano, sforzo moderato"
+  },
+  {
+    "activityId": 8200,
+    "met": 6.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Spalare la neve, a mano"
+  },
+  {
+    "activityId": 8202,
+    "met": 7.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Spalare la neve, a mano, sforzo vigoroso"
+  },
+  {
+    "activityId": 8210,
+    "met": 4.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Tagliare gli arbusti o gli alberi, con una sega manuale"
+  },
+  {
+    "activityId": 8215,
+    "met": 3.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Tagliare gli arbusti o gli alberi, con una motosega, ripulire dalle foglie con un soffiatore, usare un decespugliatore, sforzo moderato"
+  },
+  {
+    "activityId": 8220,
+    "met": 3.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Camminare, applicare il concime o seminare il prato, spingere l’applicatore"
+  },
+  {
+    "activityId": 8230,
+    "met": 1.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Irrigare il prato o il giardino, in piedi o camminando"
+  },
+  {
+    "activityId": 8239,
+    "met": 3.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Diserbare, coltivare il giardino, sforzo da lieve a moderato"
+  },
+  {
+    "activityId": 8240,
+    "met": 4.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Diserbare, coltivare il giardino (Codice Taylor 580)"
+  },
+  {
+    "activityId": 8241,
+    "met": 5.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Diserbare, coltivare il giardino, con una zappa, sforzo da moderato a vigoroso"
+  },
+  {
+    "activityId": 8245,
+    "met": 3.8,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Giardinaggio, generale, sforzo moderato"
+  },
+  {
+    "activityId": 8246,
+    "met": 3.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Raccogliere i frutti dagli alberi, raccogliere frutta/verdura, sforzo moderato"
+  },
+  {
+    "activityId": 8248,
+    "met": 4.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Raccogliere i frutti dagli alberi, spigolare la frutta, raccogliere frutta/verdura, utilizzando una scala per salire, sforzo vigoroso"
+  },
+  {
+    "activityId": 8250,
+    "met": 3.3,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Compreso camminare/stare in piedi - raccogliere dal giardino, sforzo leggero,"
+  },
+  {
+    "activityId": 8251,
+    "met": 3.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Raccogliere gli attrezzi da giardinaggio"
+  },
+  {
+    "activityId": 8255,
+    "met": 5.5,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Carriola, spingere il carrello da giardino o la carriola"
+  },
+  {
+    "activityId": 8260,
+    "met": 3.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Lavorare il giardino, generale, sforzo leggero"
+  },
+  {
+    "activityId": 8261,
+    "met": 4.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Lavorare il giardino, generale, sforzo moderato"
+  },
+  {
+    "activityId": 8262,
+    "met": 6.0,
+    "activityType": "Prato e giardino",
+    "specificActivity": "Lavorare il giardino, generale, sforzo vigoroso"
+  },
+  {
+    "activityId": 9000,
+    "met": 1.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "Giocare a giochi da tavolo, seduti"
+  },
+  {
+    "activityId": 9005,
+    "met": 2.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "Giocare al casinò, in piedi"
+  },
+  {
+    "activityId": 9010,
+    "met": 1.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "Giocare a carte, seduti"
+  },
+  {
+    "activityId": 9013,
+    "met": 1.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "Giocare agli scacchi, seduti"
+  },
+  {
+    "activityId": 9015,
+    "met": 1.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "Copiare documenti, in piedi"
+  },
+  {
+    "activityId": 9020,
+    "met": 1.8,
+    "activityType": "Miscellanea",
+    "specificActivity": "Disegnare, scrivere, dipingere, in piedi"
+  },
+  {
+    "activityId": 9025,
+    "met": 1.0,
+    "activityType": "Miscellanea",
+    "specificActivity": "Ridere, seduti"
+  },
+  {
+    "activityId": 9030,
+    "met": 1.3,
+    "activityType": "Miscellanea",
+    "specificActivity": "Seduti, leggere un libro, un giornale, ecc."
+  },
+  {
+    "activityId": 9040,
+    "met": 1.3,
+    "activityType": "Miscellanea",
+    "specificActivity": "Seduti, scrivere, stare alla scrivania, digitare alla tastiera"
+  },
+  {
+    "activityId": 9045,
+    "met": 1.0,
+    "activityType": "Miscellanea",
+    "specificActivity": "Seduti, giocare con i videogiochi tradizionali, giochi per computer"
+  },
+  {
+    "activityId": 9050,
+    "met": 1.8,
+    "activityType": "Miscellanea",
+    "specificActivity": "In piedi, conversare con una persona dal vivo, tramite telefono, al computer o scrivere messaggi di testo, sforzo leggero"
+  },
+  {
+    "activityId": 9055,
+    "met": 1.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "Seduti, conversare con una persona dal vivo, tramite telefono, al computer o scrivere messaggi di testo, sforzo leggero"
+  },
+  {
+    "activityId": 9060,
+    "met": 1.3,
+    "activityType": "Miscellanea",
+    "specificActivity": "Seduti, studiare, generale, inclusa la lettura e/o scrittura, sforzo leggero"
+  },
+  {
+    "activityId": 9065,
+    "met": 1.8,
+    "activityType": "Miscellanea",
+    "specificActivity": "Seduti, in classe, generale, prendere appunti nel corso di una lezione"
+  },
+  {
+    "activityId": 9070,
+    "met": 1.8,
+    "activityType": "Miscellanea",
+    "specificActivity": "In piedi, leggere"
+  },
+  {
+    "activityId": 9071,
+    "met": 2.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "In piedi, varie"
+  },
+  {
+    "activityId": 9075,
+    "met": 1.8,
+    "activityType": "Miscellanea",
+    "specificActivity": "Seduti, arti e mestieri, intagliare il legno, tessere, filare la lana, sforzo leggero"
+  },
+  {
+    "activityId": 9080,
+    "met": 3.0,
+    "activityType": "Miscellanea",
+    "specificActivity": "Seduti, arti e mestieri, intagliare il legno, tessere, filare la lana, sforzo moderato"
+  },
+  {
+    "activityId": 9085,
+    "met": 2.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "In piedi, arti e mestieri, dipingere con sabbia (sand panting), scolpire, tessere, sforzo leggero"
+  },
+  {
+    "activityId": 9090,
+    "met": 3.3,
+    "activityType": "Miscellanea",
+    "specificActivity": "In piedi, arti e mestieri, dipingere con sabbia (sand panting), scolpire, tessere, sforzo moderato"
+  },
+  {
+    "activityId": 9095,
+    "met": 3.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "In piedi, arti e mestieri, dipingere con sabbia (sand panting), scolpire, tessere, sforzo vigoroso"
+  },
+  {
+    "activityId": 9100,
+    "met": 1.8,
+    "activityType": "Miscellanea",
+    "specificActivity": "Raccogliersi/ricongiungersi con i familiari a tavola, rilassarsi, parlare, mangiare"
+  },
+  {
+    "activityId": 9101,
+    "met": 3.0,
+    "activityType": "Miscellanea",
+    "specificActivity": "Raccogliersi/ricongiungersi con i familiari in attività connesse al gioco con i bambini"
+  },
+  {
+    "activityId": 9105,
+    "met": 2.0,
+    "activityType": "Miscellanea",
+    "specificActivity": "Turismo/viaggi/vacanze, attività connesse alla guida di un veicolo"
+  },
+  {
+    "activityId": 9106,
+    "met": 3.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "Turismo/viaggi/vacanze, attività connesse alle escursioni a piedi"
+  },
+  {
+    "activityId": 9110,
+    "met": 2.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "Fare campeggio, attività che comprendono spostamenti a piedi, camminare, sedersi, sforzo da lieve a moderato"
+  },
+  {
+    "activityId": 9115,
+    "met": 1.5,
+    "activityType": "Miscellanea",
+    "specificActivity": "Stare seduti ad un evento sportivo, fare da spettatore"
+  },
+  {
+    "activityId": 10010,
+    "met": 1.8,
+    "activityType": "Musica",
+    "specificActivity": "Fisarmonica, seduti"
+  },
+  {
+    "activityId": 10020,
+    "met": 2.3,
+    "activityType": "Musica",
+    "specificActivity": "Violoncello, seduti"
+  },
+  {
+    "activityId": 10030,
+    "met": 2.3,
+    "activityType": "Musica",
+    "specificActivity": "Dirigere un’orchestra, in piedi"
+  },
+  {
+    "activityId": 10035,
+    "met": 2.5,
+    "activityType": "Musica",
+    "specificActivity": "Contrabbasso, in piedi"
+  },
+  {
+    "activityId": 10040,
+    "met": 3.8,
+    "activityType": "Musica",
+    "specificActivity": "Batteria, seduti"
+  },
+  {
+    "activityId": 10045,
+    "met": 3.0,
+    "activityType": "Musica",
+    "specificActivity": "Percussioni (e. bongo, conga, benbe), sforzo moderato, seduti"
+  },
+  {
+    "activityId": 10050,
+    "met": 2.0,
+    "activityType": "Musica",
+    "specificActivity": "Flauto, seduti"
+  },
+  {
+    "activityId": 10060,
+    "met": 1.8,
+    "activityType": "Musica",
+    "specificActivity": "Cornamusa, in piedi"
+  },
+  {
+    "activityId": 10070,
+    "met": 2.3,
+    "activityType": "Musica",
+    "specificActivity": "Pianoforte, seduti"
+  },
+  {
+    "activityId": 10074,
+    "met": 2.0,
+    "activityType": "Musica",
+    "specificActivity": "Suonare strumenti musicali, generale"
+  },
+  {
+    "activityId": 10077,
+    "met": 2.0,
+    "activityType": "Musica",
+    "specificActivity": "Organo, seduti"
+  },
+  {
+    "activityId": 10080,
+    "met": 3.5,
+    "activityType": "Musica",
+    "specificActivity": "Trombone, in piedi"
+  },
+  {
+    "activityId": 10090,
+    "met": 1.8,
+    "activityType": "Musica",
+    "specificActivity": "Tromba, in piedi"
+  },
+  {
+    "activityId": 10100,
+    "met": 2.5,
+    "activityType": "Musica",
+    "specificActivity": "Violino, seduti"
+  },
+  {
+    "activityId": 10110,
+    "met": 1.8,
+    "activityType": "Musica",
+    "specificActivity": "Legni, seduto"
+  },
+  {
+    "activityId": 10120,
+    "met": 2.0,
+    "activityType": "Musica",
+    "specificActivity": "Chitarra, classica, folk, da seduto"
+  },
+  {
+    "activityId": 10125,
+    "met": 3.0,
+    "activityType": "Musica",
+    "specificActivity": "Chitarra, in una rock band, in piedi"
+  },
+  {
+    "activityId": 10130,
+    "met": 40.0,
+    "activityType": "Musica",
+    "specificActivity": "Marciare in una banda, far roteare una bacchetta, camminare, ritmo moderato, generale"
+  },
+  {
+    "activityId": 10131,
+    "met": 5.5,
+    "activityType": "Musica",
+    "specificActivity": "Marciare in una banda, suonare uno strumento, a piedi, ritmo serrato, generale"
+  },
+  {
+    "activityId": 10135,
+    "met": 3.5,
+    "activityType": "Musica",
+    "specificActivity": "Marciare in una banda, suonare un tamburo grande, a piedi"
+  },
+  {
+    "activityId": 11003,
+    "met": 2.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Postazione di lavoro attiva, scrivania con tapis roulant, camminare"
+  },
+  {
+    "activityId": 11006,
+    "met": 3.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Assistente di volo"
+  },
+  {
+    "activityId": 11010,
+    "met": 4.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Panetteria, generale, sforzo moderato"
+  },
+  {
+    "activityId": 11015,
+    "met": 2.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Panetteria, sforzo leggero"
+  },
+  {
+    "activityId": 11020,
+    "met": 2.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Rilegatura"
+  },
+  {
+    "activityId": 11030,
+    "met": 6.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Costruzione strade,"
+  },
+  {
+    "activityId": 11035,
+    "met": 2.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Costruzione strade, gestione del traffico, in piedi"
+  },
+  {
+    "activityId": 11038,
+    "met": 2.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Carpenteria, generale, sforzo leggero"
+  },
+  {
+    "activityId": 11040,
+    "met": 4.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Carpenteria, generale, sforzo moderato"
+  },
+  {
+    "activityId": 11042,
+    "met": 7.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Carpenteria, generale, sforzo da pesante a vigoroso"
+  },
+  {
+    "activityId": 11050,
+    "met": 8.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Trasporto"
+  },
+  {
+    "activityId": 11060,
+    "met": 8.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Trasporto carichi moderati su per le scale, trasporto scatole (7 – 22 kg)"
+  },
+  {
+    "activityId": 11070,
+    "met": 4.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Cameriera, governante hotel, rifare il letto, pulizia bagno, spingere un carrello"
+  },
+  {
+    "activityId": 11080,
+    "met": 5.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Estrazione di carbon fossile, trivellazioni del carbone, della roccia"
+  },
+  {
+    "activityId": 11090,
+    "met": 5.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Estrazione di carbon fossile, fissaggio supporti"
+  },
+  {
+    "activityId": 11100,
+    "met": 5.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Estrazione di carbon fossile, generale"
+  },
+  {
+    "activityId": 11110,
+    "met": 6.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Estrazione di carbon fossile, spalare carbone"
+  },
+  {
+    "activityId": 11115,
+    "met": 2.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Cucinare, chef"
+  },
+  {
+    "activityId": 11120,
+    "met": 4.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Costruzioni, esterni, ristrutturazioni, nuove costruzioni (es. riparazione del tetto, varie)"
+  },
+  {
+    "activityId": 11125,
+    "met": 2.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavoro di portierato, sforzo leggero (es. pulizia lavello e servizi igienici, spolverare, passare l\\'aspirapolvere, pulizia leggera)"
+  },
+  {
+    "activityId": 11126,
+    "met": 3.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavoro di portierato, sforzo moderato (es. buffer elettrico, spazzare, rastrellare, portare fuori la spazzatura, passare l\\'aspirapolvere)"
+  },
+  {
+    "activityId": 11130,
+    "met": 3.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavori elettrici (es. collegare fili, predisporre reti elettriche)"
+  },
+  {
+    "activityId": 11135,
+    "met": 1.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Ingegnere (es. meccanico o elettrico)"
+  },
+  {
+    "activityId": 11145,
+    "met": 7.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Agricoltura, sforzo vigoroso (es. fare balle di fieno, pulire la stalla)"
+  },
+  {
+    "activityId": 11146,
+    "met": 4.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Agricoltura, sforzo moderato (es. dar da mangiare agli animali, seguire il bestiame a piedi e/o a cavallo, spargere il concime, occuparsi del raccolto)"
+  },
+  {
+    "activityId": 11147,
+    "met": 2.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Agricoltura, sforzo leggero (es. pulire le stalle, predisporre per l’alimentazione degli animali)"
+  },
+  {
+    "activityId": 11170,
+    "met": 2.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Agricoltura, attività attinenti alla guida dei mezzi (es. guidare il trattore o la mietitrice)"
+  },
+  {
+    "activityId": 11180,
+    "met": 3.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Agricoltura, occuparsi dell’alimentazione di piccoli animali"
+  },
+  {
+    "activityId": 11190,
+    "met": 4.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Agricoltura, occuparsi dell’alimentazione del bestiame, cavalli"
+  },
+  {
+    "activityId": 11191,
+    "met": 4.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Agricoltura, trasportare l\\'acqua per gli animali, trasportare dell’acqua in generale"
+  },
+  {
+    "activityId": 11192,
+    "met": 4.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Allevamento, accudire gli animali (es. toelettatura, spazzolatura, tosatura delle pecore, assistere ad un parto, prestare cure mediche, marchiare il bestiame), generale"
+  },
+  {
+    "activityId": 11195,
+    "met": 3.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Agricoltura, riso, piantare, macinatura grano"
+  },
+  {
+    "activityId": 11210,
+    "met": 3.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Allevamento, mungere a mano, svuotare secchi, sforzo moderato"
+  },
+  {
+    "activityId": 11220,
+    "met": 1.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Allevamento,"
+  },
+  {
+    "activityId": 11240,
+    "met": 8.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Vigile del fuoco, generale"
+  },
+  {
+    "activityId": 11244,
+    "met": 6.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Vigile del fuoco, soccorso di vittime, incidente automobilistico, con pike pole"
+  },
+  {
+    "activityId": 11245,
+    "met": 8.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Vigile del fuoco, salire una scala con l’attrezzatura completa, esercitazione spegnimento incendio"
+  },
+  {
+    "activityId": 11246,
+    "met": 9.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Vigile del fuoco, trasporto tubi a terra, trasportare/sollevare l’attrezzature, abbattere muri, indossando l’attrezzatura completa"
+  },
+  {
+    "activityId": 11247,
+    "met": 3.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Pesca, commerciale, sforzo leggero"
+  },
+  {
+    "activityId": 11248,
+    "met": 5.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Pesca, commerciale, sforzo moderato"
+  },
+  {
+    "activityId": 11249,
+    "met": 7.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Pesca, commerciale, sforzo vigoroso"
+  },
+  {
+    "activityId": 11250,
+    "met": 17.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Forestale, tagliare con ascia, molto velocemente, peso ascia 1,25 kg, 51 colpi/min, sforzo molto vigoroso"
+  },
+  {
+    "activityId": 11260,
+    "met": 5.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Forestale, tagliare con ascia, lentamente, peso ascia 1,25 kg, 19 colpi/min, sforzo moderato"
+  },
+  {
+    "activityId": 11262,
+    "met": 8.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Forestale, tagliare con ascia, velocemente, peso ascia 1,25 kg, 35 colpi/min, sforzo vigoroso"
+  },
+  {
+    "activityId": 11266,
+    "met": 8.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Forestale, sforzo vigoroso (es. abbattere o tagliare alberi, portare o accatastare i tronchi, abbattere gli alberi, piantare semi, tagliare a mano)"
+  },
+  {
+    "activityId": 11370,
+    "met": 4.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Pellicceria"
+  },
+  {
+    "activityId": 11375,
+    "met": 4.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Raccolta rifiuti, a piedi, svuotare i cassonetti nel camion"
+  },
+  {
+    "activityId": 11378,
+    "met": 1.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Parrucchiere (es. fare trecce ai capelli, manicure, trucco)"
+  },
+  {
+    "activityId": 11380,
+    "met": 7.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Stalliere, compresa l\\'alimentazione, la pulizia"
+  },
+  {
+    "activityId": 11381,
+    "met": 4.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Stalliere, alimentazione, abbeveraggio, pulizia stalle, compreso camminare e sollevare carichi"
+  },
+  {
+    "activityId": 11390,
+    "met": 7.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Corsa di cavalli, galoppo"
+  },
+  {
+    "activityId": 11400,
+    "met": 5.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Corsa di cavalli, trotto"
+  },
+  {
+    "activityId": 11410,
+    "met": 3.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Corsa di cavalli, passo"
+  },
+  {
+    "activityId": 11413,
+    "met": 3.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Domestica"
+  },
+  {
+    "activityId": 11415,
+    "met": 4.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Giardiniere, giardinaggio, generale"
+  },
+  {
+    "activityId": 11418,
+    "met": 3.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Addetto alla lavanderia"
+  },
+  {
+    "activityId": 11420,
+    "met": 3.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Fabbro"
+  },
+  {
+    "activityId": 11430,
+    "met": 3.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavorazioni meccaniche (es. lavorazione, lavorazione lamiere, tecnico macchinari, addetto al tornio, alla saldatura), sforzo da lieve a moderato"
+  },
+  {
+    "activityId": 11450,
+    "met": 5.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavorazioni meccaniche, addetto alla punzonatrice, sforzo moderato"
+  },
+  {
+    "activityId": 11472,
+    "met": 1.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Manager, campo immobiliare"
+  },
+  {
+    "activityId": 11475,
+    "met": 2.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavoro manuale o non qualificato, generale, sforzo leggero"
+  },
+  {
+    "activityId": 11476,
+    "met": 4.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavoro manuale o non qualificato, generale, sforzo moderato"
+  },
+  {
+    "activityId": 11477,
+    "met": 6.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavoro manuale o non qualificato generale, sforzo vigoroso"
+  },
+  {
+    "activityId": 11480,
+    "met": 4.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Muratura, calcestruzzo, sforzo moderato"
+  },
+  {
+    "activityId": 11482,
+    "met": 2.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Muratura, calcestruzzo, sforzo leggero"
+  },
+  {
+    "activityId": 11485,
+    "met": 4.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Massaggiatore, in piedi"
+  },
+  {
+    "activityId": 11490,
+    "met": 7.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "In movimento, trasportare o spingere oggetti pesanti, 34 kg o più (es. scrivanie, utilizzando come mezzo di trasporto il furgone)"
+  },
+  {
+    "activityId": 11495,
+    "met": 12.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Immersioni semplici o subacquee con apparato SCUBA come i sommozzatori,"
+  },
+  {
+    "activityId": 11500,
+    "met": 2.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Utilizzo"
+  },
+  {
+    "activityId": 11510,
+    "met": 4.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavoro nell’aranceto, raccolta frutti"
+  },
+  {
+    "activityId": 11514,
+    "met": 3.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Pittura, casa, mobili, sforzo moderato"
+  },
+  {
+    "activityId": 11516,
+    "met": 3.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Attività di idraulica"
+  },
+  {
+    "activityId": 11520,
+    "met": 2.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Stampa, lavoro nel settore della carta, in piedi"
+  },
+  {
+    "activityId": 11525,
+    "met": 2.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Polizia, dirigere il traffico, in piedi"
+  },
+  {
+    "activityId": 11526,
+    "met": 2.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Polizia, guida dell’auto, seduto"
+  },
+  {
+    "activityId": 11527,
+    "met": 1.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Polizia, passeggero nell’auto, seduto"
+  },
+  {
+    "activityId": 11528,
+    "met": 4.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Polizia, effettuare un arresto, in piedi"
+  },
+  {
+    "activityId": 11529,
+    "met": 2.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Postino, camminare per consegnare la posta"
+  },
+  {
+    "activityId": 11530,
+    "met": 2.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Calzolaio, generale"
+  },
+  {
+    "activityId": 11540,
+    "met": 7.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Spalare, scavare fossi"
+  },
+  {
+    "activityId": 11550,
+    "met": 8.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Spalare, più di 7 kg al minuto, scavando in profondità, sforzo vigoroso"
+  },
+  {
+    "activityId": 11560,
+    "met": 5.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Spalare, meno di 4,5 kg al minuto, sforzo moderato"
+  },
+  {
+    "activityId": 11570,
+    "met": 6.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Spalare, da 4,5 a 7 kg al minuto,"
+  },
+  {
+    "activityId": 11580,
+    "met": 1.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavori alla scrivania, sforzo leggero (es. lavoro d\\'ufficio, lavoro in un laboratorio di chimica, lavoro al computer, riparazione occhiali, riparazione orologi, lettura, lavori alla scrivania)"
+  },
+  {
+    "activityId": 11585,
+    "met": 1.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Stare in riunione, sforzo leggero, generale, e/o con coinvolgimenti in conversazioni"
+  },
+  {
+    "activityId": 11590,
+    "met": 2.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Seduti ad un pannello di comandi, sforzo moderato (es. spingere leve pesanti, guidare falciatrici/carrelli elevatori, gru)"
+  },
+  {
+    "activityId": 11593,
+    "met": 2.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Seduto, insegnare stretching o yoga, o un’attività leggera ad un gruppo"
+  },
+  {
+    "activityId": 11600,
+    "met": 3.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Attività cambiarsi d\\'abito per insegnare educazione fisica, in piedi)"
+  },
+  {
+    "activityId": 11610,
+    "met": 3.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Attività in piedi, sforzo leggero/moderato (es. assemblare/riparare parti pesanti, saldatura, stoccaggio componenti, riparazione auto, in piedi, imballaggio, assistenza infermieristica)"
+  },
+  {
+    "activityId": 11615,
+    "met": 4.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Attività in piedi, sforzo moderato, sollevare oggetti in continuo, 4,5–9 kg, con piccoli spostamenti o sul posto"
+  },
+  {
+    "activityId": 11620,
+    "met": 3.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Attività in piedi, sforzo moderato, sollevamento intermittente di 23 kg, agganciare/avvolgere funi"
+  },
+  {
+    "activityId": 11630,
+    "met": 4.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Attività in piedi, sforzo moderato/pesante compiti (es. sollevare più di 23 kg, muratura, pittura, tappezzeria)"
+  },
+  {
+    "activityId": 11708,
+    "met": 5.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Addetto alla lavorazione dell’acciaio, sforzo moderato (es. sbavatura, forgiatura, ribaltamento stampi)"
+  },
+  {
+    "activityId": 11710,
+    "met": 8.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Addetto alla lavorazione dell’acciaio, sforzo vigoroso (es. laminazione a mano, laminazione di prodotti siderurgici, rimozione scorie, alimentazione di un forno)"
+  },
+  {
+    "activityId": 11720,
+    "met": 2.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Sartoria, taglio tessuto"
+  },
+  {
+    "activityId": 11730,
+    "met": 2.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Sartoria, generale"
+  },
+  {
+    "activityId": 11740,
+    "met": 1.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Sartoria, cucire a mano"
+  },
+  {
+    "activityId": 11750,
+    "met": 2.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Sartoria, utilizzo"
+  },
+  {
+    "activityId": 11760,
+    "met": 3.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Sartoria, pressare"
+  },
+  {
+    "activityId": 11763,
+    "met": 2.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Sartoria, tessere, sforzo leggero (es. operazioni di finitura, lavaggio, tintura, ispezionare stoffe, misurare"
+  },
+  {
+    "activityId": 11765,
+    "met": 4.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Sartoria, tessere, sforzo moderato (es. operaioni di filatura e tessitura, portare scatole di filati, carico subbio, avvolgimento, deformazione, taglio del tessuto)"
+  },
+  {
+    "activityId": 11766,
+    "met": 6.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Autotrasporti, caricare e scaricare il camion, fissare il carico, in piedi, camminare e trasportare carichi pesanti"
+  },
+  {
+    "activityId": 11767,
+    "met": 2.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Autotrasporti, alla guida di un camion per la consegna, taxi, bus navetta, scuola bus"
+  },
+  {
+    "activityId": 11770,
+    "met": 1.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Dattilografare, macchina da scrivere elettrica, meccanica"
+  },
+  {
+    "activityId": 11780,
+    "met": 6.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Utilizzare di utensili elettrici pesanti quali utensili pneumatici (es. martelli pneumatici, trapani)"
+  },
+  {
+    "activityId": 11790,
+    "met": 8.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Utilizzare utensili pesanti (non motorizzati) come pale, picconi, piedi di porco, vanghe"
+  },
+  {
+    "activityId": 11791,
+    "met": 2.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare sul posto di lavoro, 3 km/h, in ufficio o in laboratorio, molto lentamente"
+  },
+  {
+    "activityId": 11792,
+    "met": 3.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare sul posto di lavoro, 5 km/h, in ufficio, velocità moderata, senza trasportare oggetti"
+  },
+  {
+    "activityId": 11793,
+    "met": 4.3,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare sul posto di lavoro, 6"
+  },
+  {
+    "activityId": 11795,
+    "met": 3.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare sul posto di lavoro, 4 km/h, lentamente e trasportando oggetti leggeri di peso inferiore a 11 kg"
+  },
+  {
+    "activityId": 11796,
+    "met": 3.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare, riordinare le cose del lavoro, prepararsi ad andar via"
+  },
+  {
+    "activityId": 11797,
+    "met": 3.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare, 4 km/h, ritmo lento, trasportando oggetti leggeri di peso inferiore a 11 kg"
+  },
+  {
+    "activityId": 11800,
+    "met": 4.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare, 5"
+  },
+  {
+    "activityId": 11805,
+    "met": 3.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare, spingendo una sedia a rotelle"
+  },
+  {
+    "activityId": 11810,
+    "met": 4.8,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare, 6 km/h, ritmo veloce, trasportando oggetti leggeri di peso inferiore a 11kg"
+  },
+  {
+    "activityId": 11820,
+    "met": 5.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare o salire le scale o stare in piedi, sorreggendo un oggetto con un peso compreso tra 11 e 22 kg"
+  },
+  {
+    "activityId": 11830,
+    "met": 6.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare o salire le scale o stare in piedi, sorreggendo un oggetto con un peso compreso tra 22 e 33"
+  },
+  {
+    "activityId": 11840,
+    "met": 7.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare o salire le scale o stare in piedi, sorreggendo un oggetto con un peso compreso tra 34 e 45 kg"
+  },
+  {
+    "activityId": 11850,
+    "met": 8.5,
+    "activityType": "Occupazioni",
+    "specificActivity": "Camminare o passeggiare su per le scale o restare fermi immobili sorreggendo un oggetto con un peso di 45 kg o più"
+  },
+  {
+    "activityId": 11870,
+    "met": 3.0,
+    "activityType": "Occupazioni",
+    "specificActivity": "Lavorare all’allestimento di una scena, attore teatrale, addetto al bakstage"
+  },
+  {
+    "activityId": 12010,
+    "met": 6.0,
+    "activityType": "Corsa",
+    "specificActivity": "Jogging/camminata in combinazione (la componente jogging non supera i 10 minuti) (Codice Taylor 180)"
+  },
+  {
+    "activityId": 12020,
+    "met": 7.0,
+    "activityType": "Corsa",
+    "specificActivity": "Jogging, generale"
+  },
+  {
+    "activityId": 12025,
+    "met": 8.0,
+    "activityType": "Corsa",
+    "specificActivity": "Jogging, sul posto"
+  },
+  {
+    "activityId": 12027,
+    "met": 4.5,
+    "activityType": "Corsa",
+    "specificActivity": "Jogging su un tappeto elastico"
+  },
+  {
+    "activityId": 12029,
+    "met": 6.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 6,5 km/h (9 min/km)"
+  },
+  {
+    "activityId": 12030,
+    "met": 8.3,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 8 km/h (7,5 min/km)"
+  },
+  {
+    "activityId": 12040,
+    "met": 9.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 8,4 km/h (7,3 min/km)"
+  },
+  {
+    "activityId": 12050,
+    "met": 9.8,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 9,6 km/h (6,25 min/km)"
+  },
+  {
+    "activityId": 12060,
+    "met": 10.5,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 10,8 km/h (5,5 min/km)"
+  },
+  {
+    "activityId": 12070,
+    "met": 11.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 11,3 km/h (5,3 min/km)"
+  },
+  {
+    "activityId": 12080,
+    "met": 11.8,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa 12 km/h (5 min/km)"
+  },
+  {
+    "activityId": 12090,
+    "met": 11.8,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 12,9 km/h (4,65 min/km)"
+  },
+  {
+    "activityId": 12100,
+    "met": 12.3,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 13,8 km/h (4,3 min/km)"
+  },
+  {
+    "activityId": 12110,
+    "met": 12.8,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 14,5 km/h (4,1 min/km)"
+  },
+  {
+    "activityId": 12120,
+    "met": 14.5,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 16 km/h (3,75 min/km)"
+  },
+  {
+    "activityId": 12130,
+    "met": 16.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 17,7 km/h (3,4 min/km)"
+  },
+  {
+    "activityId": 12132,
+    "met": 19.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 19,3 km/h (3,1 min/km)"
+  },
+  {
+    "activityId": 12134,
+    "met": 19.8,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 20,9 km/h (2,9 min/km)"
+  },
+  {
+    "activityId": 12135,
+    "met": 23.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, 22,5 km/h (2,66 min/km)"
+  },
+  {
+    "activityId": 12140,
+    "met": 9.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, campestre"
+  },
+  {
+    "activityId": 12150,
+    "met": 8.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa (codice Taylor 200)"
+  },
+  {
+    "activityId": 12170,
+    "met": 15.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, scale, salita"
+  },
+  {
+    "activityId": 12180,
+    "met": 10.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa su pista, allenamento"
+  },
+  {
+    "activityId": 12190,
+    "met": 8.0,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, allenamento, spingere una sedia a rotelle o una carrozzina"
+  },
+  {
+    "activityId": 12200,
+    "met": 13.3,
+    "activityType": "Corsa",
+    "specificActivity": "Corsa, maratona"
+  },
+  {
+    "activityId": 13000,
+    "met": 2.3,
+    "activityType": "Cura della persona",
+    "specificActivity": "Prepararsi per andare a letto, generale, in piedi"
+  },
+  {
+    "activityId": 13009,
+    "met": 1.8,
+    "activityType": "Cura della persona",
+    "specificActivity": "Seduti sul WC, evacuare in piedi o da accovacciati"
+  },
+  {
+    "activityId": 13010,
+    "met": 1.5,
+    "activityType": "Cura della persona",
+    "specificActivity": "Farsi il bagno, seduti"
+  },
+  {
+    "activityId": 13020,
+    "met": 2.5,
+    "activityType": "Cura della persona",
+    "specificActivity": "Vestirsi, svestirsi, in piedi o seduti"
+  },
+  {
+    "activityId": 13030,
+    "met": 1.5,
+    "activityType": "Cura della persona",
+    "specificActivity": "Mangiare, seduto"
+  },
+  {
+    "activityId": 13035,
+    "met": 2.0,
+    "activityType": "Cura della persona",
+    "specificActivity": "Parlare e fare conversazione o mangiare soltanto, in piedi"
+  },
+  {
+    "activityId": 13036,
+    "met": 1.5,
+    "activityType": "Cura della persona",
+    "specificActivity": "Assumere"
+  },
+  {
+    "activityId": 13040,
+    "met": 2.0,
+    "activityType": "Cura della persona",
+    "specificActivity": "Prepararsi, lavarsi le mani, radersi, lavarsi i denti, truccarsi, seduti o in piedi"
+  },
+  {
+    "activityId": 13045,
+    "met": 2.5,
+    "activityType": "Cura della persona",
+    "specificActivity": "Pettinarsi, in piedi"
+  },
+  {
+    "activityId": 13046,
+    "met": 1.3,
+    "activityType": "Cura della persona",
+    "specificActivity": "Farsi tagliare i capelli le unghie, seduti"
+  },
+  {
+    "activityId": 13050,
+    "met": 2.0,
+    "activityType": "Cura della persona",
+    "specificActivity": "Farsi la doccia, in piedi"
+  },
+  {
+    "activityId": 14010,
+    "met": 2.8,
+    "activityType": "Attività sessuale",
+    "specificActivity": "Periodo di massimo coinvolgimento, sforzo vigoroso"
+  },
+  {
+    "activityId": 14020,
+    "met": 1.8,
+    "activityType": "Attività sessuale",
+    "specificActivity": "Generale, sforzo moderato"
+  },
+  {
+    "activityId": 14030,
+    "met": 1.3,
+    "activityType": "Attività sessuale",
+    "specificActivity": "Effusioni, sforzo leggero, baci, abbracci"
+  },
+  {
+    "activityId": 15000,
+    "met": 5.5,
+    "activityType": "Sport",
+    "specificActivity": "Giochi tradizionali dell’Alaska, olimpiadi eschimesi, generale"
+  },
+  {
+    "activityId": 15010,
+    "met": 4.3,
+    "activityType": "Sport",
+    "specificActivity": "Tiro con l\\'arco, non da caccia"
+  },
+  {
+    "activityId": 15020,
+    "met": 7.0,
+    "activityType": "Sport",
+    "specificActivity": "Badminton, competizione (Codice Taylor 450)"
+  },
+  {
+    "activityId": 15030,
+    "met": 5.5,
+    "activityType": "Sport",
+    "specificActivity": "Badminton, singolo o doppio,"
+  },
+  {
+    "activityId": 15040,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Pallacanestro, partita (Codice Taylor 490)"
+  },
+  {
+    "activityId": 15050,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Pallacanestro, no-partita, generale (Codice Taylor 480)"
+  },
+  {
+    "activityId": 15055,
+    "met": 6.5,
+    "activityType": "Sport",
+    "specificActivity": "Pallacanestro, generale"
+  },
+  {
+    "activityId": 15060,
+    "met": 7.0,
+    "activityType": "Sport",
+    "specificActivity": "Pallacanestro, arbitraggio (Codice Taylor 500)"
+  },
+  {
+    "activityId": 15070,
+    "met": 4.5,
+    "activityType": "Sport",
+    "specificActivity": "Pallacanestro,"
+  },
+  {
+    "activityId": 15072,
+    "met": 9.3,
+    "activityType": "Sport",
+    "specificActivity": "Pallacanestro, esercitazioni, allenamento"
+  },
+  {
+    "activityId": 15075,
+    "met": 7.8,
+    "activityType": "Sport",
+    "specificActivity": "Pallacanestro, in sedia a rotelle"
+  },
+  {
+    "activityId": 15080,
+    "met": 2.5,
+    "activityType": "Sport",
+    "specificActivity": "Biliardo"
+  },
+  {
+    "activityId": 15090,
+    "met": 3.0,
+    "activityType": "Sport",
+    "specificActivity": "Bowling (Codice Taylor 390)"
+  },
+  {
+    "activityId": 15092,
+    "met": 3.8,
+    "activityType": "Sport",
+    "specificActivity": "Bowling, indoor, su pista"
+  },
+  {
+    "activityId": 15100,
+    "met": 12.8,
+    "activityType": "Sport",
+    "specificActivity": "Pugilato, sul ring, generale"
+  },
+  {
+    "activityId": 15110,
+    "met": 5.5,
+    "activityType": "Sport",
+    "specificActivity": "Pugilato, colpire il sacco"
+  },
+  {
+    "activityId": 15120,
+    "met": 7.8,
+    "activityType": "Sport",
+    "specificActivity": "Pugilato,"
+  },
+  {
+    "activityId": 15130,
+    "met": 7.0,
+    "activityType": "Sport",
+    "specificActivity": "Broomball"
+  },
+  {
+    "activityId": 15135,
+    "met": 5.8,
+    "activityType": "Sport",
+    "specificActivity": "Giochi per bambini, giochi per adulti (gioco della campana, 4 quadrati, palla avvelenata, giochi per parchi, t-ball, tetherball, biglie, videogiochi arcade), sforzo moderato"
+  },
+  {
+    "activityId": 15138,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Cheerleader, esercizi di ginnastica, competizione"
+  },
+  {
+    "activityId": 15140,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Allenare: calcio, calcetto, basket, baseball, nuoto, ecc."
+  },
+  {
+    "activityId": 15142,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Allenare prendendo parte agli allenamenti con i giocatori"
+  },
+  {
+    "activityId": 15150,
+    "met": 4.8,
+    "activityType": "Sport",
+    "specificActivity": "Cricket, battere, lanciare, difendere, recuperare"
+  },
+  {
+    "activityId": 15160,
+    "met": 3.3,
+    "activityType": "Sport",
+    "specificActivity": "Croquet"
+  },
+  {
+    "activityId": 15170,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Curling"
+  },
+  {
+    "activityId": 15180,
+    "met": 2.5,
+    "activityType": "Sport",
+    "specificActivity": "Freccette, parete o prato"
+  },
+  {
+    "activityId": 15190,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Corse dragster, spingere o guidare una macchina"
+  },
+  {
+    "activityId": 15192,
+    "met": 8.5,
+    "activityType": "Sport",
+    "specificActivity": "Corse automobili, monoposto"
+  },
+  {
+    "activityId": 15200,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Scherma"
+  },
+  {
+    "activityId": 15210,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Football americano, competizione"
+  },
+  {
+    "activityId": 15230,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Football americano, touch, flag, generale (Codice Taylor 510)"
+  },
+  {
+    "activityId": 15232,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Football americano, touch, flag, sforzo leggero"
+  },
+  {
+    "activityId": 15235,
+    "met": 2.5,
+    "activityType": "Sport",
+    "specificActivity": "Football americano o baseball, gioca con la palla"
+  },
+  {
+    "activityId": 15240,
+    "met": 3.0,
+    "activityType": "Sport",
+    "specificActivity": "Frisbee gioco, generale"
+  },
+  {
+    "activityId": 15250,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Frisbee, ultimate"
+  },
+  {
+    "activityId": 15255,
+    "met": 4.8,
+    "activityType": "Sport",
+    "specificActivity": "Golf, generale"
+  },
+  {
+    "activityId": 15265,
+    "met": 4.3,
+    "activityType": "Sport",
+    "specificActivity": "Golf, trasporto i bastoni"
+  },
+  {
+    "activityId": 15270,
+    "met": 3.0,
+    "activityType": "Sport",
+    "specificActivity": "Golf,"
+  },
+  {
+    "activityId": 15285,
+    "met": 5.3,
+    "activityType": "Sport",
+    "specificActivity": "Golf, passeggiare, colpire con i bastoni"
+  },
+  {
+    "activityId": 15290,
+    "met": 3.5,
+    "activityType": "Sport",
+    "specificActivity": "Golf, spostarsi con la golf cart (Codice Taylor 070)"
+  },
+  {
+    "activityId": 15300,
+    "met": 3.8,
+    "activityType": "Sport",
+    "specificActivity": "Ginnastica, generale"
+  },
+  {
+    "activityId": 15310,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Footbag"
+  },
+  {
+    "activityId": 15320,
+    "met": 12.0,
+    "activityType": "Sport",
+    "specificActivity": "Handball, generale (Codice Taylor 520)"
+  },
+  {
+    "activityId": 15330,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Handball, squadra"
+  },
+  {
+    "activityId": 15335,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Percorso alta fune, elementi multipli"
+  },
+  {
+    "activityId": 15340,
+    "met": 3.5,
+    "activityType": "Sport",
+    "specificActivity": "Deltaplano"
+  },
+  {
+    "activityId": 15350,
+    "met": 7.8,
+    "activityType": "Sport",
+    "specificActivity": "Hockey, su terra"
+  },
+  {
+    "activityId": 15360,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Hockey, sul ghiaccio"
+  },
+  {
+    "activityId": 15362,
+    "met": 10.0,
+    "activityType": "Sport",
+    "specificActivity": "Hockey, sul ghiaccio, competizione"
+  },
+  {
+    "activityId": 15370,
+    "met": 5.5,
+    "activityType": "Sport",
+    "specificActivity": "Equitazione, generale"
+  },
+  {
+    "activityId": 15375,
+    "met": 4.3,
+    "activityType": "Sport",
+    "specificActivity": "Accudire il cavallo, dar da mangiare, abbeverare, pulire la stalla, incluso camminare e sollevare carichi"
+  },
+  {
+    "activityId": 15380,
+    "met": 4.5,
+    "activityType": "Sport",
+    "specificActivity": "Sellare, lavare, governare, imbrigliare e rimuovere le briglia al cavallo"
+  },
+  {
+    "activityId": 15390,
+    "met": 5.8,
+    "activityType": "Sport",
+    "specificActivity": "Equitazione, trotto"
+  },
+  {
+    "activityId": 15395,
+    "met": 7.3,
+    "activityType": "Sport",
+    "specificActivity": "Equitazione, canter o galoppo"
+  },
+  {
+    "activityId": 15400,
+    "met": 3.8,
+    "activityType": "Sport",
+    "specificActivity": "Equitazione, passo"
+  },
+  {
+    "activityId": 15402,
+    "met": 9.0,
+    "activityType": "Sport",
+    "specificActivity": "Equitazione, salto"
+  },
+  {
+    "activityId": 15408,
+    "met": 1.8,
+    "activityType": "Sport",
+    "specificActivity": "Carrozza, condurre, seduti o in piedi"
+  },
+  {
+    "activityId": 15410,
+    "met": 3.0,
+    "activityType": "Sport",
+    "specificActivity": "Lancio di ferri di cavallo, quoits"
+  },
+  {
+    "activityId": 15420,
+    "met": 12.0,
+    "activityType": "Sport",
+    "specificActivity": "Palla basca"
+  },
+  {
+    "activityId": 15425,
+    "met": 5.3,
+    "activityType": "Sport",
+    "specificActivity": "Arti marziali, generi diversi, ritmo lento, novizi, apprendimento"
+  },
+  {
+    "activityId": 15430,
+    "met": 10.3,
+    "activityType": "Sport",
+    "specificActivity": "Arti marziali, generi diversi, sforzo moderato (ad esempio, judo, jujitsu, karate, kick boxing, tae kwan do, tai-bo, Muay Thai boxing)"
+  },
+  {
+    "activityId": 15440,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Giocoleria"
+  },
+  {
+    "activityId": 15450,
+    "met": 7.0,
+    "activityType": "Sport",
+    "specificActivity": "Kickball"
+  },
+  {
+    "activityId": 15460,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Lacrosse"
+  },
+  {
+    "activityId": 15465,
+    "met": 3.3,
+    "activityType": "Sport",
+    "specificActivity": "Bowls, bocce, all’aperto"
+  },
+  {
+    "activityId": 15470,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Motocross, sport motoristici su pista, fuoristrada, generale"
+  },
+  {
+    "activityId": 15480,
+    "met": 9.0,
+    "activityType": "Sport",
+    "specificActivity": "Orienteering"
+  },
+  {
+    "activityId": 15490,
+    "met": 10.0,
+    "activityType": "Sport",
+    "specificActivity": "Paddleball, competizione"
+  },
+  {
+    "activityId": 15500,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Paddleball, ricreativo, generale (Codice Taylor 460)"
+  },
+  {
+    "activityId": 15510,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Polo, a cavallo"
+  },
+  {
+    "activityId": 15520,
+    "met": 10.0,
+    "activityType": "Sport",
+    "specificActivity": "Racquetball, competizione"
+  },
+  {
+    "activityId": 15530,
+    "met": 7.0,
+    "activityType": "Sport",
+    "specificActivity": "Racquetball, generale (Codice Taylor 470)"
+  },
+  {
+    "activityId": 15533,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Arrampicata su roccia o montagna (Codice Taylor 470) (ex codice = 17120)"
+  },
+  {
+    "activityId": 15535,
+    "met": 7.5,
+    "activityType": "Sport",
+    "specificActivity": "Arrampicata su roccia, scalata, difficoltà alta"
+  },
+  {
+    "activityId": 15537,
+    "met": 5.8,
+    "activityType": "Sport",
+    "specificActivity": "Arrampicata su roccia, scalata o attraversata, sforzo da leggero a moderato"
+  },
+  {
+    "activityId": 15540,
+    "met": 5.0,
+    "activityType": "Sport",
+    "specificActivity": "Arrampicata su roccia, discesa in corda doppia"
+  },
+  {
+    "activityId": 15542,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Rodeo,"
+  },
+  {
+    "activityId": 15544,
+    "met": 5.5,
+    "activityType": "Sport",
+    "specificActivity": "Rodeo,"
+  },
+  {
+    "activityId": 15546,
+    "met": 7.0,
+    "activityType": "Sport",
+    "specificActivity": "Rodeo,"
+  },
+  {
+    "activityId": 15550,
+    "met": 12.3,
+    "activityType": "Sport",
+    "specificActivity": "Salto della corda, ritmo veloce, 120-160 salti al minuto"
+  },
+  {
+    "activityId": 15551,
+    "met": 11.8,
+    "activityType": "Sport",
+    "specificActivity": "Salto della corda, ritmo moderato, 100-120 salti al minuto , generale, salto a due piedi in pianura"
+  },
+  {
+    "activityId": 15552,
+    "met": 8.8,
+    "activityType": "Sport",
+    "specificActivity": "Salto della corda, rito lento,"
+  },
+  {
+    "activityId": 15560,
+    "met": 8.3,
+    "activityType": "Sport",
+    "specificActivity": "Rugby, a quindici, a sette, competizione"
+  },
+  {
+    "activityId": 15562,
+    "met": 6.3,
+    "activityType": "Sport",
+    "specificActivity": "Rugby, touch, no competizione"
+  },
+  {
+    "activityId": 15570,
+    "met": 3.0,
+    "activityType": "Sport",
+    "specificActivity": "Shuffleboard"
+  },
+  {
+    "activityId": 15580,
+    "met": 5.0,
+    "activityType": "Sport",
+    "specificActivity": "Skate, generale, sforzo moderato"
+  },
+  {
+    "activityId": 15582,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Skate, competizione, sforzo vigoroso"
+  },
+  {
+    "activityId": 15590,
+    "met": 7.0,
+    "activityType": "Sport",
+    "specificActivity": "Pattinaggio, a rotelle (Codice Taylor 360)"
+  },
+  {
+    "activityId": 15591,
+    "met": 7.5,
+    "activityType": "Sport",
+    "specificActivity": "Pattinaggio, pattini in linea, 14,4 km/h, ritmo lieve"
+  },
+  {
+    "activityId": 15592,
+    "met": 9.8,
+    "activityType": "Sport",
+    "specificActivity": "Pattinaggio, pattini in linea, 17,7 km/h, ritmo moderato, allenamento"
+  },
+  {
+    "activityId": 15593,
+    "met": 12.3,
+    "activityType": "Sport",
+    "specificActivity": "Pattinaggio, pattini in linea, da 21 a 21,7 km/h, ritmo sostenuto, allenamento"
+  },
+  {
+    "activityId": 15594,
+    "met": 14.0,
+    "activityType": "Sport",
+    "specificActivity": "Pattinaggio, pattini in linea, 24 km/h, massimo sforzo"
+  },
+  {
+    "activityId": 15600,
+    "met": 3.5,
+    "activityType": "Sport",
+    "specificActivity": "Paracadutismo,"
+  },
+  {
+    "activityId": 15605,
+    "met": 10.0,
+    "activityType": "Sport",
+    "specificActivity": "Calcio, competizione"
+  },
+  {
+    "activityId": 15610,
+    "met": 7.0,
+    "activityType": "Sport",
+    "specificActivity": "Calcio, ricreativo, generale (Codice Taylor 540)"
+  },
+  {
+    "activityId": 15620,
+    "met": 5.0,
+    "activityType": "Sport",
+    "specificActivity": "Softball o baseball, lancio veloce o lento,"
+  },
+  {
+    "activityId": 15625,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Softball, allenamento"
+  },
+  {
+    "activityId": 15630,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Softball, arbitraggio"
+  },
+  {
+    "activityId": 15640,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Softball, lancio"
+  },
+  {
+    "activityId": 15645,
+    "met": 3.3,
+    "activityType": "Sport",
+    "specificActivity": "Spettatori di sport, coinvolgimento elevato, emozionante, movimenti fisici"
+  },
+  {
+    "activityId": 15650,
+    "met": 12.0,
+    "activityType": "Sport",
+    "specificActivity": "Squash (Codice Taylor 530)"
+  },
+  {
+    "activityId": 15652,
+    "met": 7.3,
+    "activityType": "Sport",
+    "specificActivity": "Squash, generale"
+  },
+  {
+    "activityId": 15660,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Tennis tavolo, ping-pong (Codice Taylor 410)"
+  },
+  {
+    "activityId": 15670,
+    "met": 3.0,
+    "activityType": "Sport",
+    "specificActivity": "Tai chi, qi gong, generale"
+  },
+  {
+    "activityId": 15672,
+    "met": 1.5,
+    "activityType": "Sport",
+    "specificActivity": "Tai chi, qi gong, seduto, sforzo leggero"
+  },
+  {
+    "activityId": 15675,
+    "met": 7.3,
+    "activityType": "Sport",
+    "specificActivity": "Tennis, generale"
+  },
+  {
+    "activityId": 15680,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Tennis, doppio (Codice Taylor 430)"
+  },
+  {
+    "activityId": 15685,
+    "met": 4.5,
+    "activityType": "Sport",
+    "specificActivity": "Tennis, doppio"
+  },
+  {
+    "activityId": 15690,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Tennis, singolo (Codice Taylor 420)"
+  },
+  {
+    "activityId": 15695,
+    "met": 5.0,
+    "activityType": "Sport",
+    "specificActivity": "Tennis, colpire la palla, ricreativo, sforzo moderato"
+  },
+  {
+    "activityId": 15700,
+    "met": 3.5,
+    "activityType": "Sport",
+    "specificActivity": "Tuffi dal trampolino, ricreativo"
+  },
+  {
+    "activityId": 15702,
+    "met": 4.5,
+    "activityType": "Sport",
+    "specificActivity": "Tuffi dal trampolino, competizione"
+  },
+  {
+    "activityId": 15710,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Pallavolo (Codice Taylor 400)"
+  },
+  {
+    "activityId": 15711,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Pallavolo, competizione, in palestra"
+  },
+  {
+    "activityId": 15720,
+    "met": 3.0,
+    "activityType": "Sport",
+    "specificActivity": "Pallavolo, non competizione, 6 - 9 giocatori, generale"
+  },
+  {
+    "activityId": 15725,
+    "met": 8.0,
+    "activityType": "Sport",
+    "specificActivity": "Beach volley"
+  },
+  {
+    "activityId": 15730,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Wrestling (un match = 5 minuti)"
+  },
+  {
+    "activityId": 15731,
+    "met": 7.0,
+    "activityType": "Sport",
+    "specificActivity": "Wallyball, generale"
+  },
+  {
+    "activityId": 15732,
+    "met": 4.0,
+    "activityType": "Sport",
+    "specificActivity": "Atletica leggera (getto del peso, lancio del disco, lancio del martello)"
+  },
+  {
+    "activityId": 15733,
+    "met": 6.0,
+    "activityType": "Sport",
+    "specificActivity": "Atletica leggera (salto in alto, salto in lungo, salto triplo, lancio del giavellotto, salto con l\\'asta)"
+  },
+  {
+    "activityId": 15734,
+    "met": 10.0,
+    "activityType": "Sport",
+    "specificActivity": "Atletica leggera (siepi, ostacoli)"
+  },
+  {
+    "activityId": 16010,
+    "met": 2.5,
+    "activityType": "Trasporto",
+    "specificActivity": "Guidare una macchina e o un autocarro leggero (senza rimorchio)"
+  },
+  {
+    "activityId": 16015,
+    "met": 1.3,
+    "activityType": "Trasporto",
+    "specificActivity": "Viaggiare in auto o in camion"
+  },
+  {
+    "activityId": 16016,
+    "met": 1.3,
+    "activityType": "Trasporto",
+    "specificActivity": "Viaggiare seduto in autobus o in treno"
+  },
+  {
+    "activityId": 16020,
+    "met": 1.8,
+    "activityType": "Trasporto",
+    "specificActivity": "Volare in aereo o in elicottero"
+  },
+  {
+    "activityId": 16030,
+    "met": 3.5,
+    "activityType": "Trasporto",
+    "specificActivity": "Scooter, moto"
+  },
+  {
+    "activityId": 16035,
+    "met": 6.3,
+    "activityType": "Trasporto",
+    "specificActivity": "Tirare un risciò"
+  },
+  {
+    "activityId": 16040,
+    "met": 6.0,
+    "activityType": "Trasporto",
+    "specificActivity": "Spingere un aereo all’interno o all’esterno da un hangar"
+  },
+  {
+    "activityId": 16050,
+    "met": 2.5,
+    "activityType": "Trasporto",
+    "specificActivity": "Guidare un camion, semirimorchio, trattore >1 tonnellata, oppure un autobus"
+  },
+  {
+    "activityId": 16060,
+    "met": 3.5,
+    "activityType": "Trasporto",
+    "specificActivity": "Trasporto"
+  },
+  {
+    "activityId": 17010,
+    "met": 7.0,
+    "activityType": "Camminata",
+    "specificActivity": "Backpacking (Codice Taylor 050)"
+  },
+  {
+    "activityId": 17012,
+    "met": 7.8,
+    "activityType": "Camminata",
+    "specificActivity": "Backpacking, escursioni o escursioni guidate con zainetto"
+  },
+  {
+    "activityId": 17020,
+    "met": 5.0,
+    "activityType": "Camminata",
+    "specificActivity": "Trasporto di un carico di 7 kg (ad esempio una valigia), in piano o scendendo le scale"
+  },
+  {
+    "activityId": 17021,
+    "met": 2.3,
+    "activityType": "Camminata",
+    "specificActivity": "Trasporto di un bambino di 7 kg, camminando lentamente"
+  },
+  {
+    "activityId": 17025,
+    "met": 8.3,
+    "activityType": "Camminata",
+    "specificActivity": "Trasporto di un carico su per le scale, generale"
+  },
+  {
+    "activityId": 17026,
+    "met": 5.0,
+    "activityType": "Camminata",
+    "specificActivity": "Trasporto di un carico di 0,5–7 kg, su per le scale"
+  },
+  {
+    "activityId": 17027,
+    "met": 6.0,
+    "activityType": "Camminata",
+    "specificActivity": "Trasporto di un carico di 7–11 kg, su per le scale"
+  },
+  {
+    "activityId": 17028,
+    "met": 8.0,
+    "activityType": "Camminata",
+    "specificActivity": "Trasporto di un carico di 11– 22 kg, su per le scale"
+  },
+  {
+    "activityId": 17029,
+    "met": 10.0,
+    "activityType": "Camminata",
+    "specificActivity": "Trasporto di un carico di 22–33 kg, su per le scale"
+  },
+  {
+    "activityId": 17030,
+    "met": 12.0,
+    "activityType": "Camminata",
+    "specificActivity": "Trasporto di un carico >34 kg, su per le scale"
+  },
+  {
+    "activityId": 17031,
+    "met": 3.5,
+    "activityType": "Camminata",
+    "specificActivity": "Caricare/scaricare l’automobile, incluso il cammino"
+  },
+  {
+    "activityId": 17033,
+    "met": 6.3,
+    "activityType": "Camminata",
+    "specificActivity": "Escursioni in collina, senza carico"
+  },
+  {
+    "activityId": 17035,
+    "met": 6.5,
+    "activityType": "Camminata",
+    "specificActivity": "Escursioni in collina con trasporto da 0 a 4 kg di carico"
+  },
+  {
+    "activityId": 17040,
+    "met": 7.3,
+    "activityType": "Camminata",
+    "specificActivity": "Escursioni in collina con trasporto da 4,5 a 9 kg di carico"
+  },
+  {
+    "activityId": 17050,
+    "met": 8.3,
+    "activityType": "Camminata",
+    "specificActivity": "Escursioni in collina con trasporto da 9,5 a 19 kg di carico"
+  },
+  {
+    "activityId": 17060,
+    "met": 9.0,
+    "activityType": "Camminata",
+    "specificActivity": "Escursioni in collina con trasporto di un carico pesante 19 kg o più"
+  },
+  {
+    "activityId": 17070,
+    "met": 3.5,
+    "activityType": "Camminata",
+    "specificActivity": "Scendere le scale"
+  },
+  {
+    "activityId": 17080,
+    "met": 6.0,
+    "activityType": "Camminata",
+    "specificActivity": "Escursionismo, attraversare campi (Codice Taylor 040)"
+  },
+  {
+    "activityId": 17082,
+    "met": 5.3,
+    "activityType": "Camminata",
+    "specificActivity": "Escursionismo o camminata a passo normale tra campi e colline"
+  },
+  {
+    "activityId": 17085,
+    "met": 2.5,
+    "activityType": "Camminata",
+    "specificActivity": "Osservazione degli uccelli, passo lento"
+  },
+  {
+    "activityId": 17088,
+    "met": 4.5,
+    "activityType": "Camminata",
+    "specificActivity": "Marcia militare, andatura moderata, senza bagaglio"
+  },
+  {
+    "activityId": 17090,
+    "met": 8.0,
+    "activityType": "Camminata",
+    "specificActivity": "Marcia militare, andatura rapida, senza bagaglio"
+  },
+  {
+    "activityId": 17100,
+    "met": 4.0,
+    "activityType": "Camminata",
+    "specificActivity": "Spingere o tirare un passeggino con un bambino o camminare con dei bambini, da 4 a 5 km/h"
+  },
+  {
+    "activityId": 17105,
+    "met": 3.8,
+    "activityType": "Camminata",
+    "specificActivity": "Spingere una sedia a rotelle, non per professione"
+  },
+  {
+    "activityId": 17110,
+    "met": 6.5,
+    "activityType": "Camminata",
+    "specificActivity": "Corsa a piedi"
+  },
+  {
+    "activityId": 17130,
+    "met": 8.0,
+    "activityType": "Camminata",
+    "specificActivity": "Salire le scale, utilizzare o salire una scala (Codice Taylor 030)"
+  },
+  {
+    "activityId": 17133,
+    "met": 4.0,
+    "activityType": "Camminata",
+    "specificActivity": "Salire le scale, lentamente"
+  },
+  {
+    "activityId": 17134,
+    "met": 8.8,
+    "activityType": "Camminata",
+    "specificActivity": "Salire e scale, velocemente"
+  },
+  {
+    "activityId": 17140,
+    "met": 5.0,
+    "activityType": "Camminata",
+    "specificActivity": "Utilizzare le stampelle"
+  },
+  {
+    "activityId": 17150,
+    "met": 2.0,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, tornare a casa"
+  },
+  {
+    "activityId": 17151,
+    "met": 2.0,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, a meno di 3 km/h, in piano, passeggiata, molto lentamente"
+  },
+  {
+    "activityId": 17152,
+    "met": 2.8,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, a 3 km/h, in piano, lentamente, superficie compatta"
+  },
+  {
+    "activityId": 17160,
+    "met": 3.5,
+    "activityType": "Camminata",
+    "specificActivity": "Passeggiare per piacere (Codice Taylor 010)"
+  },
+  {
+    "activityId": 17161,
+    "met": 2.5,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare da casa all’automobile o all’autobus, dall’automobile o dall’autobus verso altri luoghi, dall’automobile i dall’autobus da o verso il posto di lavoro"
+  },
+  {
+    "activityId": 17162,
+    "met": 2.5,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare verso la casa del vicino o quella dei familiari per ragioni sociali"
+  },
+  {
+    "activityId": 17165,
+    "met": 3.0,
+    "activityType": "Camminata",
+    "specificActivity": "Passeggiare con il cane"
+  },
+  {
+    "activityId": 17170,
+    "met": 3.0,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, 4 km/h, in piano, superficie solida"
+  },
+  {
+    "activityId": 17180,
+    "met": 3.3,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, 4 km/h, in discesa"
+  },
+  {
+    "activityId": 17190,
+    "met": 3.5,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, 4,5–5 km/h, in piano, ritmo moderato, superficie stabile"
+  },
+  {
+    "activityId": 17200,
+    "met": 4.3,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, 5,5 km/h, in piano, ritmo veloce, superficie solida, camminare per fare esercizio"
+  },
+  {
+    "activityId": 17210,
+    "met": 5.3,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, da 4,5 a 5,5 km/h, in salita, da 1 a 5 % di pendenza"
+  },
+  {
+    "activityId": 17211,
+    "met": 8.0,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, da 4,5 a 5,5 km/h, da 6 a 15% di pendenza"
+  },
+  {
+    "activityId": 17220,
+    "met": 5.0,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, 6,5 km/h, in piano, superficie stabile, molto velocemente"
+  },
+  {
+    "activityId": 17230,
+    "met": 7.0,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, 7 km/h, in piano, ritmo estremamente veloce"
+  },
+  {
+    "activityId": 17231,
+    "met": 8.3,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, 8,5 km/h, in piano, superficie stabile"
+  },
+  {
+    "activityId": 17235,
+    "met": 9.8,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, 8,5 km/h, in salita, 3% di pendenza"
+  },
+  {
+    "activityId": 17250,
+    "met": 3.5,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, per piacere, pausa di lavoro"
+  },
+  {
+    "activityId": 17260,
+    "met": 4.8,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, sull’erba"
+  },
+  {
+    "activityId": 17262,
+    "met": 4.5,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, a ritmo normale, in un campo arato o nella sabbia"
+  },
+  {
+    "activityId": 17270,
+    "met": 4.0,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, verso il lavoro o la scuola (Codice Taylor 015)"
+  },
+  {
+    "activityId": 17280,
+    "met": 2.5,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, da e verso la rimessa"
+  },
+  {
+    "activityId": 17302,
+    "met": 4.8,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, per fare esercizio, 5,5 a 6,5 km/h, con bastoni da neve, camminata nordica, in piano, ritmo moderato"
+  },
+  {
+    "activityId": 17305,
+    "met": 9.5,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, per fare esercizio, 8 km/h, con bastoni da neve, camminata nordica, in piano, ritmo veloce"
+  },
+  {
+    "activityId": 17310,
+    "met": 6.8,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, per fare esercizio, con bastoni da neve, camminata nordica, in salita"
+  },
+  {
+    "activityId": 17320,
+    "met": 6.0,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, all’indietro, 5,5 km/h, in piano"
+  },
+  {
+    "activityId": 17325,
+    "met": 8.0,
+    "activityType": "Camminata",
+    "specificActivity": "Camminare, all’indietro, 5,5 km/h, in salita, 5% di pendenza"
+  },
+  {
+    "activityId": 18010,
+    "met": 2.5,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Viaggiare in barca, a motore, guidare"
+  },
+  {
+    "activityId": 18012,
+    "met": 1.3,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Viaggiare in barca, a motore, passeggero, leggero"
+  },
+  {
+    "activityId": 18020,
+    "met": 4.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Canoa, in campeggio (Codice Taylor 270)"
+  },
+  {
+    "activityId": 18025,
+    "met": 3.3,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Canoa, raccolta del riso selvatico, battere gli steli"
+  },
+  {
+    "activityId": 18030,
+    "met": 7.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Canoa, portage"
+  },
+  {
+    "activityId": 18040,
+    "met": 2.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Canoa, pagaiare, 3-6 km/h, sforzo leggero"
+  },
+  {
+    "activityId": 18050,
+    "met": 5.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Canoa, pagaiare, 6-9,5 km/h, sforzo moderato"
+  },
+  {
+    "activityId": 18060,
+    "met": 12.5,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Canoa, pagaiare, kayak, regata, >9,66 km/h, sforzo vigoroso"
+  },
+  {
+    "activityId": 18070,
+    "met": 3.5,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Canoa, pagaiare, ricreativo, generale (Codice Taylor 250)"
+  },
+  {
+    "activityId": 18080,
+    "met": 12.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Canoa, pagaiare, regata, a squadra o a coppia (Codice Taylor 260)"
+  },
+  {
+    "activityId": 18090,
+    "met": 3.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Tuffi, trampolino di lancio o piattaforma"
+  },
+  {
+    "activityId": 18100,
+    "met": 5.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Kayak, sforzo moderato"
+  },
+  {
+    "activityId": 18110,
+    "met": 4.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Pedalò"
+  },
+  {
+    "activityId": 18120,
+    "met": 3.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Vela, barca e tavola a vela, windsurf, vela su ghiaccio, generale (Codice Taylor 235)"
+  },
+  {
+    "activityId": 18130,
+    "met": 4.5,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Vela, regata"
+  },
+  {
+    "activityId": 18140,
+    "met": 3.3,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Vela, Sunfish/Laser/Hobby Cat, barche a chiglia, navigazione d’altura, crociera, nautica da diporto"
+  },
+  {
+    "activityId": 18150,
+    "met": 6.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Sci d\\'acqua o wakeboard (Codice Taylor 220)"
+  },
+  {
+    "activityId": 18160,
+    "met": 7.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Moto d’acqua, guida, in acqua"
+  },
+  {
+    "activityId": 18180,
+    "met": 15.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Attività subacquee, veloce"
+  },
+  {
+    "activityId": 18190,
+    "met": 11.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Attività subacquee, moderato"
+  },
+  {
+    "activityId": 18200,
+    "met": 7.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Attività subacquee, scuba diving, generale (Codice Taylor 310)"
+  },
+  {
+    "activityId": 18210,
+    "met": 5.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Snorkeling (Codice Taylor 310)"
+  },
+  {
+    "activityId": 18220,
+    "met": 3.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Surf,"
+  },
+  {
+    "activityId": 18222,
+    "met": 5.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Surf, corpo o tavola, competizione"
+  },
+  {
+    "activityId": 18225,
+    "met": 6.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Stand Up Paddle"
+  },
+  {
+    "activityId": 18230,
+    "met": 9.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Vasche, stile libero, veloce, sforzo vigoroso"
+  },
+  {
+    "activityId": 18240,
+    "met": 5.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Vasche, vasche stile libero, lentamente, sforzo leggero o moderato"
+  },
+  {
+    "activityId": 18250,
+    "met": 9.5,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, dorso, generale, allenamento o competizione"
+  },
+  {
+    "activityId": 18255,
+    "met": 4.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, dorso, ricreativo"
+  },
+  {
+    "activityId": 18260,
+    "met": 10.3,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, rana, generale, allenamento o competizione"
+  },
+  {
+    "activityId": 18265,
+    "met": 5.3,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, rana, ricreativo"
+  },
+  {
+    "activityId": 18270,
+    "met": 13.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, farfalla, generale"
+  },
+  {
+    "activityId": 18280,
+    "met": 10.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, crawl, ritmo sostenuto, ~75 metri/minuto, sforzo vigoroso"
+  },
+  {
+    "activityId": 18290,
+    "met": 8.3,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, crawl, media velocità, ~50 metri/minuto, sforzo vigoroso"
+  },
+  {
+    "activityId": 18300,
+    "met": 6.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, lago, oceano, fiume (Codice Taylor 280,295)"
+  },
+  {
+    "activityId": 18310,
+    "met": 6.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, ricreativo, no vasche, generale"
+  },
+  {
+    "activityId": 18320,
+    "met": 7.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, sul fianco, generale"
+  },
+  {
+    "activityId": 18330,
+    "met": 8.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, sincronizzato"
+  },
+  {
+    "activityId": 18340,
+    "met": 9.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, galleggiare, veloce, sforzo vigoroso"
+  },
+  {
+    "activityId": 18350,
+    "met": 3.5,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Nuoto, galleggiare, sforzo moderato, generale"
+  },
+  {
+    "activityId": 18352,
+    "met": 2.3,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Tubing, galleggiare su un fiume con ciambelloni, generale"
+  },
+  {
+    "activityId": 18355,
+    "met": 5.5,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Acquagym, ginnastica in acqua"
+  },
+  {
+    "activityId": 18360,
+    "met": 10.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Pallanuoto"
+  },
+  {
+    "activityId": 18365,
+    "met": 3.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Pallavolo in acqua"
+  },
+  {
+    "activityId": 18366,
+    "met": 9.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Acqua jogging"
+  },
+  {
+    "activityId": 18367,
+    "met": 2.5,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Camminata in acqua, sforzo leggero, ritmo lento"
+  },
+  {
+    "activityId": 18368,
+    "met": 4.5,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Camminata in acqua, sforzo moderato, ritmo moderato"
+  },
+  {
+    "activityId": 18369,
+    "met": 6.8,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Camminata in acqua, sforzo vigoroso, ritmo sostenuto"
+  },
+  {
+    "activityId": 18370,
+    "met": 5.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Rapide, rafting, kayak o canoa"
+  },
+  {
+    "activityId": 18380,
+    "met": 5.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Windsurf, no pompata per velocità"
+  },
+  {
+    "activityId": 18385,
+    "met": 11.0,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Windsurf o kitesurf, allenamento"
+  },
+  {
+    "activityId": 18390,
+    "met": 13.5,
+    "activityType": "Attività acquatiche e nautiche",
+    "specificActivity": "Windsurf, pompata per velocità"
+  },
+  {
+    "activityId": 19005,
+    "met": 7.5,
+    "activityType": "Attività invernali",
+    "specificActivity": "Slitta trainata da cani, conducente"
+  },
+  {
+    "activityId": 19006,
+    "met": 2.5,
+    "activityType": "Attività invernali",
+    "specificActivity": "Slitte trainate da cani, passeggero"
+  },
+  {
+    "activityId": 19010,
+    "met": 6.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Trasloco casa di ghiaccio, allocare/praticare fori"
+  },
+  {
+    "activityId": 19011,
+    "met": 2.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Pesca sul ghiaccio, seduti"
+  },
+  {
+    "activityId": 19018,
+    "met": 14.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Pattinaggio, su ghiaccio"
+  },
+  {
+    "activityId": 19020,
+    "met": 5.5,
+    "activityType": "Attività invernali",
+    "specificActivity": "Pattinaggio su ghiaccio, 14,5 km/h o meno"
+  },
+  {
+    "activityId": 19030,
+    "met": 7.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Pattinaggio su ghiaccio, generale (Codice Taylor 360)"
+  },
+  {
+    "activityId": 19040,
+    "met": 9.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Pattinaggio su ghiaccio, ritmo veloce, più di 14,48 km/h, no competizione"
+  },
+  {
+    "activityId": 19050,
+    "met": 13.3,
+    "activityType": "Attività invernali",
+    "specificActivity": "Pattinaggio sul ghiaccio, veloce, competizione"
+  },
+  {
+    "activityId": 19060,
+    "met": 7.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Salto con gli sci, risalita con trasporto sci"
+  },
+  {
+    "activityId": 19075,
+    "met": 7.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci, generale"
+  },
+  {
+    "activityId": 19080,
+    "met": 6.8,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci di fondo, 4 km/h, ritmo lento o sforzo leggero, camminata con gli sci"
+  },
+  {
+    "activityId": 19090,
+    "met": 9.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci di fondo, 6,5-8 km/h, ritmo e sforzo moderata, generale"
+  },
+  {
+    "activityId": 19100,
+    "met": 12.5,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci di fondo, 8-12,5 km/h, velocità sostenuta, sforzo vigoroso"
+  },
+  {
+    "activityId": 19110,
+    "met": 15.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci di fondo, >13 km/h, sciatore d\\'elite, corsa"
+  },
+  {
+    "activityId": 19130,
+    "met": 15.5,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci di fondo, su neve compatta, in salita, al massimo, alpinismo"
+  },
+  {
+    "activityId": 19135,
+    "met": 13.3,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci di fondo, pattinaggio"
+  },
+  {
+    "activityId": 19140,
+    "met": 13.5,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci di fondo, biathlon, tecnica di pattinaggio"
+  },
+  {
+    "activityId": 19150,
+    "met": 4.3,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci, discesa, sci alpino o snowboard, sforzo leggero, solo periodi di impegno effettivo"
+  },
+  {
+    "activityId": 19160,
+    "met": 5.3,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci, discesa, sci alpino o snowboard, sforzo moderato, generale, solo periodi di impegno effettivo"
+  },
+  {
+    "activityId": 19170,
+    "met": 8.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci, discesa, sforzo vigoroso, corsa"
+  },
+  {
+    "activityId": 19175,
+    "met": 12.5,
+    "activityType": "Attività invernali",
+    "specificActivity": "Sci, roller, piloti d\\'elite"
+  },
+  {
+    "activityId": 19180,
+    "met": 7.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Slitta, slittino, bob, luge (Codice Taylor 370)"
+  },
+  {
+    "activityId": 19190,
+    "met": 5.3,
+    "activityType": "Attività invernali",
+    "specificActivity": "Racchette da neve, sforzo moderato"
+  },
+  {
+    "activityId": 19192,
+    "met": 10.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Racchette da neve, sforzo vigoroso"
+  },
+  {
+    "activityId": 19200,
+    "met": 3.5,
+    "activityType": "Attività invernali",
+    "specificActivity": "Motoslitta, guida, sforzo moderato"
+  },
+  {
+    "activityId": 19202,
+    "met": 2.0,
+    "activityType": "Attività invernali",
+    "specificActivity": "Motoslitta, passeggero"
+  },
+  {
+    "activityId": 19252,
+    "met": 5.3,
+    "activityType": "Attività invernali",
+    "specificActivity": "Spalare la neve, a mano, sforzo moderato"
+  },
+  {
+    "activityId": 19254,
+    "met": 7.5,
+    "activityType": "Attività invernali",
+    "specificActivity": "Spalare la neve, a mano, sforzo vigoroso"
+  },
+  {
+    "activityId": 19260,
+    "met": 2.5,
+    "activityType": "Attività invernali",
+    "specificActivity": "Spazzaneve, camminare e spingere"
+  },
+  {
+    "activityId": 20000,
+    "met": 1.3,
+    "activityType": "Attività religiose",
+    "specificActivity": "Seduto in chiesa, durante una messa, partecipare ad una cerimonia, seduto in silenzio"
+  },
+  {
+    "activityId": 20001,
+    "met": 2.0,
+    "activityType": "Attività religiose",
+    "specificActivity": "Seduta, suonare uno strumento in chiesa"
+  },
+  {
+    "activityId": 20005,
+    "met": 1.8,
+    "activityType": "Attività religiose",
+    "specificActivity": "Seduto in chiesa, parlare o cantare, partecipare a una cerimonia, seduto, partecipare attivamente"
+  },
+  {
+    "activityId": 20010,
+    "met": 1.3,
+    "activityType": "Attività religiose",
+    "specificActivity": "Seduto, lettura di testi religiosi a casa"
+  },
+  {
+    "activityId": 20015,
+    "met": 1.3,
+    "activityType": "Attività religiose",
+    "specificActivity": "In piedi in silenzio in chiesa, partecipare"
+  },
+  {
+    "activityId": 20020,
+    "met": 2.0,
+    "activityType": "Attività religiose",
+    "specificActivity": "In piedi, cantare in chiesa, partecipare a una cerimonia, in piedi, partecipare attivamente"
+  },
+  {
+    "activityId": 20025,
+    "met": 1.3,
+    "activityType": "Attività religiose",
+    "specificActivity": "Inginocchiato in chiesa o in casa, pregare"
+  },
+  {
+    "activityId": 20030,
+    "met": 1.8,
+    "activityType": "Attività religiose",
+    "specificActivity": "In piedi, parlare in chiesa"
+  },
+  {
+    "activityId": 20035,
+    "met": 2.0,
+    "activityType": "Attività religiose",
+    "specificActivity": "Camminare in chiesa"
+  },
+  {
+    "activityId": 20036,
+    "met": 2.0,
+    "activityType": "Attività religiose",
+    "specificActivity": "Camminare, meno di 3 km/h, molto lentamente"
+  },
+  {
+    "activityId": 20037,
+    "met": 3.5,
+    "activityType": "Attività religiose",
+    "specificActivity": "Camminare, 5 km/h, velocità moderata, senza sorreggere nulla"
+  },
+  {
+    "activityId": 20038,
+    "met": 4.3,
+    "activityType": "Attività religiose",
+    "specificActivity": "Camminare, 5,5 km/h, velocità sostenuta, senza sorreggere nulla"
+  },
+  {
+    "activityId": 20039,
+    "met": 2.0,
+    "activityType": "Attività religiose",
+    "specificActivity": "Combinazione di camminare/stare fermi in piedi nel corso di funzioni religiose"
+  },
+  {
+    "activityId": 20040,
+    "met": 5.0,
+    "activityType": "Attività religiose",
+    "specificActivity": "Lodare con danze e movimenti, danza spirituale in chiesa"
+  },
+  {
+    "activityId": 20045,
+    "met": 2.5,
+    "activityType": "Attività religiose",
+    "specificActivity": "Servire cibo in chiesa"
+  },
+  {
+    "activityId": 20046,
+    "met": 2.0,
+    "activityType": "Attività religiose",
+    "specificActivity": "Preparare il cibo in chiesa"
+  },
+  {
+    "activityId": 20047,
+    "met": 3.3,
+    "activityType": "Attività religiose",
+    "specificActivity": "Lavare i piatti, pulizia della cucina in chiesa"
+  },
+  {
+    "activityId": 20050,
+    "met": 1.5,
+    "activityType": "Attività religiose",
+    "specificActivity": "Mangiare in chiesa"
+  },
+  {
+    "activityId": 20055,
+    "met": 2.0,
+    "activityType": "Attività religiose",
+    "specificActivity": "Mangiare/parlare in chiesa o"
+  },
+  {
+    "activityId": 20060,
+    "met": 3.3,
+    "activityType": "Attività religiose",
+    "specificActivity": "Pulizie della chiesa"
+  },
+  {
+    "activityId": 20061,
+    "met": 40.0,
+    "activityType": "Attività religiose",
+    "specificActivity": "Lavoro, generale, nel cortile della chiesa"
+  },
+  {
+    "activityId": 20065,
+    "met": 3.5,
+    "activityType": "Attività religiose",
+    "specificActivity": "In piedi, sforzo moderato (es. sollevare oggetti pesanti, assemblaggio a ritmo veloce)"
+  },
+  {
+    "activityId": 20095,
+    "met": 4.5,
+    "activityType": "Attività religiose",
+    "specificActivity": "In piedi, sforzo da pesante a moderato,"
+  },
+  {
+    "activityId": 20100,
+    "met": 1.3,
+    "activityType": "Attività religiose",
+    "specificActivity": "Dattilografare, macchina da scrivere elettrica, meccanica"
+  },
+  {
+    "activityId": 21000,
+    "met": 1.5,
+    "activityType": "Attività religiose",
+    "specificActivity": "Seduto, in riunione, generale, e/o con conversazione"
+  },
+  {
+    "activityId": 21005,
+    "met": 1.5,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Seduto, lavoro d\\'ufficio leggero,"
+  },
+  {
+    "activityId": 21010,
+    "met": 2.5,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Seduto, lavoro moderato"
+  },
+  {
+    "activityId": 21015,
+    "met": 2.3,
+    "activityType": "Attività volontarie",
+    "specificActivity": "In piedi, lavori leggeri (archiviazione, parlare, assemblaggio)"
+  },
+  {
+    "activityId": 21016,
+    "met": 2.0,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Seduto, cura dei bambini, solo i periodi di lavoro effettivo"
+  },
+  {
+    "activityId": 21017,
+    "met": 3.0,
+    "activityType": "Attività volontarie",
+    "specificActivity": "In piedi, cura dei bambini, solo i periodi di lavoro effettivo"
+  },
+  {
+    "activityId": 21018,
+    "met": 3.5,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Camminare/correre, giocare con i bambini, sforzo moderato,"
+  },
+  {
+    "activityId": 21019,
+    "met": 5.8,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Camminare/correre, giocare con i bambini, sforzo vigoroso, solo i periodi di lavoro effettivo"
+  },
+  {
+    "activityId": 21020,
+    "met": 3.0,
+    "activityType": "Attività volontarie",
+    "specificActivity": "In piedi, lavoro leggero/moderato (es. confezionare scatole, montaggio/riparazione, riparare sedie/mobili)"
+  },
+  {
+    "activityId": 21025,
+    "met": 3.5,
+    "activityType": "Attività volontarie",
+    "specificActivity": "In piedi, moderata (sollevare 22,6 kg, montaggio a ritmo veloce)"
+  },
+  {
+    "activityId": 21030,
+    "met": 4.5,
+    "activityType": "Attività volontarie",
+    "specificActivity": "In piedi, sforzo lavorativo da moderato a pesante"
+  },
+  {
+    "activityId": 21035,
+    "met": 1.3,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Scrivere a macchina o al computer"
+  },
+  {
+    "activityId": 21040,
+    "met": 2.0,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Camminare, meno di 3 km/h, molto lentamente"
+  },
+  {
+    "activityId": 21045,
+    "met": 3.5,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Camminare, 5,8 km/h, velocità moderata, non portando nulla"
+  },
+  {
+    "activityId": 21050,
+    "met": 4.3,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Camminare, 5,6 km/h, velocità sostenuta, non portando nulla"
+  },
+  {
+    "activityId": 21055,
+    "met": 3.5,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Camminare, 4 km/h, lentamente,"
+  },
+  {
+    "activityId": 21060,
+    "met": 4.5,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Camminare, 5 km/h,"
+  },
+  {
+    "activityId": 21065,
+    "met": 4.8,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Camminare, 5,6 km/h , passo svelto con trasporto di oggetti di peso inferiore a 11 kg"
+  },
+  {
+    "activityId": 21070,
+    "met": 3.0,
+    "activityType": "Attività volontarie",
+    "specificActivity": "Camminare/soffermarsi, volontariamente"
+  }
+]

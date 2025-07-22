@@ -55,7 +55,7 @@ const healthConditionsData = [
   { description: 'Menopause', categoryCode: 'physiological_state' },
 ];
 
-// Definisci incompatibilità (esempio)
+// Definisci incompatibilità
 const incompatibilitiesData = [
   // "Infant 6-12 months" incompatible with "Menopause"
   { conditionDescription: 'Infant 6-12 months', incompatibleWithDescription: 'Breastfeeding' },

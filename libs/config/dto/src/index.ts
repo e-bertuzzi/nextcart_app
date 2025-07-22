@@ -4,3 +4,5 @@ export * from './lib/consumer/create-consumer.dto';
 export * from './lib/login/login.dto';
 export * from './lib/health-condition/filter-health-conditions.dto';
 export * from './lib/body-composition/body-composition.dto';
+export * from './lib/activity/create-activity.dto';
+export * from './lib/activity/update-activity.dto';

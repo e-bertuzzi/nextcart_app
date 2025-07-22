@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import {
@@ -107,29 +107,40 @@ export class HealthConditionsService {
   }
 
   async updateUserHealthConditions(
-    consumerId: number,
-    healthConditionIds: number[]
-  ) {
-    const user = await this.consumerRepo.findOne({
-      where: { consumerId: consumerId },
-      relations: ['healthConditions'],
-    });
+  consumerId: number,
+  healthConditionIds: number[]
+) {
+  const user = await this.consumerRepo.findOne({
+    where: { consumerId },
+    relations: ['healthConditions'],
+  });
 
-    if (!user) throw new NotFoundException('User not found');
+  if (!user) throw new NotFoundException('User not found');
 
-    // Prendi le condizioni selezionate
-    const selectedConditions = await this.healthConditionRepository.findByIds(
-      healthConditionIds
+  // Controllo incompatibilità
+  const incompatibilities = await this.incompatibilityRepository
+    .createQueryBuilder('inc')
+    .where('inc.conditionId IN (:...ids)', { ids: healthConditionIds })
+    .andWhere('inc.incompatibleWithId IN (:...ids)', { ids: healthConditionIds })
+    .getMany();
+
+  if (incompatibilities.length > 0) {
+    throw new BadRequestException(
+      'Selected health conditions include incompatible pairs'
     );
-
-    // Aggiorna le condizioni dell'utente
-    user.healthConditions = selectedConditions;
-
-    // Salva l'utente con la relazione aggiornata
-    await this.consumerRepo.save(user);
-
-    return user;
   }
+
+  // Prendi le condizioni selezionate
+  const selectedConditions = await this.healthConditionRepository.findByIds(
+    healthConditionIds
+  );
+
+  user.healthConditions = selectedConditions;
+  await this.consumerRepo.save(user);
+
+  return user;
+}
+
 
   async getPathologies() {
     // Recupera solo le health conditions con categoryId = 5 (pathology)

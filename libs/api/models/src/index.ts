@@ -8,3 +8,5 @@ export * from './lib/health-condition/incompatibility/health-condition-incompati
 export * from './lib/diet/diet.entity';
 export * from './lib/diet/incompatibility/diet-incompatibility.entity';
 export * from './lib/body-composition/body-composition.entity';
+export * from './lib/activity/activity.entity';
+export * from './lib/physical-activity/physical-activity.entity';

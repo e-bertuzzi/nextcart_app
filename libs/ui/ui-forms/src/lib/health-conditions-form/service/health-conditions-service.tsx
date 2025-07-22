@@ -23,3 +23,11 @@ export async function saveUserHealthConditions(userId: number | undefined, healt
 export async function removeUserHealthCondition(userId: number | undefined, conditionId: number) {
   return api.delete(`/health-conditions/users/${userId}/health-conditions/${conditionId}`);
 }
+
+// health-conditions-service.ts
+export async function getHealthConditionIncompatibilities() {
+  const response = await fetch('/api/health-conditions/incompatibilities');
+  if (!response.ok) throw new Error('Failed to load incompatibilities');
+  return response.json() as Promise<{ conditionId: number; incompatibleWithId: number }[]>;
+}
+

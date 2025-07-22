@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nextcart/activity": ["libs/api/activity/src/index.ts"],
       "@nextcart/api-auth": ["libs/api/auth/src/index.ts"],
       "@nextcart/body-composition": ["libs/api/body-composition/src/index.ts"],
       "@nextcart/commons": ["libs/ui/commons/src/index.ts"],
@@ -22,13 +23,12 @@
       "@nextcart/diet": ["libs/api/diet/src/index.ts"],
       "@nextcart/dto": ["libs/config/dto/src/index.ts"],
       "@nextcart/enum": ["libs/config/enum/src/index.ts"],
-      "@nextcart/health-conditions": [
-        "libs/api/health-conditions/src/index.ts"
-      ],
+      "@nextcart/health-conditions": ["libs/api/health-condition/src/index.ts"],
       "@nextcart/http": ["libs/api/http/src/index.ts"],
       "@nextcart/models": ["libs/api/models/src/index.ts"],
       "@nextcart/profile": ["libs/api/profile/src/index.ts"],
       "@nextcart/token": ["libs/api/token/src/index.ts"],
+      "@nextcart/ui-activity": ["libs/ui/ui-activity/src/index.ts"],
       "@nextcart/ui-auth": ["libs/ui/ui-auth/src/index.ts"],
       "@nextcart/ui-commons": ["libs/ui/ui-commons/src/index.ts"],
       "@nextcart/ui-dashboard": ["libs/ui/ui-dashboard/src/index.ts"],

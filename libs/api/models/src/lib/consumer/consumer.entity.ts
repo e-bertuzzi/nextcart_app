@@ -11,6 +11,7 @@ import { Gender, Role } from '@nextcart/enum';
 import { HealthCondition } from '../health-condition/health-condition.entity';
 import { Diet } from '../diet/diet.entity';
 import { BodyComposition } from '../body-composition/body-composition.entity';
+import { PhysicalActivity } from '../physical-activity/physical-activity.entity';
 
 @Entity()
 export class Consumer {
@@ -66,6 +67,9 @@ export class Consumer {
 
   @OneToMany(() => BodyComposition, (bc) => bc.consumer)
   bodyCompositions?: BodyComposition[];
+
+  @OneToMany(() => PhysicalActivity, (physicalActivity) => physicalActivity.consumer)
+  physicalActivities?: PhysicalActivity[];
 
   //@ManyToOne(() => Family, (family) => family.members, { nullable: true })
   //family?: Family;
