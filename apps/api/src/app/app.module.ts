@@ -9,6 +9,8 @@ import { HealthConditionModule } from '@nextcart/health-conditions';
 import { ConfigModule } from '@nestjs/config';
 import { DietModule } from '@nextcart/diet'
 import { BodyCompositionModule } from '@nextcart/body-composition';
+import { ActivityModule } from '@nextcart/activity';
+import { PhysicalActivityModule } from '@nextcart/physical-activity';
 
 @Module({
   imports: [
@@ -31,6 +33,8 @@ import { BodyCompositionModule } from '@nextcart/body-composition';
     HealthConditionModule,
     DietModule,
     BodyCompositionModule,
+    ActivityModule,
+    PhysicalActivityModule,
     ConfigModule.forRoot({
       isGlobal: true, // disponibile ovunque
     }),

@@ -56,7 +56,7 @@ export function BodyCompositionSummary() {
             variant="primary"
             onClick={() => navigate('/body-composition/edit')}
           >
-            Add or Edit Record
+            Add new body compositon
           </Button>
         </FormLayout>
       </Container>

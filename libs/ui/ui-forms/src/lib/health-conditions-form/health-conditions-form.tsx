@@ -75,6 +75,7 @@ export function HealthForm() {
                   const hasNone = opts.some(o => o.value === '0');
 
                   if (hasNone) {
+                    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                     setSelectedPathologies([opts.find(o => o.value === '0')!]);
                   } else {
                     setSelectedPathologies(opts.filter(o => o.value !== '0'));

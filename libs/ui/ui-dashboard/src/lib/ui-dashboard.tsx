@@ -59,7 +59,7 @@ export function UiDashboard() {
               <DashboardCard
                 label="Physical Activity"
                 iconName="bicycle"
-                href="/activity"
+                href="/physical-activity"
                 description="Track your workouts"
               />
               <DashboardCard

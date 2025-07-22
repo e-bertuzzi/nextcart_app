@@ -5,6 +5,8 @@ import { DietForm } from './diet-form/diet-form';
 import { DietSummary } from './diet-form/diet-summary';
 import { BodyCompositionSummary } from './body-compositions-form/body-compositions-summary';
 import { BodyCompositionForm } from './body-compositions-form/body-composition-form';
+import { PhysicalActivitySummary } from './physical-activity-form/physical-activity-summary';
+import { PhysicalActivityForm } from './physical-activity-form/physical-activity-form';
 
 export function UiHealthPage() {
   return (
@@ -36,8 +38,20 @@ export function UiBodyPage() {
   );
 }
 
-export function UiBodyForm() {
+export function UiBodyEdit() {
   return (
     <BodyCompositionForm />
   );
+}
+
+export function UiPhysicalActivityPage() {
+  return (
+    <PhysicalActivitySummary />
+  )
+}
+
+export function UiPhysicalActivityEdit() {
+  return (
+    <PhysicalActivityForm />
+  )
 }

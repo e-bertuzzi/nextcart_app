@@ -14,6 +14,8 @@ import DietPage from './diet-pages/diet-page';
 import DietEdit from './diet-pages/diet-edit';
 import BodyPage from './body-pages/body-page';
 import BodyEdit from './body-pages/body-edit';
+import PhysicalActivityPage from './activity-pages/activity-page';
+import PhysicalActivityEdit from './activity-pages/activity-edit';
 
 export function App() {
   return (
@@ -38,6 +40,8 @@ export function App() {
             <Route path="/diet/edit" element={<DietEdit/>} />
             <Route path="/body-composition" element={<BodyPage/>} />
             <Route path="/body-composition/edit" element={<BodyEdit/>} />
+            <Route path="/physical-activity" element={<PhysicalActivityPage/>} />
+            <Route path="/physical-activity/edit" element={<PhysicalActivityEdit/>} />
           </Route>
         </Route>
         <Route path="*" element={<NotFoundPage />} />

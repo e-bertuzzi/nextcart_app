@@ -26,6 +26,9 @@
       "@nextcart/health-conditions": ["libs/api/health-condition/src/index.ts"],
       "@nextcart/http": ["libs/api/http/src/index.ts"],
       "@nextcart/models": ["libs/api/models/src/index.ts"],
+      "@nextcart/physical-activity": [
+        "libs/api/physical-activity/src/index.ts"
+      ],
       "@nextcart/profile": ["libs/api/profile/src/index.ts"],
       "@nextcart/token": ["libs/api/token/src/index.ts"],
       "@nextcart/ui-activity": ["libs/ui/ui-activity/src/index.ts"],

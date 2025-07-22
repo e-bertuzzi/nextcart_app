@@ -6,3 +6,4 @@ export * from './lib/health-condition/filter-health-conditions.dto';
 export * from './lib/body-composition/body-composition.dto';
 export * from './lib/activity/create-activity.dto';
 export * from './lib/activity/update-activity.dto';
+export * from './lib/physical-activity/physical-acvtivity.dto';

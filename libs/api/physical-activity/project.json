@@ -1,0 +1,9 @@
+{
+  "name": "physical-activity",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api/physical-activity/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project physical-activity --web",
+  "targets": {}
+}

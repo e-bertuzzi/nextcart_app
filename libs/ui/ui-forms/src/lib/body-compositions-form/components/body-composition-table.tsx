@@ -49,7 +49,7 @@ export function UserBodyCompositionsTable({
           ),
         },
       ]}
-      // altre props della tabella
+      variant='embedded'
     />
   );
 }
