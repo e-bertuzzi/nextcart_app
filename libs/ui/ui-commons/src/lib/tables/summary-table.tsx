@@ -10,7 +10,7 @@ interface GenericTableProps<T> {
   stickyHeader?: boolean;
 }
 
-export function GenericTable<T>({
+export function SummaryTable<T>({
   items,
   columnDefinitions,
   trackBy,

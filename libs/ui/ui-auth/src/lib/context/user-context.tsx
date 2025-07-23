@@ -1,4 +1,5 @@
 // src/context/UserContext.tsx
+/*
 import {
   createContext,
   useContext,
@@ -80,3 +81,4 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
 };
 
 export const useUser = () => useContext(UserContext);
+*/

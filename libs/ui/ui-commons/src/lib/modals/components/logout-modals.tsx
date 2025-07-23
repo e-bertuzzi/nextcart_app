@@ -6,7 +6,7 @@ interface LogoutModalProps {
   onClose: () => void;
 }
 
-export default function LogoutModal({ visible, onClose }: LogoutModalProps) {
+export function UiLogoutModal({ visible, onClose }: LogoutModalProps) {
   return (
     <Modal
       visible={visible}

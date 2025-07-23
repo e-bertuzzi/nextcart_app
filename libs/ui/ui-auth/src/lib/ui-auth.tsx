@@ -1,6 +1,6 @@
-import { Container } from '@cloudscape-design/components';
-import LoginForm from './login/components/login-form';
-import RegisterForm from './registration/registration-form';
+/*import { Container } from '@cloudscape-design/components';
+import LoginForm from './login/pages/login-form';
+import RegisterForm from './registration/pages/registration-form';
 
 export function UiLogin() {
   return (
@@ -22,6 +22,9 @@ export function UiRegister() {
       </div>
     </div>
   );
-}
+}*/
+
+export * from './login';
+export * from './registration';
 
 

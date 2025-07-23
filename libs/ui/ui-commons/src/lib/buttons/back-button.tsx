@@ -2,7 +2,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@cloudscape-design/components';
 import { useEffect, useRef } from 'react';
 
-export const BackButton = () => {
+export const UiBackButton = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const hasPreviousPage = useRef(false);

@@ -1,10 +1,10 @@
 import { SpaceBetween } from '@cloudscape-design/components';
-import { NameField } from './fields/name-field';
-import { SurnameField } from './fields/surname-field';
-import { DateOfBirthField } from './fields/date-birth-field';
-import { PlaceOfBirthField } from './fields/place-of-birth-field';
-import { AddressField } from './fields/address-field';
-import { GenderField } from './fields/gender-field';
+import { NameField } from '@nextcart/ui-auth';
+import { SurnameField } from '@nextcart/ui-auth';
+import { DateOfBirthField } from '@nextcart/ui-auth';
+import { PlaceOfBirthField } from '@nextcart/ui-auth';
+import { AddressField } from '@nextcart/ui-auth';
+import { GenderField } from '@nextcart/ui-auth';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Gender } from '@nextcart/enum';

@@ -1,7 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { Box, BreadcrumbGroup } from '@cloudscape-design/components';
 
-export function Breadcrumbs() {
+export function UiBreadCrumbs() {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter(Boolean);
 

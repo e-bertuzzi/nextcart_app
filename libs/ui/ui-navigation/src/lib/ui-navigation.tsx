@@ -1,3 +1,1 @@
-import Navbar from "./navbar/pages/navbar";
-
-export {Navbar as UiNavBar}
+export * from './navbar/pages';

@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@cloudscape-design/components';
 
-export default function NotFoundPage() {
+export function UiNotFound() {
   const navigate = useNavigate();
 
   const handleGoHome = () => {

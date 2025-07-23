@@ -1,14 +1,20 @@
-import React from 'react';
-import { HealthSummary } from '../lib/health-conditions-form/health-conditions-summary';
-import { HealthForm } from './health-conditions-form/health-conditions-form';
-import { DietForm } from './diet-form/diet-form';
-import { DietSummary } from './diet-form/diet-summary';
-import { BodyCompositionSummary } from './body-compositions-form/body-compositions-summary';
-import { BodyCompositionForm } from './body-compositions-form/body-composition-form';
-import { PhysicalActivitySummary } from './physical-activity-form/physical-activity-summary';
-import { PhysicalActivityForm } from './physical-activity-form/physical-activity-form';
+/*import React from 'react';
+import { HealthSummary } from './health-conditions-form/pages/health-conditions-summary';
+import { HealthForm } from './health-conditions-form/pages/health-conditions-form';
+import { DietForm } from './diet-form/pages/diet-form';
+import { DietSummary } from './diet-form/pages/diet-summary';
+import { BodyCompositionSummary } from './body-compositions-form/pages/body-compositions-summary';
+import { BodyCompositionForm } from './body-compositions-form/pages/body-composition-form';
+import { PhysicalActivitySummary } from './physical-activity-form/pages/physical-activity-summary';
+import { PhysicalActivityForm } from './physical-activity-form/pages/physical-activity-form';*/
 
-export function UiHealthPage() {
+export * from './health-conditions-form';
+export * from './diet-form';
+export * from './physical-activity-form';
+export * from './body-compositions-form';
+
+
+/*export function UiHealthPage() {
   return (
     <HealthSummary />
   );
@@ -54,4 +60,4 @@ export function UiPhysicalActivityEdit() {
   return (
     <PhysicalActivityForm />
   )
-}
+}*/

@@ -31,7 +31,6 @@
       ],
       "@nextcart/profile": ["libs/api/profile/src/index.ts"],
       "@nextcart/token": ["libs/api/token/src/index.ts"],
-      "@nextcart/ui-activity": ["libs/ui/ui-activity/src/index.ts"],
       "@nextcart/ui-auth": ["libs/ui/ui-auth/src/index.ts"],
       "@nextcart/ui-commons": ["libs/ui/ui-commons/src/index.ts"],
       "@nextcart/ui-dashboard": ["libs/ui/ui-dashboard/src/index.ts"],

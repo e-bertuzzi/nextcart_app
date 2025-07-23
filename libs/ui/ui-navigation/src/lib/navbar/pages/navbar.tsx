@@ -12,7 +12,7 @@ import GuestNav from '../components/guest-nav';
 import UserMenu from '../components/user-menu';
 import { UiLogoutModal }from '@nextcart/ui-commons';
 
-export default function Navbar() {
+export function UiNavBar() {
   const { user, logout } = useUser();
   const navigate = useNavigate();
   const [modalVisible, setModalVisible] = useState(false);

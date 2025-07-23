@@ -5,7 +5,7 @@ import RegistrationPage from './auth-pages/registration-pages/registration';
 import LayoutPage from './common-pages/navbar-page';
 import HomePage from './home-pages/home';
 
-import { Route, Routes, Link, Navigate } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import EditProfilePage from './profile-pages/edit-profile';
 import DashboardPage from './dashboard-pages/dashboard-page';
 import NotFoundPage from './common-pages/not-found-page';
