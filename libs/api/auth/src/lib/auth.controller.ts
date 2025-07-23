@@ -1,14 +1,18 @@
-import { Controller, Body, Get, HttpCode, Post, Req, UnauthorizedException, UseGuards, Res } from '@nestjs/common';
+import { Controller, Body, HttpCode, Post, Req, UnauthorizedException, Res } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateConsumerDTO, LoginDTO } from '@nextcart/dto';
-import { AuthGuard } from '@nestjs/passport';
 import { Request } from 'express';
 import { Response } from 'express';
 import { JwtService } from '@nestjs/jwt';
 import { jwtConstants } from './auth.constants';
+import {
+  ApiTags,
+  ApiOperation,
+  ApiResponse,
+  ApiBody,
+} from '@nestjs/swagger';
 
-
-
+@ApiTags('Auth')
 @Controller('auth')
 export class AuthController {
   constructor(
@@ -27,6 +31,10 @@ export class AuthController {
   }*/
 
   @Post('login')
+  @ApiOperation({ summary: 'Login user and set refresh token in cookie' })
+  @ApiBody({ type: LoginDTO })
+  @ApiResponse({ status: 201, description: 'User logged in and access token returned' })
+  @ApiResponse({ status: 401, description: 'Invalid credentials' })
   async login(@Res({ passthrough: true }) res: Response, @Body() loginDTO: LoginDTO) {
     const user = await this.authService.validateUser(loginDTO.email, loginDTO.password);
     if (!user) throw new UnauthorizedException();
@@ -45,6 +53,10 @@ export class AuthController {
   }
 
   @Post('register')
+  @ApiOperation({ summary: 'Register new user' })
+  @ApiBody({ type: CreateConsumerDTO })
+  @ApiResponse({ status: 201, description: 'User registered successfully' })
+  @ApiResponse({ status: 400, description: 'Validation failed' })
   async register(@Body() createConsumerDto: CreateConsumerDTO) {
     // Chiama il service per creare l'utente
     const consumer = await this.authService.register(createConsumerDto);
@@ -55,6 +67,9 @@ export class AuthController {
   //aggiunto per il refresh
   @Post('refresh')
   @HttpCode(200)
+  @ApiOperation({ summary: 'Refresh access token using cookie-stored refresh token' })
+  @ApiResponse({ status: 200, description: 'New access token returned' })
+  @ApiResponse({ status: 401, description: 'Invalid or expired refresh token' })
   async refresh(@Req() req: Request, @Res({ passthrough: true }) res: Response) {
     console.log(`[${new Date().toLocaleTimeString()}] Endpoint /auth/refresh chiamato`);
     const refreshToken = req.cookies?.refreshToken;
@@ -88,6 +103,8 @@ export class AuthController {
 
   @Post('logout')
   @HttpCode(200)
+  @ApiOperation({ summary: 'Logout user and clear refresh token cookie' })
+  @ApiResponse({ status: 200, description: 'Logout successful' })
   async logout(@Res({ passthrough: true }) res: Response) {
     // Se salvi i token nel DB, puoi aggiungere logica per invalidarlo qui
     // es: await this.authService.revokeRefreshToken(userId)
