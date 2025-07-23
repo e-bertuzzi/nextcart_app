@@ -1,8 +1,7 @@
 import { DataSource } from 'typeorm';
 import { HealthCondition } from '../health-condition.entity';
-import { HealthConditionCategory } from '../category/health-condition-category.entity'; // Assumendo sia qui
-import { HealthConditionIncompatibility } from '../incompatibility/health-condition-incompatibility.entity'; // nuova entità
-import { Consumer } from '../../consumer/consumer.entity';
+import { HealthConditionCategory } from '../category/health-condition-category.entity'; 
+import { HealthConditionIncompatibility } from '../incompatibility/health-condition-incompatibility.entity'; 
 
 const categoriesData = [
   { code: 'age', label: 'Age Group' },
@@ -162,7 +161,7 @@ async function seed() {
     username: 'utente',
     password: 'utente123',
     database: 'nextcart',
-    entities: [HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, Consumer],
+    entities: ['libs/api/models/src/**/*.entity.{ts,js}'],
     synchronize: false,
     logging: false,
   });

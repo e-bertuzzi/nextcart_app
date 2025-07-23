@@ -1,10 +1,5 @@
 import { DataSource } from 'typeorm';
-import { Diet } from '../diet.entity'; // correggi il path se serve
-import { DietIncompatibility } from '../incompatibility/diet-incompatibility.entity';
-import { Consumer } from '../../consumer/consumer.entity';
-import { HealthCondition } from '../../health-condition/health-condition.entity';
-import { HealthConditionCategory } from '../../health-condition/category/health-condition-category.entity';
-import { HealthConditionIncompatibility } from '../../health-condition/incompatibility/health-condition-incompatibility.entity';
+import { Diet } from '../diet.entity';
 
 const dietsData = [
   {
@@ -54,7 +49,7 @@ const dietsData = [
     description: 'Vegana',
     details: 'Non sono ammessi derivati animali',
     restrictionLevel: 21,
-  },
+  }
 ];
 
 async function seed() {
@@ -65,14 +60,7 @@ async function seed() {
     username: 'utente',
     password: 'utente123',
     database: 'nextcart',
-    entities: [
-      Diet,
-      DietIncompatibility,
-      Consumer,
-      HealthCondition,
-      HealthConditionCategory,
-      HealthConditionIncompatibility,
-    ],
+    entities: ['libs/api/models/src/**/*.entity.{ts,js}'],
     synchronize: false,
     logging: false,
   });

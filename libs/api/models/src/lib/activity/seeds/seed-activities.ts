@@ -2,14 +2,6 @@ import { DataSource } from 'typeorm';
 import { Activity } from '../activity.entity'; // aggiusta path se serve
 import * as fs from 'fs';
 import * as path from 'path';
-import { PhysicalActivity } from '../../physical-activity/physical-activity.entity';
-import { Consumer } from '../../consumer/consumer.entity';
-import { HealthCondition } from '../../health-condition/health-condition.entity';
-import { HealthConditionCategory } from '../../health-condition/category/health-condition-category.entity';
-import { HealthConditionIncompatibility } from '../../health-condition/incompatibility/health-condition-incompatibility.entity';
-import { Diet } from '../../diet/diet.entity';
-import { DietIncompatibility } from '../../diet/incompatibility/diet-incompatibility.entity';
-import { BodyComposition } from '../../body-composition/body-composition.entity';
 
 async function seed() {
   const dataSource = new DataSource({
@@ -19,7 +11,7 @@ async function seed() {
     username: 'utente',
     password: 'utente123',
     database: 'nextcart',
-    entities: [Activity, PhysicalActivity, Consumer, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, Diet, DietIncompatibility, BodyComposition],
+    entities: ['libs/api/models/src/**/*.entity.{ts,js}'],
     synchronize: false,
     logging: false,
   });
