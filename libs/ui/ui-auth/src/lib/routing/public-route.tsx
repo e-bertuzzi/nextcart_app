@@ -1,6 +1,7 @@
 // src/routes/PublicRoute.tsx
 import { Navigate, Outlet } from 'react-router-dom';
-import { useUser } from '../context/user-context';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth';
 
 export function PublicRoute() {
   const { user, loading } = useUser();

@@ -1,4 +1,5 @@
-import { PrivateRoute, PublicRoute, UserProvider } from '@nextcart/ui-auth';
+import { PrivateRoute, PublicRoute } from '@nextcart/ui-auth';
+import { UserProvider } from '@nextcart/web-auth'
 import LoginPage from './auth-pages/login-pages/login';
 import RegistrationPage from './auth-pages/registration-pages/registration';
 import LayoutPage from './common-pages/navbar-page';

@@ -1,6 +1,7 @@
 // components/Navbar/Navbar.tsx
 import { Box } from '@cloudscape-design/components';
-import { useUser } from '@nextcart/ui-auth';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 // eslint-disable-next-line @nx/enforce-module-boundaries

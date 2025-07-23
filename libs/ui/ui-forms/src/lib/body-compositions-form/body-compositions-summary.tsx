@@ -10,7 +10,7 @@ import {
 } from '@cloudscape-design/components';
 import { Navigate, useNavigate } from 'react-router-dom';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { useUser } from '@nextcart/ui-auth';
+import { useUser } from '@nextcart/web-auth';
 
 export function BodyCompositionSummary() {
   const { user, loading } = useUser();

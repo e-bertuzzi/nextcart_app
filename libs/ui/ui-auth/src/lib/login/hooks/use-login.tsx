@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useUser } from '../../context/user-context';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { api } from '@nextcart/http';
 

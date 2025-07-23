@@ -11,7 +11,8 @@ import {
   Select,
 } from '@cloudscape-design/components';
 import { usePhysicalActivity } from './hook/use-physical-activity';
-import { useUser } from '@nextcart/ui-auth';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth';
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 

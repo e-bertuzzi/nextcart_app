@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { api } from '@nextcart/http'; // il file dove hai configurato axios con interceptor
-import { useUser } from '@nextcart/ui-auth';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Gender } from '@nextcart/enum';
 

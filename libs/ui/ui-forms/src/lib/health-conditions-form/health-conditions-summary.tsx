@@ -2,7 +2,8 @@ import { useHealthConditions } from '../health-conditions-form/hook/use-health-c
 import { UserHealthConditionsTable } from '../health-conditions-form/components/user-health-condition-table';
 import { Button, Container, Box, Flashbar, SpaceBetween, Spinner } from '@cloudscape-design/components';
 import { Navigate, useNavigate } from 'react-router-dom';
-import { useUser } from '@nextcart/ui-auth'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth'
 
 export function HealthSummary() {
   const { user, loading } = useUser();

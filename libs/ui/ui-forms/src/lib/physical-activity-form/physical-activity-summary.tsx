@@ -2,7 +2,8 @@ import { usePhysicalActivity } from './hook/use-physical-activity';
 import { UserPhysicalActivitiesTable } from './components/physical-activity-table';
 import { Button, Container, Box, Flashbar, SpaceBetween, Spinner } from '@cloudscape-design/components';
 import { Navigate, useNavigate } from 'react-router-dom';
-import { useUser } from '@nextcart/ui-auth';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth';
 
 export function PhysicalActivitySummary() {
   const { user, loading } = useUser();

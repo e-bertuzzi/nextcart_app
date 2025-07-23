@@ -13,7 +13,8 @@ import { AgeConditionSelect } from './components/age-condition-select';
 import { PathologyMultiselect } from './components/pathology-multi-select';
 import { PhysiologicalStateMultiselect } from './components/physiological-state-multi-select';
 
-import { useUser } from '@nextcart/ui-auth'
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth'
 import { Navigate } from 'react-router-dom';
 
 export function HealthForm() {

@@ -1,5 +1,6 @@
 import { useLocation, Navigate, Outlet } from 'react-router-dom';
-import { useUser } from '../context/user-context';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth';
 
 export function PrivateRoute() {
   const { user, loading } = useUser();

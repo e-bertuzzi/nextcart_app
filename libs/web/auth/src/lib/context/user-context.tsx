@@ -1,11 +1,18 @@
 // src/context/UserContext.tsx
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  ReactNode,
+} from 'react';
 import { jwtDecode } from 'jwt-decode';
 
 interface User {
   email: string;
-  id: string;
+  id: number | undefined;
   token: string;
+  role: string;
 }
 
 interface UserContextType {
@@ -29,29 +36,35 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadUser = async () => {
-      const token = localStorage.getItem('authToken');
-      if (token) {
-        try {
-          const decoded: any = jwtDecode(token);
-          setUser({ email: decoded.email, id: decoded.sub, token });
-        } catch (err) {
-          console.error('Token decoding failed:', err);
-          localStorage.removeItem('authToken');
-          setUser(null);
-        }
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      try {
+        const decoded: any = jwtDecode(token);
+        const idNum = Number(decoded.sub);
+        setUser({
+          email: decoded.email,
+          id: isNaN(idNum) ? undefined : idNum,
+          token,
+          role: decoded.role,
+        });
+      } catch {
+        localStorage.removeItem('authToken');
+        setUser(null);
       }
-      setLoading(false);
-    };
-
-    loadUser();
+    }
+    setLoading(false);
   }, []);
-
 
   const login = (token: string) => {
     localStorage.setItem('authToken', token);
     const decoded: any = jwtDecode(token);
-    setUser({ email: decoded.email, id: decoded.sub, token });
+    const idNum = Number(decoded.sub);
+    setUser({
+      email: decoded.email,
+      id: isNaN(idNum) ? undefined : idNum,
+      token,
+      role: decoded.role,
+    });
   };
 
   const logout = () => {

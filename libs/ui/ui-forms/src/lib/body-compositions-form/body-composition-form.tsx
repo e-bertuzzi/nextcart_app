@@ -12,7 +12,8 @@ import {
 } from '@cloudscape-design/components';
 import { useBodyCompositions } from './hook/use-body-compositions';
 import { Navigate, useLocation } from 'react-router-dom';
-import { useUser } from '@nextcart/ui-auth';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth';
 
 interface BodyCompositionFormData {
   date: string;

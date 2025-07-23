@@ -1,5 +1,5 @@
 import { JSX } from 'react';
-import { useUser } from '@nextcart/ui-auth';
+import { useUser } from '@nextcart/web-auth';
 import { Navigate } from 'react-router-dom';
 
 interface RoleGuardProps {

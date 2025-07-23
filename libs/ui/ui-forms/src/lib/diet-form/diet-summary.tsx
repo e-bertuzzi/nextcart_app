@@ -2,7 +2,8 @@ import { Container, Box, Button, Flashbar, Spinner } from '@cloudscape-design/co
 import { useDiets } from './hook/use-diets';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { UserDietsTable } from './components/user-diet-table';
-import { useUser } from '@nextcart/ui-auth';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth';
 
 export function DietSummary() {
   const { user, loading } = useUser();

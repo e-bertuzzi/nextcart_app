@@ -7,7 +7,8 @@ import {
   Spinner,
 } from '@cloudscape-design/components';
 import { useDiets } from './hook/use-diets';
-import { useUser } from '@nextcart/ui-auth';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useUser } from '@nextcart/web-auth';
 import { Navigate } from 'react-router-dom';
 
 export function DietForm() {
