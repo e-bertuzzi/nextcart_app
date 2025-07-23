@@ -1,4 +1,5 @@
-import { Table, Button } from '@cloudscape-design/components';
+import { Button } from '@cloudscape-design/components';
+import { SummaryTable } from '@nextcart/ui-commons';
 
 interface PhysicalActivity {
   physicalActivityId: number;
@@ -14,8 +15,10 @@ interface Props {
 
 export function UserPhysicalActivitiesTable({ activities, onRemove }: Props) {
   return (
-    <Table
+    <SummaryTable<PhysicalActivity>
       items={activities}
+      trackBy="physicalActivityId"
+      header="Physical Activities"
       columnDefinitions={[
         {
           id: 'activity',
@@ -36,15 +39,16 @@ export function UserPhysicalActivitiesTable({ activities, onRemove }: Props) {
           id: 'actions',
           header: 'Actions',
           cell: (item) => (
-            <Button variant="inline-link" onClick={() => onRemove(item.physicalActivityId)}>
+            <Button
+              variant="inline-link"
+              onClick={() => onRemove(item.physicalActivityId)}
+            >
               Remove
             </Button>
           ),
         },
       ]}
-      trackBy="physicalActivityId"
       variant="embedded"
-      header="Physical Activities"
       stickyHeader
       empty={<div>No activities added yet.</div>}
     />

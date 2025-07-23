@@ -1,4 +1,6 @@
-import { Table, Button, Box } from '@cloudscape-design/components';
+// UserBodyCompositionsTable.tsx
+import { Button } from '@cloudscape-design/components';
+import { SummaryTable } from '@nextcart/ui-commons';
 
 interface BodyComposition {
   date: string;
@@ -9,7 +11,7 @@ interface BodyComposition {
 interface Props {
   compositions: BodyComposition[];
   onRemove: (date: string) => void;
-  onEdit: (record: any) => void;
+  onEdit: (record: BodyComposition) => void;
 }
 
 export function UserBodyCompositionsTable({
@@ -18,10 +20,16 @@ export function UserBodyCompositionsTable({
   onEdit,
 }: Props) {
   return (
-    <Table
+    <SummaryTable<BodyComposition>
       items={compositions}
+      trackBy="date"
+      header="Body Compositions"
       columnDefinitions={[
-        { id: 'date', header: 'Date', cell: (item) => item.date },
+        {
+          id: 'date',
+          header: 'Date',
+          cell: (item) => item.date,
+        },
         {
           id: 'weight',
           header: 'Weight',
@@ -43,13 +51,12 @@ export function UserBodyCompositionsTable({
           header: 'Actions',
           cell: (item) => (
             <>
-              <Button onClick={() => onEdit(item)}>Edit</Button>
+              <Button onClick={() => onEdit(item)}>Edit</Button>{' '}
               <Button onClick={() => onRemove(item.date)}>Remove</Button>
             </>
           ),
         },
       ]}
-      variant='embedded'
     />
   );
 }

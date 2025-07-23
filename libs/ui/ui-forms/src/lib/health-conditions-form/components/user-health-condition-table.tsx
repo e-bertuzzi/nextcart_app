@@ -1,5 +1,6 @@
-import { Table, Button } from '@cloudscape-design/components';
+import { Button } from '@cloudscape-design/components';
 import { SelectProps } from '@cloudscape-design/components';
+import { SummaryTable } from '@nextcart/ui-commons';
 
 interface Props {
   conditions: SelectProps.Option[];
@@ -8,25 +9,30 @@ interface Props {
 
 export function UserHealthConditionsTable({ conditions, onRemove }: Props) {
   return (
-    <Table
+    <SummaryTable<SelectProps.Option>
       items={conditions}
+      trackBy="value"
+      header="Current Conditions"
       columnDefinitions={[
         {
+          id: 'description',
           header: 'Description',
           cell: (item) => item.label,
         },
         {
+          id: 'actions',
           header: 'Actions',
           cell: (item) => (
-            <Button variant="inline-link" onClick={() => onRemove(Number(item.value))}>
+            <Button
+              variant="inline-link"
+              onClick={() => onRemove(Number(item.value))}
+            >
               Remove
             </Button>
           ),
         },
       ]}
-      trackBy="value"
       variant="embedded"
-      header="Current Conditions"
       stickyHeader
     />
   );
