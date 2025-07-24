@@ -6,3 +6,7 @@ export * from './lib/diet';
 export * from './lib/body-composition';
 export * from './lib/activity';
 export * from './lib/physical-activity';
+export * from './lib/product';
+export * from './lib/claim';
+export * from './lib/allergen';
+export * from './lib/nutrional-information';

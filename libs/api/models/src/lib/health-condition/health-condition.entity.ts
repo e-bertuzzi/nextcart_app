@@ -10,6 +10,7 @@ import {
 import { Consumer } from '../consumer/consumer.entity';
 import { HealthConditionCategory } from './category/health-condition-category.entity';
 import { HealthConditionIncompatibility } from './incompatibility/health-condition-incompatibility.entity';
+import { NutrientHealthCondition } from '../nutrional-information';
 
 @Entity()
 export class HealthCondition {
@@ -27,4 +28,8 @@ export class HealthCondition {
 
   @OneToMany(() => HealthConditionIncompatibility, (inc) => inc.condition)
   incompatibilities?: HealthConditionIncompatibility[];
+
+  @OneToMany(() => NutrientHealthCondition, nhc => nhc.healthCondition)
+  nutrientRelations?: NutrientHealthCondition[];
+
 }

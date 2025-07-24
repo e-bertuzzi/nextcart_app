@@ -2,7 +2,8 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Consumer, Diet, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, DietIncompatibility, BodyComposition, Activity, PhysicalActivity } from '@nextcart/models';
+import { Consumer, Diet, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, DietIncompatibility, 
+  BodyComposition, Activity, PhysicalActivity, Product, ProductCategory, Claim, Allergen, NutritionalInformation, ProductNutritionalInfo, NutrientHealthCondition  } from '@nextcart/models';
 import { AuthModule } from '@nextcart/api-auth';
 import { ProfileModule } from '@nextcart/profile';
 import { HealthConditionModule } from '@nextcart/health-conditions'; 
@@ -21,8 +22,8 @@ import { PhysicalActivityModule } from '@nextcart/physical-activity';
       username: 'utente',
       password: 'utente123',
       database: 'nextcart',
-      entities: [Consumer, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, Diet,
-        DietIncompatibility, BodyComposition, Activity, PhysicalActivity
+      entities: [Consumer, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, Diet, NutrientHealthCondition,
+        DietIncompatibility, BodyComposition, Activity, PhysicalActivity, Product, ProductCategory, Claim, Allergen, NutritionalInformation, ProductNutritionalInfo
       ],
       synchronize: true,
       logging: true,
