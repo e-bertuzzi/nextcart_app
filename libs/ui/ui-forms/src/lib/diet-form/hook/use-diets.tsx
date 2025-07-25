@@ -35,7 +35,7 @@ export function useDiets(userId: number | undefined) {
 
   const saveSelectedDiets = async () => {
     try {
-      const dietIds = selectedDiets.map(d => Number(d.value));
+      const dietIds = selectedDiets.map(d => d.value as string);
       await saveUserDiets(userId, dietIds);
       setMessage({ type: 'success', content: 'Diets saved successfully! Redirecting...' });
       fetchUserDiets();
@@ -45,7 +45,7 @@ export function useDiets(userId: number | undefined) {
     }
   };
 
-  const removeDiet = async (dietId: number) => {
+  const removeDiet = async (dietId: string) => {
     try {
       await removeUserDiet(userId, dietId);
       setMessage({ type: 'success', content: 'Diet removed.' });

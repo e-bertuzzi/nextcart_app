@@ -3,51 +3,51 @@ import { Diet } from '../diet.entity';
 
 const dietsData = [
   {
-    description: 'Celiachia',
-    details: 'Non sono ammessi prodotti contenenti GLUTINE',
+    dietId: 'Celiachia',
+    description: 'Non sono ammessi prodotti contenenti GLUTINE',
     restrictionLevel: 13,
   },
   {
-    description: 'Halal',
-    details:
+    dietId: 'Halal',
+    description:
       "Non è ammesso il maiale e l'alcol. Macellazione certificata halal",
     restrictionLevel: 14,
   },
   {
-    description: 'Intolleranza al lattosio',
-    details: 'Non sono ammessi prodotti contenenti lattosio',
+    dietId: 'Intolleranza al lattosio',
+    description: 'Non sono ammessi prodotti contenenti lattosio',
     restrictionLevel: 15,
   },
   {
-    description: 'Kosher',
-    details:
+    dietId: 'Kosher',
+    description:
       'Non sono ammessi maiale, crostacei. Macellazione certificata kosher',
     restrictionLevel: 16,
   },
   {
-    description: 'Onnivora',
-    details: 'Non ci sono restrizioni alimentari',
+    dietId: 'Onnivora',
+    description: 'Non ci sono restrizioni alimentari',
     restrictionLevel: 17,
   },
   {
-    description: 'Ovolattovegetariana',
-    details: 'Non sono ammessi carne e pesce',
+    dietId: 'Ovolattovegetariana',
+    description: 'Non sono ammessi carne e pesce',
     restrictionLevel: 18,
   },
   {
-    description: 'Pescovegetariana',
-    details: 'Non è ammessa la carne',
+    dietId: 'Pescovegetariana',
+    description: 'Non è ammessa la carne',
     restrictionLevel: 19,
   },
   {
-    description: 'Reflusso Gastrico',
-    details:
+    dietId: 'Reflusso Gastrico',
+    description:
       'Non sono ammessi caffeina, teina, agrumi, aceto, pepe, peperoncino, bevande gassate, alcol',
     restrictionLevel: 20,
   },
   {
-    description: 'Vegana',
-    details: 'Non sono ammessi derivati animali',
+    dietId: 'Vegana',
+    description: 'Non sono ammessi derivati animali',
     restrictionLevel: 21,
   }
 ];
@@ -78,8 +78,8 @@ async function seed() {
     });
     if (!exists) {
       const diet = dietRepo.create({
-        description: dietData.description,
-        details: dietData.details, // <-- aggiunto qui
+        dietId: dietData.dietId,
+        description: dietData.description, // <-- aggiunto qui
         restrictionLevel: dietData.restrictionLevel,
       });
       await dietRepo.save(diet);

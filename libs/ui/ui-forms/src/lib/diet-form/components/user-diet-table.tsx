@@ -1,14 +1,14 @@
 import { Button } from '@cloudscape-design/components';
 import { SummaryTable } from '@nextcart/ui-commons';
 
-interface Diet {
+export interface Diet {
   label: string;
-  value: number;
+  value: string;
 }
 
-interface UserDietsTableProps {
+export interface UserDietsTableProps {
   diets: Diet[];
-  onRemove: (dietId: number) => void;
+  onRemove: (dietId: string) => void;
 }
 
 export function UserDietsTable({ diets, onRemove }: UserDietsTableProps) {

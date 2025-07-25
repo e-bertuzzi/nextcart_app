@@ -3,7 +3,7 @@ import { api } from '@nextcart/http';
 
 export function mapDietToOption(diet: any) {
   return {
-    label: diet.description,
+    label: diet.dietId, // ✅ usa dietId, non description
     value: diet.dietId,
   };
 }
@@ -18,10 +18,10 @@ export async function getAllDiets() {
   return res.data.map(mapDietToOption);
 }
 
-export async function saveUserDiets(userId: number | undefined, dietIds: number[]) {
+export async function saveUserDiets(userId: number | undefined, dietIds: string[]) {
   return api.patch(`/diet/users/${userId}/diets`, { dietIds });
 }
 
-export async function removeUserDiet(userId: number | undefined, dietId: number) {
+export async function removeUserDiet(userId: number | undefined, dietId: string) {
   return api.delete(`/diet/users/${userId}/diets/${dietId}`);
 }
