@@ -5,6 +5,7 @@ import {
   ManyToMany,
   ManyToOne,
   OneToMany,
+  PrimaryColumn,
   //ManyToOne,
 } from 'typeorm';
 import { Consumer } from '../consumer/consumer.entity';
@@ -14,8 +15,8 @@ import { NutrientHealthCondition } from '../nutritional-information';
 
 @Entity()
 export class HealthCondition {
-  @PrimaryGeneratedColumn()
-  healthConditionId!: number;
+  @PrimaryColumn()
+  healthConditionId!: string;
 
   @Column({ unique: true })
   description?: string;

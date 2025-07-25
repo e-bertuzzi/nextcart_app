@@ -9,23 +9,30 @@ import { SelectProps } from '@cloudscape-design/components';
 import { useNavigate } from 'react-router-dom';
 
 export function useHealthConditions(userId: number | undefined) {
-  const [selectedAgeCondition, setSelectedAgeCondition] = useState<SelectProps.Option | null>(null);
-  const [selectedPathologies, setSelectedPathologies] = useState<SelectProps.Option[]>([]);
-  const [selectedPhysStates, setSelectedPhysStates] = useState<SelectProps.Option[]>([]);
+  const [selectedAgeCondition, setSelectedAgeCondition] =
+    useState<SelectProps.Option | null>(null);
+  const [selectedPathologies, setSelectedPathologies] = useState<
+    SelectProps.Option[]
+  >([]);
+  const [selectedPhysStates, setSelectedPhysStates] = useState<
+    SelectProps.Option[]
+  >([]);
 
   const [ageConditions, setAgeConditions] = useState<SelectProps.Option[]>([]);
   const [pathologies, setPathologies] = useState<SelectProps.Option[]>([]);
   const [physStates, setPhysStates] = useState<SelectProps.Option[]>([]);
-  const [userHealthConditions, setUserHealthConditions] = useState<SelectProps.Option[]>([]);
+  const [userHealthConditions, setUserHealthConditions] = useState<
+    SelectProps.Option[]
+  >([]);
   const [message, setMessage] = useState<any>(null);
 
   // Funzione per ottenere tutti gli ID selezionati correnti, usata per filtro
-  const getSelectedConditionIds = (): number[] => {
+  const getSelectedConditionIds = (): string[] => {
     return [
       selectedAgeCondition?.value,
-      ...selectedPathologies.map(p => p.value),
-      ...selectedPhysStates.map(p => p.value),
-    ].filter(Boolean).map(Number);
+      ...selectedPathologies.map((p) => p.value),
+      ...selectedPhysStates.map((p) => p.value),
+    ].filter(Boolean) as string[];
   };
 
   // Carica condizioni salvate dell’utente
@@ -42,7 +49,9 @@ export function useHealthConditions(userId: number | undefined) {
   useEffect(() => {
     filterHealthConditions([], 'age')
       .then(setAgeConditions)
-      .catch(() => setMessage({ type: 'error', content: 'Failed to load age conditions.' }));
+      .catch(() =>
+        setMessage({ type: 'error', content: 'Failed to load age conditions.' })
+      );
   }, []);
 
   // Quando selezioni età, carica patologie filtrate per tutte le condizioni selezionate (solo età ora)
@@ -54,11 +63,13 @@ export function useHealthConditions(userId: number | undefined) {
     }
 
     // Solo età come filtro al momento
-    const selectedIds = [Number(selectedAgeCondition.value)];
+    const selectedIds = [String(selectedAgeCondition.value)];
 
     filterHealthConditions(selectedIds, 'pathology')
       .then(setPathologies)
-      .catch(() => setMessage({ type: 'error', content: 'Failed to load pathologies.' }));
+      .catch(() =>
+        setMessage({ type: 'error', content: 'Failed to load pathologies.' })
+      );
   }, [selectedAgeCondition]);
 
   // Quando selezioni patologie, carica stati fisiologici filtrati per tutte le condizioni selezionate (età + patologie)
@@ -70,36 +81,44 @@ export function useHealthConditions(userId: number | undefined) {
     }
 
     const selectedIds = [
-      Number(selectedAgeCondition.value),
-      ...selectedPathologies.map(p => Number(p.value)),
+      String(selectedAgeCondition.value),
+      ...selectedPathologies.map((p) => String(p.value)),
     ];
 
     filterHealthConditions(selectedIds, 'physiological_state')
       .then(setPhysStates)
-      .catch(() => setMessage({ type: 'error', content: 'Failed to load physiological states.' }));
+      .catch(() =>
+        setMessage({
+          type: 'error',
+          content: 'Failed to load physiological states.',
+        })
+      );
   }, [selectedAgeCondition, selectedPathologies]);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const saveSelectedConditions = async () => {
     try {
       const allIds = getSelectedConditionIds();
 
       await saveUserHealthConditions(userId, allIds);
-      setMessage({ type: 'success', content: 'Health conditions saved successfully! You will be transferred to the summary page in 2 seconds' });
+      setMessage({
+        type: 'success',
+        content:
+          'Health conditions saved successfully! You will be transferred to the summary page in 2 seconds',
+      });
       fetchUserConditions();
 
       setTimeout(() => {
         navigate('/health');
-      }, 2000)
-
+      }, 2000);
     } catch {
       setMessage({ type: 'error', content: 'Error saving health conditions.' });
     }
   };
 
   // Rimuove una condizione selezionata dall’utente
-  const removeCondition = async (conditionId: number) => {
+  const removeCondition = async (conditionId: string) => {
     try {
       await removeUserHealthCondition(userId, conditionId);
       setMessage({ type: 'success', content: 'Condition removed.' });

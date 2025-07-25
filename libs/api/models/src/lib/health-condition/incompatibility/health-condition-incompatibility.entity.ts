@@ -7,10 +7,10 @@ export class HealthConditionIncompatibility {
   id!: number;
 
   @ManyToOne(() => HealthCondition, (condition) => condition.incompatibilities)
-  @JoinColumn({ name: 'condition_id' })
+  @JoinColumn({ name: 'conditionId' })
   condition!: HealthCondition;
 
   @ManyToOne(() => HealthCondition)
-  @JoinColumn({ name: 'incompatible_with_id' })
+  @JoinColumn({ name: 'incompatibleWithId' })
   incompatibleWith!: HealthCondition;
 }

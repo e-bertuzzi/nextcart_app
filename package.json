@@ -11,7 +11,8 @@
     "seed:product": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/product/seeds/seed-products.ts",
     "seed:product-category-allergens": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/product/product-category/product-category-allergens/seeds/seed-products-category-allergens.ts",
     "seed:nutritional-information": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/nutritional-information/seeds/seed-nutritional-information.ts",
-    "seed:product-nutritional-info": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/product/product-nutrition/seeds/seed-product-nutrition-info.ts"
+    "seed:product-nutritional-info": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/product/product-nutrition/seeds/seed-product-nutrition-info.ts",
+    "seed:nutrient-health-condition": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/nutritional-information/nutrient-health/seeds/seed-nutrient-health-condition.ts"
 
   },
   "private": true,

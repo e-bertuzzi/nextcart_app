@@ -4,7 +4,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
+import { Brackets, Repository } from 'typeorm';
 import {
   HealthCondition,
   HealthConditionCategory,
@@ -52,14 +52,13 @@ export class HealthConditionsService {
 
     if (selectedConditionIds.length > 0) {
       qb.andWhere(
-        (qb) =>
-          `NOT EXISTS (
-            SELECT 1 FROM health_condition_incompatibility inc
-            WHERE
-                (inc.condition_id = hc.healthConditionId AND inc.incompatible_with_id IN (:...selectedConditionIds))
-                OR
-                (inc.incompatible_with_id = hc.healthConditionId AND inc.condition_id IN (:...selectedConditionIds))
-            )`,
+        `NOT EXISTS (
+        SELECT 1 FROM health_condition_incompatibility inc
+        WHERE
+          (inc."conditionId" = hc."healthConditionId" AND inc."incompatibleWithId" IN (:...selectedConditionIds))
+          OR
+          (inc."incompatibleWithId" = hc."healthConditionId" AND inc."conditionId" IN (:...selectedConditionIds))
+      )`,
         { selectedConditionIds }
       );
     }
@@ -124,8 +123,8 @@ export class HealthConditionsService {
     // Controllo incompatibilità
     const incompatibilities = await this.incompatibilityRepository
       .createQueryBuilder('inc')
-      .where('inc.condition_id IN (:...ids)', { ids: healthConditionIds })
-      .andWhere('inc.incompatible_with_id IN (:...ids)', {
+      .where('inc.conditionId IN (:...ids)', { ids: healthConditionIds })
+      .andWhere('inc.incompatibleWithId IN (:...ids)', {
         ids: healthConditionIds,
       })
       .getMany();

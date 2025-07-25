@@ -45,7 +45,6 @@ async function bootstrap() {
   }
 
   SwaggerModule.setup('api-doc', app, document);
-
 }
 
 bootstrap();
