@@ -1,0 +1,2027 @@
+[
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Calcium",
+    "value": 120.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Carbohydrate",
+    "value": 6.6
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Fat",
+    "value": 3.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Fiber",
+    "value": 0.8
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Iodium",
+    "value": 22.05
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Magnesium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Phosphorous",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Potassium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Protein",
+    "value": 1.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "SaturatedFat",
+    "value": 0.3
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Selenium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Sodium",
+    "value": 0.04
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Sugar",
+    "value": 4.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitB1",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitB12",
+    "value": 0.38
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitB2",
+    "value": 0.21
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitB5",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitB6",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitB9",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitC",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitD",
+    "value": 1.1
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitE",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Calcium",
+    "value": 120.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Carbohydrate",
+    "value": 11.5
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Fat",
+    "value": 1.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Fiber",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Iodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Magnesium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Phosphorous",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Potassium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Protein",
+    "value": 0.1
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Salt"
+  },
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "Salt"
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "SaturatedFat",
+    "value": 0.2
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Selenium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Sodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Sugar",
+    "value": 7.5
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitB1",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitB12",
+    "value": 0.38
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitB2",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitB5",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitB6",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitB9",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitC",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitD",
+    "value": 0.75
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitE",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Calcium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Carbohydrate",
+    "value": 1.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Fat",
+    "value": 51.9
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Fiber"
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Iodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Magnesium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Phosphorous",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Potassium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Protein",
+    "value": 42.5
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Salt",
+    "value": 2.99
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "SaturatedFat",
+    "value": 21.3
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Selenium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Sodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Sugar",
+    "value": 1.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitB1",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitB12",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitB2",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitB5",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitB6",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitB9",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitC",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitD",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitE",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Calcium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Carbohydrate",
+    "value": 1.9
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Fat",
+    "value": 40.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Fiber",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Iodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Magnesium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Phosphorous",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Potassium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Protein",
+    "value": 9.6
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Salt"
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "SaturatedFat",
+    "value": 8.6
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Selenium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Sodium",
+    "value": 0.52
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Sugar",
+    "value": 1.4
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitB1",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitB12",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitB2",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitB5",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitB6",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitB9",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitC",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitD",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitE",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Calcium",
+    "value": 130.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Carbohydrate",
+    "value": 4.5
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Fat",
+    "value": 3.5
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Fiber",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Iodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Magnesium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Phosphorous",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Potassium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Protein",
+    "value": 3.3
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Salt"
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "SaturatedFat",
+    "value": 2.5
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Selenium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Sodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Sugar",
+    "value": 4.5
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitB1",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitB12",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitB2",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitB5",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitB6",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitB9",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitC",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitD",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitE",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Calcium",
+    "value": 120.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Carbohydrate",
+    "value": 49.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Fat",
+    "value": 1.6
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Fiber",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Iodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Magnesium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Phosphorous",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Potassium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Protein",
+    "value": 3.6
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Salt"
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "SaturatedFat",
+    "value": 1.2
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Selenium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Sodium"
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Sugar",
+    "value": 4.8
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitB1",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitB12",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitB2",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitB5",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitB6",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitB9",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitC",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitD",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitE",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Calcium",
+    "value": 120.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Carbohydrate",
+    "value": 4.9
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Fat",
+    "value": 1.2
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Fiber",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Iodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Magnesium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 0.36
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Phosphorous",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Potassium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Protein",
+    "value": 3.2
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Salt"
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "SaturatedFat",
+    "value": 0.7
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Selenium",
+    "value": 8.25
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Sodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Sugar",
+    "value": 4.9
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitB1",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitB12",
+    "value": 0.38
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitB2",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitB5",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitB6",
+    "value": 0.28
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitB9",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitC",
+    "value": 16.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitD",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitE",
+    "value": 2.4
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Calcium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Carbohydrate",
+    "value": 2.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Fat",
+    "value": 3.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Fiber",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Iodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Magnesium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 0.2
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Phosphorous",
+    "value": 15.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Potassium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Protein",
+    "value": 28.5
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Salt"
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "SaturatedFat",
+    "value": 2.8
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Selenium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Sodium",
+    "value": 0.5
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Sugar",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitB1",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitB12",
+    "value": 20.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitB2",
+    "value": 5.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitB5",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitB6",
+    "value": 3.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitB9",
+    "value": 2.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitC",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitD",
+    "value": 42.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitE",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Calcium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Carbohydrate",
+    "value": 4.9
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Fat",
+    "value": 0.1
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Fiber",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Iodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Magnesium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Phosphorous",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Potassium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Protein",
+    "value": 7.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Salt"
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "SaturatedFat",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Selenium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Sodium",
+    "value": 0.25
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Sugar",
+    "value": 4.9
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitB1",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitB12",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitB2",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitB5",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitB6",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitB9",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitC",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitD",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitE",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Calcium",
+    "value": 360.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Carbohydrate",
+    "value": 5.5
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Fat",
+    "value": 5.4
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Fiber",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Iodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Magnesium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Phosphorous",
+    "value": 210.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Potassium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Protein",
+    "value": 8.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Salt"
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "SaturatedFat",
+    "value": 3.6
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Selenium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Sodium",
+    "value": 1.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Sugar",
+    "value": 4.5
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitB1",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitB12",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitB2",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitB5",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitB6",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitB9",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitC",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitD",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitE",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Calcium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Carbohydrate",
+    "value": 2.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Chlorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Cholesterol",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Chrome",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Copper",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Fat",
+    "value": 5.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Fiber",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Fluorine",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Iodium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Iron",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Magnesium",
+    "value": 25.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Manganese",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "MonounsaturatedFat",
+    "value": 2.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Phosphorous",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Potassium",
+    "value": 74.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Protein",
+    "value": 26.5
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Salt"
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "SaturatedFat",
+    "value": 1.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Selenium",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Sodium",
+    "value": 4.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Sugar",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitA",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitB1",
+    "value": 5.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitB12",
+    "value": 10.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitB2",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitB3",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitB5",
+    "value": 5.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitB6",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitB8",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitB9",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitC",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitD",
+    "value": 11.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitE",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitF",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "VitK",
+    "value": 0.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "Zinc",
+    "value": 0.0
+  }
+]

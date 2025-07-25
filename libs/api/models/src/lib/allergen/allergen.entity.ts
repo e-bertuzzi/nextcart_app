@@ -9,7 +9,7 @@ export class Allergen {
   @Column({ length: 45, nullable: true })
   allergenName?: string;
 
-  @ManyToMany(() => ProductCategory, category => category.allergens)
+  @ManyToMany(() => ProductCategory, category => category.allergensList)
   productCategories?: ProductCategory[];
 
   @ManyToMany(() => Product, product => product.allergens)

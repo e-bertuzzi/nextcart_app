@@ -12,7 +12,7 @@ import {
 import { ProductCategory } from './product-category/product-category.entity';
 import { Claim } from '../claim';
 import { Allergen } from '../allergen';
-import { ProductNutritionalInfo } from '../nutrional-information';
+import { ProductNutritionalInfo } from './product-nutrition/product-nutritional-info.entity';
 import { Diet } from '../diet';
 
 @Entity()

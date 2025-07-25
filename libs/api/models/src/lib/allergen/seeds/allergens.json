@@ -1,0 +1,82 @@
+[
+  {
+    "allergenId": "Celery",
+    "allergenName": "Sedano"
+  },
+  {
+    "allergenId": "Crustaceans",
+    "allergenName": "Crostacei"
+  },
+  {
+    "allergenId": "E102",
+    "allergenName": "Tartrazine"
+  },
+  {
+    "allergenId": "E104",
+    "allergenName": "Giallo di  chinolina"
+  },
+  {
+    "allergenId": "E110",
+    "allergenName": "Giallo Tramonto"
+  },
+  {
+    "allergenId": "E122",
+    "allergenName": "Carmoisina"
+  },
+  {
+    "allergenId": "E124",
+    "allergenName": "Ponceau"
+  },
+  {
+    "allergenId": "E129",
+    "allergenName": "Rosso allura"
+  },
+  {
+    "allergenId": "Eggs",
+    "allergenName": "Uova"
+  },
+  {
+    "allergenId": "Fish",
+    "allergenName": "Pesce"
+  },
+  {
+    "allergenId": "Gluten",
+    "allergenName": "Glutine"
+  },
+  {
+    "allergenId": "Lupin",
+    "allergenName": "Lupini"
+  },
+  {
+    "allergenId": "Milk",
+    "allergenName": "Latte"
+  },
+  {
+    "allergenId": "Molluscs",
+    "allergenName": "Molluschi"
+  },
+  {
+    "allergenId": "Mustard",
+    "allergenName": "Senape"
+  },
+  {
+    "allergenId": "Nuts",
+    "allergenName": "Frutta a guscio"
+  },
+  {
+    "allergenId": "Peanuts",
+    "allergenName": "Arachidi"
+  },
+  {
+    "allergenId": "Sesame",
+    "allergenName": "Sesamo"
+  },
+  {
+    "allergenId": "Soya",
+    "allergenName": "Soia"
+  },
+  {
+    "allergenId": "Sulphites",
+    "allergenName": "Anidride solforosa"
+  }
+]

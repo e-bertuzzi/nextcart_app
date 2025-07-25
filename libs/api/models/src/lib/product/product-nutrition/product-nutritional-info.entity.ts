@@ -6,7 +6,7 @@ import {
   PrimaryGeneratedColumn,
 } from 'typeorm';
 import { Product } from '..';
-import { NutritionalInformation } from '../../nutrional-information/nutritional-information.entity';
+import { NutritionalInformation } from '../../nutritional-information';
 
 @Entity()
 export class ProductNutritionalInfo {
@@ -21,6 +21,7 @@ export class ProductNutritionalInfo {
   @JoinColumn({ name: 'nutrientId' })
   nutrient!: NutritionalInformation;
 
-  @Column('float')
-  value!: number;
+  @Column('float', { nullable: true })
+  value?: number;
+
 }

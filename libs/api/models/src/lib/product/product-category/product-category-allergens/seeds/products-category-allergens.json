@@ -1,0 +1,765 @@
+[
+  {
+    "productCategoryId": "Aragosta",
+    "allergenId": "Crustaceans"
+  },
+  {
+    "productCategoryId": "Astice",
+    "allergenId": "Crustaceans"
+  },
+  {
+    "productCategoryId": "Cannocchia",
+    "allergenId": "Crustaceans"
+  },
+  {
+    "productCategoryId": "Crostacei",
+    "allergenId": "Crustaceans"
+  },
+  {
+    "productCategoryId": "Mazzancolle",
+    "allergenId": "Crustaceans"
+  },
+  {
+    "productCategoryId": "Scampi",
+    "allergenId": "Crustaceans"
+  },
+  {
+    "productCategoryId": "Pasta all\\'uovo",
+    "allergenId": "Eggs"
+  },
+  {
+    "productCategoryId": "Prodotto di pasticceria",
+    "allergenId": "Eggs"
+  },
+  {
+    "productCategoryId": "Uova",
+    "allergenId": "Eggs"
+  },
+  {
+    "productCategoryId": "Uova di quaglia",
+    "allergenId": "Eggs"
+  },
+  {
+    "productCategoryId": "Uova di struzzo",
+    "allergenId": "Eggs"
+  },
+  {
+    "productCategoryId": "Alice",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Baccalà",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Branzino",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Cernia",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Lompo",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Merluzzo",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Ombrina",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Orata",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Panna al salmone UHT",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Pesce",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Pesce spada",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Pesce spatola",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Platessa",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Rana pescatrice",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Rombo",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Salmone",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Sarda",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Sardina",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Sgombo",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Sogliola",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Storione",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Tonno",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Torta salmonata",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Triglia",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Trota",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Uova di lompo",
+    "allergenId": "Fish"
+  },
+  {
+    "productCategoryId": "Avena",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Besciamella a ridotto contenuto di grassi",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Besciamella UHT",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Besciamella UHT senza lattosio",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Bevanda di avena e cacao UHT arricchito senza zuccheri",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Bevanda di avena schiumabile UHT arricchita",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Bevanda di avena senza zuccheri UHT arricchita",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Bevanda UHT a base di avena integrale",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Birra",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Cereali",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Farina",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Farina di grano",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Farina di semola",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Farro",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Grano",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Orzo",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Pasta",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Pasta all\\'uovo",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Pasta brisèe",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Pasta con ripieno",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Pasta di semola di grano duro",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Pasta di semola integrale di grano duro",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Pasta fillo",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Pasta fresca",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Pasta frolla",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Pasta Sfoglia",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Prodotto di pasticceria",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Salsa vegetale a base di soia",
+    "allergenId": "Gluten"
+  },
+  {
+    "productCategoryId": "Lupini",
+    "allergenId": "Lupin"
+  },
+  {
+    "productCategoryId": "Besciamella",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Besciamella a ridotto contenuto di grassi",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Besciamella UHT",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Besciamella UHT senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Burro",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Burro chiarificato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Burro salato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Burro senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Fiocchi di latte",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Formaggio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Formaggio fresco",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Formaggio fuso",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Formaggio spalmabile",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Formaggio stagionato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Kefir",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Kefir bianco naturale",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Kefir bianco naturale senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte addizionato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte concentrato pastorizzato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte concentrato zuccherato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte concentrato zuccherato senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte di capra",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte di capra intero pastorizzato a temperatura elevata",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte fermentato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte fieno pastorizzato ad alta temperatura omogeneizzato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte fresco intero",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte fresco intero alta qualità",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte fresco parzialmente scremato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte fresco scremato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte intero pastorizzato microfiltrato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte microfiltrato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte parzialmente scremato pastorizzato microfiltrato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte parzialmente scremato pastorizzato microfiltrato senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte scremato pastorizzato a temperatura elevata microfiltrato senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte UHT intero",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "latte UHT intero senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte UHT parzialmente scremato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte UHT parzialmente scremato addizionato con Omega 3 selenio e vitamine",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte UHT parzialmente scremato addizionato di calcio fosforo vitamina D K",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte UHT parzialmente scremato con Vitamina D",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte UHT parzialmente scremato di capra",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte UHT parzialmente scremato senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte UHT scremato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte UHT scremato senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latte UHT scremato senza lattosio concentrato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Latticino",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Miscela di grassi da spalmare",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna acida",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna acida creme frache",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna ai funghi UHT",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna al salmone UHT",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna da cucina UHT",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna da cucina UHT senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna da montare UHT",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna fresca pastorizzata",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna montata UHT senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna montata zuccherata UHT",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna pastorizzata",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna pastorizzata senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna per caffè UHT",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Panna spray UHT senza zuccheri",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Pasta Sfoglia",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Preparato a base di grassi vegetali UH  zuccherato",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Prodotto di pasticceria",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Prodotto dolciario montato spray",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Ricotta",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Ricotta di latte vaccino",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Ricotta di pecora",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Ricotta leggera (light"
+  },
+  {
+    "productCategoryId": "Yogurt",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Yogurt bianco magro",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Yogurt greco colato intero bianco",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Yogurt greco colato magro bianco",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Yogurt intero",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Yogurt intero bianco dolce",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Yogurt magro bianco parzialmente scremato senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Yogurt magro colato senza lattosio",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Yogurt magro zuccherato alla frutta",
+    "allergenId": "Milk"
+  },
+  {
+    "productCategoryId": "Calamaro",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Cappasanta",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Cozza",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Lupino",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Molluschi",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Moscardini",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Ostriche",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Polpo",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Seppia",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Totano",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Vongola",
+    "allergenId": "Molluscs"
+  },
+  {
+    "productCategoryId": "Anacardi",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Bevanda alla nocciola UHT arricchita",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Bevanda di cocco e mandorla UHT arricchita",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Bevanda di mandorle e cioccolato UHT",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Bevanda di mandorle UHT",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Bevanda di mandorle UHT arricchita",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Frutta a guscio",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Latte di mandorla",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Mandorle",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Mortadella fresca",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Nocciole",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Noci",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Noci di Pecan",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Olio di noce",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Pinoli",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Pistacchi",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Sciroppo di latte di mandorle",
+    "allergenId": "Nuts"
+  },
+  {
+    "productCategoryId": "Arachidi",
+    "allergenId": "Peanuts"
+  },
+  {
+    "productCategoryId": "Olio di semi di arachidi",
+    "allergenId": "Peanuts"
+  },
+  {
+    "productCategoryId": "Olio di sesamo",
+    "allergenId": "Sesame"
+  },
+  {
+    "productCategoryId": "Bevanda a base di soia UHT senza zuccheri",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Bevanda di soia e cioccolato UHT arricchita",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Bevanda di soia e vaniglia UHT arricchita",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Bevanda di soia UHT senza zuccheri aggiunti",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Grasso da spalmare",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Miscela di grassi da spalmare",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Olio di semi di soia",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Preparato a base di grassi vegetali UH  zuccherato",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Preparazione alimentare vegetale a base di soia",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Salsa vegetale a base di soia",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Soia",
+    "allergenId": "Soya"
+  },
+  {
+    "productCategoryId": "Aceto di alcol",
+    "allergenId": "Sulphites"
+  },
+  {
+    "productCategoryId": "Aceto di vino",
+    "allergenId": "Sulphites"
+  },
+  {
+    "productCategoryId": "Vino",
+    "allergenId": "Sulphites"
+  }
+]

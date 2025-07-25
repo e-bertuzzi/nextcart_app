@@ -1,0 +1,57 @@
+[
+  {
+    "productId": "EAN_000000001",
+    "description": "Oatly bevanda di avena schiumabile",
+    "productCategory": "Bevanda di avena schiumabile UHT arricchita"
+  },
+  {
+    "productId": "EAN_000000002",
+    "description": "Esselunga Bevanda di riso UHT arricchita con Vit B.12 e Calcio",
+    "productCategory": "Bevanda vegetale"
+  },
+  {
+    "productId": "EAN_000000003",
+    "description": "Ciccioli Barili Franco",
+    "productCategory": "Carne"
+  },
+  {
+    "productId": "EAN_000000004",
+    "description": "Labeyrie fegato magro d\\'anatra all\\'ramagnac",
+    "productCategory": null
+  },
+  {
+    "productId": "EAN_000000005",
+    "description": "GIRAU latte di capra intero",
+    "productCategory": "Latte di capra intero pastorizzato a temperatura elevata"
+  },
+  {
+    "productId": "EAN_000000006",
+    "description": "Latte parzialmente scremato pastorizzato ad alta temperatura e omogeneizzato",
+    "productCategory": "Latte"
+  },
+  {
+    "productId": "EAN_000000007",
+    "description": "Parmalat. Omega 3 plus latte",
+    "productCategory": null
+  },
+  {
+    "productId": "EAN_000000008",
+    "description": null,
+    "productCategory": null
+  },
+  {
+    "productId": "EAN_000000009",
+    "description": "Arborea latte scremato UHT senza lattosio concentrato",
+    "productCategory": "Latte"
+  },
+  {
+    "productId": "EAN_000000010",
+    "description": "Galbani. Santa Lucia ricottina light",
+    "productCategory": "Latticino"
+  },
+  {
+    "productId": "EAN_000000011",
+    "description": "Tonno Rio Mare all\\'olio di oliva pescato a canna 120g",
+    "productCategory": "Pesce"
+  }
+]

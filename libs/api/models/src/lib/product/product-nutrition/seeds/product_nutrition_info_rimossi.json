@@ -1,0 +1,58 @@
+[
+  {
+    "productId": "EAN_000000001",
+    "nutrientId": "kCal",
+    "value": 59.0
+  },
+
+  {
+    "productId": "EAN_000000002",
+    "nutrientId": "kCal",
+    "value": 55.0
+  },
+  {
+    "productId": "EAN_000000011",
+    "nutrientId": "kCal",
+    "value": 220.0
+  },
+  {
+    "productId": "EAN_000000010",
+    "nutrientId": "kCal",
+    "value": 103.0
+  },
+  {
+    "productId": "EAN_000000009",
+    "nutrientId": "kCal",
+    "value": 49.0
+  },
+  {
+    "productId": "EAN_000000008",
+    "nutrientId": "kCal",
+    "value": 180.0
+  },
+  {
+    "productId": "EAN_000000007",
+    "nutrientId": "kCal",
+    "value": 43.0
+  },
+  {
+    "productId": "EAN_000000006",
+    "nutrientId": "kCal",
+    "value": 48.0
+  },
+  {
+    "productId": "EAN_000000005",
+    "nutrientId": "kCal",
+    "value": 63.0
+  },
+  {
+    "productId": "EAN_000000004",
+    "nutrientId": "kCal",
+    "value": 408.0
+  },
+  {
+    "productId": "EAN_000000003",
+    "nutrientId": "kCal",
+    "value": 635.0
+  }
+]

@@ -9,4 +9,5 @@ export * from './lib/physical-activity';
 export * from './lib/product';
 export * from './lib/claim';
 export * from './lib/allergen';
-export * from './lib/nutrional-information';
+export * from './lib/nutritional-information';
+export * from './lib/product/product-nutrition';

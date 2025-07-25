@@ -29,6 +29,7 @@
       "@nextcart/physical-activity": [
         "libs/api/physical-activity/src/index.ts"
       ],
+      "@nextcart/product": ["libs/api/product/src/index.ts"],
       "@nextcart/profile": ["libs/api/profile/src/index.ts"],
       "@nextcart/token": ["libs/api/token/src/index.ts"],
       "@nextcart/ui-auth": ["libs/ui/ui-auth/src/index.ts"],

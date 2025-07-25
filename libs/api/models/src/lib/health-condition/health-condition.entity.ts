@@ -10,7 +10,7 @@ import {
 import { Consumer } from '../consumer/consumer.entity';
 import { HealthConditionCategory } from './category/health-condition-category.entity';
 import { HealthConditionIncompatibility } from './incompatibility/health-condition-incompatibility.entity';
-import { NutrientHealthCondition } from '../nutrional-information';
+import { NutrientHealthCondition } from '../nutritional-information';
 
 @Entity()
 export class HealthCondition {

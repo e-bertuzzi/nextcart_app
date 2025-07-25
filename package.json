@@ -5,7 +5,14 @@
   "scripts": {
     "seed:health": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/health-condition/seeds/seed-health-conditions.ts",
     "seed:diet": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/diet/seeds/seed-diets.ts",
-    "seed:activity": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/activity/seeds/seed-activities.ts"
+    "seed:activity": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/activity/seeds/seed-activities.ts",
+    "seed:allergen": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/allergen/seeds/seed-allergens.ts",
+    "seed:product-category": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/product/product-category/seeds/seed-products-category.ts",
+    "seed:product": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/product/seeds/seed-products.ts",
+    "seed:product-category-allergens": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/product/product-category/product-category-allergens/seeds/seed-products-category-allergens.ts",
+    "seed:nutritional-information": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/nutritional-information/seeds/seed-nutritional-information.ts",
+    "seed:product-nutritional-info": "npx ts-node -r tsconfig-paths/register --project tsconfig.tsnode.json libs/api/models/src/lib/product/product-nutrition/seeds/seed-product-nutrition-info.ts"
+
   },
   "private": true,
   "dependencies": {

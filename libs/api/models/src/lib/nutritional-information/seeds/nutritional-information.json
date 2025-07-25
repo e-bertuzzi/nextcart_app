@@ -1,0 +1,192 @@
+[
+  {
+    "nutrientId": "Calcium",
+    "nutrientIT": "Calcio",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "Carbohydrate",
+    "nutrientIT": "Carboidrati",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "Chlorine",
+    "nutrientIT": "Cloro",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "Cholesterol",
+    "nutrientIT": "Colesterolo",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "Chrome",
+    "nutrientIT": "Cromo",
+    "unitOfMeasure": "μg"
+  },
+  {
+    "nutrientId": "Copper",
+    "nutrientIT": "Rame",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "Fat",
+    "nutrientIT": "Grassi",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "Fiber",
+    "nutrientIT": "Fibre",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "Fluorine",
+    "nutrientIT": "Fluoro",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "Iodium",
+    "nutrientIT": "Iodio",
+    "unitOfMeasure": "μg"
+  },
+  {
+    "nutrientId": "Iron",
+    "nutrientIT": "Ferro",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "Magnesium",
+    "nutrientIT": "Magnesio",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "Manganese",
+    "nutrientIT": "Manganese",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "MonounsaturatedFat",
+    "nutrientIT": "Grassi monoinsaturi",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "Phosphorous",
+    "nutrientIT": "Fosforo",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "PolyunsaturatedFat",
+    "nutrientIT": "Grassi polinsaturi",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "Potassium",
+    "nutrientIT": "Potassio",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "Protein",
+    "nutrientIT": "Proteine",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "Salt",
+    "nutrientIT": "Sale",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "SaturatedFat",
+    "nutrientIT": "Grassi Saturi",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "Selenium",
+    "nutrientIT": "Selenio",
+    "unitOfMeasure": "μg"
+  },
+  {
+    "nutrientId": "Sodium",
+    "nutrientIT": "Sodio",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "Sugar",
+    "nutrientIT": "Zuccheri",
+    "unitOfMeasure": "g"
+  },
+  {
+    "nutrientId": "VitA",
+    "nutrientIT": "VitA",
+    "unitOfMeasure": "IU"
+  },
+  {
+    "nutrientId": "VitB1",
+    "nutrientIT": "VitB1",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "VitB12",
+    "nutrientIT": "VitB12",
+    "unitOfMeasure": "μg"
+  },
+  {
+    "nutrientId": "VitB2",
+    "nutrientIT": "VitB2",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "VitB3",
+    "nutrientIT": "VitB3",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "VitB5",
+    "nutrientIT": "VitB5",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "VitB6",
+    "nutrientIT": "VitB6",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "VitB8",
+    "nutrientIT": "VitB8",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "VitB9",
+    "nutrientIT": "VitB9",
+    "unitOfMeasure": "μg"
+  },
+  {
+    "nutrientId": "VitC",
+    "nutrientIT": "VitC",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "VitD",
+    "nutrientIT": "VitD",
+    "unitOfMeasure": "μg"
+  },
+  {
+    "nutrientId": "VitE",
+    "nutrientIT": "VitE",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "VitF",
+    "nutrientIT": "Omega-3",
+    "unitOfMeasure": "mg"
+  },
+  {
+    "nutrientId": "VitK",
+    "nutrientIT": "VitK",
+    "unitOfMeasure": "μg"
+  },
+  {
+    "nutrientId": "Zinc",
+    "nutrientIT": "Zinco",
+    "unitOfMeasure": "mg"
+  }
+]
