@@ -22,7 +22,7 @@ export class DietService {
     });
   }
 
-  async updateUserDiets(consumerId: number, dietIds: number[]) {
+  /*async updateUserDiets(consumerId: number, dietIds: number[]) {
     const user = await this.consumerRepository.findOne({
       where: { consumerId },
       relations: ['diets'],
@@ -44,7 +44,7 @@ export class DietService {
     }
 
     return user;
-  }
+  }*/
 
   async getUserDiet(userId: number, dietId: number): Promise<Diet | null> {
     return this.dietRepository

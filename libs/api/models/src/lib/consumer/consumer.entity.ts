@@ -12,6 +12,7 @@ import { HealthCondition } from '../health-condition/health-condition.entity';
 import { Diet } from '../diet/diet.entity';
 import { BodyComposition } from '../body-composition/body-composition.entity';
 import { PhysicalActivity } from '../physical-activity/physical-activity.entity';
+import { DietConsumerChoice } from '../diet-consumer-choices';
 
 @Entity()
 export class Consumer {
@@ -59,11 +60,8 @@ export class Consumer {
   @JoinTable() // Necessario solo su un lato per indicare la tabella pivot
   healthConditions: HealthCondition[] | undefined;
 
-  @ManyToMany(() => Diet, (diet) => diet.consumers, {
-    cascade: true, // opzionale: salva automaticamente relazioni nuove
-  })
-  @JoinTable() // Necessario solo su un lato per indicare la tabella pivot
-  diets: Diet[] | undefined;
+  @OneToMany(() => DietConsumerChoice, dcc => dcc.consumer)
+  dietConsumerChoices?: DietConsumerChoice[];
 
   @OneToMany(() => BodyComposition, (bc) => bc.consumer)
   bodyCompositions?: BodyComposition[];

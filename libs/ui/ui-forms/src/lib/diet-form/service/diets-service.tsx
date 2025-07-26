@@ -8,8 +8,13 @@ export function mapDietToOption(diet: any) {
   };
 }
 
-export async function getUserDiets(userId: number | undefined) {
+/*export async function getUserDiets(userId: number | undefined) {
   const res = await api.get(`/diet/users/${userId}/diets`);
+  return res.data.map(mapDietToOption);
+}*/
+
+export async function getUserDiets(userId: number | undefined) {
+  const res = await api.get(`/diet-consumer-choices/users/${userId}`);
   return res.data.map(mapDietToOption);
 }
 
@@ -18,10 +23,19 @@ export async function getAllDiets() {
   return res.data.map(mapDietToOption);
 }
 
-export async function saveUserDiets(userId: number | undefined, dietIds: string[]) {
+/*export async function saveUserDiets(userId: number | undefined, dietIds: string[]) {
   return api.patch(`/diet/users/${userId}/diets`, { dietIds });
+}*/
+
+export async function saveUserDiets(userId: number | undefined, dietIds: string[]) {
+  return api.patch(`/diet-consumer-choices/users/${userId}`, { dietIds });
 }
 
-export async function removeUserDiet(userId: number | undefined, dietId: string) {
+/*export async function removeUserDiet(userId: number | undefined, dietId: string) {
   return api.delete(`/diet/users/${userId}/diets/${dietId}`);
+}*/
+
+export async function removeUserDiet(userId: number | undefined, dietId: string) {
+  return api.delete(`/diet-consumer-choices/users/${userId}/diets/${dietId}`);
 }
+

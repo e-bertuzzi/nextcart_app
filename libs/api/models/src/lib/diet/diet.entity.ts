@@ -2,6 +2,7 @@ import { Column, Entity, ManyToMany, OneToMany, PrimaryColumn, PrimaryGeneratedC
 import { Consumer } from "../consumer/consumer.entity";
 import { DietIncompatibility } from "./incompatibility/diet-incompatibility.entity";
 import { Product } from "../product";
+import { DietConsumerChoice } from "../diet-consumer-choices";
 
 @Entity()
 export class Diet {
@@ -14,13 +15,12 @@ export class Diet {
     @Column()
     restrictionLevel?: number;
 
-    @ManyToMany(() => Consumer, (consumer) => consumer.diets)
-    consumers?: Consumer[];
+    @OneToMany(() => DietConsumerChoice, dcc => dcc.diet)
+    dietConsumerChoices?: DietConsumerChoice[];
 
     @OneToMany(() => DietIncompatibility, (inc) => inc.diet)
     incompatibilities?: DietIncompatibility[];
 
     @ManyToMany(() => Product, product => product.diets)
     products?: Product[];
-
 }

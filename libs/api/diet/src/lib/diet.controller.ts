@@ -20,7 +20,7 @@ export class DietController {
     return this.dietService.getIncompatibilities();
   }
 
-  @Patch('users/:id/diets')
+  /*@Patch('users/:id/diets')
   @ApiOperation({ summary: 'Update a user\'s selected diets' })
   @ApiParam({ name: 'id', type: Number, description: 'User ID' })
   @ApiBody({
@@ -37,17 +37,17 @@ export class DietController {
     @Body() body: { dietIds: number[] }
   ) {
     return this.dietService.updateUserDiets(userId, body.dietIds);
-  } 
+  } */
 
-  @Get('users/:id/diets')
+  /*@Get('users/:id/diets')
   @ApiOperation({ summary: 'Get all diets assigned to a user' })
   @ApiParam({ name: 'id', type: Number, description: 'User ID' })
   @ApiResponse({ status: 200, description: 'User diets retrieved successfully' })
   async getUserDiets(@Param('id') userId: number) {
     return this.dietService.getUserDiets(userId);
-  }
+  }*/
 
-  @Delete('users/:userId/diets/:dietId')
+  /*@Delete('users/:userId/diets/:dietId')
   @ApiOperation({ summary: 'Remove a specific diet from a user' })
   @ApiParam({ name: 'userId', type: Number, description: 'User ID' })
   @ApiParam({ name: 'dietId', type: Number, description: 'Diet ID to remove' })
@@ -57,6 +57,6 @@ export class DietController {
     @Param('dietId') dietId: number,
   ) {
     return this.dietService.removeUserDiet(userId, dietId);
-  }
+  }*/
 
 }

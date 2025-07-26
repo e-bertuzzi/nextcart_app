@@ -1,0 +1,9 @@
+{
+  "name": "diet-consumer-choices",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api/diet-consumer-choices/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project diet-consumer-choices --web",
+  "targets": {}
+}

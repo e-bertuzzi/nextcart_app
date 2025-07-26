@@ -21,6 +21,9 @@
       "@nextcart/commons": ["libs/ui/commons/src/index.ts"],
       "@nextcart/consumer": ["libs/api/consumer/src/index.ts"],
       "@nextcart/diet": ["libs/api/diet/src/index.ts"],
+      "@nextcart/diet-consumer-choices": [
+        "libs/api/diet-consumer-choices/src/index.ts"
+      ],
       "@nextcart/dto": ["libs/config/dto/src/index.ts"],
       "@nextcart/enum": ["libs/config/enum/src/index.ts"],
       "@nextcart/health-conditions": ["libs/api/health-condition/src/index.ts"],

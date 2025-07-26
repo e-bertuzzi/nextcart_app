@@ -11,3 +11,4 @@ export * from './lib/claim';
 export * from './lib/allergen';
 export * from './lib/nutritional-information';
 export * from './lib/product/product-nutrition';
+export * from './lib/diet-consumer-choices';

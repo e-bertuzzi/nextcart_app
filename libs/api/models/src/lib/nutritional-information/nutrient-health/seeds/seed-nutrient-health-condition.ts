@@ -25,7 +25,7 @@ async function seed() {
   );
 
   // 2. Carica dati dal file JSON
-  const filePath = path.resolve(__dirname, 'nutrient_health_condition_eng.json');
+  const filePath = path.resolve(__dirname, 'nutrient_health_condition_ita.json');
   const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
   // 3. Inserisci i record

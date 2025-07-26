@@ -3,7 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Consumer, Diet, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, DietIncompatibility, 
-  BodyComposition, Activity, PhysicalActivity, Product, ProductCategory, Claim, Allergen, NutritionalInformation, ProductNutritionalInfo, NutrientHealthCondition  } from '@nextcart/models';
+  BodyComposition, Activity, PhysicalActivity, Product, ProductCategory, Claim, Allergen, NutritionalInformation, ProductNutritionalInfo, NutrientHealthCondition,  
+  DietConsumerChoice} from '@nextcart/models';
 import { AuthModule } from '@nextcart/api-auth';
 import { ProfileModule } from '@nextcart/profile';
 import { HealthConditionModule } from '@nextcart/health-conditions'; 
@@ -12,6 +13,7 @@ import { DietModule } from '@nextcart/diet'
 import { BodyCompositionModule } from '@nextcart/body-composition';
 import { ActivityModule } from '@nextcart/activity';
 import { PhysicalActivityModule } from '@nextcart/physical-activity';
+import { DietConsumerChoiceModule } from '@nextcart/diet-consumer-choices'; 
 
 @Module({
   imports: [
@@ -22,7 +24,7 @@ import { PhysicalActivityModule } from '@nextcart/physical-activity';
       username: 'utente',
       password: 'utente123',
       database: 'nextcart',
-      entities: [Consumer, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, Diet, NutrientHealthCondition,
+      entities: [Consumer, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, Diet, NutrientHealthCondition, DietConsumerChoice,
         DietIncompatibility, BodyComposition, Activity, PhysicalActivity, Product, ProductCategory, Claim, Allergen, NutritionalInformation, ProductNutritionalInfo
       ],
       synchronize: true,
@@ -36,6 +38,7 @@ import { PhysicalActivityModule } from '@nextcart/physical-activity';
     BodyCompositionModule,
     ActivityModule,
     PhysicalActivityModule,
+    DietConsumerChoiceModule,
     ConfigModule.forRoot({
       isGlobal: true, // disponibile ovunque
     }),

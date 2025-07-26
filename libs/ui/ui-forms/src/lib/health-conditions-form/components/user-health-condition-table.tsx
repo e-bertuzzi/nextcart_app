@@ -4,7 +4,7 @@ import { SummaryTable } from '@nextcart/ui-commons';
 
 interface Props {
   conditions: SelectProps.Option[];
-  onRemove: (id: number) => void;
+  onRemove: (id: string) => void;
 }
 
 export function UserHealthConditionsTable({ conditions, onRemove }: Props) {
@@ -25,7 +25,7 @@ export function UserHealthConditionsTable({ conditions, onRemove }: Props) {
           cell: (item) => (
             <Button
               variant="inline-link"
-              onClick={() => onRemove(Number(item.value))}
+              onClick={() => onRemove(String(item.value))}
             >
               Remove
             </Button>
