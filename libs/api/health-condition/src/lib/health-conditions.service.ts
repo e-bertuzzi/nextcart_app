@@ -30,11 +30,11 @@ export class HealthConditionsService {
     return this.categoryRepository.find();
   }
 
-  async getHealthConditions() {
+  /*async getHealthConditions() {
     return this.healthConditionRepository.find({
       relations: ['category'],
     });
-  }
+  }*/
 
   async getIncompatibilities() {
     return this.incompatibilityRepository.find({
@@ -66,7 +66,7 @@ export class HealthConditionsService {
     return qb.getMany();
   }
 
-  async getUserHealthConditions(userId: number) {
+  /*async getUserHealthConditions(userId: number) {
     return this.healthConditionRepository
       .createQueryBuilder('hc')
       .innerJoin(
@@ -77,9 +77,9 @@ export class HealthConditionsService {
       .leftJoinAndSelect('hc.category', 'category') // <-- aggiungi questa riga
       .where('link.consumerConsumerId = :userId', { userId })
       .getMany();
-  }
+  }*/
 
-  async getUserHealthCondition(
+  /*async getUserHealthCondition(
     userId: number,
     conditionId: number
   ): Promise<HealthCondition | null> {
@@ -94,9 +94,9 @@ export class HealthConditionsService {
       .where('link.consumerConsumerId = :userId', { userId })
       .andWhere('hc.healthConditionId = :conditionId', { conditionId })
       .getOne();
-  }
+  }*/
 
-  async removeUserHealthCondition(
+  /*async removeUserHealthCondition(
     userId: number,
     conditionId: number
   ): Promise<{ deleted: boolean }> {
@@ -107,9 +107,9 @@ export class HealthConditionsService {
     );
 
     return { deleted: true };
-  }
+  }*/
 
-  async updateUserHealthConditions(
+  /*async updateUserHealthConditions(
     consumerId: number,
     healthConditionIds: number[]
   ) {
@@ -144,7 +144,7 @@ export class HealthConditionsService {
     await this.consumerRepo.save(user);
 
     return user;
-  }
+  }*/
 
   async getPathologies() {
     // Recupera solo le health conditions con categoryId = 5 (pathology)

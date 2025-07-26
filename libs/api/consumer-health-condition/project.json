@@ -1,0 +1,9 @@
+{
+  "name": "consumer-health-condition",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api/consumer-health-condition/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project consumer-health-condition --web",
+  "targets": {}
+}

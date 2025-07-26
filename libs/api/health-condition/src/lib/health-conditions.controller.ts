@@ -14,12 +14,12 @@ export class HealthConditionsController {
     return this.healthConditionService.getAllCategories();
   }
 
-  @Get()
+ /* @Get()
   @ApiOperation({ summary: 'Get all health conditions' })
   @ApiResponse({ status: 200, description: 'List of health conditions returned' })
   async getAllHealthConditions() {
     return this.healthConditionService.getHealthConditions();
-  }
+  }*/
 
   @Get('incompatibilities')
   @ApiOperation({ summary: 'Get health condition incompatibilities' })
@@ -36,7 +36,7 @@ export class HealthConditionsController {
     return this.healthConditionService.filterHealthConditions(filterDto);
   }
 
-  @Patch('users/:id/health-conditions')
+  /*@Patch('users/:id/health-conditions')
   @ApiOperation({ summary: 'Update health conditions for a user' })
   @ApiParam({ name: 'id', type: Number, description: 'User ID' })
   @ApiBody({
@@ -53,15 +53,15 @@ export class HealthConditionsController {
     @Body() body: { healthConditionIds: number[] }
   ) {
     return this.healthConditionService.updateUserHealthConditions(userId, body.healthConditionIds);
-  } 
+  } */
 
-  @Get('users/:id/health-conditions')
+  /*@Get('users/:id/health-conditions')
   @ApiOperation({ summary: 'Get health conditions of a user' })
   @ApiParam({ name: 'id', type: Number, description: 'User ID' })
   @ApiResponse({ status: 200, description: 'User health conditions retrieved' })
   async getUserHealthConditions(@Param('id') userId: number) {
     return this.healthConditionService.getUserHealthConditions(userId);
-  }
+  }*/
 
   @Get('categories/pathologies')
   @ApiOperation({ summary: 'Get all pathologies under health condition categories' })
@@ -71,7 +71,7 @@ export class HealthConditionsController {
   }
 
   // GET singola health condition di un utente (opzionale)
-  @Get('users/:userId/health-conditions/:conditionId')
+  /*@Get('users/:userId/health-conditions/:conditionId')
   @ApiOperation({ summary: 'Get a specific health condition of a user' })
   @ApiParam({ name: 'userId', type: Number, description: 'User ID' })
   @ApiParam({ name: 'conditionId', type: Number, description: 'Health Condition ID' })
@@ -81,9 +81,9 @@ export class HealthConditionsController {
     @Param('conditionId') conditionId: number,
   ) {
     return this.healthConditionService.getUserHealthCondition(userId, conditionId);
-  }
+  }*/
 
-  @Delete('users/:userId/health-conditions/:conditionId')
+  /*@Delete('users/:userId/health-conditions/:conditionId')
   @ApiOperation({ summary: 'Remove a health condition from a user' })
   @ApiParam({ name: 'userId', type: Number, description: 'User ID' })
   @ApiParam({ name: 'conditionId', type: Number, description: 'Health Condition ID' })
@@ -93,7 +93,7 @@ export class HealthConditionsController {
     @Param('conditionId') conditionId: number,
   ) {
     return this.healthConditionService.removeUserHealthCondition(userId, conditionId);
-  }
+  }*/
 
 
 }
