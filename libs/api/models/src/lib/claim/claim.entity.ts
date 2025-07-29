@@ -1,5 +1,5 @@
-import { Entity, Column, PrimaryColumn, ManyToMany } from 'typeorm';
-import { Product } from '../product';
+import { Entity, Column, PrimaryColumn, OneToMany } from 'typeorm';
+import { ProductClaim } from '../product/product-claim/product-claim.entity';
 
 @Entity()
 export class Claim {
@@ -9,6 +9,6 @@ export class Claim {
   @Column('text')
   description!: string;
 
-  @ManyToMany(() => Product, product => product.claims)
-  products!: Product[];
+  @OneToMany(() => ProductClaim, pc => pc.claim)
+  productClaims?: ProductClaim[];
 }

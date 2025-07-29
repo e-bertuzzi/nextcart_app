@@ -5,7 +5,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Consumer, Diet, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, DietIncompatibility, 
   BodyComposition, Activity, PhysicalActivity, Product, ProductCategory, Claim, Allergen, NutritionalInformation, ProductNutritionalInfo, NutrientHealthCondition,  
   DietConsumerChoice, ConsumerHealthCondition, ProductCategoryAllergen, 
-  ProductAllergen} from '@nextcart/models';
+  ProductAllergen,
+  ProductClaim} from '@nextcart/models';
 import { AuthModule } from '@nextcart/api-auth';
 import { ProfileModule } from '@nextcart/profile';
 import { HealthConditionModule } from '@nextcart/health-conditions'; 
@@ -28,7 +29,7 @@ import { ConsumerHealthConditionModule } from '@nextcart/consumer-health-conditi
       database: 'nextcart',
       entities: [Consumer, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, Diet, NutrientHealthCondition, DietConsumerChoice, ConsumerHealthCondition,
         DietIncompatibility, BodyComposition, Activity, PhysicalActivity, Product, ProductCategory, Claim, Allergen, NutritionalInformation, ProductNutritionalInfo, ProductCategoryAllergen,
-        ProductAllergen
+        ProductAllergen, ProductClaim
       ],
       synchronize: true,
       logging: true,

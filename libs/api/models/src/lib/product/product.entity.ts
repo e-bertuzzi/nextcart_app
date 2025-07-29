@@ -15,6 +15,7 @@ import { Allergen } from '../allergen';
 import { ProductNutritionalInfo } from './product-nutrition/product-nutritional-info.entity';
 import { Diet } from '../diet';
 import { ProductAllergen } from './product-allergen/product-allergen.entity';
+import { ProductClaim } from './product-claim/product-claim.entity';
 
 @Entity()
 export class Product {
@@ -30,13 +31,8 @@ export class Product {
   @JoinColumn({ name: 'productCategory' }) // maps to the column in SQL
   productCategory?: ProductCategory;
 
-  @ManyToMany(() => Claim, (claim) => claim.products)
-  @JoinTable({
-    //name: 'ProductClaims',
-    joinColumn: { name: 'Product', referencedColumnName: 'productId' },
-    inverseJoinColumn: { name: 'Claims', referencedColumnName: 'claimsId' },
-  })
-  claims!: Claim[];
+  @OneToMany(() => ProductClaim, pc => pc.product)
+  productClaims?: ProductClaim[];
 
   @OneToMany(() => ProductAllergen, pa => pa.product)
   productAllergens?: ProductAllergen[];
