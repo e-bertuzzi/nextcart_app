@@ -13,6 +13,7 @@ import { Diet } from '../diet/diet.entity';
 import { BodyComposition } from '../body-composition/body-composition.entity';
 import { PhysicalActivity } from '../physical-activity/physical-activity.entity';
 import { DietConsumerChoice } from '../diet-consumer-choices';
+import { ConsumerHealthCondition } from '../consumer-health-conditions';
 
 @Entity()
 export class Consumer {
@@ -54,11 +55,14 @@ export class Consumer {
   @Column({ nullable: true })
   address?: string;
 
-  @ManyToMany(() => HealthCondition, (condition) => condition.consumers, {
+  /*@ManyToMany(() => HealthCondition, (condition) => condition.consumers, {
     cascade: true, // opzionale: salva automaticamente relazioni nuove
   })
   @JoinTable() // Necessario solo su un lato per indicare la tabella pivot
-  healthConditions: HealthCondition[] | undefined;
+  healthConditions: HealthCondition[] | undefined;*/
+
+  @OneToMany(() => ConsumerHealthCondition, chc => chc.consumer, {})
+  consumerHealthConditions?: ConsumerHealthCondition[];
 
   @OneToMany(() => DietConsumerChoice, dcc => dcc.consumer)
   dietConsumerChoices?: DietConsumerChoice[];

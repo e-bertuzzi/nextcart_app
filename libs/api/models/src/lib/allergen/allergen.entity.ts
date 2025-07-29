@@ -1,5 +1,6 @@
-import { Entity, PrimaryColumn, Column, ManyToMany } from 'typeorm';
-import { Product, ProductCategory } from '../product';
+import { Entity, PrimaryColumn, Column, ManyToMany, OneToMany } from 'typeorm';
+import { Product } from '../product';
+import { ProductCategoryAllergen } from '../product';
 
 @Entity()
 export class Allergen {
@@ -9,8 +10,8 @@ export class Allergen {
   @Column({ length: 45, nullable: true })
   allergenName?: string;
 
-  @ManyToMany(() => ProductCategory, category => category.allergensList)
-  productCategories?: ProductCategory[];
+  @OneToMany(() => ProductCategoryAllergen, pca => pca.allergen)
+  categoryLinks?: ProductCategoryAllergen[];
 
   @ManyToMany(() => Product, product => product.allergens)
   products?: Product[];
