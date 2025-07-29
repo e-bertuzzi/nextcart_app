@@ -14,6 +14,7 @@ import { Claim } from '../claim';
 import { Allergen } from '../allergen';
 import { ProductNutritionalInfo } from './product-nutrition/product-nutritional-info.entity';
 import { Diet } from '../diet';
+import { ProductAllergen } from './product-allergen/product-allergen.entity';
 
 @Entity()
 export class Product {
@@ -37,21 +38,8 @@ export class Product {
   })
   claims!: Claim[];
 
-  @ManyToMany(() => Allergen, (allergen) => allergen.products, {
-    cascade: true,
-  })
-  @JoinTable({
-    //name: 'ProductAllergens', // nome della tabella pivot
-    joinColumn: {
-      name: 'Product',
-      referencedColumnName: 'productId',
-    },
-    inverseJoinColumn: {
-      name: 'Allergens',
-      referencedColumnName: 'allergenId',
-    },
-  })
-  allergens?: Allergen[];
+  @OneToMany(() => ProductAllergen, pa => pa.product)
+  productAllergens?: ProductAllergen[];
 
   @OneToMany(() => ProductNutritionalInfo, (pni) => pni.product)
   nutritionalInformationValues?: ProductNutritionalInfo[];
