@@ -1,0 +1,246 @@
+[
+  {
+    "claimsId": "A bassissimo contenuto di sodio/sale",
+    "description": "Il prodotto contiene non più di 0,04 g di sodio o un valore equivalente di sale per 100 g o 100 ml"
+  },
+  {
+    "claimsId": "A basso contenuto calorico",
+    "description": " il prodotto non contiene più di 40 kcal per 100 g se solido o 20 kcal per 100 ml se liquido"
+  },
+  {
+    "claimsId": "A basso contenuto di glutine",
+    "description": "il contenuto di glutine dell'alimento, consistente di uno o più ingredienti ricavati da frumento, segale, orzo, avena, non sia superiore a 100 mg/kg"
+  },
+  {
+    "claimsId": "A basso contenuto di grassi",
+    "description": "il prodotto ha non più di 3 g di grassi per 100g se solido o meno di 1,5 g per 100 ml se liquido"
+  },
+  {
+    "claimsId": "A basso contenuto di grassi saturi",
+    "description": "il prodotto ha non più di 1,5 g di grassi per 100g se solido o meno di 0,75 g per 100 ml se liquido"
+  },
+  {
+    "claimsId": "A basso contenuto di sodio/sale",
+    "description": "Il prodotto contiene non più di 0.12 g di sodio o un valore equivalente di sale per 100 g o 100 ml"
+  },
+  {
+    "claimsId": "A basso contenuto di zuccheri",
+    "description": "il prodotto ha meno di 5 g di zuccheri per 100g se solido o meno di 2,5 g per 100 ml se liquido"
+  },
+  {
+    "claimsId": "A ridotto contenuto calorico",
+    "description": "l’apporto energetico è ridotto di almeno il 30%"
+  },
+  {
+    "claimsId": "A ridotto contenuto di lattosio",
+    "description": "Qunado il tenore di lattosio, per latte e latte fermentato, è inferiore a 0,5 g per 100 g o 100 ml"
+  },
+  {
+    "claimsId": "A tasso ridotto di colesterolo",
+    "description": "la riduzione del contenuto di una determinata sostanza è pari ad almeno il 30% rispetto a un prodotto simile"
+  },
+  {
+    "claimsId": "A tasso ridotto di grassi",
+    "description": "la riduzione del contenuto di una determinata sostanza è pari ad almeno il 30% rispetto a un prodotto simile"
+  },
+  {
+    "claimsId": "A tasso ridotto di grassi saturi",
+    "description": "la riduzione del contenuto di una determinata sostanza è pari ad almeno il 30% rispetto a un prodotto simile"
+  },
+  {
+    "claimsId": "A tasso ridotto di zuccheri",
+    "description": "la riduzione del contenuto di una determinata sostanza è pari ad almeno il 30% rispetto a un prodotto simile"
+  },
+  {
+    "claimsId": "Ad alto contenuto di fibre",
+    "description": "il prodotto contiene almeno 6 g di fibre per 100 g o almeno 3 g di fibre per 100 kcal"
+  },
+  {
+    "claimsId": "Ad alto contenuto di proteine",
+    "description": "almeno il 20% del valore energetico dell’alimento è apportato da proteine"
+  },
+  {
+    "claimsId": "Birra analcolica",
+    "description": "Tav (titolo alcolometrico volumico) pari o inferiore a 1,2"
+  },
+  {
+    "claimsId": "Decaffeinato",
+    "description": "Tenore in caffeina tra 0,1 e 0,3"
+  },
+  {
+    "claimsId": "Fonte di acidi grassi omega-3",
+    "description": "il prodotto contiene almeno 0,3 g di acido alfa-linolenico (ALA) per 100 gr o 100 kcal"
+  },
+  {
+    "claimsId": "Fonte di fibre",
+    "description": "il prodotto contiene almeno 3 g di fibre per 100 g o almeno 1,5 g di fibre per 100 kcal"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Calcio",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Cloro",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Cromo",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Ferro",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Fluoro",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Fosforo",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Iodio",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Magnesio",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Manganese",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Potassio",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Rame",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Selenio",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Sodio",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitA",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitB1",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitB12",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitB2",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitB3",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitB5",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitB6",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitB8",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitB9",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitC",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitD",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitE",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitF",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di VitK",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Fonte di/ad alto contenuto di Zinco",
+    "description": "il prodotto contiene almeno il 15/30% della dose giornaliera raccomandata di vitamina e/o minerale"
+  },
+  {
+    "claimsId": "Light",
+    "description": "il valore energetico e/o di grassi e/o di zuccheri è ridotto di almeno 30% rispetto alla media dei prodotti più venduti"
+  },
+  {
+    "claimsId": "Naturalmente a ridotto contenuto di lattosio",
+    "description": "quando il tenore residuo di lattosio è inferiore a 0,5 g per 100 g"
+  },
+  {
+    "claimsId": "Naturalmente privo di lattosio",
+    "description": "quando il tenore residuo di lattosio è inferiore a 0,1 g per 100 g"
+  },
+  {
+    "claimsId": "Ricco di acidi grassi mono- o polinsaturi",
+    "description": "almeno il 45% degli acidi grassi presenti nel prodotto derivano dai grassi monoinsaturi/polinsaturi e a condizione che gli stessi apportino oltre il 20% del valore energetico del prodotto"
+  },
+  {
+    "claimsId": "Ricco di acidi grassi omega-3",
+    "description": "il prodotto contiene almeno 0,6 g di ALA per 100 gr o 100 kcal"
+  },
+  {
+    "claimsId": "Ricco di grassi insaturi",
+    "description": "almeno il 70% degli acidi grassi presenti nel prodotto derivano da grassi insaturi e a condizione che gli stessi apportino oltre il 20% del valore energetico del prodotto"
+  },
+  {
+    "claimsId": "Senza calorie",
+    "description": "il prodotto ha non più di 4 kcal per 100g"
+  },
+  {
+    "claimsId": "Senza glutine",
+    "description": "il contenuto di glutine dell'alimento venduto non sia superiore a 20 mg/kg"
+  },
+  {
+    "claimsId": "Senza grassi",
+    "description": "il prodotto ha non più di 0,5 g per 100g o 100ml"
+  },
+  {
+    "claimsId": "Senza grassi saturi",
+    "description": "la somma dei grassi saturi e trans presenti è inferiore a 0,1 g per 100g o 100ml"
+  },
+  {
+    "claimsId": "Senza lattosio",
+    "description": "Quando il tenore di lattosio è inferiore a 0,1 g per 100 f"
+  },
+  {
+    "claimsId": "Senza sale o sodio",
+    "description": "Il prodotto contiene non più di 0,005 g di sodio o un valore equivalente di sale per 100 g"
+  },
+  {
+    "claimsId": "Senza zuccheri",
+    "description": "il prodotto ha meno di 0,5 g di zuccheri per 100g o 100ml"
+  },
+  {
+    "claimsId": "Senza zuccheri aggiunti",
+    "description": "Il prodotto non contiene zucchero o dolcificanti. Se il prodotto contiene zuccheri naturalmente sull’etichetta va riportato “contiene naturalmente zuccheri “"
+  }
+]

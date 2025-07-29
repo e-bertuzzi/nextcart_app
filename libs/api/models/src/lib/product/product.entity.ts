@@ -16,6 +16,7 @@ import { ProductNutritionalInfo } from './product-nutrition/product-nutritional-
 import { Diet } from '../diet';
 import { ProductAllergen } from './product-allergen/product-allergen.entity';
 import { ProductClaim } from './product-claim/product-claim.entity';
+import { ProductDiet } from './product-diet/product-diet.entity';
 
 @Entity()
 export class Product {
@@ -40,17 +41,6 @@ export class Product {
   @OneToMany(() => ProductNutritionalInfo, (pni) => pni.product)
   nutritionalInformationValues?: ProductNutritionalInfo[];
 
-  @ManyToMany(() => Diet, (diet) => diet.products)
-  @JoinTable({
-    //name: 'ProductDiet', // nome della tabella intermedia
-    joinColumn: {
-      name: 'Product', // nome della colonna in ProductDiet che fa riferimento a Product
-      referencedColumnName: 'productId',
-    },
-    inverseJoinColumn: {
-      name: 'Diet', // nome della colonna in ProductDiet che fa riferimento a Diet
-      referencedColumnName: 'dietId', // assicurati che sia il nome giusto nella tua entità Diet
-    },
-  })
-  diets?: Diet[];
+  @OneToMany(() => ProductDiet, pd => pd.product)
+  productDiets?: ProductDiet[]; 
 }

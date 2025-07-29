@@ -1,6 +1,7 @@
 import { DataSource } from 'typeorm';
 import { ProductCategory } from '../../product-category.entity';
 import { Allergen } from '../../../../allergen';
+import { ProductCategoryAllergen } from '../product-category-allergen.entity';
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -21,46 +22,38 @@ async function seed() {
 
   const categoryRepo = dataSource.getRepository(ProductCategory);
   const allergenRepo = dataSource.getRepository(Allergen);
+  const pivotRepo = dataSource.getRepository(ProductCategoryAllergen);
 
-  // 1. Truncate product_category_allergens_list_allergen (tabella join many-to-many)
-  await dataSource.query(`TRUNCATE TABLE "product_category_allergens_list_allergen" CASCADE`);
+  // 1. Svuota la tabella pivot
+  await dataSource.query(`TRUNCATE TABLE "product_category_allergen" CASCADE`);
 
-  // 2. Carica il file JSON con le associazioni many-to-many
+  // 2. Carica il file JSON
   const relationsPath = path.resolve(__dirname, 'products-category-allergens.json');
   const relationsData: { productCategoryId: string; allergenId: string }[] = JSON.parse(
     fs.readFileSync(relationsPath, 'utf-8')
   );
 
   for (const rel of relationsData) {
-    // Trova categoria e allergene
-    const category = await categoryRepo.findOne({
-      where: { productCategoryId: rel.productCategoryId },
-      relations: ['allergensList'],
-    });
+    const category = await categoryRepo.findOneBy({ productCategoryId: rel.productCategoryId });
     if (!category) {
       console.warn(`Categoria non trovata: ${rel.productCategoryId}`);
       continue;
     }
 
-    const allergen = await allergenRepo.findOne({
-      where: { allergenId: rel.allergenId },
-    });
+    const allergen = await allergenRepo.findOneBy({ allergenId: rel.allergenId });
     if (!allergen) {
       console.warn(`Allergene non trovato: ${rel.allergenId}`);
       continue;
     }
 
-    if (!category.allergensList) {
-      category.allergensList = [];
-    }
+    const relation = pivotRepo.create({
+      productCategoryId: category.productCategoryId,
+      allergenId: allergen.allergenId,
+      productCategory: category,
+      allergen: allergen,
+    });
 
-    // Evita duplicati
-    if (!category.allergensList.find(a => a.allergenId === allergen.allergenId)) {
-      category.allergensList.push(allergen);
-    }
-
-    // Salva la categoria con l'allergene associato
-    await categoryRepo.save(category);
+    await pivotRepo.save(relation);
   }
 
   console.log('Seed associazioni ProductCategory <-> Allergen completato!');

@@ -1,26 +1,30 @@
-import { Column, Entity, ManyToMany, OneToMany, PrimaryColumn, PrimaryGeneratedColumn } from "typeorm";
-import { Consumer } from "../consumer/consumer.entity";
-import { DietIncompatibility } from "./incompatibility/diet-incompatibility.entity";
-import { Product } from "../product";
-import { DietConsumerChoice } from "../diet-consumer-choices";
+import {
+  Column,
+  Entity,
+  OneToMany,
+  PrimaryColumn,
+} from 'typeorm';
+import { DietIncompatibility } from './incompatibility/diet-incompatibility.entity';
+import { DietConsumerChoice } from '../diet-consumer-choices';
+import { ProductDiet } from '../product/product-diet/product-diet.entity';
 
 @Entity()
 export class Diet {
-    @PrimaryColumn()
-    dietId!: string;
+  @PrimaryColumn()
+  dietId!: string;
 
-    @Column({ unique: true })
-    description!: string;
+  @Column({ unique: true })
+  description!: string;
 
-    @Column()
-    restrictionLevel?: number;
+  @Column()
+  restrictionLevel?: number;
 
-    @OneToMany(() => DietConsumerChoice, dcc => dcc.diet)
-    dietConsumerChoices?: DietConsumerChoice[];
+  @OneToMany(() => DietConsumerChoice, (dcc) => dcc.diet)
+  dietConsumerChoices?: DietConsumerChoice[];
 
-    @OneToMany(() => DietIncompatibility, (inc) => inc.diet)
-    incompatibilities?: DietIncompatibility[];
+  @OneToMany(() => DietIncompatibility, (inc) => inc.diet)
+  incompatibilities?: DietIncompatibility[];
 
-    @ManyToMany(() => Product, product => product.diets)
-    products?: Product[];
+  @OneToMany(() => ProductDiet, (pd) => pd.diet)
+  productDiets?: ProductDiet[];
 }

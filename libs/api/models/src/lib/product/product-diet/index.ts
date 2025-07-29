@@ -1,0 +1,1 @@
+export * from './product-diet.entity';
