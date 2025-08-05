@@ -7,10 +7,10 @@ export class DietIncompatibility {
   id!: number;
 
   @ManyToOne(() => Diet, (diet) => diet.incompatibilities)
-  @JoinColumn({ name: 'diet_id' })
+  @JoinColumn({ name: 'dietId' })
   diet!: Diet;
 
   @ManyToOne(() => Diet)
-  @JoinColumn({ name: 'incompatible_with_id' })
+  @JoinColumn({ name: 'incompatibleWithId' })
   incompatibleWith!: Diet;
 }

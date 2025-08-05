@@ -1,1 +1,0 @@
-export * from './diet-consumer-choices.entity';

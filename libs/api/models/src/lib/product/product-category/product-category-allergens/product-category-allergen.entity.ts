@@ -5,17 +5,17 @@ import { Allergen } from '../../../allergen';
 
 @Entity()
 export class ProductCategoryAllergen {
-  @PrimaryColumn({ name: 'ProductCategory', type: 'varchar', length: 100 })
+  @PrimaryColumn({ name: 'productCategory', type: 'varchar', length: 100 })
   productCategoryId!: string;
 
-  @PrimaryColumn({ name: 'Allergens', type: 'varchar', length: 25 })
+  @PrimaryColumn({ name: 'allergens', type: 'varchar', length: 25 })
   allergenId!: string;
 
   @ManyToOne(() => ProductCategory, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  @JoinColumn({ name: 'ProductCategory', referencedColumnName: 'productCategoryId' })
+  @JoinColumn({ name: 'productCategory', referencedColumnName: 'productCategoryId' })
   productCategory!: ProductCategory;
 
   @ManyToOne(() => Allergen, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  @JoinColumn({ name: 'Allergens', referencedColumnName: 'allergenId' })
+  @JoinColumn({ name: 'allergens', referencedColumnName: 'allergenId' })
   allergen!: Allergen;
 }

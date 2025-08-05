@@ -12,7 +12,7 @@ import { Consumer } from '../consumer/consumer.entity';
 import { HealthConditionCategory } from './category/health-condition-category.entity';
 import { HealthConditionIncompatibility } from './incompatibility/health-condition-incompatibility.entity';
 import { NutrientHealthCondition } from '../nutritional-information';
-import { ConsumerHealthCondition } from '../consumer-health-conditions';
+import { ConsumerHealthCondition } from '../consumer/consumer-health-conditions';
 
 @Entity()
 export class HealthCondition {

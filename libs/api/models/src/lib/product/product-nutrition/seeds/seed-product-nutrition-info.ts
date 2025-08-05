@@ -31,13 +31,19 @@ async function seed() {
 
   // 3. Inserisci i dati
   for (const item of nutritionData) {
-    const record = nutritionRepo.create({
-      product: { productId: item.productId }, // usa la chiave primaria corretta
-      nutrient: { nutrientId: item.nutrientId }, // usa la chiave primaria corretta
-      value: item.value ?? null,
-    });
-    await nutritionRepo.save(record);
+  if (!item.productId || !item.nutrientId) {
+    console.warn(`Dati incompleti, salto l'item:`, item);
+    continue;
   }
+
+  const record = nutritionRepo.create({
+    product: { productId: item.productId },
+    nutrient: { nutrientId: item.nutrientId },
+    value: item.value ?? null,
+  });
+  await nutritionRepo.save(record);
+}
+
 
   console.log('Seed ProductNutritionInfo completato!');
   await dataSource.destroy();

@@ -8,12 +8,10 @@ import {
   //ManyToOne,
 } from 'typeorm';
 import { Gender, Role } from '@nextcart/enum';
-import { HealthCondition } from '../health-condition/health-condition.entity';
-import { Diet } from '../diet/diet.entity';
 import { BodyComposition } from '../body-composition/body-composition.entity';
 import { PhysicalActivity } from '../physical-activity/physical-activity.entity';
-import { DietConsumerChoice } from '../diet-consumer-choices';
-import { ConsumerHealthCondition } from '../consumer-health-conditions';
+import { DietConsumerChoice } from '../diet/diet-consumer-choices';
+import { ConsumerHealthCondition } from './consumer-health-conditions';
 
 @Entity()
 export class Consumer {

@@ -77,7 +77,7 @@ export function usePhysicalActivity(userId?: number) {
 
       setMessage({
         type: 'success',
-        content: 'Attività salvata con successo!',
+        content: 'Physical activities saved successfully! You will be transferred to the summary page in 2 seconds',
       });
       fetchUserActivities();
 
@@ -96,7 +96,7 @@ export function usePhysicalActivity(userId?: number) {
   const removeActivity = async (id: number) => {
     try {
       await removeUserPhysicalActivity(id);
-      setMessage({ type: 'success', content: 'Attività rimossa.' });
+      setMessage({ type: 'success', content: 'Physical activity removed' });
       fetchUserActivities();
     } catch {
       setMessage({

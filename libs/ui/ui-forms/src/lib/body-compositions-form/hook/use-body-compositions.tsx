@@ -26,7 +26,7 @@ export function useBodyCompositions(userId: number | undefined) {
       await createOrUpdateBodyComposition(userId, dto);
       setMessage({
         type: 'success',
-        content: 'Body composition saved! Redirecting in 2 seconds...',
+        content: 'Body composition saved successfully! You will be transferred to the summary page in 2 seconds',
       });
       fetchCompositions();
 
@@ -41,7 +41,7 @@ export function useBodyCompositions(userId: number | undefined) {
   const removeComposition = async (date: string) => {
     try {
       await deleteBodyCompositionByDate(userId, date);
-      setMessage({ type: 'success', content: 'Body composition removed.' });
+      setMessage({ type: 'success', content: 'Body composition removed' });
       fetchCompositions();
     } catch {
       setMessage({ type: 'error', content: 'Failed to remove body composition.' });

@@ -1,2320 +1,296 @@
 [
   {
-    "productCategoryId": "Abbacchio",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Ovino"
+    "productCategoryId": 1,
+    "group": "1",
+    "category": "latte",
+    "standardPortion": "125"
   },
   {
-    "productCategoryId": "Aceto",
-    "description": null,
-    "typology": null,
-    "allergens": null,
-    "parent": null
+    "productCategoryId": 2,
+    "group": "1",
+    "category": "yogurt e altri latti fermentati",
+    "standardPortion": "125"
   },
   {
-    "productCategoryId": "Aceto balsamico",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Aceto"
+    "productCategoryId": 3,
+    "group": "1",
+    "category": "formaggi freschi <=25% grassi",
+    "standardPortion": "100"
   },
   {
-    "productCategoryId": "Aceto di alcol",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Sulphites",
-    "parent": "Aceto"
+    "productCategoryId": 4,
+    "group": "1",
+    "category": "altri formaggi >25%grassi",
+    "standardPortion": "50"
   },
   {
-    "productCategoryId": "Aceto di mele",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Aceto"
+    "productCategoryId": 5,
+    "group": "1",
+    "category": "bevande vegetali",
+    "standardPortion": "125"
   },
   {
-    "productCategoryId": "Aceto di riso",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Aceto"
+    "productCategoryId": 6,
+    "group": "2",
+    "category": "carne \"bianca\" fresca/surgelata pollo, tacchino, coniglio",
+    "standardPortion": "100"
   },
   {
-    "productCategoryId": "Aceto di vino",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Sulphites",
-    "parent": "Aceto"
+    "productCategoryId": 7,
+    "group": "2",
+    "category": "carne \"rossa\" fresca/surgelata bovina, ovina, suina, equina",
+    "standardPortion": "100"
   },
   {
-    "productCategoryId": "Acqua di cocco",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 8,
+    "group": "2",
+    "category": "altre carni e frattaglie",
+    "standardPortion": "100"
   },
   {
-    "productCategoryId": "Agnello da latte",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Ovino"
+    "productCategoryId": 9,
+    "group": "2",
+    "category": "salumi",
+    "standardPortion": "50"
   },
   {
-    "productCategoryId": "Alghe",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": null
+    "productCategoryId": 10,
+    "group": "2",
+    "category": "carne in gelatina",
+    "standardPortion": "70"
   },
   {
-    "productCategoryId": "Alghe essicate",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Alghe"
+    "productCategoryId": 11,
+    "group": "2",
+    "category": "pesce, molluschi, crostacei freschi/surgelati",
+    "standardPortion": "150"
   },
   {
-    "productCategoryId": "Alice",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Fish",
-    "parent": "Pesce"
+    "productCategoryId": 12,
+    "group": "2",
+    "category": "pesce, molluschi, crostacei conservati",
+    "standardPortion": "50"
   },
   {
-    "productCategoryId": "Amido di mais",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Farina"
+    "productCategoryId": 13,
+    "group": "2",
+    "category": "alternative vegetali tofu, burger vegetali",
+    "standardPortion": "100"
   },
   {
-    "productCategoryId": "Anacardi",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Nuts",
-    "parent": "Frutta a guscio"
+    "productCategoryId": 14,
+    "group": "2",
+    "category": "uova",
+    "standardPortion": "50"
   },
   {
-    "productCategoryId": "Anatra",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
+    "productCategoryId": 15,
+    "group": "3",
+    "category": "legumi freschi o in scatola",
+    "standardPortion": "150"
   },
   {
-    "productCategoryId": "Arachidi",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Peanuts",
-    "parent": "Frutta a guscio"
+    "productCategoryId": 16,
+    "group": "3",
+    "category": "legumi secchi",
+    "standardPortion": "50"
   },
   {
-    "productCategoryId": "Aragosta",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Crustaceans",
-    "parent": "Crostacei"
+    "productCategoryId": 17,
+    "group": "4",
+    "category": "pasta, cous cous, riso, mais, farro, orzo, quinoa, farine, ecc",
+    "standardPortion": "80"
   },
   {
-    "productCategoryId": "Astice",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Crustaceans",
-    "parent": "Crostacei"
+    "productCategoryId": 18,
+    "group": "4",
+    "category": "pane",
+    "standardPortion": "50"
   },
   {
-    "productCategoryId": "Avena",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": "Cereali"
+    "productCategoryId": 19,
+    "group": "4",
+    "category": "sostituti del pane cracker, grissini, friselle, tarallini, gallette, ecc.",
+    "standardPortion": "30"
   },
   {
-    "productCategoryId": "Baccalà",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Fish",
-    "parent": "Merluzzo"
+    "productCategoryId": 20,
+    "group": "4",
+    "category": "prodotti da forno dolci brioche, croissant, cornetti, biscotti, merendine, barrette, ecc.",
+    "standardPortion": "30"
   },
   {
-    "productCategoryId": "Besciamella",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": null
+    "productCategoryId": 21,
+    "group": "4",
+    "category": "cereali per la colazione e fette biscottate",
+    "standardPortion": "30"
   },
   {
-    "productCategoryId": "Besciamella a ridotto contenuto di grassi",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Gluten, Milk",
-    "parent": "Besciamella"
+    "productCategoryId": 22,
+    "group": "4",
+    "category": "patate e altri tuberi",
+    "standardPortion": "200"
   },
   {
-    "productCategoryId": "Besciamella UHT",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Gluten, Milk",
-    "parent": "Besciamella"
+    "productCategoryId": 23,
+    "group": "5",
+    "category": "insalate a foglia",
+    "standardPortion": "80"
   },
   {
-    "productCategoryId": "Besciamella UHT senza lattosio",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Gluten, Milk",
-    "parent": "Besciamella"
+    "productCategoryId": 24,
+    "group": "5",
+    "category": "verdure e ortaggi",
+    "standardPortion": "200"
   },
   {
-    "productCategoryId": "Bevanda a base di frutta",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": null
+    "productCategoryId": 25,
+    "group": "6",
+    "category": "frutta fresca",
+    "standardPortion": "150"
   },
   {
-    "productCategoryId": "Bevanda a base di riso UHT con calcio senza zuccheri aggiunti",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 26,
+    "group": "6",
+    "category": "frutta secca disidratata",
+    "standardPortion": "30"
   },
   {
-    "productCategoryId": "Bevanda a base di soia UHT senza zuccheri",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Soya",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 27,
+    "group": "7",
+    "category": "noci, nocciole, pistacchi, mandorle, semi di lino, semi di sesamo, semi di zucca, ecc.",
+    "standardPortion": "30"
   },
   {
-    "productCategoryId": "Bevanda alcolica",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
+    "productCategoryId": 28,
+    "group": "8",
+    "category": "oli extravergine d'oliva, di semi, di masi ecc.",
+    "standardPortion": "9"
   },
   {
-    "productCategoryId": "Bevanda alla nocciola UHT arricchita",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Nuts",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 29,
+    "group": "8",
+    "category": "burro, strutto e lardo",
+    "standardPortion": "10"
   },
   {
-    "productCategoryId": "Bevanda di avena e cacao UHT arricchito senza zuccheri",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Gluten",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 30,
+    "group": "8",
+    "category": "panna, besciamella",
+    "standardPortion": "100"
   },
   {
-    "productCategoryId": "Bevanda di avena schiumabile UHT arricchita",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Gluten",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 31,
+    "group": "9",
+    "category": "pesto alla genovese, alla trapanese ecc.",
+    "standardPortion": "40"
   },
   {
-    "productCategoryId": "Bevanda di avena senza glutine UHT",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 32,
+    "group": "9",
+    "category": "aceto, salsa di soia, maionese, salse",
+    "standardPortion": "10"
   },
   {
-    "productCategoryId": "Bevanda di avena senza zuccheri UHT arricchita",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Gluten",
-    "parent": "Bevanda di avena UHT arricchita"
+    "productCategoryId": 33,
+    "group": "9",
+    "category": "sughi pronti arrabbiata, ragù, ecc.",
+    "standardPortion": "90"
   },
   {
-    "productCategoryId": "Bevanda di avena UHT arricchita",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 34,
+    "group": "10",
+    "category": "zucchero/miele/caramelle",
+    "standardPortion": "5"
   },
   {
-    "productCategoryId": "Bevanda di cocco arricchita",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 35,
+    "group": "10",
+    "category": "marmellata",
+    "standardPortion": "10"
   },
   {
-    "productCategoryId": "Bevanda di cocco e mandorla UHT arricchita",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Nuts",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 36,
+    "group": "10",
+    "category": "torte, gelati",
+    "standardPortion": "70"
   },
   {
-    "productCategoryId": "Bevanda di mandorle e cioccolato UHT",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Nuts",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 37,
+    "group": "10",
+    "category": "budini/sorbetti",
+    "standardPortion": "100"
   },
   {
-    "productCategoryId": "Bevanda di mandorle UHT",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Nuts",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 38,
+    "group": "10",
+    "category": "cioccolato, cioccolatini, creme spalmabili",
+    "standardPortion": "10"
   },
   {
-    "productCategoryId": "Bevanda di mandorle UHT arricchita",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Nuts",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 39,
+    "group": "11",
+    "category": "spremute succhi",
+    "standardPortion": "200"
   },
   {
-    "productCategoryId": "Bevanda di riso UHT arricchita",
-    "description": "Bevanda vegetale",
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 40,
+    "group": "11",
+    "category": "bibite zuccherate",
+    "standardPortion": "150"
   },
   {
-    "productCategoryId": "Bevanda di soia e cioccolato UHT arricchita",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Soya",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 41,
+    "group": "11",
+    "category": "caffe, orzo",
+    "standardPortion": "40"
   },
   {
-    "productCategoryId": "Bevanda di soia e vaniglia UHT arricchita",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Soya",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 42,
+    "group": "12",
+    "category": "vino",
+    "standardPortion": "125"
   },
   {
-    "productCategoryId": "Bevanda di soia UHT senza zuccheri aggiunti",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Soya",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 43,
+    "group": "12",
+    "category": "birra",
+    "standardPortion": "130"
   },
   {
-    "productCategoryId": "Bevanda UHT a base di avena integrale",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Gluten",
-    "parent": "Bevanda vegetale"
+    "productCategoryId": 44,
+    "group": "12",
+    "category": "vermouth/porto/aperitivi",
+    "standardPortion": "75"
   },
   {
-    "productCategoryId": "Bevanda vegetale",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
+    "productCategoryId": 45,
+    "group": "12",
+    "category": "superalcolici",
+    "standardPortion": "40"
   },
   {
-    "productCategoryId": "Bibite analcoliche a base di succo di frutta (es. aranciata"
+    "productCategoryId": 46,
+    "group": "13",
+    "category": "erbe",
+    "standardPortion": "0,1"
   },
   {
-    "productCategoryId": "Bibite analcoliche con nome di frutto (chinotto"
+    "productCategoryId": 47,
+    "group": "13",
+    "category": "polvere",
+    "standardPortion": "0,1"
   },
   {
-    "productCategoryId": "Bibite analcoliche gassate",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": null
+    "productCategoryId": 48,
+    "group": "13",
+    "category": "sale",
+    "standardPortion": "0,5"
   },
   {
-    "productCategoryId": "Birra",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": "Bevanda alcolica"
-  },
-  {
-    "productCategoryId": "Bovino",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Carne"
-  },
-  {
-    "productCategoryId": "Bovino Adulto",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Bovino"
-  },
-  {
-    "productCategoryId": "Branzino",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Bresaola bovina",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Salume"
-  },
-  {
-    "productCategoryId": "Burro",
-    "description": "Burro vaccino",
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Burro chiarificato",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Burro"
-  },
-  {
-    "productCategoryId": "Burro salato",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Burro"
-  },
-  {
-    "productCategoryId": "Burro senza lattosio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Burro"
-  },
-  {
-    "productCategoryId": "Calamaro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Molluscs",
-    "parent": "Molluschi"
-  },
-  {
-    "productCategoryId": "Cannocchia",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Crustaceans",
-    "parent": "Crostacei"
-  },
-  {
-    "productCategoryId": "Cappasanta",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Molluscs",
-    "parent": "Molluschi"
-  },
-  {
-    "productCategoryId": "Cappone",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
-  },
-  {
-    "productCategoryId": "Carne",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Castrato",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Ovino"
-  },
-  {
-    "productCategoryId": "Cavallo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Equino"
-  },
-  {
-    "productCategoryId": "Ceci",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Legumi"
-  },
-  {
-    "productCategoryId": "Cereali",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Cernia",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Composta",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Concentrato di pomodoro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pomodoro"
-  },
-  {
-    "productCategoryId": "Confettura",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Conserve alla frutta"
-  },
-  {
-    "productCategoryId": "Confettura extra",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Coniglio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Carne"
-  },
-  {
-    "productCategoryId": "Conserve alla frutta",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Cozza",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Molluscs",
-    "parent": "Molluschi"
-  },
-  {
-    "productCategoryId": "Crema di marroni",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Conserve alla frutta"
-  },
-  {
-    "productCategoryId": "Crostacei",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Crustaceans",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Crusca",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Equino",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Carne"
-  },
-  {
-    "productCategoryId": "Erbe aromatiche (foglie"
-  },
-  {
-    "productCategoryId": "Erbe aromatiche (semi"
-  },
-  {
-    "productCategoryId": "Fagioli bianchi",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Legumi"
-  },
-  {
-    "productCategoryId": "Fagioli Borlotti",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "legumi"
-  },
-  {
-    "productCategoryId": "Fagioli cannellini",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Legumi"
-  },
-  {
-    "productCategoryId": "Fagioli rossi",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "legumi"
-  },
-  {
-    "productCategoryId": "Fagiolini",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Legumi"
-  },
-  {
-    "productCategoryId": "Faraona",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
-  },
-  {
-    "productCategoryId": "Farina",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Farina di ceci",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Farina"
-  },
-  {
-    "productCategoryId": "Farina di grano",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": "Farina"
-  },
-  {
-    "productCategoryId": "Farina di riso",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Farina"
-  },
-  {
-    "productCategoryId": "Farina di semola",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": "Farina"
-  },
-  {
-    "productCategoryId": "Farro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": "Cereali"
-  },
-  {
-    "productCategoryId": "Fave",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Legumi"
-  },
-  {
-    "productCategoryId": "Fecola di patate",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Farina"
-  },
-  {
-    "productCategoryId": "Fiocchi di latte",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Latticino"
-  },
-  {
-    "productCategoryId": "Foie Gras",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
-  },
-  {
-    "productCategoryId": "Formaggio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Formaggio fresco",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Formaggio"
-  },
-  {
-    "productCategoryId": "Formaggio fuso",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Formaggio"
-  },
-  {
-    "productCategoryId": "Formaggio spalmabile",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Formaggio"
-  },
-  {
-    "productCategoryId": "Formaggio stagionato",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Formaggio"
-  },
-  {
-    "productCategoryId": "Frutta",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Ortofrutticoli"
-  },
-  {
-    "productCategoryId": "Frutta a guscio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Nuts",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Frutta allo sciroppo",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Sciroppo"
-  },
-  {
-    "productCategoryId": "Frutta candita",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Ortofrutticoli"
-  },
-  {
-    "productCategoryId": "Frutta fresca",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Ortofrutticoli"
-  },
-  {
-    "productCategoryId": "Funghi",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Ortofrutticoli"
-  },
-  {
-    "productCategoryId": "Funghi secchi",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Ortofrutticoli"
-  },
-  {
-    "productCategoryId": "Galletto",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
-  },
-  {
-    "productCategoryId": "Gallina",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
-  },
-  {
-    "productCategoryId": "Gallo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
-  },
-  {
-    "productCategoryId": "Gamberi",
-    "description": null,
-    "typology": null,
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Gelatina",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Conserve alla frutta"
-  },
-  {
-    "productCategoryId": "Grano",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": "Cereali"
-  },
-  {
-    "productCategoryId": "Grano saraceno",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Cereali"
-  },
-  {
-    "productCategoryId": "Grasso da spalmare",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Soya",
-    "parent": "Margarina"
-  },
-  {
-    "productCategoryId": "Insalata di alghe",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Alghe"
-  },
-  {
-    "productCategoryId": "Kefir",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Kefir bianco naturale",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Kefir bianco naturale senza lattosio",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Latte",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Latte addizionato",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte concentrato pastorizzato",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte concentrato zuccherato",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte concentrato zuccherato senza lattosio",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte di capra",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte di capra intero pastorizzato a temperatura elevata",
-    "description": null,
-    "typology": null,
-    "allergens": "Milk",
-    "parent": "Latte di capra"
-  },
-  {
-    "productCategoryId": "Latte di mandorla",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Nuts",
-    "parent": "Bevanda vegetale"
-  },
-  {
-    "productCategoryId": "Latte fermentato",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Latte fieno pastorizzato ad alta temperatura omogeneizzato",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte fresco intero",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte fresco intero alta qualità",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte fresco parzialmente scremato",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte fresco scremato",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte intero pastorizzato microfiltrato",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte microfiltrato"
-  },
-  {
-    "productCategoryId": "Latte microfiltrato",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte parzialmente scremato pastorizzato microfiltrato",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte microfiltrato"
-  },
-  {
-    "productCategoryId": "Latte parzialmente scremato pastorizzato microfiltrato senza lattosio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte scremato pastorizzato a temperatura elevata microfiltrato senza lattosio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte UHT intero",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "latte UHT intero senza lattosio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte UHT parzialmente scremato",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte UHT parzialmente scremato addizionato con Omega 3 selenio e vitamine",
-    "description": null,
-    "typology": null,
-    "allergens": "Milk",
-    "parent": "Latte addizionato"
-  },
-  {
-    "productCategoryId": "Latte UHT parzialmente scremato addizionato di calcio fosforo vitamina D K",
-    "description": null,
-    "typology": null,
-    "allergens": "Milk",
-    "parent": "Latte addizionato"
-  },
-  {
-    "productCategoryId": "Latte UHT parzialmente scremato con Vitamina D",
-    "description": null,
-    "typology": null,
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte UHT parzialmente scremato di capra",
-    "description": null,
-    "typology": null,
-    "allergens": "Milk",
-    "parent": "Latte di capra"
-  },
-  {
-    "productCategoryId": "Latte UHT parzialmente scremato senza lattosio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte UHT scremato",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte UHT scremato senza lattosio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latte UHT scremato senza lattosio concentrato",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Latticino",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte"
-  },
-  {
-    "productCategoryId": "Legumi",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Lenticchie",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Legumi"
-  },
-  {
-    "productCategoryId": "Lievito",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Lievito"
-  },
-  {
-    "productCategoryId": "Lievito di birra",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Lievito"
-  },
-  {
-    "productCategoryId": "Lievito per dolci",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Lievito"
-  },
-  {
-    "productCategoryId": "Lievito vanigliato",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Lievito"
-  },
-  {
-    "productCategoryId": "Lompo",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Lumaca",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Carne"
-  },
-  {
-    "productCategoryId": "Lupini",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Lupin",
-    "parent": "Legumi"
-  },
-  {
-    "productCategoryId": "Lupino",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Molluscs",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Mais",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Cereali"
-  },
-  {
-    "productCategoryId": "Mandorle",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Nuts",
-    "parent": "Frutta a guscio"
-  },
-  {
-    "productCategoryId": "Manzo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Bovino Adulto"
-  },
-  {
-    "productCategoryId": "Margarina",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Marmellata",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Mazzancolle",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Crustaceans",
-    "parent": "Crostacei"
-  },
-  {
-    "productCategoryId": "Merluzzo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Miglio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Cereali"
-  },
-  {
-    "productCategoryId": "Miscela di grassi da spalmare",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk, Soya",
-    "parent": "Burro"
-  },
-  {
-    "productCategoryId": "Molluschi",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Molluscs",
-    "parent": "Molluschi"
-  },
-  {
-    "productCategoryId": "Mortadella",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Salume"
-  },
-  {
-    "productCategoryId": "Mortadella di fegato",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Mortadella"
-  },
-  {
-    "productCategoryId": "Mortadella fresca",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Nuts",
-    "parent": "Carne"
-  },
-  {
-    "productCategoryId": "Moscardini",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Molluscs",
-    "parent": "Molluschi"
-  },
-  {
-    "productCategoryId": "Nettare di frutta",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Bevanda a base di frutta"
-  },
-  {
-    "productCategoryId": "Nocciole",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Nuts",
-    "parent": "Frutta a guscio"
-  },
-  {
-    "productCategoryId": "Noci",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Nuts",
-    "parent": "Frutta a guscio"
-  },
-  {
-    "productCategoryId": "Noci di Pecan",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Nuts",
-    "parent": "Frutta a guscio"
-  },
-  {
-    "productCategoryId": "Oca",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
-  },
-  {
-    "productCategoryId": "Olio",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Olio di canapa",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Olio di semi"
-  },
-  {
-    "productCategoryId": "Olio di cocco",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Olio"
-  },
-  {
-    "productCategoryId": "Olio di colza",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Olio di semi"
-  },
-  {
-    "productCategoryId": "Olio di lino",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Olio di semi"
-  },
-  {
-    "productCategoryId": "Olio di noce",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Nuts",
-    "parent": "Olio di semi"
-  },
-  {
-    "productCategoryId": "Olio di oliva",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Olio di riso",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "olio di semi"
-  },
-  {
-    "productCategoryId": "Olio di sansa",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "olio di oliva"
-  },
-  {
-    "productCategoryId": "Olio di semi",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Olio di semi di arachidi",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Peanuts",
-    "parent": "Olio di semi"
-  },
-  {
-    "productCategoryId": "Olio di semi di girasole",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Olio di semi"
-  },
-  {
-    "productCategoryId": "Olio di semi di mais",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Olio di semi di soia",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Soya",
-    "parent": "olio di semi"
-  },
-  {
-    "productCategoryId": "Olio di sesamo",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Sesame",
-    "parent": "Olio di semi"
-  },
-  {
-    "productCategoryId": "Olio di vinacciolo",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Olio di semi"
-  },
-  {
-    "productCategoryId": "Olio extravergine d\\'oliva",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "olio di oliva"
-  },
-  {
-    "productCategoryId": "Olive",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Olive al forno",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Olive"
-  },
-  {
-    "productCategoryId": "Olive condite",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Olive"
-  },
-  {
-    "productCategoryId": "Olive denocciolate",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Olive"
-  },
-  {
-    "productCategoryId": "Olive in olio",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Olive"
-  },
-  {
-    "productCategoryId": "Olive in salamoia",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Olive"
-  },
-  {
-    "productCategoryId": "Ombrina",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Orata",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Ortofrutticoli",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Orzo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": "Cereali"
-  },
-  {
-    "productCategoryId": "Ostriche",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Molluscs",
-    "parent": "Molluschi"
-  },
-  {
-    "productCategoryId": "Ovino",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Carne"
-  },
-  {
-    "productCategoryId": "Pancetta",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Salume"
-  },
-  {
-    "productCategoryId": "Pancetta affumicata",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Pancetta"
-  },
-  {
-    "productCategoryId": "Panna",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Panna acida",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna acida creme frache",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna ai funghi UHT",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna al salmone UHT",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Fish, Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna da cucina UHT",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna da cucina UHT senza lattosio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna da montare UHT",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna fresca pastorizzata",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna montata UHT senza lattosio",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna montata zuccherata UHT",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna pastorizzata",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna pastorizzata senza lattosio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna per caffè UHT",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Panna spray UHT senza zuccheri",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Passata di pomodoro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pomodoro"
-  },
-  {
-    "productCategoryId": "Pasta",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Gluten",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Pasta all\\'uovo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Eggs, Gluten",
-    "parent": "Pasta"
-  },
-  {
-    "productCategoryId": "Pasta brisèe",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Gluten",
-    "parent": "Pasta"
-  },
-  {
-    "productCategoryId": "Pasta con ripieno",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Gluten",
-    "parent": "Pasta"
-  },
-  {
-    "productCategoryId": "Pasta di semola di grano duro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": "Pasta"
-  },
-  {
-    "productCategoryId": "Pasta di semola integrale di grano duro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": "Pasta di semola di grano duro"
-  },
-  {
-    "productCategoryId": "Pasta fillo",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Gluten",
-    "parent": "Pasta"
-  },
-  {
-    "productCategoryId": "Pasta fresca",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Gluten",
-    "parent": "pasta"
-  },
-  {
-    "productCategoryId": "Pasta frolla",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Gluten",
-    "parent": "Pasta"
-  },
-  {
-    "productCategoryId": "Pasta Sfoglia",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Gluten, Milk",
-    "parent": "Pasta"
-  },
-  {
-    "productCategoryId": "Pecora",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Ovino"
-  },
-  {
-    "productCategoryId": "Pelati",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pomodoro"
-  },
-  {
-    "productCategoryId": "Pesce",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Pesce spada",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Pesce spatola",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Pinoli",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Nuts",
-    "parent": "Frutta a guscio"
-  },
-  {
-    "productCategoryId": "Piselli",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Legumi"
-  },
-  {
-    "productCategoryId": "Pistacchi",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Nuts",
-    "parent": "Frutta a guscio"
-  },
-  {
-    "productCategoryId": "Platessa",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Pollame",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Carne"
-  },
-  {
-    "productCategoryId": "Pollo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
-  },
-  {
-    "productCategoryId": "Polpa di pomodoro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pomodoro"
-  },
-  {
-    "productCategoryId": "Polpo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Molluscs",
-    "parent": "Molluschi"
-  },
-  {
-    "productCategoryId": "Pomodoro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pomodoro"
-  },
-  {
-    "productCategoryId": "Preparato a base di grassi vegetali UH  zuccherato",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk, Soya",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Preparazione alimentare vegetale a base di soia",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Soya",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Prodotto di pasticceria",
-    "description": "Preparazioni dolce e salate da forno",
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Eggs, Gluten, Milk",
-    "parent": null
-  },
-  {
-    "productCategoryId": "Prodotto dolciario montato spray",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Panna"
-  },
-  {
-    "productCategoryId": "Prodotto senza glutine a base di mais e riso",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Pasta"
-  },
-  {
-    "productCategoryId": "Prosciutto cotto",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Salume"
-  },
-  {
-    "productCategoryId": "Prosciutto cotto alta qualità",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Prosciutto cotto"
-  },
-  {
-    "productCategoryId": "Prosciutto cotto scelto",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Prosciutto cotto"
-  },
-  {
-    "productCategoryId": "Prosciutto crudo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Salume"
-  },
-  {
-    "productCategoryId": "Puledro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Equino"
-  },
-  {
-    "productCategoryId": "Quaglia",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
-  },
-  {
-    "productCategoryId": "Quinoa",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Rana pescatrice",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Ricotta",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Latticino"
-  },
-  {
-    "productCategoryId": "Ricotta di capra",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Ricotta"
-  },
-  {
-    "productCategoryId": "Ricotta di latte vaccino",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Ricotta"
-  },
-  {
-    "productCategoryId": "Ricotta di pecora",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Milk",
-    "parent": "Ricotta"
-  },
-  {
-    "productCategoryId": "Ricotta leggera (light"
-  },
-  {
-    "productCategoryId": "Riso",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Cereali"
-  },
-  {
-    "productCategoryId": "Riso integrale",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Riso"
-  },
-  {
-    "productCategoryId": "Rombo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Salame",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Salume"
-  },
-  {
-    "productCategoryId": "Sale",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Sale fino",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Sale"
-  },
-  {
-    "productCategoryId": "Sale grosso",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Sale"
-  },
-  {
-    "productCategoryId": "Sale integrale",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Sale"
-  },
-  {
-    "productCategoryId": "Sale iodato",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Sale"
-  },
-  {
-    "productCategoryId": "Sale iposodico",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Sale"
-  },
-  {
-    "productCategoryId": "Salmone",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Salsa di pomodoro",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Pomodoro"
-  },
-  {
-    "productCategoryId": "Salsa vegetale a base di soia",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Gluten, Soya",
-    "parent": "Besciamella"
-  },
-  {
-    "productCategoryId": "Salume",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Carne"
-  },
-  {
-    "productCategoryId": "Sarda",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Sardina",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Scampi",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Crustaceans",
-    "parent": "Crostacei"
-  },
-  {
-    "productCategoryId": "Sciroppo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Sciroppo  di frutta",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Sciroppo"
-  },
-  {
-    "productCategoryId": "Sciroppo d\\'acero",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Sciroppo"
-  },
-  {
-    "productCategoryId": "Sciroppo d\\'agave",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Sciroppo"
-  },
-  {
-    "productCategoryId": "Sciroppo di latte di mandorle",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Nuts",
-    "parent": "Sciroppo"
-  },
-  {
-    "productCategoryId": "Scottona",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Bovino Adulto"
-  },
-  {
-    "productCategoryId": "Seppia",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Molluscs",
-    "parent": "Molluschi"
-  },
-  {
-    "productCategoryId": "Sgombo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Sogliola",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Soia",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Soya",
-    "parent": "Legumi"
-  },
-  {
-    "productCategoryId": "Speck",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Salume"
-  },
-  {
-    "productCategoryId": "Storione",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Strutto",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Carne"
-  },
-  {
-    "productCategoryId": "Succo di frutta",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Bevanda a base di frutta"
-  },
-  {
-    "productCategoryId": "Succo di pomodoro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pomodoro"
-  },
-  {
-    "productCategoryId": "Succo e polpa di frutta",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Bevanda a base di frutta"
-  },
-  {
-    "productCategoryId": "Sugo di pomodoro",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": null,
-    "parent": "Pomodoro"
-  },
-  {
-    "productCategoryId": "Suino",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Carne"
-  },
-  {
-    "productCategoryId": "Tacchino",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Pollame"
-  },
-  {
-    "productCategoryId": "Tartufo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Funghi"
-  },
-  {
-    "productCategoryId": "Teff",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Cereali"
-  },
-  {
-    "productCategoryId": "Tonno",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Torta salmonata",
-    "description": null,
-    "typology": "Denominazione Usuale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Totano",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Molluscs",
-    "parent": "Molluschi"
-  },
-  {
-    "productCategoryId": "Triglia",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Trota",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Pesce"
-  },
-  {
-    "productCategoryId": "Uova",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Eggs",
-    "parent": "Uova"
-  },
-  {
-    "productCategoryId": "Uova di lompo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Fish",
-    "parent": "Uova"
-  },
-  {
-    "productCategoryId": "Uova di quaglia",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Eggs",
-    "parent": "Uova"
-  },
-  {
-    "productCategoryId": "Uova di struzzo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Eggs",
-    "parent": "Uova"
-  },
-  {
-    "productCategoryId": "Vino",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Sulphites",
-    "parent": "bevanda alcolica"
-  },
-  {
-    "productCategoryId": "Vitello",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Bovino"
-  },
-  {
-    "productCategoryId": "Vitellone",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Bovino Adulto"
-  },
-  {
-    "productCategoryId": "Vongola",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Molluscs",
-    "parent": "Molluschi"
-  },
-  {
-    "productCategoryId": "Yogurt",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Yogurt bianco magro",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Yogurt greco colato intero bianco",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Yogurt greco colato magro bianco",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Yogurt intero",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Yogurt intero bianco dolce",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Yogurt magro bianco parzialmente scremato senza lattosio",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Yogurt magro colato senza lattosio",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Yogurt magro zuccherato alla frutta",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": "Milk",
-    "parent": "Latte fermentato"
-  },
-  {
-    "productCategoryId": "Zucchero",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": null
-  },
-  {
-    "productCategoryId": "Zucchero a velo",
-    "description": null,
-    "typology": "Denominazione Descrittiva",
-    "allergens": null,
-    "parent": "Zucchero"
-  },
-  {
-    "productCategoryId": "Zucchero di canna",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Zucchero"
-  },
-  {
-    "productCategoryId": "Zucchero di canna grezzo",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Zucchero"
-  },
-  {
-    "productCategoryId": "Zucchero di canna integrale",
-    "description": null,
-    "typology": "Denominazione Legale",
-    "allergens": null,
-    "parent": "Zucchero"
+    "productCategoryId": 49,
+    "group": "14",
+    "category": "patatine, pop-corn, salatini",
+    "standardPortion": "25"
   }
 ]

@@ -37,7 +37,7 @@ export function useDiets(userId: number | undefined) {
     try {
       const dietIds = selectedDiets.map(d => d.value as string);
       await saveUserDiets(userId, dietIds);
-      setMessage({ type: 'success', content: 'Diets saved successfully! Redirecting...' });
+      setMessage({ type: 'success', content: 'Diets saved successfully! You will be transferred to the summary page in 2 seconds' });
       fetchUserDiets();
       setTimeout(() => navigate('/diet'), 2000);
     } catch {

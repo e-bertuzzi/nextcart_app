@@ -11,10 +11,10 @@ export class ProductClaim {
   Claims!: string;
 
   @ManyToOne(() => Product, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  @JoinColumn({ name: 'Product' })
+  @JoinColumn({ name: 'product' })
   product!: Product;
 
   @ManyToOne(() => Claim)
-  @JoinColumn({ name: 'Claims' })
+  @JoinColumn({ name: 'claims' })
   claim!: Claim;
 }

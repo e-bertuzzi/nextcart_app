@@ -99,7 +99,7 @@ export function useHealthConditions(userId: number | undefined) {
 
   const saveSelectedConditions = async () => {
     try {
-      const allIds = getSelectedConditionIds();
+      const allIds = getSelectedConditionIds().filter((id) => id !== '0');
 
       await saveUserHealthConditions(userId, allIds);
       setMessage({

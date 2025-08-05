@@ -5,7 +5,7 @@ import {
   PrimaryColumn,
 } from 'typeorm';
 import { DietIncompatibility } from './incompatibility/diet-incompatibility.entity';
-import { DietConsumerChoice } from '../diet-consumer-choices';
+import { DietConsumerChoice } from './diet-consumer-choices';
 import { ProductDiet } from '../product/product-diet/product-diet.entity';
 
 @Entity()

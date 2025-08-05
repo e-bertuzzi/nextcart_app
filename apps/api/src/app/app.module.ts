@@ -69,6 +69,7 @@ import { ConsumerHealthConditionModule } from '@nextcart/consumer-health-conditi
         ProductAllergen,
         ProductClaim,
         ProductDiet,
+        DietConsumerChoice
       ],
       synchronize: true,
       logging: true,
