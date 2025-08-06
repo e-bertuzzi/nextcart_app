@@ -65,6 +65,7 @@ export function ProductFilters({
       <Button onClick={onReset} variant="link">
         Reset filtri
       </Button>
+      <hr style={{ marginTop: '1rem', marginBottom: '1rem', border: 'none', borderTop: '1px solid #ccc' }} />
     </SpaceBetween>
   );
 }

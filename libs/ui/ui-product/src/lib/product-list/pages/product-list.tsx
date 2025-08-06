@@ -4,6 +4,8 @@ import {
   Header,
   Spinner,
   Alert,
+  Input,
+  FormField,
 } from '@cloudscape-design/components';
 import { useState, useEffect } from 'react';
 import { useProducts } from '../hooks/use-products';
@@ -23,6 +25,7 @@ export function UiProductList() {
     error: errorDiets,
   } = useDiets();
   const userId = user?.id;
+
   const [searchQuery, setSearchQuery] = useState('');
 
   const {
@@ -72,7 +75,12 @@ export function UiProductList() {
         p.productDiets?.some((pd) => pd.dietId === sel.value)
       );
 
-    return matchesCategory && matchesDiet;
+    const matchesSearch =
+      searchQuery.trim() === '' ||
+      p.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.itName?.toLowerCase().includes(searchQuery.toLowerCase());
+
+    return matchesCategory && matchesDiet && matchesSearch;
   });
 
   const handleResetFilters = () => {
@@ -83,6 +91,17 @@ export function UiProductList() {
 
   return (
     <Container header={<Header variant="h1">Catalogo Prodotti</Header>}>
+      <FormField label="Cerca prodotto">
+        <Input
+          value={searchQuery}
+          onChange={({ detail }) => setSearchQuery(detail.value)}
+          placeholder="Cerca per nome prodotto"
+          type="search"
+        />
+      </FormField>
+
+      <hr style={{ marginTop: '1.5rem', marginBottom: '1.5rem', border: 'none', borderTop: '1px solid #ccc' }} />
+
       <ProductFilters
         categories={categories}
         selectedCategories={selectedCategories}
