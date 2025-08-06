@@ -14,20 +14,20 @@ import { ProductDiet } from './product-diet/product-diet.entity';
 
 @Entity()
 export class Product {
-  @PrimaryColumn({ type: 'varchar', length: 100 })
+  @PrimaryColumn({ type: 'varchar', length: 100, name: 'product_id' })
   productId!: string;
 
   @Column({ type: 'varchar', length: 255, nullable: true })
   name?: string;
 
-  @Column({ type: 'varchar', length: 255, nullable: true })
+  @Column({ type: 'varchar', length: 255, nullable: true, name: 'it_name' })
   itName?: string;
 
   @ManyToOne(() => ProductCategory, (category) => category.products, {
     onUpdate: 'CASCADE',
     nullable: true,
   })
-  @JoinColumn({ name: 'productCategory' })
+  @JoinColumn({ name: 'product_category' })
   productCategory?: ProductCategory;
 
   @OneToMany(() => ProductClaim, (pc) => pc.product)

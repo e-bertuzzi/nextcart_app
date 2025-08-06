@@ -15,13 +15,13 @@ import { ConsumerHealthCondition } from './consumer-health-conditions';
 
 @Entity()
 export class Consumer {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({ name: "consumer_id" })
   consumerId!: number;
 
   @Column({ unique: true })
   email!: string;
 
-  @Column()
+  @Column({ name: 'password_hash' })
   passwordHash!: string;
 
   @Column()
@@ -30,10 +30,10 @@ export class Consumer {
   @Column({ nullable: true })
   surname?: string;
 
-  @Column()
+  @Column({ name: 'date_of_birth' })
   dateOfBirth!: Date;
 
-  @Column({ nullable: true })
+  @Column({ nullable: true, name: 'place_of_birth' })
   placeOfBirth?: string;
 
   @Column({

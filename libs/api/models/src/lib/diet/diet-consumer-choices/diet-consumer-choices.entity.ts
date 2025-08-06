@@ -6,19 +6,19 @@ import { Diet } from '..';
 @Entity()
 export class DietConsumerChoice {
   // Esplicita le foreign key come colonne primarie
-  @PrimaryColumn({ name: 'Consumer' })
+  @PrimaryColumn({ name: 'consumer' })
   consumerId!: number;
 
-  @PrimaryColumn({ name: 'Diet' })
+  @PrimaryColumn({ name: 'diet' })
   dietId!: string;
 
   // Relazione con Consumer
   @ManyToOne(() => Consumer, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  @JoinColumn({ name: 'Consumer' })
+  @JoinColumn({ name: 'consumer' })
   consumer!: Consumer;
 
   // Relazione con Diet
   @ManyToOne(() => Diet)
-  @JoinColumn({ name: 'Diet' })
+  @JoinColumn({ name: 'diet' })
   diet!: Diet;
 }

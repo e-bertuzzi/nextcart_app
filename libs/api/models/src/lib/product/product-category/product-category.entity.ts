@@ -11,7 +11,7 @@ import { ProductCategoryAllergen } from './product-category-allergens/product-ca
 
 @Entity()
 export class ProductCategory {
-  @PrimaryColumn({ type: 'varchar', length: 100 })
+  @PrimaryColumn({ type: 'varchar', length: 100, name: 'product_category_id' })
   productCategoryId!: string;
 
   @Column({ name: 'group', type: 'varchar', length: 255, nullable: true })
@@ -20,7 +20,7 @@ export class ProductCategory {
   @Column({ name: 'category', type: 'varchar', length: 100, nullable: true })
   category?: string;
 
-  @Column({ name: 'standardPortion', type: 'varchar', length: 100, nullable: true })
+  @Column({ name: 'standard_portion', type: 'varchar', length: 100, nullable: true })
   standardPortion?: string;
 
   // Relazione gerarchica (parent/children)

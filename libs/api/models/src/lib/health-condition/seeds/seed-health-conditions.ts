@@ -169,7 +169,7 @@ async function seed() {
   const incompatibilityRepo = dataSource.getRepository(HealthConditionIncompatibility);
 
   // Prima tronca la tabella di join con CASCADE
-  await dataSource.query('TRUNCATE TABLE "consumer_health_conditions_health_condition" CASCADE');
+  await dataSource.query('TRUNCATE TABLE "consumer_health_condition" CASCADE');
 
   // Poi tronca le tabelle collegate in ordine corretto, sempre con CASCADE
   await dataSource.query('TRUNCATE TABLE "health_condition_incompatibility" CASCADE');

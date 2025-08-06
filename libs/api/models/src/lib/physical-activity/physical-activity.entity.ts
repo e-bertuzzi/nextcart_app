@@ -4,7 +4,7 @@ import { Consumer } from '../consumer/consumer.entity';
 
 @Entity('physical_activity')
 export class PhysicalActivity {
-  @PrimaryGeneratedColumn()
+  @PrimaryGeneratedColumn({ name: 'physical_activity_id' })
   physicalActivityId!: number;
 
   @ManyToOne(() => Activity, (activity) => activity.physicalActivities, { eager: true })
@@ -15,10 +15,10 @@ export class PhysicalActivity {
   @JoinColumn({ name: 'consumer' })
   consumer!: Consumer;
 
-  @Column({ type: 'text' })
+  @Column({ type: 'text', name: 'specific_activity' })
   specificActivity!: string;
 
-  @Column({ type: 'int' })
+  @Column({ type: 'int', name: 'duration_minutes' })
   durationMinutes!: number;
 
   @Column({ type: 'date' })

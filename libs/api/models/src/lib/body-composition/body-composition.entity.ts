@@ -3,7 +3,7 @@ import { Consumer } from '../consumer/consumer.entity';
 
 @Entity()
 export class BodyComposition {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'consumer_id' })
   consumerId!: number;
 
   @PrimaryColumn({ type: 'date' })
@@ -16,6 +16,6 @@ export class BodyComposition {
   height?: number;
 
   @ManyToOne(() => Consumer, (consumer) => consumer.bodyCompositions)
-  @JoinColumn({ name: 'consumerId' })
+  @JoinColumn({ name: 'consumer_id' })
   consumer!: Consumer;
 }

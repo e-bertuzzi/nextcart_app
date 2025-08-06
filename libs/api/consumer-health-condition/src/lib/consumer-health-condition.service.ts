@@ -68,8 +68,8 @@ export class ConsumerHealthConditionService {
     // Check incompatibilities
     const incompatibilities = await this.incompatibilityRepo
       .createQueryBuilder('inc')
-      .where('inc.conditionId IN (:...ids)', { ids: conditionIds })
-      .andWhere('inc.incompatibleWithId IN (:...ids)', { ids: conditionIds })
+      .where('inc.condition_id IN (:...ids)', { ids: conditionIds })
+      .andWhere('inc.incompatible_with_id IN (:...ids)', { ids: conditionIds })
       .getMany();
 
     if (incompatibilities.length > 0) {

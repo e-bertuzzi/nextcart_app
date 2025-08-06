@@ -10,13 +10,13 @@ import { ProductDiet } from '../product/product-diet/product-diet.entity';
 
 @Entity()
 export class Diet {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'diet_id' })
   dietId!: string;
 
   @Column({ unique: true })
   description!: string;
 
-  @Column()
+  @Column({ name: 'restriction_level' })
   restrictionLevel?: number;
 
   @OneToMany(() => DietConsumerChoice, (dcc) => dcc.diet)

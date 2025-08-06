@@ -4,10 +4,10 @@ import { ProductCategoryAllergen } from '../product';
 
 @Entity()
 export class Allergen {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'allergen_id' })
   allergenId!: string;
 
-  @Column({ length: 45, nullable: true })
+  @Column({ length: 45, nullable: true, name: 'allergen_name' })
   allergenName?: string;
 
   @OneToMany(() => ProductCategoryAllergen, pca => pca.allergen)

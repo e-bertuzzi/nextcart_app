@@ -53,9 +53,9 @@ export class HealthConditionsService {
         `NOT EXISTS (
         SELECT 1 FROM health_condition_incompatibility inc
         WHERE
-          (inc."conditionId" = hc."healthConditionId" AND inc."incompatibleWithId" IN (:...selectedConditionIds))
+          (inc."condition_id" = hc."health_condition_id" AND inc."incompatible_with_id" IN (:...selectedConditionIds))
           OR
-          (inc."incompatibleWithId" = hc."healthConditionId" AND inc."conditionId" IN (:...selectedConditionIds))
+          (inc."incompatible_with_id" = hc."health_condition_id" AND inc."condition_id" IN (:...selectedConditionIds))
       )`,
         { selectedConditionIds }
       );

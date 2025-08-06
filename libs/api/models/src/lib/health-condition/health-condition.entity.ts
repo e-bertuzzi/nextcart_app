@@ -6,6 +6,7 @@ import {
   ManyToOne,
   OneToMany,
   PrimaryColumn,
+  JoinColumn,
   //ManyToOne,
 } from 'typeorm';
 import { Consumer } from '../consumer/consumer.entity';
@@ -16,13 +17,14 @@ import { ConsumerHealthCondition } from '../consumer/consumer-health-conditions'
 
 @Entity()
 export class HealthCondition {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'health_condition_id' })
   healthConditionId!: string;
 
   @Column({ unique: true })
   description?: string;
 
   @ManyToOne(() => HealthConditionCategory, (category) => category.healthConditions)
+  @JoinColumn({ name: 'category_id' })
   category!: HealthConditionCategory;
 
   /*@ManyToMany(() => Consumer, (consumer) => consumer.healthConditions)

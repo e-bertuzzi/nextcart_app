@@ -17,6 +17,7 @@ import BodyPage from './body-pages/body-page';
 import BodyEdit from './body-pages/body-edit';
 import PhysicalActivityPage from './activity-pages/activity-page';
 import PhysicalActivityEdit from './activity-pages/activity-edit';
+import ProductListPage from './product-pages/product-list';
 
 export function App() {
   return (
@@ -43,6 +44,7 @@ export function App() {
             <Route path="/body-composition/edit" element={<BodyEdit/>} />
             <Route path="/physical-activity" element={<PhysicalActivityPage/>} />
             <Route path="/physical-activity/edit" element={<PhysicalActivityEdit/>} />
+            <Route path='/products' element={<ProductListPage/>} />
           </Route>
         </Route>
         <Route path="*" element={<NotFoundPage />} />

@@ -71,6 +71,25 @@ export function UiDashboard() {
             </DashboardGrid>
           </ExpandableSection>
 
+          {/* Products Section */}
+          <ExpandableSection headerText="🛍️ Products">
+            <DashboardGrid columns="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+              {/* Esempio statico: sostituisci con dati dinamici se vuoi */}
+              <DashboardCard
+                label="Products List"
+                iconName="shopping-cart"
+                href="/products"
+                description="View product details"
+              />
+              <DashboardCard
+                label="Product 2"
+                iconName="widget"
+                href="/products/2"
+                description="View product details"
+              />
+            </DashboardGrid>
+          </ExpandableSection>
+
           {/* Analytics Section */}
           <ExpandableSection headerText="📊 Analytics">
             <DashboardGrid>

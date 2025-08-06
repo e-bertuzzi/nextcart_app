@@ -15,10 +15,10 @@ export class ProductService {
     return this.productRepo.find({
       relations: [
         'productCategory',
-        'claims',
-        'allergens',
+        'productClaims',
+        'productAllergens',
         'nutritionalInformationValues',
-        'diets',
+        'productDiets',
       ],
     });
   }
@@ -28,10 +28,10 @@ export class ProductService {
       where: { productId: id },
       relations: [
         'productCategory',
-        'claims',
-        'allergens',
+        'productClaims',
+        'productAllergens',
         'nutritionalInformationValues',
-        'diets',
+        'productDiets',
       ],
     });
 

@@ -3,7 +3,7 @@ import { ProductClaim } from '../product/product-claim/product-claim.entity';
 
 @Entity()
 export class Claim {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'claim_id' })
   claimsId!: string;
 
   @Column('text')

@@ -6,17 +6,17 @@ import { HealthCondition } from '../../health-condition';
 
 @Entity()
 export class ConsumerHealthCondition {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'consumer' })
   Consumer!: number;
 
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'health_condition' })
   HealthConditions!: string;
 
   @ManyToOne(() => Consumer, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  @JoinColumn({ name: 'Consumer' })
+  @JoinColumn({ name: 'consumer' })
   consumer!: Consumer;
 
   @ManyToOne(() => HealthCondition, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  @JoinColumn({ name: 'HealthConditions' })
+  @JoinColumn({ name: 'health_condition' })
   healthCondition!: HealthCondition;
 }

@@ -36,6 +36,7 @@ import { ActivityModule } from '@nextcart/activity';
 import { PhysicalActivityModule } from '@nextcart/physical-activity';
 import { DietConsumerChoiceModule } from '@nextcart/diet-consumer-choices';
 import { ConsumerHealthConditionModule } from '@nextcart/consumer-health-condition';
+import { ProductModule } from '@nextcart/product'
 
 @Module({
   imports: [
@@ -84,6 +85,7 @@ import { ConsumerHealthConditionModule } from '@nextcart/consumer-health-conditi
     PhysicalActivityModule,
     DietConsumerChoiceModule,
     ConsumerHealthConditionModule,
+    ProductModule,
     ConfigModule.forRoot({
       isGlobal: true, // disponibile ovunque
     }),

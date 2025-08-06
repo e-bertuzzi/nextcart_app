@@ -13,11 +13,14 @@ import cookieParser from 'cookie-parser';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
+  const globalPrefix = 'api';
+
   const config = new DocumentBuilder()
     .setTitle('My API')
     .setDescription('La documentazione della mia API REST')
     .setVersion('1.0')
     .addBearerAuth() // opzionale per JWT o autenticazione
+    .addServer(`/${globalPrefix}`) // ✅ aggiunto: informa Swagger che tutte le API iniziano con /api
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
@@ -29,7 +32,6 @@ async function bootstrap() {
     credentials: true,
   });
 
-  const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
   const port = process.env.PORT || 3000;
 

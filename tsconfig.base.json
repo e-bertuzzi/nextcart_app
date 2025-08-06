@@ -45,6 +45,7 @@
       "@nextcart/ui-home": ["libs/ui/ui-home/src/index.ts"],
       "@nextcart/ui-layout": ["libs/ui/ui-layout/src/index.ts"],
       "@nextcart/ui-navigation": ["libs/ui/ui-navigation/src/index.ts"],
+      "@nextcart/ui-product": ["libs/ui/ui-product/src/index.ts"],
       "@nextcart/ui-profile": ["libs/ui/ui-profile/src/index.ts"],
       "@nextcart/web-auth": ["libs/web/auth/src/index.ts"]
     }

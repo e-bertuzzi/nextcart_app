@@ -4,17 +4,17 @@ import { Allergen } from '../../allergen';
 
 @Entity()
 export class ProductAllergen {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'product' })
   Product!: string;
 
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'allergen' })
   Allergens!: string;
 
   @ManyToOne(() => Product, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  @JoinColumn({ name: 'Product' })
+  @JoinColumn({ name: 'product' })
   product!: Product;
 
   @ManyToOne(() => Allergen)
-  @JoinColumn({ name: 'Allergens' })
+  @JoinColumn({ name: 'allergen' })
   allergen!: Allergen;
 }

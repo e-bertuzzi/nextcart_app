@@ -4,10 +4,10 @@ import { Claim } from '../../claim'; // Adatta il path in base alla tua struttur
 
 @Entity()
 export class ProductClaim {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'product' })
   Product!: string;
 
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'claim' })
   Claims!: string;
 
   @ManyToOne(() => Product, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
@@ -15,6 +15,6 @@ export class ProductClaim {
   product!: Product;
 
   @ManyToOne(() => Claim)
-  @JoinColumn({ name: 'claims' })
+  @JoinColumn({ name: 'claim' })
   claim!: Claim;
 }

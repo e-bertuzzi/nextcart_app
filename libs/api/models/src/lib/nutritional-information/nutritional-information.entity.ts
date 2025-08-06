@@ -4,10 +4,10 @@ import { NutrientHealthCondition } from './nutrient-health';
 
 @Entity()
 export class NutritionalInformation {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'nutrient_id' })
   nutrientId!: string;
 
-  @Column({ length: 100 })
+  @Column({ length: 100, name: 'nutrient_it' })
   nutrientIT!: string;
 
   @Column({ length: 255, nullable: true })
@@ -18,6 +18,4 @@ export class NutritionalInformation {
 
   @OneToMany(() => NutrientHealthCondition, nhc => nhc.nutrient)
   healthConditionRelations?: NutrientHealthCondition[];
-
-
 }

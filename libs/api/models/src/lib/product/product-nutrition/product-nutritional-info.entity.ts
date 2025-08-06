@@ -14,11 +14,11 @@ export class ProductNutritionalInfo {
   id!: number;
 
   @ManyToOne(() => Product, product => product.nutritionalInformationValues, { onDelete: 'CASCADE' })
-  @JoinColumn({ name: 'productId' })
+  @JoinColumn({ name: 'product_id' })
   product!: Product;
 
   @ManyToOne(() => NutritionalInformation, nutrient => nutrient.products, { onDelete: 'CASCADE' })
-  @JoinColumn({ name: 'nutrientId' })
+  @JoinColumn({ name: 'nutrient_id' })
   nutrient!: NutritionalInformation;
 
   @Column('float', { nullable: true })

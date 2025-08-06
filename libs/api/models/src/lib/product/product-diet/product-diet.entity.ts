@@ -4,17 +4,17 @@ import { Diet } from '../../diet'; // aggiorna il path secondo la struttura
 
 @Entity()
 export class ProductDiet {
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'product_id' })
   productId!: string;
 
-  @PrimaryColumn()
+  @PrimaryColumn({ name: 'diet_id' })
   dietId!: string;
 
   @ManyToOne(() => Product, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  @JoinColumn({ name: 'productId' })
+  @JoinColumn({ name: 'product_id' })
   product!: Product;
 
   @ManyToOne(() => Diet, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
-  @JoinColumn({ name: 'dietId' })
+  @JoinColumn({ name: 'diet_id' })
   diet!: Diet;
 }
