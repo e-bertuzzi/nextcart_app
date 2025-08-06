@@ -6,7 +6,7 @@ export async function getAllProducts() {
   return res.data;
 }
 
-export async function getProductById(productId: string) {
+/*export async function getProductById(productId: string) {
   const res = await api.get(`/products/${productId}`);
   return res.data;
-}
+}*/
