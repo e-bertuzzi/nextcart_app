@@ -5,6 +5,7 @@ import { Product } from '@nextcart/models';
 
 export function useProducts() {
   const [products, setProducts] = useState<Product[]>([]);
+  console.log(products)
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
