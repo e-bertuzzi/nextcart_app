@@ -5,11 +5,12 @@ import { Product } from '@nextcart/models';
 export function ProductDetailSection({ product }: { product: Product }) {
   return (
     <Container
-      header={<Header variant="h2">{product.itName || product.name}</Header>}
+      header={<Header variant="h2">{product.name || product.itName}</Header>}
     >
       <SpaceBetween size="m">
-        <Box>Categoria: {product.productCategory?.category || 'N/A'}</Box>
-        <Box>ID prodotto: {product.productId}</Box>
+        <Box>IT Name: {product.itName || 'N/A'}</Box>
+        <Box>Category: {product.productCategory?.category || 'N/A'}</Box>
+        <Box>ID product: {product.productId}</Box>
       </SpaceBetween>
     </Container>
   );

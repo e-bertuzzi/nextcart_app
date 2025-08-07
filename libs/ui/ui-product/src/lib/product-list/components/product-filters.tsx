@@ -25,21 +25,21 @@ export function ProductFilters({
 }) {
   return (
     <SpaceBetween size="l">
-      <FormField label="Filtra per categoria">
+      <FormField label="Filter by category">
         <Multiselect
           options={categories}
           selectedOptions={selectedCategories}
           onChange={({ detail }) =>
             setSelectedCategories([...detail.selectedOptions])
           }
-          placeholder="Seleziona categorie"
-          selectedAriaLabel="Categorie selezionate"
-          empty="Nessuna categoria disponibile"
-          ariaLabel="Categoria"
+          placeholder="Select categories"
+          selectedAriaLabel="Selected categories"
+          empty="No categories available"
+          ariaLabel="Category"
         />
       </FormField>
 
-      <FormField label="Filtra per dieta">
+      <FormField label="Filtra by diet">
         <Multiselect
           options={diets}
           selectedOptions={selectedDiets}
@@ -55,15 +55,15 @@ export function ProductFilters({
                 }))
             )
           }
-          placeholder="Seleziona diete"
-          selectedAriaLabel="Diete selezionate"
-          empty="Nessuna dieta disponibile"
-          ariaLabel="Dieta"
+          placeholder="Select diets"
+          selectedAriaLabel="Selected diets"
+          empty="No diet available"
+          ariaLabel="Diet"
         />
       </FormField>
 
-      <Button onClick={onReset} variant="link">
-        Reset filtri
+      <Button onClick={onReset}>
+        Reset filters
       </Button>
       <hr style={{ marginTop: '1rem', marginBottom: '1rem', border: 'none', borderTop: '1px solid #ccc' }} />
     </SpaceBetween>

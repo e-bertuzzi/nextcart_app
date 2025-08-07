@@ -52,7 +52,7 @@ export function UiDashboard() {
             <DashboardGrid columns="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               <DashboardCard
                 label="Purchases"
-                iconName="shopping-cart"
+                iconName="receipt"
                 href="/purchases"
                 description="Review your recent purchases"
               />
@@ -79,13 +79,13 @@ export function UiDashboard() {
                 label="Products List"
                 iconName="shopping-cart"
                 href="/products"
-                description="View product details"
+                description="View product list"
               />
               <DashboardCard
-                label="Product 2"
-                iconName="widget"
-                href="/products/2"
-                description="View product details"
+                label="Add Product"
+                iconName="add"
+                href="/products/add"
+                description="Add new product"
               />
             </DashboardGrid>
           </ExpandableSection>

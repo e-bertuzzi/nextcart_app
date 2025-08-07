@@ -5,14 +5,14 @@ import { ProductAllergen } from '@nextcart/models';
 export function ProductAllergens({ allergens }: { allergens: ProductAllergen[] }) {
   return (
     <Box padding="l">
-      <Header variant="h3">Allergeni</Header>
+      <Header variant="h3">Allergens</Header>
       <SpaceBetween size="xs">
         {allergens.length > 0 ? (
           allergens.map((allergen, index) => (
-            <Box key={index}>{allergen.Allergens}</Box>
+            <Box key={index}>{allergen.allergen.allergenId} - {allergen.allergen.allergenName}</Box>
           ))
         ) : (
-          <Box>Nessun allergene disponibile</Box>
+          <Box>No allergens available</Box>
         )}
       </SpaceBetween>
     </Box>

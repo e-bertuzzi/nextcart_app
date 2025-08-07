@@ -3,6 +3,7 @@ import {
   ContentLayout,
   Spinner,
   SpaceBetween,
+  ExpandableSection,
 } from '@cloudscape-design/components';
 import { useParams } from 'react-router-dom';
 import { useProductDetails } from '../hooks/use-product-details';
@@ -20,29 +21,44 @@ export function UiProductDetail() {
   const { product, loading } = useProductDetails(productId || '');
 
   if (!productId) {
-    return <div>ID prodotto non fornito</div>;
+    return <div>Product ID not provided</div>;
   }
 
   if (loading) return <Spinner />;
 
-  if (!product) return <div>Prodotto non trovato</div>;
+  if (!product) return <div>Product not found</div>;
 
   return (
     <AppLayout
       content={
-        <ContentLayout header={<h1>Dettaglio Prodotto</h1>}>
+        <ContentLayout header={<h1>Product Detail</h1>}>
           <SpaceBetween size="l">
             <ProductDetailSection product={product} />
 
             {/* Metti i componenti in colonna, uno sotto l’altro */}
-            <ProductClaims claims={product.productClaims || []} />
-            {/* Puoi aggiungere gli altri componenti in colonna qui */}
-            {<ProductAllergens allergens={product.productAllergens || []} /> }
-            {<ProductDiets diets={product.productDiets || []} /> }
-            {<ProductNutritionalTable nutritionalInfo={product.nutritionalInformationValues || []} /> }
+            <ExpandableSection headerText="Claim">
+              <ProductClaims claims={product.productClaims || []} />
+            </ExpandableSection>
+
+            <ExpandableSection headerText="Allergens">
+              <ProductAllergens allergens={product.productAllergens || []} />
+            </ExpandableSection>
+
+            <ExpandableSection headerText="Diets">
+              <ProductDiets diets={product.productDiets || []} />
+            </ExpandableSection>
+
+            <ExpandableSection headerText="Nutritional Values">
+              <ProductNutritionalTable
+                nutritionalInfo={product.nutritionalInformationValues || []}
+              />
+            </ExpandableSection>
           </SpaceBetween>
         </ContentLayout>
       }
+      navigationHide // <== Nasconde la colonna di navigazione
+      toolsHide // <== Nasconde la colonna strumenti laterale
+      disableContentPaddings
     />
   );
 }

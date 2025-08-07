@@ -9,7 +9,7 @@ export function ProductNutritionalTable({
 }) {
   return (
     <Box padding="l">
-      <Header variant="h3">Valori Nutrizionali</Header>
+      <Header variant="h3">Nutritional Values</Header>
       <SpaceBetween size="xs">
         {nutritionalInfo.length > 0 ? (
           nutritionalInfo.map((info, index) => (
@@ -18,7 +18,7 @@ export function ProductNutritionalTable({
             </Box>
           ))
         ) : (
-          <Box>Nessuna informazione nutrizionale disponibile</Box>
+          <Box>No nutritional information available</Box>
         )}
       </SpaceBetween>
     </Box>

@@ -6,14 +6,14 @@ export function ProductDiets({ diets }: { diets: ProductDiet[] }) {
     console.log("diete ", diets);
   return (
     <Box padding="l">
-      <Header variant="h3">Diete</Header>
+      <Header variant="h3">Diets</Header>
       <SpaceBetween size="xs">
         {diets.length > 0 ? (
           diets.map((diet, index) => (
-            <Box key={index}>{diet.dietId || 'Dieta non disponibile'}</Box>
+            <Box key={index}>{diet.dietId || 'N/A'}</Box>
           ))
         ) : (
-          <Box>Nessuna dieta disponibile</Box>
+          <Box>No diets available</Box>
         )}
       </SpaceBetween>
     </Box>

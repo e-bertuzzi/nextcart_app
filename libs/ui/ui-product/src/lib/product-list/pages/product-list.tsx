@@ -90,12 +90,12 @@ export function UiProductList() {
   };
 
   return (
-    <Container header={<Header variant="h1">Catalogo Prodotti</Header>}>
-      <FormField label="Cerca prodotto">
+    <Container header={<Header variant="h1">Product catalog</Header>}>
+      <FormField label="Search product">
         <Input
           value={searchQuery}
           onChange={({ detail }) => setSearchQuery(detail.value)}
-          placeholder="Cerca per nome prodotto"
+          placeholder="Search by product name"
           type="search"
         />
       </FormField>

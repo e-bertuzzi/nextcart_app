@@ -19,7 +19,7 @@ export function ProductCardList({ products }: { products: any[] }) {
             id: 'category',
             content: (item) => (
               <Box color="text-body-secondary">
-                Categoria: {item.productCategory?.category ?? 'N/A'}
+                Category: {item.productCategory?.category ?? 'N/A'}
               </Box>
             ),
           },
@@ -30,7 +30,7 @@ export function ProductCardList({ products }: { products: any[] }) {
                 variant="primary"
                 onClick={() => navigate(`/products/${item.productId}`)}
               >
-                Dettagli
+                Details
               </Button>
             ),
           },

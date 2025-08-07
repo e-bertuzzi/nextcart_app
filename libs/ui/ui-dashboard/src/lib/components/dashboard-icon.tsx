@@ -10,6 +10,10 @@ import {
   faChartBar,
   faChartLine,
   faChartArea,
+  faPlus,
+  faReceipt,
+  faCartArrowDown,
+  faShoppingBag,
 } from '@fortawesome/free-solid-svg-icons';
 
 const iconMap: Record<string, any> = {
@@ -23,6 +27,10 @@ const iconMap: Record<string, any> = {
   'bar-chart': faChartBar,
   'line-chart': faChartLine,
   'trend-up': faChartArea,
+  'add': faPlus,
+  'receipt': faReceipt,
+  'cart-arrow-down': faCartArrowDown,
+  'shopping-bag': faShoppingBag,
 };
 
 interface DashboardIconProps {

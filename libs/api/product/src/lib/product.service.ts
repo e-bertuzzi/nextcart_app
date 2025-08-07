@@ -29,7 +29,9 @@ export class ProductService {
       relations: [
         'productCategory',
         'productClaims',
+        'productClaims.claim',
         'productAllergens',
+        'productAllergens.allergen',
         'nutritionalInformationValues',
         'productDiets',
       ],
