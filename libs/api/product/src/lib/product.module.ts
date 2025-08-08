@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ProductController } from './product.controller';
 import { ProductService } from './product.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Product, Claim, Allergen, Diet, ProductCategory } from '@nextcart/models';
+import { Product, Claim, Allergen, Diet, ProductCategory, NutritionalInformation } from '@nextcart/models';
 
 @Module({
   imports: [
@@ -12,6 +12,7 @@ import { Product, Claim, Allergen, Diet, ProductCategory } from '@nextcart/model
       Allergen,
       Diet,
       ProductCategory,
+      NutritionalInformation
     ]),
   ],
   controllers: [ProductController],

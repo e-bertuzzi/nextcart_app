@@ -56,14 +56,8 @@ export function useAddProduct() {
         // Diets
         const di = await productService.getDiets();
         console.log('Diets (raw):', di);
-        setDiets(di);
+        setDietOptions(di);
 
-        const dietsOpts: Option[] = di.map((diet) => ({
-          label: diet.dietId,
-          value: diet.description,
-        }));
-        console.log('Diets (options):', dietsOpts);
-        setDietOptions(dietsOpts);
         console.log('categories ', cat);
 
         // Nutritional infos

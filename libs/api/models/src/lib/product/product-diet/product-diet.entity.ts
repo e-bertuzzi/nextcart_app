@@ -1,6 +1,7 @@
 import { Entity, PrimaryColumn, ManyToOne, JoinColumn } from 'typeorm';
 import { Product } from '../product.entity';
 import { Diet } from '../../diet'; // aggiorna il path secondo la struttura
+import { Exclude } from 'class-transformer';
 
 @Entity()
 export class ProductDiet {
@@ -12,6 +13,7 @@ export class ProductDiet {
 
   @ManyToOne(() => Product, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })
   @JoinColumn({ name: 'product_id' })
+  @Exclude()
   product!: Product;
 
   @ManyToOne(() => Diet, { onDelete: 'CASCADE', onUpdate: 'CASCADE' })

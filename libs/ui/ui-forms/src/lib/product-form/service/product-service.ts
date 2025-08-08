@@ -32,22 +32,25 @@ export const productService = {
     );
   },
 
-  getDiets: async (): Promise<Diet[]> => {
+  getDiets: async (): Promise<Option[]> => {
     const res = await api.get('/diet');
-    return res.data;
+    return res.data.map((diet: { dietId: string; description: string }) => ({
+      label: diet.description,
+      value: diet.dietId,
+    }));
   },
 
   getNutritionalInfos: async (): Promise<Option[]> => {
     const res = await api.get('/nutritional-information');
     // res.data è presumibilmente NutritionalInformation[]
     return res.data.map((item: any) => ({
-      value: item.nutrientIT, // o altra proprietà descrittiva da mostrare
-      label: item.nutrientId, // l'id univoco che vuoi usare come value
+      label: item.nutrientIT, // o altra proprietà descrittiva da mostrare
+      value: item.nutrientId, // l'id univoco che vuoi usare come value
     }));
   },
 
   createProduct: async (payload: ProductCreatePayload) => {
-    console.log("payload inviato", payload)
+    console.log('payload inviato', payload);
     return api.post('/products/create', payload);
   },
 };

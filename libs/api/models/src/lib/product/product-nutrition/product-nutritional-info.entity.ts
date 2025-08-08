@@ -7,6 +7,7 @@ import {
 } from 'typeorm';
 import { Product } from '..';
 import { NutritionalInformation } from '../../nutritional-information';
+import { Exclude } from 'class-transformer';
 
 @Entity()
 export class ProductNutritionalInfo {
@@ -15,6 +16,7 @@ export class ProductNutritionalInfo {
 
   @ManyToOne(() => Product, product => product.nutritionalInformationValues, { onDelete: 'CASCADE' })
   @JoinColumn({ name: 'product_id' })
+  @Exclude()
   product!: Product;
 
   @ManyToOne(() => NutritionalInformation, nutrient => nutrient.products, { onDelete: 'CASCADE' })

@@ -5,10 +5,13 @@ import {
   Allergen,
   Claim,
   Diet,
+  NutritionalInformation,
   Product,
   ProductAllergen,
   ProductCategory,
   ProductClaim,
+  ProductDiet,
+  ProductNutritionalInfo,
 } from '@nextcart/models';
 import { classToPlain } from 'class-transformer';
 import { In, Repository } from 'typeorm';
@@ -25,7 +28,9 @@ export class ProductService {
     @InjectRepository(Diet)
     private readonly dietRepo: Repository<Diet>,
     @InjectRepository(ProductCategory)
-    private readonly categoryRepo: Repository<ProductCategory>
+    private readonly categoryRepo: Repository<ProductCategory>,
+    @InjectRepository(NutritionalInformation)
+    private readonly nutritionalInformationRepo: Repository<NutritionalInformation>
   ) {}
 
   async findAll(): Promise<Product[]> {
@@ -50,6 +55,7 @@ export class ProductService {
         'productAllergens',
         'productAllergens.allergen',
         'nutritionalInformationValues',
+        'nutritionalInformationValues.nutrient',
         'productDiets',
       ],
     });
@@ -107,6 +113,44 @@ export class ProductService {
         pa.productId = product.productId;
         pa.allergenId = allergen.allergenId;
         return pa;
+      });
+    }
+
+    if (data.productDiets) {
+      const dietIds = data.productDiets.map((d) => d.dietId);
+      const diets = await this.dietRepo.findBy({
+        dietId: In(dietIds),
+      });
+
+      product.productDiets = diets.map((diet) => {
+        const pd = new ProductDiet();
+        pd.product = product;
+        pd.diet = diet;
+        pd.productId = product.productId;
+        pd.dietId = diet.dietId;
+        return pd;
+      });
+    }
+
+    if (
+      data.nutritionalInformationValues &&
+      data.nutritionalInformationValues.length > 0
+    ) {
+      const nutrientIds = data.nutritionalInformationValues.map((n) =>
+        n.id.toString()
+      );
+      const nutrients = await this.nutritionalInformationRepo.findBy({
+        nutrientId: In(nutrientIds),
+      });
+
+      product.nutritionalInformationValues = nutrients.map((nutrient) => {
+        const info = new ProductNutritionalInfo();
+        info.product = product;
+        info.nutrient = nutrient;
+        info.value = data.nutritionalInformationValues?.find(
+          (n) => n.id.toString() === nutrient.nutrientId
+        )?.value;
+        return info;
       });
     }
 

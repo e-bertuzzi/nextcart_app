@@ -14,7 +14,7 @@ export function ProductNutritionalTable({
         {nutritionalInfo.length > 0 ? (
           nutritionalInfo.map((info, index) => (
             <Box key={index}>
-              {info.nutrient.nutrientIT}: {info.value}
+              {info.nutrient?.nutrientIT ?? 'Unknown nutrient'}: {info.value ?? 'N/A'}
             </Box>
           ))
         ) : (
@@ -24,3 +24,4 @@ export function ProductNutritionalTable({
     </Box>
   );
 }
+
