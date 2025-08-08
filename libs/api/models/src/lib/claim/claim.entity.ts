@@ -4,11 +4,11 @@ import { ProductClaim } from '../product/product-claim/product-claim.entity';
 @Entity()
 export class Claim {
   @PrimaryColumn({ name: 'claim_id' })
-  claimsId!: string;
+  claimId!: string;
 
   @Column('text')
   description!: string;
 
-  @OneToMany(() => ProductClaim, pc => pc.claim)
+  @OneToMany(() => ProductClaim, pc => pc.claim, { cascade: true })
   productClaims?: ProductClaim[];
 }

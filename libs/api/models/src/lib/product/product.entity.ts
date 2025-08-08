@@ -30,15 +30,17 @@ export class Product {
   @JoinColumn({ name: 'product_category' })
   productCategory?: ProductCategory;
 
-  @OneToMany(() => ProductClaim, (pc) => pc.product)
+  @OneToMany(() => ProductClaim, (pc) => pc.product, { cascade: true })
   productClaims?: ProductClaim[];
 
-  @OneToMany(() => ProductAllergen, (pa) => pa.product)
+  @OneToMany(() => ProductAllergen, (pa) => pa.product, { cascade: true })
   productAllergens?: ProductAllergen[];
 
-  @OneToMany(() => ProductNutritionalInfo, (pni) => pni.product)
+  @OneToMany(() => ProductNutritionalInfo, (pni) => pni.product, {
+    cascade: true,
+  })
   nutritionalInformationValues?: ProductNutritionalInfo[];
 
-  @OneToMany(() => ProductDiet, (pd) => pd.product)
+  @OneToMany(() => ProductDiet, (pd) => pd.product, { cascade: true })
   productDiets?: ProductDiet[];
 }

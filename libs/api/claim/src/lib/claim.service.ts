@@ -15,7 +15,7 @@ export class ClaimService {
   }
 
   async findOne(id: string): Promise<Claim | null> {
-    return this.claimRepository.findOneBy({ claimsId: id });
+    return this.claimRepository.findOneBy({ claimId: id });
   }
 
   // Altri metodi CRUD se ti servono (create, update, delete)...

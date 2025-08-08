@@ -20,9 +20,10 @@ export interface ProductCreatePayload {
   productId: string;
   name?: string;
   itName?: string;
-  productCategory?: { id: string };
-  productClaims?: { id: string }[];
-  productAllergens?: { id: string }[];
-  productDiets?: { id: string }[];
+  productCategory?: { productCategoryId: string };
+  productClaims?: { claim: { claimId: string } }[];
+  productAllergens?: { allergen: { allergenId: string } }[];
+  productDiets?: { dietId: string }[];
   nutritionalInformationValues?: { id: string }[];
 }
+

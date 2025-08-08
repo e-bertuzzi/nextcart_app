@@ -8,6 +8,7 @@ import {
 } from '@nestjs/swagger';
 import { Product } from '@nextcart/models';
 import { ProductService } from './product.service';
+import { instanceToPlain } from 'class-transformer';
 
 @ApiTags('Products') // Tag per raggruppare le API in Swagger
 @Controller('products')
@@ -34,7 +35,7 @@ export class ProductController {
     return this.productService.findOne(id);
   }
 
-  @Post()
+  @Post('create')
   @ApiOperation({ summary: 'Create a new product' })
   @ApiBody({ type: Product })
   @ApiResponse({
@@ -43,7 +44,7 @@ export class ProductController {
     type: Product,
   })
   create(@Body() data: Partial<Product>) {
-    return this.productService.create(data);
+    return instanceToPlain(this.productService.create(data));
   }
 
   @Delete(':id')

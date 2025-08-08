@@ -42,7 +42,7 @@ export function useAddProduct() {
         const cat = await productService.getCategories();
         console.log('Categorie:', cat);
         setCategories(cat);
-      
+
         // Claims
         const cl = await productService.getClaims();
         console.log('Claims:', cl);
@@ -100,15 +100,22 @@ export function useAddProduct() {
         name: formData.name,
         itName: formData.itName,
         productCategory: formData.productCategoryId
-          ? { id: formData.productCategoryId }
+          ? { productCategoryId: formData.productCategoryId }
           : undefined,
-        productClaims: formData.productClaimIds.map((id) => ({ id })),
-        productAllergens: formData.productAllergenIds.map((id) => ({ id })),
-        productDiets: formData.productDietIds.map((id) => ({ id })),
+        productClaims: formData.productClaimIds.map((claimId) => ({
+          claim: { claimId }, // claimsId è il nome della PK della tua entity Claim
+        })),
+        productAllergens: formData.productAllergenIds.map((allergenId) => ({
+          allergen: { allergenId },
+        })),
+        productDiets: formData.productDietIds.map((dietId) => ({
+          dietId,
+        })),
         nutritionalInformationValues: formData.nutritionalInfoIds.map((id) => ({
           id,
         })),
       };
+
       await productService.createProduct(payload);
       setMessage({ type: 'success', content: 'Product added successfully!' });
       setFormData({

@@ -16,9 +16,9 @@ export const productService = {
 
   getClaims: async (): Promise<Option[]> => {
     const res = await api.get('/product-claims');
-    return res.data.map((claim: { claimsId: string; description: string }) => ({
-      label: claim.claimsId,
-      value: claim.description,
+    return res.data.map((claim: { claimId: string; description: string }) => ({
+      label: claim.description,
+      value: claim.claimId,
     }));
   },
 
@@ -26,8 +26,8 @@ export const productService = {
     const res = await api.get('/product-allergens');
     return res.data.map(
       (allergen: { allergenId: string; allergenName: string }) => ({
-        value: allergen.allergenName ?? allergen.allergenId, // fallback se allergenName mancante
-        label: allergen.allergenId,
+        label: allergen.allergenName ?? allergen.allergenId, // fallback se allergenName mancante
+        value: allergen.allergenId,
       })
     );
   },
@@ -47,6 +47,7 @@ export const productService = {
   },
 
   createProduct: async (payload: ProductCreatePayload) => {
-    return api.post('/products', payload);
+    console.log("payload inviato", payload)
+    return api.post('/products/create', payload);
   },
 };
