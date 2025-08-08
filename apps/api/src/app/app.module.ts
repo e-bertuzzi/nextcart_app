@@ -37,7 +37,11 @@ import { PhysicalActivityModule } from '@nextcart/physical-activity';
 import { DietConsumerChoiceModule } from '@nextcart/diet-consumer-choices';
 import { ConsumerHealthConditionModule } from '@nextcart/consumer-health-condition';
 import { ProductModule } from '@nextcart/product'
-
+import { ProductCategoryModule } from '@nextcart/product-category';
+import { ClaimModule } from '@nextcart/claim';
+import { AllergenModule } from '@nextcart/allergen';
+import { NutritionalInformationModule } from '@nextcart/nutritional-information';
+ 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -86,6 +90,10 @@ import { ProductModule } from '@nextcart/product'
     DietConsumerChoiceModule,
     ConsumerHealthConditionModule,
     ProductModule,
+    ProductCategoryModule,
+    ClaimModule,
+    AllergenModule,
+    NutritionalInformationModule,
     ConfigModule.forRoot({
       isGlobal: true, // disponibile ovunque
     }),

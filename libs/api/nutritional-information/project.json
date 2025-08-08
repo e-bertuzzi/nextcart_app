@@ -1,0 +1,9 @@
+{
+  "name": "nutritional-information",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/api/nutritional-information/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project nutritional-information --web",
+  "targets": {}
+}

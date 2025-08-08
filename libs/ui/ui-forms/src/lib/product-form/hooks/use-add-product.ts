@@ -42,7 +42,7 @@ export function useAddProduct() {
         const cat = await productService.getCategories();
         console.log('Categorie:', cat);
         setCategories(cat);
-      /*
+      
         // Claims
         const cl = await productService.getClaims();
         console.log('Claims:', cl);
@@ -51,7 +51,7 @@ export function useAddProduct() {
         // Allergens
         const al = await productService.getAllergens();
         console.log('Allergens:', al);
-        setAllergens(al);*/
+        setAllergens(al);
 
         // Diets
         const di = await productService.getDiets();
@@ -64,6 +64,7 @@ export function useAddProduct() {
         }));
         console.log('Diets (options):', dietsOpts);
         setDietOptions(dietsOpts);
+        console.log('categories ', cat);
 
         // Nutritional infos
         const ni = await productService.getNutritionalInfos();

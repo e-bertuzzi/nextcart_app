@@ -5,3 +5,4 @@ export * from './lib/health-condition';
 export * from './lib/body-composition';
 export * from './lib/activity';
 export * from './lib/physical-activity';
+export * from './lib/product-category';

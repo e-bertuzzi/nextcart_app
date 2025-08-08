@@ -16,8 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@nextcart/activity": ["libs/api/activity/src/index.ts"],
+      "@nextcart/allergen": ["libs/api/allergen/src/index.ts"],
       "@nextcart/api-auth": ["libs/api/auth/src/index.ts"],
       "@nextcart/body-composition": ["libs/api/body-composition/src/index.ts"],
+      "@nextcart/claim": ["libs/api/claim/src/index.ts"],
       "@nextcart/commons": ["libs/ui/commons/src/index.ts"],
       "@nextcart/consumer": ["libs/api/consumer/src/index.ts"],
       "@nextcart/consumer-health-condition": [
@@ -32,10 +34,14 @@
       "@nextcart/health-conditions": ["libs/api/health-condition/src/index.ts"],
       "@nextcart/http": ["libs/api/http/src/index.ts"],
       "@nextcart/models": ["libs/api/models/src/index.ts"],
+      "@nextcart/nutritional-information": [
+        "libs/api/nutritional-information/src/index.ts"
+      ],
       "@nextcart/physical-activity": [
         "libs/api/physical-activity/src/index.ts"
       ],
       "@nextcart/product": ["libs/api/product/src/index.ts"],
+      "@nextcart/product-category": ["libs/api/product-category/src/index.ts"],
       "@nextcart/profile": ["libs/api/profile/src/index.ts"],
       "@nextcart/token": ["libs/api/token/src/index.ts"],
       "@nextcart/ui-auth": ["libs/ui/ui-auth/src/index.ts"],
