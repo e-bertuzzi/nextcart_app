@@ -1,6 +1,16 @@
 import React from 'react';
-import { Multiselect, Input } from '@cloudscape-design/components';
-import { Option, ProductFormState } from '../interface/types';
+import {
+  Multiselect,
+  Input,
+  SpaceBetween,
+  FormField,
+  Table,
+} from '@cloudscape-design/components';
+import {
+  NutritionalInfoOption,
+  Option,
+  ProductFormState,
+} from '../interface/types';
 
 interface ProductFieldsGroupProps {
   formData: ProductFormState;
@@ -13,7 +23,7 @@ interface ProductFieldsGroupProps {
   claims: Option[];
   allergens: Option[];
   dietOptions: Option[];
-  nutritionalInfos: Option[];
+  nutritionalInfos: NutritionalInfoOption[];
 }
 
 export function ProductFieldsGroup({
@@ -26,8 +36,26 @@ export function ProductFieldsGroup({
   dietOptions,
   nutritionalInfos,
 }: ProductFieldsGroupProps) {
+  // Funzione per aggiornare i valori nutrizionali nel formData
+  function handleNutritionalValueChange(nutrientId: string, newValue: string) {
+    const currentValues = formData.nutritionalInfoValues || [];
+
+    const index = currentValues.findIndex((v) => v.nutrientId === nutrientId);
+
+    let updatedValues;
+
+    if (index !== -1) {
+      updatedValues = [...currentValues];
+      updatedValues[index] = { nutrientId, value: newValue };
+    } else {
+      updatedValues = [...currentValues, { nutrientId, value: newValue }];
+    }
+
+    onChange('nutritionalInfoValues', updatedValues);
+  }
+
   return (
-    <>
+    <SpaceBetween direction="vertical" size="m">
       <Input
         disabled={disabled}
         value={formData.productId}
@@ -131,24 +159,51 @@ export function ProductFieldsGroup({
         />
       )}
 
-      {/* Nutritional Info MultiSelect */}
-      <Multiselect
-        disabled={disabled}
-        options={nutritionalInfos}
-        selectedOptions={nutritionalInfos.filter((o) =>
-          formData.nutritionalInfoIds.includes(o.value)
-        )}
-        onChange={({ detail }) =>
-          onChange(
-            'nutritionalInfoIds',
-            detail.selectedOptions
-              .map((o) => o.value)
-              .filter((v): v is string => v !== undefined)
-          )
-        }
-        ariaLabel="Nutritional Information"
-        placeholder="Select Nutritional Info"
-      />
-    </>
+      {/* Nutritional Info Table with Inputs */}
+      <FormField label="Nutritional Values">
+        <Table
+          columnDefinitions={[
+            {
+              id: 'nutrient',
+              header: 'Nutrient',
+              cell: (item) => item.label,
+            },
+            {
+              id: 'value',
+              header: 'Value',
+              cell: (item) => {
+                const currentValue =
+                  formData.nutritionalInfoValues?.find(
+                    (v) => v.nutrientId === item.value
+                  )?.value || '';
+
+                return (
+                  <div
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                    }}
+                  >
+                    <Input
+                      type="number"
+                      value={currentValue}
+                      onChange={({ detail }) =>
+                        handleNutritionalValueChange(item.value, detail.value)
+                      }
+                      disabled={disabled}
+                    />
+                    <span>{item.unitOfMeasure}</span>
+                  </div>
+                );
+              },
+            },
+          ]}
+          items={nutritionalInfos}
+          variant="embedded"
+          stickyHeader
+        />
+      </FormField>
+    </SpaceBetween>
   );
 }

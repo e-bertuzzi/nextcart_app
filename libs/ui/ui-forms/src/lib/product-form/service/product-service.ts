@@ -42,10 +42,10 @@ export const productService = {
 
   getNutritionalInfos: async (): Promise<Option[]> => {
     const res = await api.get('/nutritional-information');
-    // res.data è presumibilmente NutritionalInformation[]
     return res.data.map((item: any) => ({
-      label: item.nutrientIT, // o altra proprietà descrittiva da mostrare
-      value: item.nutrientId, // l'id univoco che vuoi usare come value
+      label: item.label ?? item.nutrientIT ?? 'No label',
+      value: item.value ?? item.nutrientId ?? '',
+      unitOfMeasure: item.unitOfMeasure ?? '',
     }));
   },
 

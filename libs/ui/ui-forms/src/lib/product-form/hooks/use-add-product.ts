@@ -4,6 +4,7 @@ import {
   Option,
   ProductFormState,
   ProductCreatePayload,
+  NutritionalInfoOption,
 } from '../interface/types';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -18,15 +19,17 @@ export function useAddProduct() {
     productClaimIds: [],
     productAllergenIds: [],
     productDietIds: [],
-    nutritionalInfoIds: [],
+    nutritionalInfoValues: [], // nuovo formato
   });
 
   const [categories, setCategories] = useState<Option[]>([]);
   const [claims, setClaims] = useState<Option[]>([]);
   const [allergens, setAllergens] = useState<Option[]>([]);
-  const [diets, setDiets] = useState<Diet[]>([]); // dati originali
-  const [dietOptions, setDietOptions] = useState<Option[]>([]); // opzioni per select
-  const [nutritionalInfos, setNutritionalInfos] = useState<Option[]>([]);
+  const [diets, setDiets] = useState<Diet[]>([]);
+  const [dietOptions, setDietOptions] = useState<Option[]>([]);
+  const [nutritionalInfos, setNutritionalInfos] = useState<
+    NutritionalInfoOption[]
+  >([]);
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<{
@@ -38,32 +41,27 @@ export function useAddProduct() {
     async function fetchOptions() {
       setLoading(true);
       try {
-        // Categories
         const cat = await productService.getCategories();
-        console.log('Categorie:', cat);
         setCategories(cat);
 
-        // Claims
         const cl = await productService.getClaims();
-        console.log('Claims:', cl);
         setClaims(cl);
 
-        // Allergens
         const al = await productService.getAllergens();
-        console.log('Allergens:', al);
         setAllergens(al);
 
-        // Diets
         const di = await productService.getDiets();
-        console.log('Diets (raw):', di);
         setDietOptions(di);
 
-        console.log('categories ', cat);
-
-        // Nutritional infos
-        const ni = await productService.getNutritionalInfos();
-        console.log('Nutritional Infos:', ni);
-        setNutritionalInfos(ni);
+        const niRaw = await productService.getNutritionalInfos();
+        console.log("niraw", niRaw);
+        const niMapped: NutritionalInfoOption[] = niRaw.map((item: any) => ({
+          label: item.label,
+          value: item.value,
+          unitOfMeasure: item.unitOfMeasure,
+        }));
+        console.log("nutr", niMapped);
+        setNutritionalInfos(niMapped);
       } catch (error) {
         console.error('Errore durante fetchOptions:', error);
         setMessage({ type: 'error', content: 'Error loading options.' });
@@ -97,7 +95,7 @@ export function useAddProduct() {
           ? { productCategoryId: formData.productCategoryId }
           : undefined,
         productClaims: formData.productClaimIds.map((claimId) => ({
-          claim: { claimId }, // claimsId è il nome della PK della tua entity Claim
+          claim: { claimId },
         })),
         productAllergens: formData.productAllergenIds.map((allergenId) => ({
           allergen: { allergenId },
@@ -105,9 +103,12 @@ export function useAddProduct() {
         productDiets: formData.productDietIds.map((dietId) => ({
           dietId,
         })),
-        nutritionalInformationValues: formData.nutritionalInfoIds.map((id) => ({
-          id,
-        })),
+        nutritionalInformationValues: formData.nutritionalInfoValues
+          .filter((v) => v.value !== '' && !isNaN(Number(v.value)))
+          .map((v) => ({
+            id: v.nutrientId, // usa id come richiesto dal nuovo tipo
+            value: Number(v.value),
+          })),
       };
 
       await productService.createProduct(payload);
@@ -120,9 +121,10 @@ export function useAddProduct() {
         productClaimIds: [],
         productAllergenIds: [],
         productDietIds: [],
-        nutritionalInfoIds: [],
+        nutritionalInfoValues: [],
       });
     } catch (error) {
+      console.error(error);
       setMessage({ type: 'error', content: 'Error adding product.' });
     } finally {
       setLoading(false);
@@ -139,8 +141,8 @@ export function useAddProduct() {
     categories,
     claims,
     allergens,
-    diets, // dati originali (opzionale)
-    dietOptions, // da usare nella UI per il multiselect
+    diets,
+    dietOptions,
     nutritionalInfos,
   };
 }

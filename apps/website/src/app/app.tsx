@@ -48,7 +48,7 @@ export function App() {
             <Route path="/physical-activity/edit" element={<PhysicalActivityEdit/>} />
             <Route path='/products' element={<ProductListPage/>} />
             <Route path="/products/:productId" element={<ProductDetailPage />} />
-            <Route path="/products/settings/add" element={<ProductAddForm />} />
+            <Route path="/products/add/new" element={<ProductAddForm />} />
           </Route>
         </Route>
         <Route path="*" element={<NotFoundPage />} />

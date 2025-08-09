@@ -3,7 +3,15 @@ export interface Option {
   value: string;
 }
 
-// Tipo per il form, con solo ID come stringhe (più semplice da gestire in UI)
+export interface NutritionalValue {
+  nutrientId: string;
+  value: string;
+}
+
+export interface NutritionalInfoOption extends Option {
+  unitOfMeasure: string;
+}
+
 export interface ProductFormState {
   productId: string;
   name?: string;
@@ -12,7 +20,7 @@ export interface ProductFormState {
   productClaimIds: string[];
   productAllergenIds: string[];
   productDietIds: string[];
-  nutritionalInfoIds: string[];
+  nutritionalInfoValues: NutritionalValue[];
 }
 
 // Tipo per il backend (payload da inviare)
@@ -24,6 +32,9 @@ export interface ProductCreatePayload {
   productClaims?: { claim: { claimId: string } }[];
   productAllergens?: { allergen: { allergenId: string } }[];
   productDiets?: { dietId: string }[];
-  nutritionalInformationValues?: { id: string }[];
+  nutritionalInformationValues?: {
+    id: string;   // nutrientId o id del nutrient
+    value: number;
+  }[];
 }
 

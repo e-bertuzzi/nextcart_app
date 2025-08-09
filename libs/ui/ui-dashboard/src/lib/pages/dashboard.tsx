@@ -84,7 +84,7 @@ export function UiDashboard() {
               <DashboardCard
                 label="Add Product"
                 iconName="add"
-                href="/products/add"
+                href="/products/add/new"
                 description="Add new product"
               />
             </DashboardGrid>

@@ -1,5 +1,5 @@
 // product.service.ts
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import {
   Allergen,
@@ -68,6 +68,16 @@ export class ProductService {
   }
 
   async create(data: Partial<Product>): Promise<Product> {
+    const existingProduct = await this.productRepo.findOne({
+      where: { productId: data.productId },
+    });
+
+    if (existingProduct) {
+      throw new ConflictException(
+        `Product with id ${data.productId} already exists`
+      );
+    }
+
     const product = this.productRepo.create({
       productId: data.productId,
       name: data.name,
