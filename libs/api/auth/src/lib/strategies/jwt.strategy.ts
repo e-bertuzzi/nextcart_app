@@ -5,10 +5,12 @@ import { TokenService } from '@nextcart/token';
 import { ConsumerService } from '@nextcart/consumer';
 import { jwtConstants } from '../auth.constants';
 import { Request } from 'express';
+import { Role } from '@nextcart/enum';
 
 interface JwtPayload {
   sub: string;
   email: string;
+  role: Role;
 }
 
 @Injectable()
