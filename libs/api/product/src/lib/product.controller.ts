@@ -19,7 +19,6 @@ export class ProductController {
   constructor(private readonly productService: ProductService) {}
 
   @Get()
-  @Roles(Role.isUser)
   @ApiOperation({ summary: 'Get all products' })
   @ApiResponse({
     status: 200,
@@ -31,7 +30,6 @@ export class ProductController {
   }
 
   @Get(':id')
-  @Roles(Role.isUser)
   @ApiOperation({ summary: 'Get product by ID' })
   @ApiParam({ name: 'id', description: 'Product ID', type: String })
   @ApiResponse({ status: 200, description: 'Product found', type: Product })

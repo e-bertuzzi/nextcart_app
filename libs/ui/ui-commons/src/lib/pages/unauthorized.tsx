@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@cloudscape-design/components';
 
-export default function NotFoundPage() {
+export function UiUnauthorized() {
   const navigate = useNavigate();
 
   const handleGoHome = () => {
@@ -10,8 +10,8 @@ export default function NotFoundPage() {
 
   return (
     <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>404 - Page Not Found</h1>
-      <p>The page you are looking for does not exist.</p>
+      <h1 style={{ color: '#dc3545' }}>Unauthorized</h1>
+      <p>You do not have permission to access this page.</p>
       <Button variant="primary" onClick={handleGoHome} className="mt-4">
         Go to Homepage
       </Button>

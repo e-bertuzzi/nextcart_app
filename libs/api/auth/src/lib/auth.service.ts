@@ -38,7 +38,7 @@ export class AuthService {
 
   // Crea token JWT
   async login(user: any) {
-    const payload = { email: user.email, sub: user.consumerId };
+    const payload = { email: user.email, sub: user.consumerId, role: user.role };
 
     const accessToken = this.jwtService.sign(payload, {
       //expiresIn: '10s', // access token breve

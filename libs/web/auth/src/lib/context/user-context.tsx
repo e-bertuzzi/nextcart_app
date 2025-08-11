@@ -7,12 +7,13 @@ import {
   ReactNode,
 } from 'react';
 import { jwtDecode } from 'jwt-decode';
+import { Role } from '@nextcart/enum';
 
 interface User {
   email: string;
   id: number | undefined;
   token: string;
-  role: string;
+  role: Role;
 }
 
 interface UserContextType {
@@ -40,6 +41,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
     if (token) {
       try {
         const decoded: any = jwtDecode(token);
+        console.log('decoded', decoded);
         const idNum = Number(decoded.sub);
         setUser({
           email: decoded.email,

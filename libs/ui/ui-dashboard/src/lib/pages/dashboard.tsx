@@ -6,14 +6,19 @@ import {
 
 import { DashboardGrid } from '../components/dashboard-grid';
 import { DashboardCard } from '../components/dashboard-card';
+import { useUser } from '@nextcart/web-auth';
+import { Role } from '@nextcart/enum';
 
 export function UiDashboard() {
+  const { user } = useUser();
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-emerald-50 to-green-100 py-10 px-4">
       <div className="max-w-screen-xl mx-auto">
         <SpaceBetween size="l">
-
-          <Header variant="h1" description="Explore and manage your activities with ease.">
+          <Header
+            variant="h1"
+            description="Explore and manage your activities with ease."
+          >
             Welcome to Your Dashboard
           </Header>
 
@@ -81,25 +86,46 @@ export function UiDashboard() {
                 href="/products"
                 description="View product list"
               />
-              <DashboardCard
-                label="Add Product"
-                iconName="add"
-                href="/products/add/new"
-                description="Add new product"
-              />
+              {user?.role === Role.isAdmin && (
+                <DashboardCard
+                  label="Add Product"
+                  iconName="add"
+                  href="/products/add/new"
+                  description="Add new product"
+                />
+              )}
             </DashboardGrid>
           </ExpandableSection>
 
           {/* Analytics Section */}
           <ExpandableSection headerText="📊 Analytics">
             <DashboardGrid>
-              <DashboardCard label="Analytics 1" iconName="bar-chart" href="#" description="Insights & stats" />
-              <DashboardCard label="Analytics 2" iconName="line-chart" href="#" description="Progress tracking" />
-              <DashboardCard label="Analytics 3" iconName="trend-up" href="#" description="Growth overview" />
-              <DashboardCard label="Analytics 4" iconName="bar-chart" href="#" description="Full analytics view" />
+              <DashboardCard
+                label="Analytics 1"
+                iconName="bar-chart"
+                href="#"
+                description="Insights & stats"
+              />
+              <DashboardCard
+                label="Analytics 2"
+                iconName="line-chart"
+                href="#"
+                description="Progress tracking"
+              />
+              <DashboardCard
+                label="Analytics 3"
+                iconName="trend-up"
+                href="#"
+                description="Growth overview"
+              />
+              <DashboardCard
+                label="Analytics 4"
+                iconName="bar-chart"
+                href="#"
+                description="Full analytics view"
+              />
             </DashboardGrid>
           </ExpandableSection>
-
         </SpaceBetween>
       </div>
     </div>

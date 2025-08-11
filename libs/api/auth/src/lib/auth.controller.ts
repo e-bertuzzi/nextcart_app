@@ -83,7 +83,7 @@ export class AuthController {
       const user = await this.authService.validatePayload({ email: payload.email });
 
       const newAccessToken = this.jwtService.sign(
-        { email: user.email, sub: user.consumerId },
+        { email: user.email, sub: user.consumerId, role: user.role },
         //{ expiresIn: '10s' }, //TODO: METTERE I TEMPI NELL'ENV E SISTEMARE ANCHE CONSTANTS E JWT_SECRET
         { expiresIn:  jwtConstants.accessTokenExpiration },
       );
