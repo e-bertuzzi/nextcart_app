@@ -38,3 +38,17 @@ export interface ProductCreatePayload {
   }[];
 }
 
+export interface ProductUpdatePayload {
+  name?: string;
+  itName?: string;
+  productCategory?: { productCategoryId: string };
+  productClaims?: { claim: { claimId: string } }[];
+  productAllergens?: { allergen: { allergenId: string } }[];
+  productDiets?: { dietId: string }[];
+  nutritionalInformationValues?: {
+    id: string;
+    value: number;
+  }[];
+}
+
+

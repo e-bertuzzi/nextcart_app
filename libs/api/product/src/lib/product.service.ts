@@ -1,4 +1,3 @@
-// product.service.ts
 import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import {
@@ -13,7 +12,6 @@ import {
   ProductDiet,
   ProductNutritionalInfo,
 } from '@nextcart/models';
-import { classToPlain } from 'class-transformer';
 import { In, Repository } from 'typeorm';
 
 @Injectable()
@@ -30,7 +28,20 @@ export class ProductService {
     @InjectRepository(ProductCategory)
     private readonly categoryRepo: Repository<ProductCategory>,
     @InjectRepository(NutritionalInformation)
-    private readonly nutritionalInformationRepo: Repository<NutritionalInformation>
+    private readonly nutritionalInformationRepo: Repository<NutritionalInformation>,
+
+    // Repository per entità ponte
+    @InjectRepository(ProductClaim)
+    private readonly productClaimRepo: Repository<ProductClaim>,
+
+    @InjectRepository(ProductAllergen)
+    private readonly productAllergenRepo: Repository<ProductAllergen>,
+
+    @InjectRepository(ProductDiet)
+    private readonly productDietRepo: Repository<ProductDiet>,
+
+    @InjectRepository(ProductNutritionalInfo)
+    private readonly productNutritionalInfoRepo: Repository<ProductNutritionalInfo>,
   ) {}
 
   async findAll(): Promise<Product[]> {
@@ -84,7 +95,6 @@ export class ProductService {
       itName: data.itName,
     });
 
-    // Categoria
     if (data.productCategory) {
       const category = await this.categoryRepo.findOneBy({
         productCategoryId: data.productCategory.productCategoryId,
@@ -92,7 +102,6 @@ export class ProductService {
       product.productCategory = category ?? undefined;
     }
 
-    // Claims
     if (data.productClaims) {
       const claimIds = data.productClaims.map((c) => c.claim.claimId);
       const claims = await this.claimRepo.findBy({ claimId: In(claimIds) });
@@ -107,7 +116,6 @@ export class ProductService {
       });
     }
 
-    // Allergeni
     if (data.productAllergens) {
       const allergenIds = data.productAllergens.map(
         (a) => a.allergen.allergenId
@@ -164,8 +172,6 @@ export class ProductService {
       });
     }
 
-    // Idem per diete, ecc...
-
     return this.productRepo.save(product);
   }
 
@@ -176,5 +182,107 @@ export class ProductService {
 
   async remove(id: string): Promise<void> {
     await this.productRepo.delete(id);
+  }
+
+  async updateProduct(id: string, data: Partial<Product>): Promise<Product> {
+    const product = await this.productRepo.findOne({
+      where: { productId: id },
+      relations: [
+        'productClaims',
+        'productAllergens',
+        'productDiets',
+        'nutritionalInformationValues',
+      ],
+    });
+
+    if (!product) {
+      throw new NotFoundException('Product not found');
+    }
+
+    product.name = data.name ?? product.name;
+    product.itName = data.itName ?? product.itName;
+
+    if (data.productCategory) {
+      const category = await this.categoryRepo.findOneBy({
+        productCategoryId: data.productCategory.productCategoryId,
+      });
+      product.productCategory = category ?? undefined;
+    } else {
+      product.productCategory = undefined;
+    }
+
+    if (data.productClaims) {
+      // Elimina tutti i ProductClaim legati al prodotto
+      await this.productClaimRepo.delete({ productId: product.productId });
+
+      const claimIds = data.productClaims.map((c) => c.claim.claimId);
+      const claims = await this.claimRepo.findBy({ claimId: In(claimIds) });
+
+      product.productClaims = claims.map((claim) => {
+        const pc = new ProductClaim();
+        pc.product = product;
+        pc.claim = claim;
+        pc.productId = product.productId;
+        pc.claimId = claim.claimId;
+        return pc;
+      });
+    }
+
+    if (data.productAllergens) {
+      await this.productAllergenRepo.delete({ productId: product.productId });
+
+      const allergenIds = data.productAllergens.map((a) => a.allergen.allergenId);
+      const allergens = await this.allergenRepo.findBy({
+        allergenId: In(allergenIds),
+      });
+
+      product.productAllergens = allergens.map((allergen) => {
+        const pa = new ProductAllergen();
+        pa.product = product;
+        pa.allergen = allergen;
+        pa.productId = product.productId;
+        pa.allergenId = allergen.allergenId;
+        return pa;
+      });
+    }
+
+    if (data.productDiets) {
+      await this.productDietRepo.delete({ productId: product.productId });
+
+      const dietIds = data.productDiets.map((d) => d.dietId);
+      const diets = await this.dietRepo.findBy({ dietId: In(dietIds) });
+
+      product.productDiets = diets.map((diet) => {
+        const pd = new ProductDiet();
+        pd.product = product;
+        pd.diet = diet;
+        pd.productId = product.productId;
+        pd.dietId = diet.dietId;
+        return pd;
+      });
+    }
+
+    if (data.nutritionalInformationValues) {
+      await this.productClaimRepo.delete({ productId: product.productId });
+
+      const nutrientIds = data.nutritionalInformationValues.map((n) =>
+        n.id.toString()
+      );
+      const nutrients = await this.nutritionalInformationRepo.findBy({
+        nutrientId: In(nutrientIds),
+      });
+
+      product.nutritionalInformationValues = nutrients.map((nutrient) => {
+        const info = new ProductNutritionalInfo();
+        info.product = product;
+        info.nutrient = nutrient;
+        info.value = data.nutritionalInformationValues?.find(
+          (n) => n.id.toString() === nutrient.nutrientId
+        )?.value;
+        return info;
+      });
+    }
+
+    return this.productRepo.save(product);
   }
 }

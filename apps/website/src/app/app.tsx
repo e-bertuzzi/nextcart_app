@@ -21,7 +21,7 @@ import ProductListPage from './product-pages/product-list';
 import ProductDetailPage from './product-pages/product-detail';
 import ProductAddForm from './product-pages/product-form';
 import { Role } from '@nextcart/enum';
-import UnauthorizedPage from './common-pages/unauthorized-page';
+import ProductEditForm from './product-pages/product-edit';
 
 export function App() {
   return (
@@ -54,11 +54,12 @@ export function App() {
 
           <Route element={<PrivateRoute allowedRoles={[Role.isAdmin]} />}>
             <Route path="/products/add/new" element={<ProductAddForm />} />
+            <Route path="/products/edit/:id" element={<ProductEditForm />} />
           </Route>
           
         </Route>
         <Route path="*" element={<NotFoundPage />} />
-        <Route path="/unauthorized" element={<UnauthorizedPage />} />
+        
       </Routes>
     </UserProvider>
   );

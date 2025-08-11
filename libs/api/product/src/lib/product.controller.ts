@@ -1,4 +1,13 @@
-import { Controller, Get, Param, Post, Body, Delete, UseGuards } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Param,
+  Post,
+  Body,
+  Delete,
+  UseGuards,
+  Put,
+} from '@nestjs/common';
 import {
   ApiTags,
   ApiOperation,
@@ -11,7 +20,7 @@ import { ProductService } from './product.service';
 import { instanceToPlain } from 'class-transformer';
 import { JwtAuthGuard, Roles, RolesGuard } from '@nextcart/api-auth';
 import { Role } from '@nextcart/enum';
- 
+
 @ApiTags('Products') // Tag per raggruppare le API in Swagger
 @UseGuards(JwtAuthGuard, RolesGuard) // Protegge tutto il controller (facoltativo)
 @Controller('products')
@@ -58,5 +67,20 @@ export class ProductController {
   @ApiResponse({ status: 404, description: 'Product not found' })
   remove(@Param('id') id: string) {
     return this.productService.remove(id);
+  }
+
+  @Put(':id')
+  @Roles(Role.isAdmin)
+  @ApiOperation({ summary: 'Update a product by ID' })
+  @ApiParam({ name: 'id', description: 'Product ID', type: String })
+  @ApiBody({ type: Product })
+  @ApiResponse({
+    status: 200,
+    description: 'Product updated successfully',
+    type: Product,
+  })
+  @ApiResponse({ status: 404, description: 'Product not found' })
+  async update(@Param('id') id: string, @Body() data: Partial<Product>) {
+    return instanceToPlain(await this.productService.updateProduct(id, data));
   }
 }

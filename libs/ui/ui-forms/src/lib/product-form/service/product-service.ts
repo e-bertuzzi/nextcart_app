@@ -1,6 +1,10 @@
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { api } from '@nextcart/http'; // o da dove prendi api
-import { Option, ProductCreatePayload } from '../interface/types';
+import {
+  Option,
+  ProductCreatePayload,
+  ProductUpdatePayload,
+} from '../interface/types';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Diet } from '@nextcart/models';
 
@@ -52,5 +56,16 @@ export const productService = {
   createProduct: async (payload: ProductCreatePayload) => {
     console.log('payload inviato', payload);
     return api.post('/products/create', payload);
+  },
+
+  updateProduct: async (productId: string, payload: ProductUpdatePayload) => {
+    console.log('payload aggiornamento', payload);
+    return api.put(`/products/${productId}`, payload);
+  },
+
+  getProduct: async (productId: string) => {
+    const res = await api.get(`/products/${productId}`).then((res) => res.data);
+    console.log('Risposta raw dal backend:', res);
+    return res;
   },
 };

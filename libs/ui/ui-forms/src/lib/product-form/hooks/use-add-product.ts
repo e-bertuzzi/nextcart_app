@@ -19,7 +19,7 @@ export function useAddProduct() {
     productClaimIds: [],
     productAllergenIds: [],
     productDietIds: [],
-    nutritionalInfoValues: [], // nuovo formato
+    nutritionalInfoValues: [],
   });
 
   const [categories, setCategories] = useState<Option[]>([]);

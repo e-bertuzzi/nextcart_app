@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Multiselect,
   Input,
   SpaceBetween,
   FormField,
   Table,
+  Button,
 } from '@cloudscape-design/components';
 import {
   NutritionalInfoOption,
@@ -36,10 +37,19 @@ export function ProductFieldsGroup({
   dietOptions,
   nutritionalInfos,
 }: ProductFieldsGroupProps) {
-  // Funzione per aggiornare i valori nutrizionali nel formData
+  const [selectedNutrients, setSelectedNutrients] = useState<
+    NutritionalInfoOption[]
+  >([]);
+
+  // Effetto: reset della multiselect quando formData è vuoto dopo invio
+  useEffect(() => {
+    if (!formData.productId && !formData.name && !formData.itName) {
+      setSelectedNutrients([]);
+    }
+  }, [formData]);
+
   function handleNutritionalValueChange(nutrientId: string, newValue: string) {
     const currentValues = formData.nutritionalInfoValues || [];
-
     const index = currentValues.findIndex((v) => v.nutrientId === nutrientId);
 
     let updatedValues;
@@ -56,14 +66,16 @@ export function ProductFieldsGroup({
 
   return (
     <SpaceBetween direction="vertical" size="m">
+      {/* Product ID */}
       <Input
-        disabled={disabled}
+        disabled={true}
         value={formData.productId}
         onChange={({ detail }) => onChange('productId', detail.value)}
         placeholder="Product ID"
         ariaLabel="Product ID"
       />
 
+      {/* Name */}
       <Input
         disabled={disabled}
         value={formData.name || ''}
@@ -72,6 +84,7 @@ export function ProductFieldsGroup({
         ariaLabel="Name"
       />
 
+      {/* Italian Name */}
       <Input
         disabled={disabled}
         value={formData.itName || ''}
@@ -159,51 +172,70 @@ export function ProductFieldsGroup({
         />
       )}
 
-      {/* Nutritional Info Table with Inputs */}
-      <FormField label="Nutritional Values">
-        <Table
-          columnDefinitions={[
-            {
-              id: 'nutrient',
-              header: 'Nutrient',
-              cell: (item) => item.label,
-            },
-            {
-              id: 'value',
-              header: 'Value',
-              cell: (item) => {
-                const currentValue =
-                  formData.nutritionalInfoValues?.find(
-                    (v) => v.nutrientId === item.value
-                  )?.value || '';
-
-                return (
-                  <div
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '8px',
-                    }}
-                  >
-                    <Input
-                      type="number"
-                      value={currentValue}
-                      onChange={({ detail }) =>
-                        handleNutritionalValueChange(item.value, detail.value)
-                      }
-                      disabled={disabled}
-                    />
-                    <span>{item.unitOfMeasure}</span>
-                  </div>
-                );
-              },
-            },
-          ]}
-          items={nutritionalInfos}
-          variant="embedded"
-          stickyHeader
+      {/* Nutritional Info Dynamic Selection */}
+      <FormField label="Add Nutritional Values">
+        <Multiselect
+          disabled={disabled}
+          options={nutritionalInfos}
+          selectedOptions={selectedNutrients}
+          onChange={({ detail }) => {
+            setSelectedNutrients(
+              detail.selectedOptions as NutritionalInfoOption[]
+            );
+          }}
+          placeholder="Select nutrients to add"
         />
       </FormField>
+
+      {selectedNutrients.length > 0 && (
+        <FormField label="Nutritional Values">
+          <Table
+            columnDefinitions={[
+              {
+                id: 'nutrient',
+                header: 'Nutrient',
+                cell: (item) => item.label,
+              },
+              {
+                id: 'value',
+                header: 'Value',
+                cell: (item) => {
+                  const currentValue =
+                    formData.nutritionalInfoValues?.find(
+                      (v) => v.nutrientId === item.value
+                    )?.value || '';
+
+                  return (
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                      }}
+                    >
+                      <Input
+                        type="number"
+                        value={currentValue}
+                        onChange={({ detail }) =>
+                          handleNutritionalValueChange(
+                            item.value,
+                            detail.value
+                          )
+                        }
+                        disabled={disabled}
+                      />
+                      <span>{item.unitOfMeasure}</span>
+                    </div>
+                  );
+                },
+              },
+            ]}
+            items={selectedNutrients}
+            variant="embedded"
+            stickyHeader
+          />
+        </FormField>
+      )}
     </SpaceBetween>
   );
 }
