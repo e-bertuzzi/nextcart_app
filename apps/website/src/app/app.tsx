@@ -54,7 +54,7 @@ export function App() {
 
           <Route element={<PrivateRoute allowedRoles={[Role.isAdmin]} />}>
             <Route path="/products/add/new" element={<ProductAddForm />} />
-            <Route path="/products/edit/:id" element={<ProductEditForm />} />
+            <Route path="/products/:id/edit" element={<ProductEditForm />} />
           </Route>
           
         </Route>

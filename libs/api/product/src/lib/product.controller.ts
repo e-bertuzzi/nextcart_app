@@ -61,6 +61,7 @@ export class ProductController {
   }
 
   @Delete(':id')
+  @Roles(Role.isAdmin)
   @ApiOperation({ summary: 'Delete a product by ID' })
   @ApiParam({ name: 'id', description: 'Product ID', type: String })
   @ApiResponse({ status: 200, description: 'Product deleted successfully' })
