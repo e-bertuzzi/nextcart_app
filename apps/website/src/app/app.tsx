@@ -34,7 +34,7 @@ export function App() {
             <Route path="/register" element={<RegistrationPage />} />
           </Route>
 
-          {/* Rotte protette */}
+          {/* Rotte protette mettere questo per admin <Route element={<PrivateRoute allowedRoles={['admin']} />}> */}
           <Route element={<PrivateRoute />}>
             <Route path="/edit-profile" element={<EditProfilePage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
@@ -50,6 +50,7 @@ export function App() {
             <Route path="/products/:productId" element={<ProductDetailPage />} />
             <Route path="/products/add/new" element={<ProductAddForm />} />
           </Route>
+          
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -6,3 +6,4 @@ export * from './lib/body-composition';
 export * from './lib/activity';
 export * from './lib/physical-activity';
 export * from './lib/product-category';
+export * from './lib/allergen';
