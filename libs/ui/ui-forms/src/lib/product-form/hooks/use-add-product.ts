@@ -50,16 +50,16 @@ export function useAddProduct() {
         const al = await productService.getAllergens();
         setAllergens(
           al.map((item: any) => ({
-            label: item.value, // 👈 testo mostrato nella UI
-            value: item.value, // 👈 valore usato nei dati
+            label: item.value, 
+            value: item.value, 
           }))
         );
 
         const di = await productService.getDiets();
         setDietOptions(
           di.map((item: any) => ({
-            label: item.value, // 👈 testo mostrato nella UI
-            value: item.value, // 👈 valore usato nei dati
+            label: item.value, 
+            value: item.value,
           }))
         );
 

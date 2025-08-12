@@ -8,3 +8,7 @@ export const getProductById = async (productId: string): Promise<Product> => {
   const response = await api.get(`/products/${productId}`);
   return response.data;
 };
+
+export const deleteProduct = async (productId: string): Promise<void> => {
+  await api.delete(`/products/${productId}`);
+};
