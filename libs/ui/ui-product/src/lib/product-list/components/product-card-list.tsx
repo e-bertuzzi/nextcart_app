@@ -11,7 +11,7 @@ export function ProductCardList({ products }: { products: any[] }) {
       cardDefinition={{
         header: (item) => (
           <Box fontWeight="bold" fontSize="heading-m">
-            {item.name || item.itName}
+            {item.name || item.itName} <Box fontWeight="light">ID: {item.productId}</Box>
           </Box>
         ),
         sections: [

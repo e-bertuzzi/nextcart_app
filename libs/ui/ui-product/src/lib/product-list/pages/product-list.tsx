@@ -1,4 +1,3 @@
-// UiProductList.tsx
 import {
   Container,
   Header,
@@ -13,6 +12,7 @@ import { useProducts } from '../hooks/use-products';
 import { useUser } from '@nextcart/web-auth';
 import { useUserDiets } from '../hooks/use-user-diets';
 import { useDiets } from '../hooks/use-diets';
+import { useAllergens } from '../hooks/use-allergens'; // import nuovo hook
 
 import { ProductFilters } from '../components/product-filters';
 import { ProductCardList } from '../components/product-card-list';
@@ -24,8 +24,9 @@ export function UiProductList() {
     loading: loadingDiets,
     error: errorDiets,
   } = useDiets();
-  const userId = user?.id;
+  const { allergens: allAllergenOptions, loading: loadingAllergens, error: errorAllergens } = useAllergens(); // nuovo hook
 
+  const userId = user?.id;
   const [searchQuery, setSearchQuery] = useState('');
 
   const {
@@ -37,9 +38,9 @@ export function UiProductList() {
   const { products, loading, error } = useProducts();
 
   const [selectedCategories, setSelectedCategories] = useState<any[]>([]);
-  const [selectedDiets, setSelectedDiets] = useState<
-    { label: string; value: string }[]
-  >([]);
+  const [selectedDiets, setSelectedDiets] = useState<{ label: string; value: string }[]>([]);
+  const [selectedAllergens, setSelectedAllergens] = useState<{ label: string; value: string }[]>([]); // stato allergeni
+
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
@@ -49,11 +50,17 @@ export function UiProductList() {
     }
   }, [userDiets, initialized]);
 
-  if (loadingUser || loadingUserDiets || loading || loadingDiets)
+  if (
+    loadingUser ||
+    loadingUserDiets ||
+    loading ||
+    loadingDiets ||
+    loadingAllergens // considera anche caricamento allergeni
+  )
     return <Spinner />;
 
-  if (error || errorUserDiets || errorDiets)
-    return <Alert type="error">{error || errorUserDiets || errorDiets}</Alert>;
+  if (error || errorUserDiets || errorDiets || errorAllergens)
+    return <Alert type="error">{error || errorUserDiets || errorDiets || errorAllergens}</Alert>;
 
   const categories = Array.from(
     new Set(products.map((p) => p.productCategory?.category).filter(Boolean))
@@ -75,17 +82,28 @@ export function UiProductList() {
         p.productDiets?.some((pd) => pd.dietId === sel.value)
       );
 
+    const matchesAllergen =
+      selectedAllergens.length === 0 ||
+      // escludi prodotti che contengono allergeni selezionati
+      selectedAllergens.every(
+        (allergen) =>
+          !p.productAllergens?.some(
+            (pa) => pa.allergenId === allergen.value
+          )
+      );
+
     const matchesSearch =
       searchQuery.trim() === '' ||
       p.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
       p.itName?.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return matchesCategory && matchesDiet && matchesSearch;
+    return matchesCategory && matchesDiet && matchesAllergen && matchesSearch;
   });
 
   const handleResetFilters = () => {
     setSelectedCategories([]);
     setSelectedDiets([]);
+    setSelectedAllergens([]); // reset allergeni
     setInitialized(false);
   };
 
@@ -109,6 +127,9 @@ export function UiProductList() {
         diets={allDietOptions}
         selectedDiets={selectedDiets}
         setSelectedDiets={setSelectedDiets}
+        allergens={allAllergenOptions} // passa allergeni a ProductFilters
+        selectedAllergens={selectedAllergens}
+        setSelectedAllergens={setSelectedAllergens}
         onReset={handleResetFilters}
       />
 
