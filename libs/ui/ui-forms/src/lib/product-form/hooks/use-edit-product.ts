@@ -47,12 +47,24 @@ export function useEditProduct(productId: string) {
           productService.getProduct(productId), // fetch prodotto esistente
         ]);
 
-        console.log('prodotto', product);
+        console.log('diete stampate', di);
 
         setCategories(cat);
         setClaims(cl);
-        setAllergens(al);
-        setDietOptions(di);
+        setAllergens(
+          al.map((item: any) => ({
+            label: item.value, // 👈 testo mostrato nella UI
+            value: item.value, // 👈 valore usato nei dati
+          }))
+        );
+        
+        setDietOptions(
+          di.map((item: any) => ({
+            label: item.value, // 👈 testo mostrato nella UI
+            value: item.value, // 👈 valore usato nei dati
+          }))
+        );
+
         const niMapped = niRaw.map((item: any) => ({
           label: item.label,
           value: item.value,

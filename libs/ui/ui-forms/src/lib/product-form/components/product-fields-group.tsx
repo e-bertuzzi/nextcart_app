@@ -5,7 +5,6 @@ import {
   SpaceBetween,
   FormField,
   Table,
-  Button,
 } from '@cloudscape-design/components';
 import {
   NutritionalInfoOption,
@@ -41,12 +40,24 @@ export function ProductFieldsGroup({
     NutritionalInfoOption[]
   >([]);
 
-  // Effetto: reset della multiselect quando formData è vuoto dopo invio
+  // Reset se form vuoto dopo invio
   useEffect(() => {
     if (!formData.productId && !formData.name && !formData.itName) {
       setSelectedNutrients([]);
     }
   }, [formData]);
+
+  // ✅ Pre-seleziona nutrienti già presenti nel prodotto con ordine stabile
+  useEffect(() => {
+    if (nutritionalInfos.length > 0 && formData.nutritionalInfoValues.length > 0) {
+      const preselected = formData.nutritionalInfoValues
+        .map((val) =>
+          nutritionalInfos.find((ni) => ni.value === val.nutrientId)
+        )
+        .filter((ni): ni is NutritionalInfoOption => ni !== undefined);
+      setSelectedNutrients(preselected);
+    }
+  }, [nutritionalInfos, formData.nutritionalInfoValues]);
 
   function handleNutritionalValueChange(nutrientId: string, newValue: string) {
     const currentValues = formData.nutritionalInfoValues || [];
@@ -179,9 +190,8 @@ export function ProductFieldsGroup({
           options={nutritionalInfos}
           selectedOptions={selectedNutrients}
           onChange={({ detail }) => {
-            setSelectedNutrients(
-              detail.selectedOptions as NutritionalInfoOption[]
-            );
+            // Mantiene l'ordine di selezione, non ricalcola
+            setSelectedNutrients(detail.selectedOptions as NutritionalInfoOption[]);
           }}
           placeholder="Select nutrients to add"
         />
@@ -211,20 +221,20 @@ export function ProductFieldsGroup({
                         display: 'flex',
                         alignItems: 'center',
                         gap: '8px',
+                        minHeight: '36px', // fissa l'altezza
                       }}
                     >
                       <Input
                         type="number"
                         value={currentValue}
                         onChange={({ detail }) =>
-                          handleNutritionalValueChange(
-                            item.value,
-                            detail.value
-                          )
+                          handleNutritionalValueChange(item.value, detail.value)
                         }
                         disabled={disabled}
                       />
-                      <span>{item.unitOfMeasure}</span>
+                      <span style={{ whiteSpace: 'nowrap' }}>
+                        {item.unitOfMeasure}
+                      </span>
                     </div>
                   );
                 },

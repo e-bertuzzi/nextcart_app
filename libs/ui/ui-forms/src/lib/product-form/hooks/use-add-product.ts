@@ -48,10 +48,20 @@ export function useAddProduct() {
         setClaims(cl);
 
         const al = await productService.getAllergens();
-        setAllergens(al);
+        setAllergens(
+          al.map((item: any) => ({
+            label: item.value, // 👈 testo mostrato nella UI
+            value: item.value, // 👈 valore usato nei dati
+          }))
+        );
 
         const di = await productService.getDiets();
-        setDietOptions(di);
+        setDietOptions(
+          di.map((item: any) => ({
+            label: item.value, // 👈 testo mostrato nella UI
+            value: item.value, // 👈 valore usato nei dati
+          }))
+        );
 
         const niRaw = await productService.getNutritionalInfos();
         console.log("niraw", niRaw);
