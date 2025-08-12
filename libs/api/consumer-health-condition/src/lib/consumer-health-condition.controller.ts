@@ -1,11 +1,4 @@
-import {
-  Controller,
-  Get,
-  Patch,
-  Param,
-  Delete,
-  Body,
-} from '@nestjs/common';
+import { Controller, Get, Patch, Param, Delete, Body } from '@nestjs/common';
 import {
   ApiTags,
   ApiOperation,
@@ -59,20 +52,53 @@ export class ConsumerHealthConditionController {
   @ApiResponse({ status: 200, description: "User's health conditions updated" })
   async updateUserHealthConditions(
     @Param('userId') userId: number,
-    @Body() body: { healthConditionIds: number[] },
+    @Body() body: { healthConditionIds: number[] }
   ) {
-    return this.service.updateUserHealthConditions(userId, body.healthConditionIds);
+    return this.service.updateUserHealthConditions(
+      userId,
+      body.healthConditionIds
+    );
   }
 
   @Delete('users/:userId/health-conditions/:conditionId')
   @ApiOperation({ summary: "Remove a user's health condition" })
   @ApiParam({ name: 'userId', type: Number, description: 'ID of the user' })
-  @ApiParam({ name: 'conditionId', type: String, description: 'ID of the health condition to remove' })
+  @ApiParam({
+    name: 'conditionId',
+    type: String,
+    description: 'ID of the health condition to remove',
+  })
   @ApiResponse({ status: 200, description: "User's health condition removed" })
   async removeUserHealthCondition(
     @Param('userId') userId: number,
     @Param('conditionId') conditionId: string
   ) {
     return this.service.removeUserHealthCondition(userId, conditionId);
+  }
+
+  @Get(':conditionId/nutrient-constraints')
+  @ApiOperation({
+    summary: 'Get nutrient constraints for a specific health condition',
+  })
+  @ApiParam({
+    name: 'conditionId',
+    type: String,
+    description: 'ID of the health condition',
+  })
+  @ApiResponse({
+    status: 200,
+    description: 'List of nutrient constraints for the given health condition',
+  })
+  @ApiResponse({
+    status: 404,
+    description: 'No nutrient constraints found for this health condition',
+  })
+  async getNutrientConstraints(@Param('conditionId') conditionId: string) {
+    return this.service.getNutrientConstraints(conditionId);
+  }
+
+  @Get('user/:userId/nutrient-constraints')
+  async getUserNutrientConstraints(@Param('userId') userId: number) {
+    return this.service.getUserNutrientConstraints(userId);
   }
 }

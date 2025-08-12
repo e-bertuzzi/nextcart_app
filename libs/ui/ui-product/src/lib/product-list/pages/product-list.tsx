@@ -12,7 +12,8 @@ import { useProducts } from '../hooks/use-products';
 import { useUser } from '@nextcart/web-auth';
 import { useUserDiets } from '../hooks/use-user-diets';
 import { useDiets } from '../hooks/use-diets';
-import { useAllergens } from '../hooks/use-allergens'; // import nuovo hook
+import { useAllergens } from '../hooks/use-allergens';
+import { useUserNutrientConstraints } from '../hooks/use-health-condition';
 
 import { ProductFilters } from '../components/product-filters';
 import { ProductCardList } from '../components/product-card-list';
@@ -24,7 +25,16 @@ export function UiProductList() {
     loading: loadingDiets,
     error: errorDiets,
   } = useDiets();
-  const { allergens: allAllergenOptions, loading: loadingAllergens, error: errorAllergens } = useAllergens(); // nuovo hook
+  const {
+    allergens: allAllergenOptions,
+    loading: loadingAllergens,
+    error: errorAllergens,
+  } = useAllergens();
+  const {
+    nutrientConstraints,
+    loading: loadingNutrientConstraints,
+    error: errorNutrientConstraints,
+  } = useUserNutrientConstraints(user?.id);
 
   const userId = user?.id;
   const [searchQuery, setSearchQuery] = useState('');
@@ -38,8 +48,14 @@ export function UiProductList() {
   const { products, loading, error } = useProducts();
 
   const [selectedCategories, setSelectedCategories] = useState<any[]>([]);
-  const [selectedDiets, setSelectedDiets] = useState<{ label: string; value: string }[]>([]);
-  const [selectedAllergens, setSelectedAllergens] = useState<{ label: string; value: string }[]>([]); // stato allergeni
+  const [selectedDiets, setSelectedDiets] = useState<
+    { label: string; value: string }[]
+  >([]);
+  const [selectedAllergens, setSelectedAllergens] = useState<
+    { label: string; value: string }[]
+  >([]);
+  const [selectedNutrientConstraints, setSelectedNutrientConstraints] =
+    useState<{ label: string; value: string }[]>([]);
 
   const [initialized, setInitialized] = useState(false);
 
@@ -55,12 +71,29 @@ export function UiProductList() {
     loadingUserDiets ||
     loading ||
     loadingDiets ||
-    loadingAllergens // considera anche caricamento allergeni
-  )
+    loadingAllergens ||
+    loadingNutrientConstraints
+  ) {
     return <Spinner />;
+  }
 
-  if (error || errorUserDiets || errorDiets || errorAllergens)
-    return <Alert type="error">{error || errorUserDiets || errorDiets || errorAllergens}</Alert>;
+  if (
+    error ||
+    errorUserDiets ||
+    errorDiets ||
+    errorAllergens ||
+    errorNutrientConstraints
+  ) {
+    return (
+      <Alert type="error">
+        {error ||
+          errorUserDiets ||
+          errorDiets ||
+          errorAllergens ||
+          errorNutrientConstraints}
+      </Alert>
+    );
+  }
 
   const categories = Array.from(
     new Set(products.map((p) => p.productCategory?.category).filter(Boolean))
@@ -84,26 +117,62 @@ export function UiProductList() {
 
     const matchesAllergen =
       selectedAllergens.length === 0 ||
-      // escludi prodotti che contengono allergeni selezionati
       selectedAllergens.every(
         (allergen) =>
-          !p.productAllergens?.some(
-            (pa) => pa.allergenId === allergen.value
-          )
+          !p.productAllergens?.some((pa) => pa.allergenId === allergen.value)
       );
+
+    const matchesNutrientConstraint =
+      selectedNutrientConstraints.length === 0 ||
+      selectedNutrientConstraints.every((sel) => {
+        const constraint = nutrientConstraints.find(
+          (nc) => nc.nutrientId.toLowerCase() === sel.value.toLowerCase()
+        );
+
+        const pn = p.nutritionalInformationValues?.find((item) => {
+          const id =
+            (item as any).nutrient?.nutrientId ?? (item as any).nutrientId;
+          return id?.toString().toLowerCase() === sel.value.toLowerCase();
+        });
+
+        if (!constraint || !pn) return false;
+
+        const rawValue =
+          (pn as any).value ?? (pn as any).quantity ?? (pn as any).amount;
+
+        const nutrientValue = Number(rawValue);
+
+        const minOk =
+          constraint.minQuantity == null ||
+          nutrientValue >= constraint.minQuantity;
+        const maxOk =
+          constraint.maxQuantity == null ||
+          nutrientValue <= constraint.maxQuantity;
+
+        return minOk && maxOk;
+      });
+
+    console.log(matchesNutrientConstraint);
 
     const matchesSearch =
       searchQuery.trim() === '' ||
       p.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||
       p.itName?.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return matchesCategory && matchesDiet && matchesAllergen && matchesSearch;
+    return (
+      matchesCategory &&
+      matchesDiet &&
+      matchesAllergen &&
+      matchesNutrientConstraint &&
+      matchesSearch
+    );
   });
 
   const handleResetFilters = () => {
     setSelectedCategories([]);
     setSelectedDiets([]);
-    setSelectedAllergens([]); // reset allergeni
+    setSelectedAllergens([]);
+    setSelectedNutrientConstraints([]);
     setInitialized(false);
   };
 
@@ -118,7 +187,14 @@ export function UiProductList() {
         />
       </FormField>
 
-      <hr style={{ marginTop: '1.5rem', marginBottom: '1.5rem', border: 'none', borderTop: '1px solid #ccc' }} />
+      <hr
+        style={{
+          marginTop: '1.5rem',
+          marginBottom: '1.5rem',
+          border: 'none',
+          borderTop: '1px solid #ccc',
+        }}
+      />
 
       <ProductFilters
         categories={categories}
@@ -127,9 +203,12 @@ export function UiProductList() {
         diets={allDietOptions}
         selectedDiets={selectedDiets}
         setSelectedDiets={setSelectedDiets}
-        allergens={allAllergenOptions} // passa allergeni a ProductFilters
+        allergens={allAllergenOptions}
         selectedAllergens={selectedAllergens}
         setSelectedAllergens={setSelectedAllergens}
+        nutrientConstraints={nutrientConstraints}
+        selectedNutrientConstraints={selectedNutrientConstraints}
+        setSelectedNutrientConstraints={setSelectedNutrientConstraints}
         onReset={handleResetFilters}
       />
 

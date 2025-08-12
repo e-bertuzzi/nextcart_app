@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConsumerHealthConditionController } from './consumer-health-condition.controller';
 import { ConsumerHealthConditionService } from './consumer-health-condition.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Consumer, ConsumerHealthCondition, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility } from '@nextcart/models';
+import { Consumer, ConsumerHealthCondition, HealthCondition, HealthConditionCategory, HealthConditionIncompatibility, NutrientHealthCondition } from '@nextcart/models';
 
 @Module({
   imports: [
@@ -12,6 +12,7 @@ import { Consumer, ConsumerHealthCondition, HealthCondition, HealthConditionCate
       Consumer,
       HealthConditionIncompatibility,
       HealthConditionCategory,
+      NutrientHealthCondition
     ]),
   ],
   controllers: [ConsumerHealthConditionController],

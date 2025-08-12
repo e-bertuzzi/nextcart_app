@@ -13,9 +13,12 @@ export function ProductFilters({
   diets,
   selectedDiets,
   setSelectedDiets,
-  allergens, // nuovo
-  selectedAllergens, // nuovo
-  setSelectedAllergens, // nuovo
+  allergens,
+  selectedAllergens,
+  setSelectedAllergens,
+  nutrientConstraints, // nuovo
+  selectedNutrientConstraints, // nuovo
+  setSelectedNutrientConstraints, // nuovo
   onReset,
 }: {
   categories: { label: string; value: string }[];
@@ -24,9 +27,19 @@ export function ProductFilters({
   diets: { label: string; value: string }[];
   selectedDiets: { label: string; value: string }[];
   setSelectedDiets: (value: { label: string; value: string }[]) => void;
-  allergens: { label: string; value: string }[]; // nuovo
-  selectedAllergens: { label: string; value: string }[]; // nuovo
-  setSelectedAllergens: (value: { label: string; value: string }[]) => void; // nuovo
+  allergens: { label: string; value: string }[];
+  selectedAllergens: { label: string; value: string }[];
+  setSelectedAllergens: (value: { label: string; value: string }[]) => void;
+  nutrientConstraints: {
+    nutrientId: string;
+    nutrientName: string;
+    minQuantity?: number;
+    maxQuantity?: number;
+  }[]; // nuovo
+  selectedNutrientConstraints: { label: string; value: string }[]; // nuovo
+  setSelectedNutrientConstraints: (
+    value: { label: string; value: string }[]
+  ) => void; // nuovo
   onReset: () => void;
 }) {
   return (
@@ -88,6 +101,35 @@ export function ProductFilters({
           selectedAriaLabel="Selected allergens"
           empty="No allergens available"
           ariaLabel="Allergen"
+        />
+      </FormField>
+
+      {/* Nuovo filtro per vincoli nutrizionali */}
+      <FormField label="Filter by nutrient constraints">
+        <Multiselect
+          options={nutrientConstraints.map((c) => ({
+            label: `${c.nutrientId} (${c.minQuantity ?? '-'} / ${
+              c.maxQuantity ?? '-'
+            })`,
+            value: c.nutrientId,
+          }))}
+          selectedOptions={selectedNutrientConstraints}
+          onChange={({ detail }) =>
+            setSelectedNutrientConstraints(
+              detail.selectedOptions
+                .filter(
+                  (opt): opt is { label: string; value: string } => !!opt.label
+                )
+                .map((opt) => ({
+                  label: opt.label!,
+                  value: opt.value,
+                }))
+            )
+          }
+          placeholder="Select nutrient constraints"
+          selectedAriaLabel="Selected nutrient constraints"
+          empty="No nutrient constraints available"
+          ariaLabel="Nutrient constraints"
         />
       </FormField>
 

@@ -40,15 +40,10 @@ export function UiLayout() {
         className="mx-auto w-full max-w-[1800px] px-4"
         style={{ paddingTop: '64px' }}
       >
-        {shouldShowBreadcrumb && (
-          <div className="mx-auto w-full max-w-[1400px] mb-4">
-            <UiBreadCrumbs />
-          </div>
-        )}
-
-        {shouldShowBackButton(location.pathname) && (
-          <div className="mb-4 pl-4">
-            <UiBackButton />
+        {(shouldShowBreadcrumb || shouldShowBackButton(location.pathname)) && (
+          <div className="mx-auto w-full max-w-[1400px] mb-4 flex items-center gap-4">
+            {/*shouldShowBackButton(location.pathname) && <UiBackButton /> decommentare per mostrare il pulsante*/} 
+            {shouldShowBreadcrumb && <UiBreadCrumbs />}
           </div>
         )}
 

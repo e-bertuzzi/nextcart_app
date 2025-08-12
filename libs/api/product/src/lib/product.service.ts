@@ -55,6 +55,7 @@ export class ProductService {
         'productClaims',
         'productAllergens',
         'nutritionalInformationValues',
+        'nutritionalInformationValues.nutrient',
         'productDiets',
       ],
     });
