@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   Box,
   Button,
@@ -11,8 +11,11 @@ import {
 
 import { useAddProduct } from '../hooks/use-add-product';
 import { ProductFieldsGroup } from '../components/product-fields-group';
+import { useLocation } from 'react-router-dom';
 
 export function UiAddProduct() {
+  const location = useLocation();
+
   const {
     formData,
     loading,
@@ -26,6 +29,12 @@ export function UiAddProduct() {
     dietOptions,
     nutritionalInfos,
   } = useAddProduct();
+
+  useEffect(() => {
+    if (location.state?.newId) {
+      onChange('productId', location.state.newId);
+    }
+  }, [location.state?.newId, onChange]);
 
   return (
     <Box padding={{ vertical: 'xl', horizontal: 'l' }}>
@@ -59,6 +68,7 @@ export function UiAddProduct() {
               disabled={loading}
               categories={categories}
               claims={claims}
+              disableProductId={false}
               allergens={allergens}
               dietOptions={dietOptions} // <-- qui, NON diets (Diet[]), ma dietOptions (Option[])
               nutritionalInfos={nutritionalInfos}

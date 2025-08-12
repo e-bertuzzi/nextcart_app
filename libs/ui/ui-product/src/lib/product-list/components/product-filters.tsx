@@ -39,7 +39,7 @@ export function ProductFilters({
         />
       </FormField>
 
-      <FormField label="Filtra by diet">
+      <FormField label="Filter by diet">
         <Multiselect
           options={diets}
           selectedOptions={selectedDiets}

@@ -22,6 +22,7 @@ import ProductDetailPage from './product-pages/product-detail';
 import ProductAddForm from './product-pages/product-form';
 import { Role } from '@nextcart/enum';
 import ProductEditForm from './product-pages/product-edit';
+import ProductCheckPage from './product-pages/product-check';
 
 export function App() {
   return (
@@ -34,6 +35,12 @@ export function App() {
           <Route element={<PublicRoute />}>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/register" element={<RegistrationPage />} />
+          </Route>
+
+          <Route element={<PrivateRoute allowedRoles={[Role.isAdmin]} />}>
+            <Route path="/products/add" element={<ProductAddForm />} />
+            <Route path="/products/:id/edit" element={<ProductEditForm />} />
+            <Route path="/products/check" element={<ProductCheckPage />} />
           </Route>
 
           {/* Rotte protette mettere questo per admin <Route element={<PrivateRoute allowedRoles={['admin']} />}> */}
@@ -50,11 +57,6 @@ export function App() {
             <Route path="/physical-activity/edit" element={<PhysicalActivityEdit/>} />
             <Route path='/products' element={<ProductListPage/>} />
             <Route path="/products/:productId" element={<ProductDetailPage />} />
-          </Route>
-
-          <Route element={<PrivateRoute allowedRoles={[Role.isAdmin]} />}>
-            <Route path="/products/add/new" element={<ProductAddForm />} />
-            <Route path="/products/:id/edit" element={<ProductEditForm />} />
           </Route>
           
         </Route>

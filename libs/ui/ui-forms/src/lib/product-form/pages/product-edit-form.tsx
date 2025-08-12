@@ -68,6 +68,7 @@ export function UiEditProduct() {
                 onChange={onChange}
                 disabled={loading}
                 categories={categories}
+                disableProductId={true}
                 claims={claims}
                 allergens={allergens}
                 dietOptions={dietOptions}

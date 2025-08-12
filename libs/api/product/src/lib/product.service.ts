@@ -1,4 +1,8 @@
-import { ConflictException, Injectable, NotFoundException } from '@nestjs/common';
+import {
+  ConflictException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import {
   Allergen,
@@ -41,7 +45,7 @@ export class ProductService {
     private readonly productDietRepo: Repository<ProductDiet>,
 
     @InjectRepository(ProductNutritionalInfo)
-    private readonly productNutritionalInfoRepo: Repository<ProductNutritionalInfo>,
+    private readonly productNutritionalInfoRepo: Repository<ProductNutritionalInfo>
   ) {}
 
   async findAll(): Promise<Product[]> {
@@ -231,7 +235,9 @@ export class ProductService {
     if (data.productAllergens) {
       await this.productAllergenRepo.delete({ productId: product.productId });
 
-      const allergenIds = data.productAllergens.map((a) => a.allergen.allergenId);
+      const allergenIds = data.productAllergens.map(
+        (a) => a.allergen.allergenId
+      );
       const allergens = await this.allergenRepo.findBy({
         allergenId: In(allergenIds),
       });
@@ -284,5 +290,10 @@ export class ProductService {
     }
 
     return this.productRepo.save(product);
+  }
+
+  async exists(id: string): Promise<boolean> {
+    const count = await this.productRepo.count({ where: { productId: id } });
+    return count > 0;
   }
 }

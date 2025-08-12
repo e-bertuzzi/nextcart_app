@@ -90,8 +90,16 @@ export function UiDashboard() {
                 <DashboardCard
                   label="Add Product"
                   iconName="add"
-                  href="/products/add/new"
+                  href="/products/add"
                   description="Add new product"
+                />
+              )}
+              {user?.role === Role.isAdmin && (
+                <DashboardCard
+                  label="Check Product"
+                  iconName="barcode"
+                  href="/products/check"
+                  description="Check product"
                 />
               )}
             </DashboardGrid>

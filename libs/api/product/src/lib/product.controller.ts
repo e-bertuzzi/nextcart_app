@@ -7,6 +7,7 @@ import {
   Delete,
   UseGuards,
   Put,
+  Query,
 } from '@nestjs/common';
 import {
   ApiTags,
@@ -26,6 +27,21 @@ import { Role } from '@nextcart/enum';
 @Controller('products')
 export class ProductController {
   constructor(private readonly productService: ProductService) {}
+
+  @Get('check')
+  @Roles(Role.isAdmin)
+  @ApiOperation({ summary: 'Check if a product exists by ID' })
+  @ApiResponse({
+    status: 200,
+    description: 'Product existence status',
+    schema: {
+      example: { exists: true },
+    },
+  })
+  async checkExists(@Query('id') id: string): Promise<{ exists: boolean }> {
+    const exists = await this.productService.exists(id);
+    return { exists };
+  }
 
   @Get()
   @ApiOperation({ summary: 'Get all products' })
@@ -84,4 +100,6 @@ export class ProductController {
   async update(@Param('id') id: string, @Body() data: Partial<Product>) {
     return instanceToPlain(await this.productService.updateProduct(id, data));
   }
+
+  
 }

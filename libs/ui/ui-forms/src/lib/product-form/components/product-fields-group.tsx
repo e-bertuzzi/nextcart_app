@@ -24,6 +24,7 @@ interface ProductFieldsGroupProps {
   allergens: Option[];
   dietOptions: Option[];
   nutritionalInfos: NutritionalInfoOption[];
+  disableProductId?: boolean;
 }
 
 export function ProductFieldsGroup({
@@ -35,6 +36,7 @@ export function ProductFieldsGroup({
   allergens,
   dietOptions,
   nutritionalInfos,
+  disableProductId
 }: ProductFieldsGroupProps) {
   const [selectedNutrients, setSelectedNutrients] = useState<
     NutritionalInfoOption[]
@@ -79,7 +81,7 @@ export function ProductFieldsGroup({
     <SpaceBetween direction="vertical" size="m">
       {/* Product ID */}
       <Input
-        disabled={true}
+        disabled={disableProductId ?? false}
         value={formData.productId}
         onChange={({ detail }) => onChange('productId', detail.value)}
         placeholder="Product ID"

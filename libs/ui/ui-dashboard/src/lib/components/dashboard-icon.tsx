@@ -14,6 +14,8 @@ import {
   faReceipt,
   faCartArrowDown,
   faShoppingBag,
+  faCheck,
+  faBarcode
 } from '@fortawesome/free-solid-svg-icons';
 
 const iconMap: Record<string, any> = {
@@ -31,6 +33,8 @@ const iconMap: Record<string, any> = {
   'receipt': faReceipt,
   'cart-arrow-down': faCartArrowDown,
   'shopping-bag': faShoppingBag,
+  'check': faCheck,
+  'barcode': faBarcode
 };
 
 interface DashboardIconProps {

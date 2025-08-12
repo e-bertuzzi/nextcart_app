@@ -7,7 +7,7 @@ import {
   Button,
   Modal,
 } from '@cloudscape-design/components';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useProductDetails } from '../hooks/use-product-details';
 import { ProductDetailSection } from '../components/product-detail-section';
 import { ProductClaims } from '../components/product-claims';
@@ -18,29 +18,19 @@ import { ProductNutritionalTable } from '../components/product-nutritional-table
 import { useUser } from '@nextcart/web-auth';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Role } from '@nextcart/enum';
-import { useState } from 'react';
-import { deleteProduct } from '../service'; // <-- da creare/importare
 
 export function UiProductDetail() {
   const { productId } = useParams<{ productId: string }>();
-  const { product, loading } = useProductDetails(productId || '');
+  const {
+    product,
+    loading,
+    showDeleteModal,
+    isDeleting,
+    confirmDelete,
+    cancelDelete,
+    handleDelete,
+  } = useProductDetails(productId || '');
   const { user } = useUser();
-  const navigate = useNavigate();
-  const [showDeleteModal, setShowDeleteModal] = useState(false);
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  const handleDelete = async () => {
-    setIsDeleting(true);
-    try {
-      await deleteProduct(productId!);
-      navigate('/products');
-    } catch (err) {
-      console.error('Errore durante l\'eliminazione:', err);
-    } finally {
-      setIsDeleting(false);
-      setShowDeleteModal(false);
-    }
-  };
 
   if (!productId) return <div>Product ID not provided</div>;
   if (loading) return <Spinner />;
@@ -57,13 +47,13 @@ export function UiProductDetail() {
                   <>
                     <Button
                       variant="primary"
-                      onClick={() => navigate(`/products/${productId}/edit`)}
+                      onClick={() => window.location.assign(`/products/${productId}/edit`)}
                     >
                       Edit Product
                     </Button>
                     <Button
                       variant="normal"
-                      onClick={() => setShowDeleteModal(true)}
+                      onClick={confirmDelete}
                     >
                       Delete Product
                     </Button>
@@ -103,11 +93,11 @@ export function UiProductDetail() {
       {showDeleteModal && (
         <Modal
           visible={showDeleteModal}
-          onDismiss={() => setShowDeleteModal(false)}
+          onDismiss={cancelDelete}
           header="Conferma eliminazione"
           footer={
             <SpaceBetween direction="horizontal" size="xs">
-              <Button variant="link" onClick={() => setShowDeleteModal(false)}>
+              <Button variant="link" onClick={cancelDelete}>
                 Cancel
               </Button>
               <Button
@@ -120,7 +110,7 @@ export function UiProductDetail() {
             </SpaceBetween>
           }
         >
-          Are you sure you want to delete the product <b>{product.name}</b>?
+          Are you sure you want to delete the product <b>{product.name}</b>?  
           This action cannot be undone.
         </Modal>
       )}
