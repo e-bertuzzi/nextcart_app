@@ -7,3 +7,4 @@ export * from './lib/activity';
 export * from './lib/physical-activity';
 export * from './lib/product-category';
 export * from './lib/allergen';
+export * from './lib/claim';

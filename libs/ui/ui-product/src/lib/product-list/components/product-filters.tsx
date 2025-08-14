@@ -32,10 +32,14 @@ export function ProductFilters({
   setSelectedAllergens: (value: { label: string; value: string }[]) => void;
   nutrientConstraints: {
     nutrientId: string;
-    nutrientName: string;
     minQuantity?: number;
     maxQuantity?: number;
-  }[]; // nuovo
+    nutrient: {
+      nutrientId: string;
+      nutrientIT: string;
+      unitOfMeasure?: string;
+    };
+  }[];
   selectedNutrientConstraints: { label: string; value: string }[]; // nuovo
   setSelectedNutrientConstraints: (
     value: { label: string; value: string }[]
@@ -108,9 +112,9 @@ export function ProductFilters({
       <FormField label="Filter by nutrient constraints">
         <Multiselect
           options={nutrientConstraints.map((c) => ({
-            label: `${c.nutrientId} (${c.minQuantity ?? '-'} / ${
+            label: `${c.nutrient.nutrientIT} (${c.minQuantity ?? '-'} / ${
               c.maxQuantity ?? '-'
-            })`,
+            }) ${c.nutrient.unitOfMeasure ?? ''}`,
             value: c.nutrientId,
           }))}
           selectedOptions={selectedNutrientConstraints}

@@ -14,13 +14,12 @@ import { PathologyMultiselect } from '../components/pathology-multi-select';
 import { PhysiologicalStateMultiselect } from '../components/physiological-state-multi-select';
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { useUser } from '@nextcart/web-auth'
+import { useUser } from '@nextcart/web-auth';
 import { Navigate } from 'react-router-dom';
 
 export function UiHealthEdit() {
-
   const { user, loading } = useUser();
-  const userId = user?.id;  // userId può essere undefined se user è null
+  const userId = user?.id; // userId può essere undefined se user è null
 
   const {
     selectedAgeCondition,
@@ -40,19 +39,24 @@ export function UiHealthEdit() {
   const [step, setStep] = useState(1);
 
   if (loading) return <Spinner />; // oppure <div>Loading...</div>
-  
-    if (!user) {
-      return <Navigate to="/login" />;
-    }
+
+  if (!user) {
+    return <Navigate to="/login" />;
+  }
 
   return (
     <Box margin="l">
-      <Container header={
-        <h1 style={{ color: 'green', fontWeight: 'bold' }}>
-          Health conditions selection
-        </h1>}>
+      <Container
+        header={
+          <h1 style={{ color: 'green', fontWeight: 'bold' }}>
+            Health conditions selection
+          </h1>
+        }
+      >
         <Box margin={{ bottom: 'm' }}>
-          <h2>Warning: All previously selected conditions will be overwritten.</h2>
+          <h2>
+            Warning: All previously selected conditions will be overwritten.
+          </h2>
         </Box>
 
         <Form>
@@ -71,28 +75,43 @@ export function UiHealthEdit() {
             {step >= 2 && (
               <PathologyMultiselect
                 selected={selectedPathologies}
-                options={[{ value: '0', label: 'No pathology' }, ...pathologies]}
+                options={[
+                  { value: '0', label: 'No pathology' },
+                  ...pathologies,
+                ]}
                 onChange={(opts) => {
-                  const hasNone = opts.some(o => o.value === '0');
+                  const hasNone = opts.some((o) => o.value === '0');
 
                   if (hasNone) {
                     // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                    setSelectedPathologies([opts.find(o => o.value === '0')!]);
+                    setSelectedPathologies([
+                      opts.find((o) => o.value === '0')!,
+                    ]);
                   } else {
-                    setSelectedPathologies(opts.filter(o => o.value !== '0'));
+                    setSelectedPathologies(opts.filter((o) => o.value !== '0'));
                   }
                   setStep(3);
                   setSelectedPhysStates([]);
                 }}
               />
-
             )}
 
             {step >= 3 && physStates.length > 0 && (
               <PhysiologicalStateMultiselect
                 selected={selectedPhysStates}
-                options={physStates}
-                onChange={(opts) => setSelectedPhysStates(opts)}
+                options={[
+                  { value: '0', label: 'No physiological state' },
+                  ...physStates,
+                ]}
+                onChange={(opts) => {
+                  const hasNone = opts.some((o) => o.value === '0');
+
+                  if (hasNone) {
+                    setSelectedPhysStates([opts.find((o) => o.value === '0')!]);
+                  } else {
+                    setSelectedPhysStates(opts.filter((o) => o.value !== '0'));
+                  }
+                }}
               />
             )}
 
