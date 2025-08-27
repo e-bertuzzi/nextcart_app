@@ -19,6 +19,7 @@
       "@nextcart/allergen": ["libs/api/allergen/src/index.ts"],
       "@nextcart/api-auth": ["libs/api/auth/src/index.ts"],
       "@nextcart/body-composition": ["libs/api/body-composition/src/index.ts"],
+      "@nextcart/cart": ["libs/api/cart/src/index.ts"],
       "@nextcart/claim": ["libs/api/claim/src/index.ts"],
       "@nextcart/commons": ["libs/ui/commons/src/index.ts"],
       "@nextcart/consumer": ["libs/api/consumer/src/index.ts"],

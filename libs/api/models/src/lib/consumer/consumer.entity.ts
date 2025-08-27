@@ -12,6 +12,7 @@ import { BodyComposition } from '../body-composition/body-composition.entity';
 import { PhysicalActivity } from '../physical-activity/physical-activity.entity';
 import { DietConsumerChoice } from '../diet/diet-consumer-choices';
 import { ConsumerHealthCondition } from './consumer-health-conditions';
+import { Cart } from '../cart';
 
 @Entity()
 export class Consumer {
@@ -70,6 +71,10 @@ export class Consumer {
 
   @OneToMany(() => PhysicalActivity, (physicalActivity) => physicalActivity.consumer)
   physicalActivities?: PhysicalActivity[];
+
+  @OneToMany(() => Cart, (cart) => cart.consumer)
+  carts?: Cart[];
+
 
   //@ManyToOne(() => Family, (family) => family.members, { nullable: true })
   //family?: Family;

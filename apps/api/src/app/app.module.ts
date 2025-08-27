@@ -24,7 +24,9 @@ import {
   ProductCategoryAllergen,
   ProductAllergen,
   ProductClaim,
-  ProductDiet
+  ProductDiet,
+  Cart,
+  CartItem
 } from '@nextcart/models';
 import { AuthModule } from '@nextcart/api-auth';
 import { ProfileModule } from '@nextcart/profile';
@@ -74,7 +76,9 @@ import { NutritionalInformationModule } from '@nextcart/nutritional-information'
         ProductAllergen,
         ProductClaim,
         ProductDiet,
-        DietConsumerChoice
+        DietConsumerChoice,
+        Cart,
+        CartItem,
       ],
       synchronize: true,
       logging: true,

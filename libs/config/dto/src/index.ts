@@ -8,3 +8,5 @@ export * from './lib/physical-activity';
 export * from './lib/product-category';
 export * from './lib/allergen';
 export * from './lib/claim';
+export * from './lib/cart';
+export * from './lib/cart-item';
