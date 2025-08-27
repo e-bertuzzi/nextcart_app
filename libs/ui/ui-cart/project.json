@@ -1,0 +1,9 @@
+{
+  "name": "ui-cart",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/ui-cart/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-cart --web",
+  "targets": {}
+}

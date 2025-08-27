@@ -10,7 +10,7 @@ export class CartService {
   constructor(
     @InjectRepository(Cart) private cartRepo: Repository<Cart>,
     @InjectRepository(CartItem) private cartItemRepo: Repository<CartItem>,
-    @InjectRepository(Product) private productRepo: Repository<Product>,
+    @InjectRepository(Product) private productRepo: Repository<Product>
   ) {}
 
   async createCart(dto: CreateCartDto): Promise<Cart> {
@@ -28,6 +28,13 @@ export class CartService {
     });
     if (!cart) throw new NotFoundException('Cart not found');
     return cart;
+  }
+
+  async getCartsByUser(userId: number): Promise<Cart[]> {
+    return this.cartRepo.find({
+      where: { consumer: { consumerId: userId } },
+      relations: ['items', 'items.product'], // se vuoi includere i prodotti
+    });
   }
 
   async addItem(cartId: number, dto: AddCartItemDto): Promise<CartItem> {

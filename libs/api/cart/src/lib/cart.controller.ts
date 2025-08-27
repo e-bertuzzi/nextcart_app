@@ -13,7 +13,11 @@ export class CartController {
 
   @Post()
   @ApiOperation({ summary: 'Create a new cart/shopping list' })
-  @ApiResponse({ status: 201, description: 'Cart successfully created', type: Cart })
+  @ApiResponse({
+    status: 201,
+    description: 'Cart successfully created',
+    type: Cart,
+  })
   async createCart(@Body() dto: CreateCartDto): Promise<Cart> {
     return this.cartService.createCart(dto);
   }
@@ -25,12 +29,23 @@ export class CartController {
     return this.cartService.getCart(cartId);
   }
 
+  @Get('user/:userId')
+  @ApiOperation({ summary: 'Get all carts for a user' })
+  @ApiResponse({ status: 200, description: 'User carts', type: [Cart] })
+  async getUserCarts(@Param('userId') userId: number): Promise<Cart[]> {
+    return this.cartService.getCartsByUser(userId);
+  }
+
   @Post(':cartId/items')
   @ApiOperation({ summary: 'Add a product to the cart' })
-  @ApiResponse({ status: 201, description: 'Product successfully added to cart', type: CartItem })
+  @ApiResponse({
+    status: 201,
+    description: 'Product successfully added to cart',
+    type: CartItem,
+  })
   async addItem(
     @Param('cartId') cartId: number,
-    @Body() dto: AddCartItemDto,
+    @Body() dto: AddCartItemDto
   ): Promise<CartItem> {
     return this.cartService.addItem(cartId, dto);
   }
@@ -40,7 +55,7 @@ export class CartController {
   @ApiResponse({ status: 200, description: 'Product successfully removed' })
   async removeItem(
     @Param('cartId') cartId: number,
-    @Param('productId') productId: string,
+    @Param('productId') productId: string
   ): Promise<void> {
     return this.cartService.removeItem(cartId, productId);
   }

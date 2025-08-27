@@ -43,7 +43,8 @@ import { ProductCategoryModule } from '@nextcart/product-category';
 import { ClaimModule } from '@nextcart/claim';
 import { AllergenModule } from '@nextcart/allergen';
 import { NutritionalInformationModule } from '@nextcart/nutritional-information';
- 
+import { CartModule } from '@nextcart/cart'
+  
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -98,6 +99,7 @@ import { NutritionalInformationModule } from '@nextcart/nutritional-information'
     ClaimModule,
     AllergenModule,
     NutritionalInformationModule,
+    CartModule,
     ConfigModule.forRoot({
       isGlobal: true, // disponibile ovunque
     }),
