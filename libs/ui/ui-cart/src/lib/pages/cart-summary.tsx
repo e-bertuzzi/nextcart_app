@@ -19,32 +19,32 @@ export function UiCartPage() {
   const userId = user?.id;
   const navigate = useNavigate();
 
-  const {
-    carts,
-    loadingCarts,
-    removeCart,
-    message,
-    setMessage,
-  } = useCart(userId);
+  const { carts, loadingCarts, removeCart, message, setMessage } = useCart(userId);
 
-  // Stato modale conferma cancellazione carrello
+  // Stato modale conferma cancellazione
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [selectedCartId, setSelectedCartId] = useState<number | null>(null);
 
   if (loading || loadingCarts) return <Spinner />;
 
-  if (!user) {
-    return <Navigate to="/login" />;
-  }
+  if (!user) return <Navigate to="/login" />;
 
+  // Mostra il modale
   const handleRemoveClick = (cartId: number) => {
     setSelectedCartId(cartId);
     setConfirmOpen(true);
   };
 
-  const confirmRemove = () => {
-    if (selectedCartId) {
-      removeCart(selectedCartId);
+  // Conferma la rimozione
+  const confirmRemove = async () => {
+    if (!selectedCartId) return;
+    try {
+      await removeCart(selectedCartId);
+      setMessage({ type: 'success', content: 'Cart removed successfully!' });
+    } catch (err) {
+      console.error(err);
+      setMessage({ type: 'error', content: 'Failed to remove cart.' });
+    } finally {
       setConfirmOpen(false);
       setSelectedCartId(null);
     }
@@ -66,10 +66,7 @@ export function UiCartPage() {
             <CartTable carts={carts} onRemoveCart={handleRemoveClick} />
           )}
 
-          <Button
-            variant="primary"
-            onClick={() => navigate('/cart/create')}
-          >
+          <Button variant="primary" onClick={() => navigate('/cart/create')}>
             Add New Cart
           </Button>
         </FormLayout>

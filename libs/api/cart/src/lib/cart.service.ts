@@ -71,6 +71,9 @@ export class CartService {
   }
 
   async deleteCart(cartId: number): Promise<void> {
-    await this.cartRepo.delete(cartId);
+    const result = await this.cartRepo.delete({ cartId });
+    if (result.affected === 0) {
+      throw new NotFoundException(`Cart ${cartId} not found`);
+    }
   }
 }

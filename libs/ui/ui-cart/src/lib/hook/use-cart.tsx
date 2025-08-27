@@ -30,8 +30,12 @@ export function useCart(userId: number | undefined) {
 
   // Crea un nuovo carrello
   const createNewCart = async (name: string) => {
+    if (!userId) {
+      setMessage({ type: 'error', content: 'User not found.' });
+      return;
+    }
     try {
-      await createCart({ name, userId });
+      await createCart({ name, consumerId: userId }); // ✅ qui consumerId
       setMessage({ type: 'success', content: 'Cart created successfully!' });
       fetchUserCarts();
     } catch {
@@ -39,19 +43,24 @@ export function useCart(userId: number | undefined) {
     }
   };
 
-  // Rimuove un carrello
   const removeCart = async (cartId: number) => {
     try {
       await removeCartService(cartId);
+      // usa cartId invece di id
+      setCarts((prev) => prev.filter((c) => c.cartId !== cartId));
       setMessage({ type: 'success', content: 'Cart removed successfully!' });
-      fetchUserCarts();
-    } catch {
+    } catch (err) {
+      console.error(err);
       setMessage({ type: 'error', content: 'Failed to remove cart.' });
     }
   };
 
   // Aggiunge un prodotto a un carrello
-  const addItem = async (cartId: number, productId: string, quantity: number) => {
+  const addItem = async (
+    cartId: number,
+    productId: string,
+    quantity: number
+  ) => {
     try {
       await addItemToCart(cartId, { productId, quantity });
       setMessage({ type: 'success', content: 'Product added to cart!' });

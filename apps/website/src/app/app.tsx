@@ -24,6 +24,7 @@ import { Role } from '@nextcart/enum';
 import ProductEditForm from './product-pages/product-edit';
 import ProductCheckPage from './product-pages/product-check';
 import CartPage from './cart-pages/cart-page';
+import CartEdit from './cart-pages/cart-edit';
 
 export function App() {
   return (
@@ -58,6 +59,7 @@ export function App() {
             <Route path='/products' element={<ProductListPage/>} />
             <Route path="/products/:productId" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/cart/create" element={<CartEdit />} />
           </Route>
           
         </Route>

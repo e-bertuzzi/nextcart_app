@@ -6,7 +6,7 @@ export async function getUserCarts(userId: number | undefined) {
   return res.data; // Assumiamo che il backend restituisca lista di carrelli con items
 }
 
-export async function createCart(data: { name: string; userId: number | undefined }) {
+export async function createCart(data: { name: string; consumerId: number | undefined }) {
   const res = await api.post('/cart', data);
   return res.data;
 }
