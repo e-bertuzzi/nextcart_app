@@ -130,11 +130,11 @@ export class ConsumerHealthConditionService {
       relations: ['healthCondition'],
     });
 
-    if (!conditions.length) {
+    /*if (!conditions.length) {
       throw new NotFoundException(
         `No health conditions found for user ${userId}`
       );
-    }
+    }*/
 
     // 2. Recupera i vincoli per ogni condizione
     const allConstraints = await Promise.all(

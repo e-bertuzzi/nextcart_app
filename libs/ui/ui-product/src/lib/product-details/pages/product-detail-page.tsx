@@ -7,7 +7,7 @@ import {
   Button,
   Modal,
 } from '@cloudscape-design/components';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useProductDetails } from '../hooks/use-product-details';
 import { ProductDetailSection } from '../components/product-detail-section';
 import { ProductClaims } from '../components/product-claims';
@@ -21,6 +21,8 @@ import { Role } from '@nextcart/enum';
 
 export function UiProductDetail() {
   const { productId } = useParams<{ productId: string }>();
+  const navigate = useNavigate();
+
   const {
     product,
     loading,
@@ -43,18 +45,21 @@ export function UiProductDetail() {
           <ContentLayout
             header={
               <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <Button variant="link" onClick={() => navigate(-1)}>
+                  Back
+                </Button>
+
                 {user?.role === Role.isAdmin && (
                   <>
                     <Button
                       variant="primary"
-                      onClick={() => window.location.assign(`/products/${productId}/edit`)}
+                      onClick={() =>
+                        window.location.assign(`/products/${productId}/edit`)
+                      }
                     >
                       Edit Product
                     </Button>
-                    <Button
-                      variant="normal"
-                      onClick={confirmDelete}
-                    >
+                    <Button variant="normal" onClick={confirmDelete}>
                       Delete Product
                     </Button>
                   </>
@@ -94,7 +99,7 @@ export function UiProductDetail() {
         <Modal
           visible={showDeleteModal}
           onDismiss={cancelDelete}
-          header="Conferma eliminazione"
+          header="Confirm delete"
           footer={
             <SpaceBetween direction="horizontal" size="xs">
               <Button variant="link" onClick={cancelDelete}>
