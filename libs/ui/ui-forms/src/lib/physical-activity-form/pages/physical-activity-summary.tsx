@@ -1,6 +1,15 @@
+import { useState } from 'react';
 import { usePhysicalActivity } from '../hook/use-physical-activity';
 import { UserPhysicalActivitiesTable } from '../components/physical-activity-table';
-import { Button, Container, Box, Flashbar, SpaceBetween, Spinner } from '@cloudscape-design/components';
+import {
+  Button,
+  Container,
+  Box,
+  Flashbar,
+  SpaceBetween,
+  Spinner,
+  Modal,
+} from '@cloudscape-design/components';
 import { Navigate, useNavigate } from 'react-router-dom';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
@@ -18,11 +27,30 @@ export function UiPhysicalActivityPage() {
     loadingActivities,
   } = usePhysicalActivity(userId);
 
+  // Stato per la modale di conferma
+  const [confirmOpen, setConfirmOpen] = useState(false);
+  const [selectedActivityId, setSelectedActivityId] = useState<number | null>(
+    null
+  );
+
   if (loading || loadingActivities) return <Spinner />;
 
   if (!user) {
     return <Navigate to="/login" />;
   }
+
+  const handleRemoveClick = (activityId: number) => {
+    setSelectedActivityId(activityId);
+    setConfirmOpen(true);
+  };
+
+  const confirmRemove = () => {
+    if (selectedActivityId) {
+      removeActivity(selectedActivityId);
+      setConfirmOpen(false);
+      setSelectedActivityId(null);
+    }
+  };
 
   return (
     <Box margin="l">
@@ -39,14 +67,35 @@ export function UiPhysicalActivityPage() {
           ) : (
             <UserPhysicalActivitiesTable
               activities={userActivities}
-              onRemove={removeActivity}
+              onRemove={handleRemoveClick} // ✅ ora apre la modale
             />
           )}
 
-          <Button variant="primary" onClick={() => navigate('/physical-activity/edit')}>
+          <Button
+            variant="primary"
+            onClick={() => navigate('/physical-activity/edit')}
+          >
             Add new activity
           </Button>
         </FormLayout>
+
+        {/* Modale di conferma */}
+        <Modal
+          visible={confirmOpen}
+          header="Confirm removal"
+          onDismiss={() => setConfirmOpen(false)}
+          closeAriaLabel="Close modal"
+          footer={
+            <SpaceBetween direction="horizontal" size="xs">
+              <Button onClick={() => setConfirmOpen(false)}>Cancel</Button>
+              <Button variant="primary" onClick={confirmRemove}>
+                Confirm
+              </Button>
+            </SpaceBetween>
+          }
+        >
+          Are you sure you want to remove this activity?
+        </Modal>
       </Container>
     </Box>
   );

@@ -5,15 +5,16 @@ import {
   Box,
   Flashbar,
   Spinner,
+  SpaceBetween, // 👈 aggiunto
 } from '@cloudscape-design/components';
 import { useDiets } from '../hook/use-diets';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export function UiDietEdit() {
   const { user, loading } = useUser();
-  const userId = user?.id; // userId può essere undefined se user è null
+  const userId = user?.id;
 
   const {
     selectedDiets,
@@ -24,8 +25,9 @@ export function UiDietEdit() {
     setMessage,
   } = useDiets(userId);
 
-  if (loading) return <Spinner />; // oppure <div>Loading...</div>
+  const navigate = useNavigate();
 
+  if (loading) return <Spinner />;
   if (!user) {
     return <Navigate to="/login" />;
   }
@@ -58,13 +60,20 @@ export function UiDietEdit() {
           placeholder="Select diets"
         />
       </Box>
-      <Button
-        variant="primary"
-        onClick={saveSelectedDiets}
-        disabled={selectedDiets.length === 0}
-      >
-        Save Diets
-      </Button>
+
+      {/* Pulsanti distanziati */}
+      <SpaceBetween direction="horizontal" size="s">
+        <Button
+          variant="primary"
+          onClick={saveSelectedDiets}
+          disabled={selectedDiets.length === 0}
+        >
+          Save Diets
+        </Button>
+        <Button variant="link" onClick={() => navigate(-1)}>
+          Cancel
+        </Button>
+      </SpaceBetween>
     </Container>
   );
 }

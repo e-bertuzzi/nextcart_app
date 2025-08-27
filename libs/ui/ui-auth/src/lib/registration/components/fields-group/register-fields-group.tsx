@@ -34,7 +34,7 @@ export function RegisterFieldsGroup({ formData, onChange, disabled }: Props) {
     <SpaceBetween size="m">
       <EmailField value={formData.email} onChange={(v) => onChange('email', v)} disabled={disabled} />
       <PasswordField value={formData.password} onChange={(v) => onChange('password', v)} disabled={disabled} />
-      <PasswordField value={formData.confirmPassword} onChange={(v) => onChange('confirmPassword', v)} disabled={disabled} />
+      <PasswordField value={formData.confirmPassword} onChange={(v) => onChange('confirmPassword', v)} label="Confirm Password *" disabled={disabled} />
       <NameField value={formData.name} onChange={(v) => onChange('name', v)} disabled={disabled} />
       <SurnameField value={formData.surname || ''} onChange={(v) => onChange('surname', v)} disabled={disabled} />
       <DateOfBirthField value={formData.dateOfBirth} onChange={(v) => onChange('dateOfBirth', v)} disabled={disabled} />

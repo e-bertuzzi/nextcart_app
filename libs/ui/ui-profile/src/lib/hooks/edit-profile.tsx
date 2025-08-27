@@ -6,6 +6,8 @@ import { useUser } from '@nextcart/web-auth';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Gender } from '@nextcart/enum';
 
+import { useNavigate } from 'react-router-dom';
+
 export interface FormData {
   name: string;
   surname?: string;
@@ -27,6 +29,8 @@ export function useEditProfile() {
     gender: Gender.isMale,
     address: '',
   });
+
+  const navigate = useNavigate();
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<{ type: 'success' | 'error'; content: string } | null>(null);
@@ -65,7 +69,11 @@ export function useEditProfile() {
     setMessage(null);
     try {
       await api.put('profile/edit', formData);
-      setMessage({ type: 'success', content: 'Profile updated successfully!' });
+      setMessage({ type: 'success', content: 'Profile updated successfully! You will be transferred to the dashboard in 2 seconds' });
+      
+      setTimeout(() => {
+        navigate('/dashboard');
+      }, 2000);
     } catch {
       setMessage({ type: 'error', content: 'Error updating profile.' });
     } finally {

@@ -25,7 +25,7 @@ export default function UserMenu({ user, onLogout }: UserMenuProps) {
           <a href="/edit-profile" className="text-emerald-600 hover:underline text-sm">
             Profile
           </a>
-          <button onClick={onLogout} className="text-red-600 hover:text-red-700 text-sm text-left">
+          <button onClick={onLogout} className="text-red-600 hover:underline hover:text-red-700 text-sm text-left">
             Logout
           </button>
         </SpaceBetween>

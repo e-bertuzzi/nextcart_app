@@ -14,12 +14,14 @@ import { usePhysicalActivity } from '../hook/use-physical-activity';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
 import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export function UiPhysicalActivityEdit() {
   const { user, loading } = useUser();
   const userId = user?.id;
   const [step, setStep] = useState(1);
+
+  const navigate = useNavigate();
 
   const {
     allActivities,
@@ -39,9 +41,6 @@ export function UiPhysicalActivityEdit() {
   if (loading) return <Spinner />;
   if (!user) return <Navigate to="/login" />;
 
-  console.log(allActivities);
-
-  // Filtro le attività specifiche in base al tipo selezionato
   const specificOptions = allActivities
     .filter((a) => a.type === selectedActivity?.value)
     .map((a) => ({
@@ -89,7 +88,6 @@ export function UiPhysicalActivityEdit() {
             {/* Step 3 - Data e durata */}
             {step >= 3 && (
               <>
-                {/* Etichetta per la data */}
                 <Box margin={{ bottom: 'xs' }}>
                   <label htmlFor="activity-date" style={{ fontWeight: 600 }}>
                     Select date
@@ -104,8 +102,6 @@ export function UiPhysicalActivityEdit() {
                   />
                 </Box>
 
-
-                {/* Etichetta + input e label affiancata per durata */}
                 <Box margin={{ bottom: 'xs' }}>
                   <label htmlFor="duration-minutes" style={{ fontWeight: 600 }}>
                     Duration
@@ -126,12 +122,20 @@ export function UiPhysicalActivityEdit() {
                     minutes
                   </span>
                 </Box>
+              </>
+            )}
 
+            {/* Pulsanti visibili sempre */}
+            <SpaceBetween direction="horizontal" size="s">
+              {step >= 3 && (
                 <Button variant="primary" onClick={saveActivity}>
                   Save Activity
                 </Button>
-              </>
-            )}
+              )}
+              <Button variant="link" onClick={() => navigate(-1)}>
+                Cancel
+              </Button>
+            </SpaceBetween>
           </FormLayout>
         </Form>
       </Container>

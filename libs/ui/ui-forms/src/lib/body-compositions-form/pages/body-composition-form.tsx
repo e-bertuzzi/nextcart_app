@@ -11,7 +11,7 @@ import {
   Spinner,
 } from '@cloudscape-design/components';
 import { useBodyCompositions } from '../hook/use-body-compositions';
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
 
@@ -23,10 +23,11 @@ interface BodyCompositionFormData {
 
 export function UiBodyEdit() {
   const location = useLocation();
+  const navigate = useNavigate(); // 👈 serve per annullare
   const editRecord = location.state?.record;
   const { user, loading } = useUser();
 
-  const userId = user?.id;  // userId può essere undefined se user è null
+  const userId = user?.id;  
 
   const {
     saveComposition,
@@ -60,7 +61,6 @@ export function UiBodyEdit() {
       return;
     }
 
-    // Converti peso e altezza da string a number
     const dto = {
       date: formData.date,
       weight: formData.weight ? parseFloat(formData.weight) : undefined,
@@ -70,7 +70,7 @@ export function UiBodyEdit() {
     saveComposition(dto);
   };
 
-  if (loading) return <Spinner />; // oppure <div>Loading...</div>
+  if (loading) return <Spinner />;
 
   if (!user) {
     return <Navigate to="/login" />;
@@ -119,9 +119,14 @@ export function UiBodyEdit() {
             />
           </FormField>
 
-          <Button variant="primary" onClick={handleSubmit}>
-            Save Body Composition
-          </Button>
+          <SpaceBetween direction="horizontal" size="s">
+            <Button variant="primary" onClick={handleSubmit}>
+              Save Body Composition
+            </Button>
+            <Button variant="link" onClick={() => navigate(-1)}>
+              Cancel
+            </Button>
+          </SpaceBetween>
         </SpaceBetween>
       </Container>
     </Box>

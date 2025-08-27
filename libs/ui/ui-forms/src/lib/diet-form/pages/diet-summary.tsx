@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import {
   Container,
   Box,
   Button,
   Flashbar,
   Spinner,
+  Modal,
+  SpaceBetween,
 } from '@cloudscape-design/components';
 import { useDiets } from '../hook/use-diets';
 import { Navigate, useNavigate } from 'react-router-dom';
@@ -18,9 +21,13 @@ export function UiDietPage() {
   const { selectedDiets, removeDiet, message, setMessage } = useDiets(userId);
   const navigate = useNavigate();
 
-  // ✅ Usa dietId come label per mostrare l'ID (anziché la descrizione)
+  // Stato per la modale di conferma
+  const [confirmOpen, setConfirmOpen] = useState(false);
+  const [selectedDietId, setSelectedDietId] = useState<string | null>(null);
+
+  // Normalizziamo le diete
   const normalizedDiets = selectedDiets.map((diet) => ({
-    label: diet.label ?? '', // ✅ Usa il dietId
+    label: diet.label ?? '',
     value: diet.value ?? '',
   }));
 
@@ -30,6 +37,19 @@ export function UiDietPage() {
     return <Navigate to="/login" />;
   }
 
+  const handleRemoveClick = (dietId: string) => {
+    setSelectedDietId(dietId);
+    setConfirmOpen(true);
+  };
+
+  const confirmRemove = () => {
+    if (selectedDietId) {
+      removeDiet(selectedDietId);
+      setConfirmOpen(false);
+      setSelectedDietId(null);
+    }
+  };
+
   return (
     <Container
       header={
@@ -37,7 +57,7 @@ export function UiDietPage() {
       }
     >
       <Box margin="m">
-        <UserDietsTable diets={normalizedDiets} onRemove={removeDiet} />
+        <UserDietsTable diets={normalizedDiets} onRemove={handleRemoveClick} />
       </Box>
 
       {message && (
@@ -58,6 +78,24 @@ export function UiDietPage() {
       <Button variant="primary" onClick={() => navigate('/diet/edit')}>
         Change diets
       </Button>
+
+      {/* Modale di conferma */}
+      <Modal
+        visible={confirmOpen}
+        header="Confirm removal"
+        onDismiss={() => setConfirmOpen(false)}
+        closeAriaLabel="Close modal"
+        footer={
+          <SpaceBetween direction="horizontal" size="xs">
+            <Button onClick={() => setConfirmOpen(false)}>Cancel</Button>
+            <Button variant="primary" onClick={confirmRemove}>
+              Confirm
+            </Button>
+          </SpaceBetween>
+        }
+      >
+        Are you sure you want to remove this diet?
+      </Modal>
     </Container>
   );
 }

@@ -15,11 +15,12 @@ import { PhysiologicalStateMultiselect } from '../components/physiological-state
 
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom'; // 👈 aggiunto useNavigate
 
 export function UiHealthEdit() {
   const { user, loading } = useUser();
-  const userId = user?.id; // userId può essere undefined se user è null
+  const userId = user?.id;
+  const navigate = useNavigate(); // 👈 serve per annullare
 
   const {
     selectedAgeCondition,
@@ -38,7 +39,7 @@ export function UiHealthEdit() {
 
   const [step, setStep] = useState(1);
 
-  if (loading) return <Spinner />; // oppure <div>Loading...</div>
+  if (loading) return <Spinner />;
 
   if (!user) {
     return <Navigate to="/login" />;
@@ -83,8 +84,8 @@ export function UiHealthEdit() {
                   const hasNone = opts.some((o) => o.value === '0');
 
                   if (hasNone) {
-                    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                     setSelectedPathologies([
+                      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                       opts.find((o) => o.value === '0')!,
                     ]);
                   } else {
@@ -107,7 +108,10 @@ export function UiHealthEdit() {
                   const hasNone = opts.some((o) => o.value === '0');
 
                   if (hasNone) {
-                    setSelectedPhysStates([opts.find((o) => o.value === '0')!]);
+                    setSelectedPhysStates([
+                      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                      opts.find((o) => o.value === '0')!,
+                    ]);
                   } else {
                     setSelectedPhysStates(opts.filter((o) => o.value !== '0'));
                   }
@@ -115,15 +119,20 @@ export function UiHealthEdit() {
               />
             )}
 
-            {step === 3 && (
-              <Button
-                variant="primary"
-                onClick={saveSelectedConditions}
-                disabled={!selectedAgeCondition}
-              >
-                Save
+            <SpaceBetween direction="horizontal" size="s">
+              {step === 3 && (
+                <Button
+                  variant="primary"
+                  onClick={saveSelectedConditions}
+                  disabled={!selectedAgeCondition}
+                >
+                  Save
+                </Button>
+              )}
+              <Button variant="link" onClick={() => navigate(-1)}>
+                Cancel
               </Button>
-            )}
+            </SpaceBetween>
           </FormLayout>
         </Form>
       </Container>
