@@ -29,26 +29,31 @@ async function seed() {
   const filePath = path.resolve(__dirname, 'product_nutrition_info.json');
   const nutritionData = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
 
-  // 3. Inserisci i dati
-  for (const item of nutritionData) {
-  if (!item.productId || !item.nutrientId) {
-    console.warn(`Dati incompleti, salto l'item:`, item);
-    continue;
+  // Funzione per ripulire il nutrientId
+  function cleanNutrientId(nutrientId: string): string {
+    return nutrientId.replace(/\s*\(.*?\)/g, '').trim();
   }
 
-  const record = nutritionRepo.create({
-    product: { productId: item.productId },
-    nutrient: { nutrientId: item.nutrientId },
-    value: item.value ?? null,
-  });
-  await nutritionRepo.save(record);
-}
+  // 3. Inserisci i dati
+  for (const item of nutritionData) {
+    if (!item.productId || !item.nutrientId) {
+      console.warn(`⚠️  Dati incompleti, salto l'item:`, item);
+      continue;
+    }
 
+    const record = nutritionRepo.create({
+      product: { productId: item.productId },
+      nutrient: { nutrientId: cleanNutrientId(item.nutrientId) }, // 👈 pulizia qui
+      value: item.value ?? null,
+    });
 
-  console.log('Seed ProductNutritionInfo completato!');
+    await nutritionRepo.save(record);
+  }
+
+  console.log('✅ Seed ProductNutritionInfo completato!');
   await dataSource.destroy();
 }
 
 seed().catch((err) => {
-  console.error('Errore nel seed ProductNutritionInfo:', err);
+  console.error('❌ Errore nel seed ProductNutritionInfo:', err);
 });
