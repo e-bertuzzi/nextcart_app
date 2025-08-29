@@ -39,7 +39,7 @@ export function CartTable({ carts, onRemoveCart, onViewCart }: Props) {
         {
           id: 'quantity',
           header: 'Number of Products',
-          cell: (cart) => cart.items.length,
+          cell: (cart) => cart.items.reduce((sum, item) => sum + (item.quantity ?? 0), 0),
         },
         {
           id: 'actions',
