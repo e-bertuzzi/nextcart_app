@@ -1,8 +1,16 @@
-import { Controller, Post, Get, Delete, Param, Body } from '@nestjs/common';
+import {
+  Controller,
+  Post,
+  Get,
+  Delete,
+  Param,
+  Body,
+  Patch,
+} from '@nestjs/common';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import { CartService } from './cart.service';
 import { CreateCartDto } from '@nextcart/dto';
-import { AddCartItemDto } from '@nextcart/dto';
+import { AddCartItemDto, UpdateCartItemDto } from '@nextcart/dto';
 import { Cart } from '@nextcart/models';
 import { CartItem } from '@nextcart/models';
 
@@ -50,14 +58,13 @@ export class CartController {
     return this.cartService.addItem(cartId, dto);
   }
 
-  @Delete(':cartId/items/:productId')
-  @ApiOperation({ summary: 'Remove a product from the cart' })
-  @ApiResponse({ status: 200, description: 'Product successfully removed' })
-  async removeItem(
-    @Param('cartId') cartId: number,
-    @Param('productId') productId: string
+  @Delete('items/:cartItemId')
+  @ApiOperation({ summary: 'Remove a cart item by its ID' })
+  @ApiResponse({ status: 200, description: 'Cart item successfully removed' })
+  async removeItemByCartItemId(
+    @Param('cartItemId') cartItemId: string
   ): Promise<void> {
-    return this.cartService.removeItem(cartId, productId);
+    return this.cartService.removeItemByCartItemId(cartItemId);
   }
 
   @Delete(':cartId')
@@ -65,5 +72,16 @@ export class CartController {
   @ApiResponse({ status: 200, description: 'Cart successfully deleted' })
   async deleteCart(@Param('cartId') cartId: number): Promise<void> {
     return this.cartService.deleteCart(cartId);
+  }
+
+  @Patch('items/:cartItemId')
+  async updateCartItem(
+    @Param('cartItemId') cartItemId: string,
+    @Body() dto: { delta: number }
+  ): Promise<CartItem> {
+    return this.cartService.updateItemQuantityByCartItemId(
+      cartItemId,
+      dto.delta
+    );
   }
 }

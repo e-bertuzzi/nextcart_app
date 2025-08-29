@@ -63,11 +63,13 @@ export class CartService {
     return this.cartItemRepo.save(item);
   }
 
-  async removeItem(cartId: number, productId: string): Promise<void> {
-    await this.cartItemRepo.delete({
-      cart: { cartId },
-      product: { productId },
-    });
+  async removeItemByCartItemId(cartItemId: string): Promise<void> {
+    await this.cartItemRepo
+      .createQueryBuilder()
+      .delete()
+      .from(CartItem)
+      .where('cart_item.cart_item_id = :cartItemId', { cartItemId })
+      .execute();
   }
 
   async deleteCart(cartId: number): Promise<void> {
@@ -75,5 +77,26 @@ export class CartService {
     if (result.affected === 0) {
       throw new NotFoundException(`Cart ${cartId} not found`);
     }
+  }
+
+  async updateItemQuantityByCartItemId(
+    cartItemId: string,
+    delta: number
+  ): Promise<CartItem> {
+    const item = await this.cartItemRepo.findOne({
+      where: { cartItemId: Number(cartItemId) },
+      relations: ['product', 'cart'],
+    });
+    if (!item) throw new NotFoundException('Cart item not found');
+
+    item.quantity += delta;
+    if (item.quantity <= 0) {
+      await this.cartItemRepo.delete({ cartItemId: Number(cartItemId) });
+      throw new NotFoundException(
+        'Cart item removed because quantity reached zero'
+      );
+    }
+
+    return this.cartItemRepo.save(item);
   }
 }

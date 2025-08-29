@@ -4,7 +4,7 @@ import {
   createCart,
   removeCart as removeCartService,
   addItemToCart,
-  removeItemFromCart,
+  removeItemByCartItemId,
 } from '../service/carts-service';
 import { useNavigate } from 'react-router-dom';
 
@@ -32,14 +32,16 @@ export function useCart(userId: number | undefined) {
   const createNewCart = async (name: string) => {
     if (!userId) {
       setMessage({ type: 'error', content: 'User not found.' });
-      return;
+      return null;
     }
     try {
-      await createCart({ name, consumerId: userId }); // ✅ qui consumerId
+      const newCart = await createCart({ name, consumerId: userId });
       setMessage({ type: 'success', content: 'Cart created successfully!' });
-      fetchUserCarts();
+      await fetchUserCarts(); // aggiorna la lista
+      return newCart;
     } catch {
       setMessage({ type: 'error', content: 'Failed to create cart.' });
+      return null;
     }
   };
 
@@ -71,11 +73,11 @@ export function useCart(userId: number | undefined) {
   };
 
   // Rimuove un prodotto da un carrello
-  const removeItem = async (cartId: number, productId: string) => {
+  const removeItem = async (cartItemId: string) => {
     try {
-      await removeItemFromCart(cartId, productId);
+      await removeItemByCartItemId(cartItemId); // ✅ passa il cartItemId
       setMessage({ type: 'success', content: 'Product removed from cart!' });
-      fetchUserCarts();
+      await fetchUserCarts();
     } catch {
       setMessage({ type: 'error', content: 'Failed to remove product.' });
     }

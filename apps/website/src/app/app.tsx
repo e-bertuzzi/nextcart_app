@@ -25,6 +25,7 @@ import ProductEditForm from './product-pages/product-edit';
 import ProductCheckPage from './product-pages/product-check';
 import CartPage from './cart-pages/cart-page';
 import CartEdit from './cart-pages/cart-edit';
+import CartDetail from './cart-pages/cart-detail';
 
 export function App() {
   return (
@@ -60,6 +61,7 @@ export function App() {
             <Route path="/products/:productId" element={<ProductDetailPage />} />
             <Route path="/cart" element={<CartPage />} />
             <Route path="/cart/create" element={<CartEdit />} />
+            <Route path="/cart/:cartId" element={<CartDetail />} />
           </Route>
           
         </Route>

@@ -20,6 +20,10 @@ export async function addItemToCart(cartId: number, data: { productId: string; q
   return res.data;
 }
 
-export async function removeItemFromCart(cartId: number, productId: string) {
-  return api.delete(`/cart/${cartId}/items/${productId}`);
+export async function removeItemByCartItemId(cartItemId: string) {
+  return api.delete(`/cart/items/${cartItemId}`);
+}
+export async function updateItemQuantity(cartItemId: string, delta: number) {
+  const res = await api.patch(`/cart/items/${cartItemId}`, { delta });
+  return res.data;
 }

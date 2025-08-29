@@ -7,6 +7,7 @@ import {
   Select,
   SpaceBetween,
   Flashbar,
+  Input,
 } from '@cloudscape-design/components';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -18,11 +19,15 @@ export function ProductCardList({ products }: { products: any[] }) {
   const navigate = useNavigate();
   const { user } = useUser();
   const userId = user?.id;
-  const { carts, addItem, message, setMessage } = useCart(userId);
+  const { carts, addItem, createNewCart, message, setMessage } = useCart(userId);
 
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
   const [selectedCart, setSelectedCart] = useState<any>(null);
   const [modalOpen, setModalOpen] = useState(false);
+
+  // Stato per nuova spesa
+  const [isCreatingCart, setIsCreatingCart] = useState(false);
+  const [newCartName, setNewCartName] = useState('');
 
   const handleAddToCart = (product: any) => {
     setSelectedProduct(product);
@@ -30,16 +35,34 @@ export function ProductCardList({ products }: { products: any[] }) {
   };
 
   const handleConfirm = async () => {
-    if (!selectedCart || !selectedProduct) return;
+    if (!selectedProduct) return;
+
     try {
-      await addItem(selectedCart.cartId, selectedProduct.productId, 1);
+      let targetCartId = selectedCart?.cartId;
+
+      if (isCreatingCart && newCartName.trim() !== '') {
+        // crea nuova spesa
+        const newCart = await createNewCart(newCartName);
+        targetCartId = newCart.cartId;
+      }
+
+      if (!targetCartId) return;
+
+      await addItem(targetCartId, selectedProduct.productId, 1);
+
       setMessage({
         type: 'success',
-        content: `${selectedProduct.name} added to ${selectedCart.name}!`,
+        content: `${selectedProduct.name} added to ${
+          isCreatingCart ? newCartName : selectedCart.name
+        }!`,
       });
+
+      // reset stato
       setModalOpen(false);
       setSelectedCart(null);
       setSelectedProduct(null);
+      setIsCreatingCart(false);
+      setNewCartName('');
     } catch (err) {
       console.error(err);
       setMessage({ type: 'error', content: 'Failed to add product.' });
@@ -105,7 +128,7 @@ export function ProductCardList({ products }: { products: any[] }) {
         empty="Nessun prodotto disponibile."
       />
 
-      {/* Modal per scegliere il carrello */}
+      {/* Modal per scegliere o creare il carrello */}
       <Modal
         visible={modalOpen}
         header={`Aggiungi ${selectedProduct?.name} al carrello`}
@@ -116,7 +139,10 @@ export function ProductCardList({ products }: { products: any[] }) {
             <Button onClick={() => setModalOpen(false)}>Annulla</Button>
             <Button
               variant="primary"
-              disabled={!selectedCart}
+              disabled={
+                (!isCreatingCart && !selectedCart) ||
+                (isCreatingCart && newCartName.trim() === '')
+              }
               onClick={handleConfirm}
             >
               Conferma
@@ -127,21 +153,42 @@ export function ProductCardList({ products }: { products: any[] }) {
         <Select
           placeholder="Seleziona un carrello"
           selectedOption={
-            selectedCart
+            isCreatingCart
+              ? { label: '➕ Crea nuova spesa', value: 'create_new' }
+              : selectedCart
               ? { label: selectedCart.name, value: selectedCart.cartId }
               : null
           }
           onChange={({ detail }) => {
-            const cart = carts.find(
-              (c) => c.cartId === detail.selectedOption.value
-            );
-            setSelectedCart(cart || null);
+            if (detail.selectedOption.value === 'create_new') {
+              setIsCreatingCart(true);
+              setSelectedCart(null);
+            } else {
+              const cart = carts.find(
+                (c) => c.cartId === detail.selectedOption.value
+              );
+              setSelectedCart(cart || null);
+              setIsCreatingCart(false);
+            }
           }}
-          options={carts.map((c) => ({
-            label: c.name,
-            value: c.cartId,
-          }))}
+          options={[
+            ...carts.map((c) => ({
+              label: c.name,
+              value: c.cartId,
+            })),
+            { label: '➕ Crea nuova spesa', value: 'create_new' },
+          ]}
         />
+
+        {isCreatingCart && (
+          <Box margin={{ top: 's' }}>
+            <Input
+              placeholder="Nome nuova spesa"
+              value={newCartName}
+              onChange={({ detail }) => setNewCartName(detail.value)}
+            />
+          </Box>
+        )}
       </Modal>
     </Box>
   );
