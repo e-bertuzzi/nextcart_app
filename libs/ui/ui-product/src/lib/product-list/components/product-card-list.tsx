@@ -1,4 +1,3 @@
-// components/ProductCardList.tsx
 import {
   Cards,
   Box,
@@ -6,8 +5,8 @@ import {
   Modal,
   Select,
   SpaceBetween,
-  Flashbar,
   Input,
+  Flashbar,
 } from '@cloudscape-design/components';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
@@ -19,19 +18,21 @@ export function ProductCardList({ products }: { products: any[] }) {
   const navigate = useNavigate();
   const { user } = useUser();
   const userId = user?.id;
-  const { carts, addItem, createNewCart, message, setMessage } = useCart(userId);
+  const { carts, addItem, createNewCart } = useCart(userId);
 
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
   const [selectedCart, setSelectedCart] = useState<any>(null);
   const [modalOpen, setModalOpen] = useState(false);
-
-  // Stato per nuova spesa
   const [isCreatingCart, setIsCreatingCart] = useState(false);
   const [newCartName, setNewCartName] = useState('');
+
+  // Stato per Flashbar temporanea dentro il modal
+  const [flashMessage, setFlashMessage] = useState<string | null>(null);
 
   const handleAddToCart = (product: any) => {
     setSelectedProduct(product);
     setModalOpen(true);
+    setFlashMessage(null); // reset messaggio
   };
 
   const handleConfirm = async () => {
@@ -41,7 +42,6 @@ export function ProductCardList({ products }: { products: any[] }) {
       let targetCartId = selectedCart?.cartId;
 
       if (isCreatingCart && newCartName.trim() !== '') {
-        // crea nuova spesa
         const newCart = await createNewCart(newCartName);
         targetCartId = newCart.cartId;
       }
@@ -50,40 +50,24 @@ export function ProductCardList({ products }: { products: any[] }) {
 
       await addItem(targetCartId, selectedProduct.productId, 1);
 
-      setMessage({
-        type: 'success',
-        content: `${selectedProduct.name} added to ${
-          isCreatingCart ? newCartName : selectedCart.name
-        }!`,
-      });
+      // Mostra Flashbar verde temporanea sotto la Select
+      setFlashMessage(`${selectedProduct.name} aggiunto al carrello!`);
+      setTimeout(() => setFlashMessage(null), 2500);
 
-      // reset stato
-      setModalOpen(false);
-      setSelectedCart(null);
+      // reset stato prodotto selezionato ma lascia il modal aperto
       setSelectedProduct(null);
+      setSelectedCart(null);
       setIsCreatingCart(false);
       setNewCartName('');
     } catch (err) {
       console.error(err);
-      setMessage({ type: 'error', content: 'Failed to add product.' });
+      setFlashMessage("Errore durante l'aggiunta del prodotto.");
+      setTimeout(() => setFlashMessage(null), 2500);
     }
   };
 
   return (
     <Box>
-      {message && (
-        <Flashbar
-          items={[
-            {
-              type: message.type,
-              content: message.content,
-              dismissible: true,
-              onDismiss: () => setMessage(null),
-            },
-          ]}
-        />
-      )}
-
       <Cards
         items={products}
         cardDefinition={{
@@ -128,10 +112,9 @@ export function ProductCardList({ products }: { products: any[] }) {
         empty="Nessun prodotto disponibile."
       />
 
-      {/* Modal per scegliere o creare il carrello */}
       <Modal
         visible={modalOpen}
-        header={`Aggiungi ${selectedProduct?.name} al carrello`}
+        header={`Aggiungi prodotto al carrello`}
         onDismiss={() => setModalOpen(false)}
         closeAriaLabel="Chiudi"
         footer={
@@ -186,6 +169,22 @@ export function ProductCardList({ products }: { products: any[] }) {
               placeholder="Nome nuova spesa"
               value={newCartName}
               onChange={({ detail }) => setNewCartName(detail.value)}
+            />
+          </Box>
+        )}
+
+        {/* Flashbar temporanea sotto la Select */}
+        {flashMessage && (
+          <Box margin={{ top: 's' }}>
+            <Flashbar
+              items={[
+                {
+                  type: 'success',
+                  content: flashMessage,
+                  dismissible: true,
+                  onDismiss: () => setFlashMessage(null),
+                },
+              ]}
             />
           </Box>
         )}

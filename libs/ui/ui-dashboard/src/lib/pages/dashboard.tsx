@@ -6,7 +6,9 @@ import {
 
 import { DashboardGrid } from '../components/dashboard-grid';
 import { DashboardCard } from '../components/dashboard-card';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Role } from '@nextcart/enum';
 
 export function UiDashboard() {
@@ -82,9 +84,15 @@ export function UiDashboard() {
               {/* Esempio statico: sostituisci con dati dinamici se vuoi */}
               <DashboardCard
                 label="Products List"
-                iconName="shopping-cart"
+                iconName="shopping-bag"
                 href="/products"
                 description="View product list"
+              />
+              <DashboardCard
+                label="Cart Section"
+                iconName="shopping-cart"
+                href="/cart"
+                description="View cart list"
               />
               {user?.role === Role.isAdmin && (
                 <DashboardCard

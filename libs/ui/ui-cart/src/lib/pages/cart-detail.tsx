@@ -1,20 +1,19 @@
 import { useEffect, useState } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams, Navigate, useNavigate } from 'react-router-dom';
 import {
   Box,
-  Button,
   Container,
   Flashbar,
   SpaceBetween,
   Spinner,
   Table,
+  Button,
 } from '@cloudscape-design/components';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
 import { useCart } from '../hook/use-cart';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product } from '@nextcart/models';
-import { removeItemByCartItemId, updateItemQuantity } from '../service/carts-service';
 
 interface CartItem {
   productId: string;
@@ -28,12 +27,13 @@ export function UiCartDetailPage() {
   const { cartId } = useParams<{ cartId: string }>();
   const { user, loading } = useUser();
   const userId = user?.id;
+  const navigate = useNavigate();
 
   const {
     carts,
     loadingCarts,
-    addItem,
     removeItem,
+    updateItemQuantity,
     message,
     setMessage,
     fetchUserCarts,
@@ -41,6 +41,7 @@ export function UiCartDetailPage() {
 
   const [cart, setCart] = useState<any | null>(null);
 
+  // Seleziona il carrello corrente
   useEffect(() => {
     if (cartId && carts.length > 0) {
       const found = carts.find((c) => c.cartId === Number(cartId));
@@ -49,40 +50,8 @@ export function UiCartDetailPage() {
   }, [cartId, carts]);
 
   if (loading || loadingCarts) return <Spinner />;
-
   if (!user) return <Navigate to="/login" />;
-
   if (!cart) return <p>Cart not found.</p>;
-
-  const handleIncrease = async (cartItemId: string) => {
-    try {
-      await updateItemQuantity(cartItemId, 1); // usa solo cartItemId
-      setMessage({ type: 'success', content: 'Quantity increased!' });
-      await fetchUserCarts();
-    } catch {
-      setMessage({ type: 'error', content: 'Failed to increase quantity.' });
-    }
-  };
-
-  const handleDecrease = async (cartItemId: string) => {
-    try {
-      await updateItemQuantity(cartItemId, -1); // decrementa
-      setMessage({ type: 'success', content: 'Quantity decreased!' });
-      await fetchUserCarts();
-    } catch {
-      setMessage({ type: 'error', content: 'Failed to decrease quantity.' });
-    }
-  };
-
-  const handleRemove = async (cartItemId: string) => {
-    try {
-      await removeItemByCartItemId(cartItemId); // elimina specifico cartItem
-      setMessage({ type: 'success', content: 'Product removed!' });
-      await fetchUserCarts();
-    } catch {
-      setMessage({ type: 'error', content: 'Failed to remove product.' });
-    }
-  };
 
   return (
     <Box margin="l">
@@ -94,6 +63,13 @@ export function UiCartDetailPage() {
         }
       >
         <FormLayout message={message} setMessage={setMessage}>
+          <Button
+            variant="link"
+            onClick={() => navigate(-1)}
+          >
+            &larr; Back
+          </Button>
+
           <Table<CartItem>
             items={cart.items}
             trackBy="cartItemId"
@@ -114,25 +90,19 @@ export function UiCartDetailPage() {
                 cell: (item) => (
                   <SpaceBetween direction="horizontal" size="xs">
                     <Button
-                      onClick={() =>
-                        handleIncrease(item.cartItemId)
-                      }
+                      onClick={() => updateItemQuantity(item.cartItemId, 1)}
                     >
                       +
                     </Button>
                     <Button
                       disabled={item.quantity <= 1}
-                      onClick={() =>
-                        handleDecrease(item.cartItemId)
-                      }
+                      onClick={() => updateItemQuantity(item.cartItemId, -1)}
                     >
                       -
                     </Button>
                     <Button
                       variant="inline-link"
-                      onClick={() =>
-                        handleRemove(item.cartItemId)
-                      }
+                      onClick={() => removeItem(item.cartItemId)}
                     >
                       Remove
                     </Button>
@@ -140,6 +110,11 @@ export function UiCartDetailPage() {
                 ),
               },
             ]}
+            empty={
+              <Box textAlign="center" color="inherit">
+                <b>This cart is empty.</b>
+              </Box>
+            }
           />
         </FormLayout>
       </Container>

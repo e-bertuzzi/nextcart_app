@@ -19,7 +19,8 @@ export function UiCartPage() {
   const userId = user?.id;
   const navigate = useNavigate();
 
-  const { carts, loadingCarts, removeCart, message, setMessage } = useCart(userId);
+  const { carts, loadingCarts, removeCart, message, setMessage } =
+    useCart(userId);
 
   // Stato modale conferma cancellazione
   const [confirmOpen, setConfirmOpen] = useState(false);
@@ -63,7 +64,11 @@ export function UiCartPage() {
           {carts.length === 0 ? (
             <p>No carts yet. Click below to create one!</p>
           ) : (
-            <CartTable carts={carts} onRemoveCart={handleRemoveClick} />
+            <CartTable
+              carts={carts}
+              onRemoveCart={handleRemoveClick}
+              onViewCart={(cartId) => navigate(`/cart/${cartId}`)}
+            />
           )}
 
           <Button variant="primary" onClick={() => navigate('/cart/create')}>
