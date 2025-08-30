@@ -13,26 +13,85 @@ import { useState } from 'react';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
 import { useCart } from '@nextcart/ui-cart';
+import { useProductCompatibility } from '../hooks/use-product-compatibility';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { CartItemWarning } from '@nextcart/enum';
 
-export function ProductCardList({ products }: { products: any[] }) {
+// 🔹 Header del prodotto con compatibilità
+function ProductHeader({
+  product,
+  userDiets,
+  setSelectedProductWarnings,
+}: {
+  product: any;
+  userDiets: { value: string }[];
+  setSelectedProductWarnings: (warnings: CartItemWarning[]) => void;
+}) {
+  const { compatible, incompatibleDiets } = useProductCompatibility(
+    product,
+    userDiets
+  );
+
+  // Aggiorna le warning di selectedProduct quando viene cliccato "Add to cart"
+  const handleSetWarnings = () => {
+    const warningsToSend =
+      compatible || incompatibleDiets.length === 0
+        ? [CartItemWarning.NONE]
+        : incompatibleDiets.map(() => CartItemWarning.NOT_COMPATIBLE_WITH_DIET);
+    setSelectedProductWarnings(warningsToSend);
+  };
+
+  return (
+    <Box fontWeight="bold" fontSize="heading-m">
+      {product.name || product.itName}{' '}
+      <Box fontWeight="light">ID: {product.productId}</Box>
+      {!compatible && (
+        <Box color="text-status-warning" fontSize="body-s">
+          ⚠ Non compatibile con: {incompatibleDiets.join(', ')}
+        </Box>
+      )}
+    </Box>
+  );
+}
+
+export function ProductCardList({
+  products,
+  userDiets,
+}: {
+  products: any[];
+  userDiets: { label: string; value: string }[];
+}) {
   const navigate = useNavigate();
   const { user } = useUser();
   const userId = user?.id;
   const { carts, addItem, createNewCart } = useCart(userId);
 
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
+  const [selectedProductWarnings, setSelectedProductWarnings] = useState<
+    CartItemWarning[]
+  >([CartItemWarning.NONE]);
   const [selectedCart, setSelectedCart] = useState<any>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [isCreatingCart, setIsCreatingCart] = useState(false);
   const [newCartName, setNewCartName] = useState('');
-
-  // Stato per Flashbar temporanea dentro il modal
   const [flashMessage, setFlashMessage] = useState<string | null>(null);
 
   const handleAddToCart = (product: any) => {
     setSelectedProduct(product);
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { compatible, incompatibleDiets } = useProductCompatibility(
+      product,
+      userDiets
+    );
+
+    const warningsToSend =
+      compatible || incompatibleDiets.length === 0
+        ? [CartItemWarning.NONE]
+        : incompatibleDiets.map(() => CartItemWarning.NOT_COMPATIBLE_WITH_DIET);
+
+    setSelectedProductWarnings(warningsToSend);
     setModalOpen(true);
-    setFlashMessage(null); // reset messaggio
   };
 
   const handleConfirm = async () => {
@@ -48,17 +107,29 @@ export function ProductCardList({ products }: { products: any[] }) {
 
       if (!targetCartId) return;
 
-      await addItem(targetCartId, selectedProduct.productId, 1);
+      // 🔹 Aggiunta al carrello passando warnings
+      await addItem(
+        targetCartId,
+        selectedProduct.productId,
+        1,
+        selectedProductWarnings
+      );
 
-      // Mostra Flashbar verde temporanea sotto la Select
-      setFlashMessage(`${selectedProduct.name} aggiunto al carrello!`);
+      setFlashMessage(
+        `${selectedProduct.name} aggiunto al carrello${
+          selectedProductWarnings.includes(CartItemWarning.NONE)
+            ? ''
+            : ' ⚠ Attenzione!'
+        }`
+      );
       setTimeout(() => setFlashMessage(null), 2500);
 
-      // reset stato prodotto selezionato ma lascia il modal aperto
       setSelectedProduct(null);
+      setSelectedProductWarnings([CartItemWarning.NONE]);
       setSelectedCart(null);
       setIsCreatingCart(false);
       setNewCartName('');
+      setModalOpen(false);
     } catch (err) {
       console.error(err);
       setFlashMessage("Errore durante l'aggiunta del prodotto.");
@@ -72,10 +143,11 @@ export function ProductCardList({ products }: { products: any[] }) {
         items={products}
         cardDefinition={{
           header: (item) => (
-            <Box fontWeight="bold" fontSize="heading-m">
-              {item.name || item.itName}{' '}
-              <Box fontWeight="light">ID: {item.productId}</Box>
-            </Box>
+            <ProductHeader
+              product={item}
+              userDiets={userDiets}
+              setSelectedProductWarnings={setSelectedProductWarnings}
+            />
           ),
           sections: [
             {
@@ -173,7 +245,6 @@ export function ProductCardList({ products }: { products: any[] }) {
           </Box>
         )}
 
-        {/* Flashbar temporanea sotto la Select */}
         {flashMessage && (
           <Box margin={{ top: 's' }}>
             <Flashbar

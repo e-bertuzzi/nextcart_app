@@ -4,6 +4,7 @@ import { Repository } from 'typeorm';
 import { Cart, CartItem, Product } from '@nextcart/models';
 import { CreateCartDto } from '@nextcart/dto';
 import { AddCartItemDto } from '@nextcart/dto';
+import { CartItemWarning } from '@nextcart/enum';
 
 @Injectable()
 export class CartService {
@@ -52,11 +53,22 @@ export class CartService {
 
     if (item) {
       item.quantity += dto.quantity;
+
+      // 🔹 Aggiorna/aggiungi warning se ne vengono passati
+      if (dto.warnings?.length) {
+        // combina eventuali warning esistenti con quelli nuovi, evitando duplicati
+        const existingWarnings = item.warnings || [CartItemWarning.NONE];
+        const newWarnings = dto.warnings.filter(
+          (w) => !existingWarnings.includes(w)
+        );
+        item.warnings = [...existingWarnings, ...newWarnings];
+      }
     } else {
       item = this.cartItemRepo.create({
         cart,
         product,
         quantity: dto.quantity,
+        warnings: dto.warnings?.length ? dto.warnings : [CartItemWarning.NONE], // default NONE
       });
     }
 

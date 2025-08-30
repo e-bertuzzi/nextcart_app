@@ -8,6 +8,8 @@ import {
   updateItemQuantity as updateItemQuantityService,
 } from '../service/carts-service';
 import { useNavigate } from 'react-router-dom';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { CartItemWarning } from '@nextcart/enum';
 
 export function useCart(userId: number | undefined) {
   const [carts, setCarts] = useState<any[]>([]);
@@ -55,9 +57,14 @@ export function useCart(userId: number | undefined) {
     }
   };
 
-  const addItem = async (cartId: number, productId: string, quantity: number) => {
+  const addItem = async (
+    cartId: number,
+    productId: string,
+    quantity: number,
+    warnings?: CartItemWarning[]
+  ) => {
     try {
-      await addItemToCart(cartId, { productId, quantity });
+      await addItemToCart(cartId, { productId, quantity, warnings });
       setMessage({ type: 'success', content: 'Product added to cart!' });
       await fetchUserCarts();
     } catch {

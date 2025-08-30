@@ -22,6 +22,7 @@
       "@nextcart/cart": ["libs/api/cart/src/index.ts"],
       "@nextcart/claim": ["libs/api/claim/src/index.ts"],
       "@nextcart/commons": ["libs/ui/commons/src/index.ts"],
+      "@nextcart/compatibility": ["libs/api/compatibility/src/index.ts"],
       "@nextcart/consumer": ["libs/api/consumer/src/index.ts"],
       "@nextcart/consumer-health-condition": [
         "libs/api/consumer-health-condition/src/index.ts"

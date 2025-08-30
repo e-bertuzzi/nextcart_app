@@ -212,7 +212,8 @@ export function UiProductList() {
         onReset={handleResetFilters}
       />
 
-      <ProductCardList products={filteredProducts} />
+      {/* ✅ Passo userDiets come prop */}
+      <ProductCardList products={filteredProducts} userDiets={userDiets} />
     </Container>
   );
 }

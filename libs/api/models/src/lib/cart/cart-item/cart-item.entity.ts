@@ -1,7 +1,13 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
-import { Cart } from "../cart.entity";
-import { Product } from "../../product";
-import { CartItemWarning } from "@nextcart/enum";
+import {
+  Column,
+  Entity,
+  JoinColumn,
+  ManyToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
+import { Cart } from '../cart.entity';
+import { Product } from '../../product';
+import { CartItemWarning } from '@nextcart/enum';
 
 @Entity()
 export class CartItem {
@@ -20,9 +26,8 @@ export class CartItem {
   quantity!: number;
 
   @Column({
-    type: 'enum',
-    enum: CartItemWarning,
-    default: CartItemWarning.NONE,
+    type: 'simple-array',
+    default: '',
   })
-  warning!: CartItemWarning;
+  warnings!: CartItemWarning[];
 }

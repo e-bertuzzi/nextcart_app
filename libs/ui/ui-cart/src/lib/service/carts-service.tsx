@@ -1,4 +1,6 @@
 // eslint-disable-next-line @nx/enforce-module-boundaries
+import { CartItemWarning } from '@nextcart/enum';
+// eslint-disable-next-line @nx/enforce-module-boundaries
 import { api } from '@nextcart/http';
 
 export async function getUserCarts(userId: number | undefined) {
@@ -15,7 +17,10 @@ export async function removeCart(cartId: number) {
   return api.delete(`/cart/${cartId}`);
 }
 
-export async function addItemToCart(cartId: number, data: { productId: string; quantity: number }) {
+export async function addItemToCart(
+  cartId: number,
+  data: { productId: string; quantity: number; warnings?: CartItemWarning[] }
+) {
   const res = await api.post(`/cart/${cartId}/items`, data);
   return res.data;
 }
