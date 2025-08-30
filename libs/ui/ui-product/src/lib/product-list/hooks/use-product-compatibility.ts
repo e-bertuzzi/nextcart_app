@@ -16,3 +16,46 @@ export function useProductCompatibility(
     incompatibleDiets,
   };
 }
+
+export function useProductNutrientCompatibility(
+  product: any,
+  userNutrientConstraints: { nutrientId: string; minQuantity?: number; maxQuantity?: number }[]
+): { compatible: boolean; violatedNutrients: string[] } {
+
+  console.log('Product nutrients raw:', product.nutritionalInformationValues);
+  console.log('User constraints raw:', userNutrientConstraints);
+
+  if (!userNutrientConstraints || userNutrientConstraints.length === 0) {
+    return { compatible: true, violatedNutrients: [] };
+  }
+
+  const productNutrients = product.nutritionalInformationValues ?? [];
+  const violatedNutrients: string[] = [];
+
+  for (const constraint of userNutrientConstraints) {
+    // Qui accediamo correttamente all'id del nutriente
+    const prodNutrient = productNutrients.find(
+      (n: any) => n.nutrient?.id === constraint.nutrientId
+    );
+
+    // Qui prendiamo il valore reale del nutriente
+    const quantity = prodNutrient?.value ?? 0;
+
+    if (
+      (constraint.minQuantity != null && quantity < constraint.minQuantity) ||
+      (constraint.maxQuantity != null && quantity > constraint.maxQuantity)
+    ) {
+      violatedNutrients.push(constraint.nutrientId);
+    }
+  }
+
+  const compatible = violatedNutrients.length === 0;
+  return {
+    compatible,
+    violatedNutrients,
+  };
+}
+
+
+
+
