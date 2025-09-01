@@ -47,8 +47,8 @@ export function UiLogin() {
   return (
     <>
       <Container>
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white via-emerald-50 to-green-100 px-4">
-          <div className="w-full max-w-xl bg-white shadow-lg rounded-xl p-6">
+        <div className="flex flex-col justify-center items-center min-h-[80vh] bg-gradient-to-b from-white via-emerald-50 to-green-100 px-4">
+          <div className="w-full max-w-xl bg-white shadow-lg rounded-xl p-6 max-h-[90vh] overflow-auto">
             <Form>
               <SpaceBetween size="m">
                 <FormField label="Email">
