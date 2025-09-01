@@ -25,7 +25,13 @@ export class CartService {
   async getCart(cartId: number): Promise<Cart> {
     const cart = await this.cartRepo.findOne({
       where: { cartId },
-      relations: ['items', 'items.product'],
+      relations: [
+        'items',
+        'items.product',
+        'items.product.productDiets',
+        'items.product.nutritionalInformationValues',
+        'items.product.nutritionalInformationValues.nutrient',
+      ],
     });
     if (!cart) throw new NotFoundException('Cart not found');
     return cart;
@@ -34,7 +40,13 @@ export class CartService {
   async getCartsByUser(userId: number): Promise<Cart[]> {
     return this.cartRepo.find({
       where: { consumer: { consumerId: userId } },
-      relations: ['items', 'items.product'], // se vuoi includere i prodotti
+      relations: [
+        'items',
+        'items.product',
+        'items.product.productDiets',
+        'items.product.nutritionalInformationValues',
+        'items.product.nutritionalInformationValues.nutrient',
+      ],
     });
   }
 

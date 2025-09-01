@@ -13,7 +13,9 @@ import { useState } from 'react';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
 import { useCart } from '@nextcart/ui-cart';
-import { useProductCompatibility, useProductNutrientCompatibility } from '../hooks/use-product-compatibility';
+//import { useProductCompatibility, useProductNutrientCompatibility } from '../hooks/use-product-compatibility';
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { useProductCompatibility, useProductNutrientCompatibility } from '@nextcart/ui-compatibility';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { CartItemWarning } from '@nextcart/enum';
 import { useUserNutrientConstraints } from '../hooks/use-health-condition';

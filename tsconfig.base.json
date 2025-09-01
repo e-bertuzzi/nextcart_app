@@ -49,6 +49,7 @@
       "@nextcart/ui-auth": ["libs/ui/ui-auth/src/index.ts"],
       "@nextcart/ui-cart": ["libs/ui/ui-cart/src/index.ts"],
       "@nextcart/ui-commons": ["libs/ui/ui-commons/src/index.ts"],
+      "@nextcart/ui-compatibility": ["libs/ui/ui-compatibility/src/index.ts"],
       "@nextcart/ui-dashboard": ["libs/ui/ui-dashboard/src/index.ts"],
       "@nextcart/ui-forms": ["libs/ui/ui-forms/src/index.ts"],
       "@nextcart/ui-home": ["libs/ui/ui-home/src/index.ts"],

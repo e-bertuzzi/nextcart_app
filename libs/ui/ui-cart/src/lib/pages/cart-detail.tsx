@@ -16,6 +16,12 @@ import { useUser } from '@nextcart/web-auth';
 import { useCart } from '../hook/use-cart';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product } from '@nextcart/models';
+import {
+  useProductCompatibility,
+  useProductNutrientCompatibility,
+} from '@nextcart/ui-compatibility';
+import { useUserDiets } from '@nextcart/ui-compatibility'; // hook personalizzato per le diete
+import { useUserNutrientConstraints } from '@nextcart/ui-compatibility'; // hook per vincoli nutrizionali
 
 interface CartItem {
   productId: string;
@@ -23,7 +29,7 @@ interface CartItem {
   name: string;
   quantity: number;
   product?: Product;
-  warnings?: string;
+  warnings?: string[];
 }
 
 export function UiCartDetailPage() {
@@ -39,12 +45,20 @@ export function UiCartDetailPage() {
     updateItemQuantity,
     message,
     setMessage,
-    fetchUserCarts,
   } = useCart(userId);
 
   const [cart, setCart] = useState<any | null>(null);
 
-  // Seleziona il carrello corrente
+  // 🔹 Recupero diete e vincoli
+  const {
+    userDiets,
+    loading: loadingDiets,
+    error: dietsError,
+  } = useUserDiets(userId);
+  const { nutrientConstraints, loading: loadingConstraints } =
+    useUserNutrientConstraints(userId);
+
+  // 🔹 Seleziona carrello corrente
   useEffect(() => {
     if (cartId && carts.length > 0) {
       const found = carts.find((c) => c.cartId === Number(cartId));
@@ -52,9 +66,41 @@ export function UiCartDetailPage() {
     }
   }, [cartId, carts]);
 
-  if (loading || loadingCarts) return <Spinner />;
+  if (loading || loadingCarts || loadingDiets || loadingConstraints)
+    return <Spinner />;
   if (!user) return <Navigate to="/login" />;
   if (!cart) return <p>Cart not found.</p>;
+
+  const cartItemsWithWarnings = cart.items.map((item: any) => {
+    console.log('Processing item:', item.product?.name);
+    console.log('item', item)
+    console.log('Product diets:', item.product?.productDiets);
+    console.log('User diets:', userDiets);
+    console.log(
+      'Product nutrients:',
+      item.product?.nutritionalInformationValues
+    );
+    console.log('User nutrient constraints:', nutrientConstraints);
+
+    console.log('Full product object:', item.product);
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { compatible: dietCompatible } = useProductCompatibility(
+      item.product,
+      userDiets
+    );
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { compatible: nutrientCompatible } = useProductNutrientCompatibility(
+      item.product,
+      nutrientConstraints
+    );
+
+    const warnings: string[] = [];
+    if (!dietCompatible) warnings.push('NOT_COMPATIBLE_WITH_DIET');
+    if (!nutrientCompatible) warnings.push('NOT_COMPATIBLE_WITH_CONDITION');
+
+    return { ...item, warnings };
+  });
 
   return (
     <Box margin="l">
@@ -70,7 +116,7 @@ export function UiCartDetailPage() {
             &larr; Back
           </Button>
           <Table<CartItem>
-            items={cart.items}
+            items={cartItemsWithWarnings}
             trackBy="cartItemId"
             columnDefinitions={[
               {
@@ -79,47 +125,31 @@ export function UiCartDetailPage() {
                 cell: (item) => (
                   <SpaceBetween direction="horizontal" size="xs">
                     <span>{item.product?.name}</span>
-                    {item.warnings &&
-                      (Array.isArray(item.warnings)
-                        ? item.warnings.length > 0 &&
-                          !(
-                            item.warnings.length === 1 &&
-                            item.warnings[0] === 'NONE'
-                          )
-                        : item.warnings !== 'NONE') && (
-                        <Popover
-                          position="top"
-                          size="small"
-                          content={
-                            <Box fontSize="body-s">
-                              {Array.isArray(item.warnings)
-                                ? item.warnings
-                                    .filter((w) => w !== 'NONE')
-                                    .map((w) =>
-                                      w === 'NOT_COMPATIBLE_WITH_DIET'
-                                        ? 'Not compatible with your diets'
-                                        : w === 'NOT_COMPATIBLE_WITH_CONDITION'
-                                        ? 'Not compatible with your health conditions'
-                                        : 'Other incompatibility'
-                                    )
-                                    .join(', ')
-                                : item.warnings === 'NOT_COMPATIBLE_WITH_DIET'
-                                ? 'Not compatible with your diets'
-                                : item.warnings ===
-                                  'NOT_COMPATIBLE_WITH_CONDITION'
-                                ? 'Not compatible with your health conditions'
-                                : 'Other incompatibility'}
-                            </Box>
-                          }
+                    {item.warnings && item.warnings.length > 0 && (
+                      <Popover
+                        position="top"
+                        size="small"
+                        content={
+                          <Box fontSize="body-s">
+                            {item.warnings
+                              .map((w) =>
+                                w === 'NOT_COMPATIBLE_WITH_DIET'
+                                  ? 'Not compatible with your diets'
+                                  : w === 'NOT_COMPATIBLE_WITH_CONDITION'
+                                  ? 'Not compatible with your health conditions'
+                                  : 'Other incompatibility'
+                              )
+                              .join(', ')}
+                          </Box>
+                        }
+                      >
+                        <div
+                          style={{ display: 'inline-block', cursor: 'help' }}
                         >
-                          {/* Trigger element: ensure it can receive hover */}
-                          <div
-                            style={{ display: 'inline-block', cursor: 'help' }}
-                          >
-                            <StatusIndicator type="warning" />
-                          </div>
-                        </Popover>
-                      )}
+                          <StatusIndicator type="warning" />
+                        </div>
+                      </Popover>
+                    )}
                   </SpaceBetween>
                 ),
               },
