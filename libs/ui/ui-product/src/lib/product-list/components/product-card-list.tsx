@@ -21,7 +21,7 @@ import {
 } from '@nextcart/ui-compatibility';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { CartItemWarning } from '@nextcart/enum';
-import { useUserNutrientConstraints } from '../hooks/use-health-condition';
+import { useUserNutrientConstraints } from '@nextcart/ui-compatibility';
 
 // 🔹 Header del prodotto con compatibilità
 function ProductHeader({

@@ -10,10 +10,10 @@ import { useState, useEffect } from 'react';
 import { useProducts } from '../hooks/use-products';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
-import { useUserDiets } from '../hooks/use-user-diets';
+import { useUserDiets } from '@nextcart/ui-compatibility';
 import { useDiets } from '../hooks/use-diets';
 import { useAllergens } from '../hooks/use-allergens';
-import { useUserNutrientConstraints } from '../hooks/use-health-condition';
+import { useUserNutrientConstraints } from '@nextcart/ui-compatibility';
 
 import { ProductFilters } from '../components/product-filters';
 import { ProductCardList } from '../components/product-card-list';

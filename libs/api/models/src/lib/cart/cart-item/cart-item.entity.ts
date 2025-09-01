@@ -25,9 +25,9 @@ export class CartItem {
   @Column({ type: 'int', default: 1 })
   quantity!: number;
 
-  @Column({
+  /*@Column({  DA METTERE SE SI VUOLE GESTIRE IL PRIMO WARNING A LIVELLO DI DATABASE
     type: 'simple-array',
     default: '',
   })
-  warnings!: CartItemWarning[];
+  warnings!: CartItemWarning[];*/ 
 }

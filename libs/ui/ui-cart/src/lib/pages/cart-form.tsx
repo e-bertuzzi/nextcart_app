@@ -37,7 +37,9 @@ export function UiCartForm() {
 
     await createNewCart(cartName); // ✅ usa l'hook aggiornato
     setCartName(''); // pulisce il form
-    navigate('/cart'); // torna alla lista carrelli
+    setTimeout(() => {
+    navigate('/cart');
+  }, 2000);
   };
 
   return (
