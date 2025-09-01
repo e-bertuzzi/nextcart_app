@@ -6,10 +6,7 @@ import {
   Flashbar,
   SpaceBetween,
   Spinner,
-  Table,
   Button,
-  StatusIndicator,
-  Popover,
 } from '@cloudscape-design/components';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { useUser } from '@nextcart/web-auth';
@@ -20,8 +17,10 @@ import {
   useProductCompatibility,
   useProductNutrientCompatibility,
 } from '@nextcart/ui-compatibility';
-import { useUserDiets } from '@nextcart/ui-compatibility'; // hook personalizzato per le diete
-import { useUserNutrientConstraints } from '@nextcart/ui-compatibility'; // hook per vincoli nutrizionali
+import { useUserDiets } from '@nextcart/ui-compatibility';
+import { useUserNutrientConstraints } from '@nextcart/ui-compatibility';
+
+import { CartItemsTable } from '../components/cart-item-table';
 
 interface CartItem {
   productId: string;
@@ -53,7 +52,6 @@ export function UiCartDetailPage() {
   const {
     userDiets,
     loading: loadingDiets,
-    error: dietsError,
   } = useUserDiets(userId);
   const { nutrientConstraints, loading: loadingConstraints } =
     useUserNutrientConstraints(userId);
@@ -72,18 +70,6 @@ export function UiCartDetailPage() {
   if (!cart) return <p>Cart not found.</p>;
 
   const cartItemsWithWarnings = cart.items.map((item: any) => {
-    console.log('Processing item:', item.product?.name);
-    console.log('item', item)
-    console.log('Product diets:', item.product?.productDiets);
-    console.log('User diets:', userDiets);
-    console.log(
-      'Product nutrients:',
-      item.product?.nutritionalInformationValues
-    );
-    console.log('User nutrient constraints:', nutrientConstraints);
-
-    console.log('Full product object:', item.product);
-
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { compatible: dietCompatible } = useProductCompatibility(
       item.product,
@@ -115,80 +101,11 @@ export function UiCartDetailPage() {
           <Button variant="link" onClick={() => navigate(-1)}>
             &larr; Back
           </Button>
-          <Table<CartItem>
+
+          <CartItemsTable
             items={cartItemsWithWarnings}
-            trackBy="cartItemId"
-            columnDefinitions={[
-              {
-                id: 'name',
-                header: 'Product',
-                cell: (item) => (
-                  <SpaceBetween direction="horizontal" size="xs">
-                    <span>{item.product?.name}</span>
-                    {item.warnings && item.warnings.length > 0 && (
-                      <Popover
-                        position="top"
-                        size="small"
-                        content={
-                          <Box fontSize="body-s">
-                            {item.warnings
-                              .map((w) =>
-                                w === 'NOT_COMPATIBLE_WITH_DIET'
-                                  ? 'Not compatible with your diets'
-                                  : w === 'NOT_COMPATIBLE_WITH_CONDITION'
-                                  ? 'Not compatible with your health conditions'
-                                  : 'Other incompatibility'
-                              )
-                              .join(', ')}
-                          </Box>
-                        }
-                      >
-                        <div
-                          style={{ display: 'inline-block', cursor: 'help' }}
-                        >
-                          <StatusIndicator type="warning" />
-                        </div>
-                      </Popover>
-                    )}
-                  </SpaceBetween>
-                ),
-              },
-              {
-                id: 'quantity',
-                header: 'Quantity',
-                cell: (item) => item.quantity,
-              },
-              {
-                id: 'actions',
-                header: 'Actions',
-                cell: (item) => (
-                  <SpaceBetween direction="horizontal" size="xs">
-                    <Button
-                      onClick={() => updateItemQuantity(item.cartItemId, 1)}
-                    >
-                      +
-                    </Button>
-                    <Button
-                      disabled={item.quantity <= 1}
-                      onClick={() => updateItemQuantity(item.cartItemId, -1)}
-                    >
-                      -
-                    </Button>
-                    <Button
-                      variant="inline-link"
-                      onClick={() => removeItem(item.cartItemId)}
-                    >
-                      Remove
-                    </Button>
-                  </SpaceBetween>
-                ),
-              },
-            ]}
-            empty={
-              <Box textAlign="center" color="inherit">
-                <b>This cart is empty.</b>
-              </Box>
-            }
+            onUpdateQuantity={updateItemQuantity}
+            onRemoveItem={removeItem}
           />
         </FormLayout>
       </Container>

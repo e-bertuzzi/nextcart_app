@@ -15,7 +15,10 @@ import { useUser } from '@nextcart/web-auth';
 import { useCart } from '@nextcart/ui-cart';
 //import { useProductCompatibility, useProductNutrientCompatibility } from '../hooks/use-product-compatibility';
 // eslint-disable-next-line @nx/enforce-module-boundaries
-import { useProductCompatibility, useProductNutrientCompatibility } from '@nextcart/ui-compatibility';
+import {
+  useProductCompatibility,
+  useProductNutrientCompatibility,
+} from '@nextcart/ui-compatibility';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { CartItemWarning } from '@nextcart/enum';
 import { useUserNutrientConstraints } from '../hooks/use-health-condition';
@@ -29,10 +32,17 @@ function ProductHeader({
 }: {
   product: any;
   userDiets: { value: string }[];
-  userNutrientConstraints: { nutrientId: string; minQuantity?: number; maxQuantity?: number }[];
+  userNutrientConstraints: {
+    nutrientId: string;
+    minQuantity?: number;
+    maxQuantity?: number;
+  }[];
   setSelectedProductWarnings: (warnings: CartItemWarning[]) => void;
 }) {
-  const { compatible: dietCompatible } = useProductCompatibility(product, userDiets);
+  const { compatible: dietCompatible } = useProductCompatibility(
+    product,
+    userDiets
+  );
   const { compatible: nutrientCompatible } = useProductNutrientCompatibility(
     product,
     userNutrientConstraints
@@ -42,13 +52,11 @@ function ProductHeader({
     <Box fontWeight="bold" fontSize="heading-m">
       {product.name || product.itName}{' '}
       <Box fontWeight="light">ID: {product.productId}</Box>
-
       {!dietCompatible && (
         <Box color="text-status-warning" fontSize="body-s">
           ⚠ Not compatible with your diets
         </Box>
       )}
-
       {!nutrientCompatible && (
         <Box color="text-status-warning" fontSize="body-s">
           ⚠ Not compatible with your health conditions
@@ -57,7 +65,6 @@ function ProductHeader({
     </Box>
   );
 }
-
 
 export function ProductCardList({
   products,
@@ -72,10 +79,13 @@ export function ProductCardList({
   const { carts, addItem, createNewCart } = useCart(userId);
 
   // 🔹 recupero vincoli nutrizionali da backend
-  const { nutrientConstraints, loading: loadingConstraints } = useUserNutrientConstraints(userId);
+  const { nutrientConstraints, loading: loadingConstraints } =
+    useUserNutrientConstraints(userId);
 
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
-  const [selectedProductWarnings, setSelectedProductWarnings] = useState<CartItemWarning[]>([CartItemWarning.NONE]);
+  const [selectedProductWarnings, setSelectedProductWarnings] = useState<
+    CartItemWarning[]
+  >([CartItemWarning.NONE]);
   const [selectedCart, setSelectedCart] = useState<any>(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [isCreatingCart, setIsCreatingCart] = useState(false);
@@ -87,13 +97,21 @@ export function ProductCardList({
 
     // qui usiamo i vincoli dell’utente caricati
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { compatible: dietCompatible } = useProductCompatibility(product, userDiets);
+    const { compatible: dietCompatible } = useProductCompatibility(
+      product,
+      userDiets
+    );
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { compatible: nutrientCompatible } = useProductNutrientCompatibility(product, nutrientConstraints);
+    const { compatible: nutrientCompatible } = useProductNutrientCompatibility(
+      product,
+      nutrientConstraints
+    );
 
     const warnings: CartItemWarning[] = [];
-    if (!dietCompatible) warnings.push(CartItemWarning.NOT_COMPATIBLE_WITH_DIET);
-    if (!nutrientCompatible) warnings.push(CartItemWarning.NOT_COMPATIBLE_WITH_CONDITION);
+    if (!dietCompatible)
+      warnings.push(CartItemWarning.NOT_COMPATIBLE_WITH_DIET);
+    if (!nutrientCompatible)
+      warnings.push(CartItemWarning.NOT_COMPATIBLE_WITH_CONDITION);
     if (warnings.length === 0) warnings.push(CartItemWarning.NONE);
 
     setSelectedProductWarnings(warnings);
@@ -101,39 +119,45 @@ export function ProductCardList({
   };
 
   const handleConfirm = async () => {
-    if (!selectedProduct) return;
+  if (!selectedProduct) return;
 
-    try {
-      let targetCartId = selectedCart?.cartId;
+  try {
+    let targetCartId = selectedCart?.cartId;
 
-      if (isCreatingCart && newCartName.trim() !== '') {
-        const newCart = await createNewCart(newCartName);
-        targetCartId = newCart.cartId;
-      }
-
-      if (!targetCartId) return;
-
-      await addItem(targetCartId, selectedProduct.productId, 1, selectedProductWarnings);
-
-      setFlashMessage(
-        `${selectedProduct.name} aggiunto al carrello${
-          selectedProductWarnings.includes(CartItemWarning.NONE) ? '' : ' ⚠ Attenzione!'
-        }`
-      );
-      setTimeout(() => setFlashMessage(null), 2500);
-
-      setSelectedProduct(null);
-      setSelectedProductWarnings([CartItemWarning.NONE]);
-      setSelectedCart(null);
-      setIsCreatingCart(false);
-      setNewCartName('');
-      setModalOpen(false);
-    } catch (err) {
-      console.error(err);
-      setFlashMessage("Errore durante l'aggiunta del prodotto.");
-      setTimeout(() => setFlashMessage(null), 2500);
+    if (isCreatingCart && newCartName.trim() !== '') {
+      const newCart = await createNewCart(newCartName);
+      targetCartId = newCart.cartId;
     }
-  };
+
+    if (!targetCartId) return;
+
+    await addItem(
+      targetCartId,
+      selectedProduct.productId,
+      1,
+      selectedProductWarnings
+    );
+
+    setFlashMessage(`${selectedProduct.name} added to cart...`);
+
+    // chiudi il modal solo dopo aver mostrato il messaggio
+    setTimeout(() => {
+      setFlashMessage(null);
+      setModalOpen(false);
+    }, 2000);
+
+    setSelectedProduct(null);
+    setSelectedProductWarnings([CartItemWarning.NONE]);
+    setSelectedCart(null);
+    setIsCreatingCart(false);
+    setNewCartName('');
+  } catch (err) {
+    console.error(err);
+    setFlashMessage("Errore durante l'aggiunta del prodotto.");
+    setTimeout(() => setFlashMessage(null), 2500);
+  }
+};
+
 
   if (loadingConstraints) {
     return <Box>Caricamento vincoli nutrizionali...</Box>;
@@ -144,7 +168,7 @@ export function ProductCardList({
       <Cards
         items={products}
         cardDefinition={{
-          header: item => (
+          header: (item) => (
             <ProductHeader
               product={item}
               userDiets={userDiets}
@@ -155,7 +179,7 @@ export function ProductCardList({
           sections: [
             {
               id: 'category',
-              content: item => (
+              content: (item) => (
                 <Box color="text-body-secondary">
                   Category: {item.productCategory?.category ?? 'N/A'}
                 </Box>
@@ -163,12 +187,19 @@ export function ProductCardList({
             },
             {
               id: 'actions',
-              content: item => (
+              content: (item) => (
                 <SpaceBetween direction="horizontal" size="xs">
-                  <Button variant="primary" onClick={() => navigate(`/products/${item.productId}`)}>
+                  <Button
+                    variant="primary"
+                    onClick={() => navigate(`/products/${item.productId}`)}
+                  >
                     Details
                   </Button>
-                  <Button iconName="add-plus" variant="primary" onClick={() => handleAddToCart(item)}>
+                  <Button
+                    iconName="add-plus"
+                    variant="primary"
+                    onClick={() => handleAddToCart(item)}
+                  >
                     Add to cart
                   </Button>
                 </SpaceBetween>
@@ -190,7 +221,10 @@ export function ProductCardList({
             <Button onClick={() => setModalOpen(false)}>Annulla</Button>
             <Button
               variant="primary"
-              disabled={(!isCreatingCart && !selectedCart) || (isCreatingCart && newCartName.trim() === '')}
+              disabled={
+                (!isCreatingCart && !selectedCart) ||
+                (isCreatingCart && newCartName.trim() === '')
+              }
               onClick={handleConfirm}
             >
               Conferma
@@ -212,23 +246,41 @@ export function ProductCardList({
               setIsCreatingCart(true);
               setSelectedCart(null);
             } else {
-              const cart = carts.find(c => c.cartId === detail.selectedOption.value);
+              const cart = carts.find(
+                (c) => c.cartId === detail.selectedOption.value
+              );
               setSelectedCart(cart || null);
               setIsCreatingCart(false);
             }
           }}
-          options={[...carts.map(c => ({ label: c.name, value: c.cartId })), { label: '➕ Crea nuova spesa', value: 'create_new' }]}
+          options={[
+            ...carts.map((c) => ({ label: c.name, value: c.cartId })),
+            { label: '➕ Crea nuova spesa', value: 'create_new' },
+          ]}
         />
 
         {isCreatingCart && (
           <Box margin={{ top: 's' }}>
-            <Input placeholder="Nome nuova spesa" value={newCartName} onChange={({ detail }) => setNewCartName(detail.value)} />
+            <Input
+              placeholder="Nome nuova spesa"
+              value={newCartName}
+              onChange={({ detail }) => setNewCartName(detail.value)}
+            />
           </Box>
         )}
 
         {flashMessage && (
           <Box margin={{ top: 's' }}>
-            <Flashbar items={[{ type: 'success', content: flashMessage, dismissible: true, onDismiss: () => setFlashMessage(null) }]} />
+            <Flashbar
+              items={[
+                {
+                  type: 'success',
+                  content: flashMessage,
+                  dismissible: true,
+                  onDismiss: () => setFlashMessage(null),
+                },
+              ]}
+            />
           </Box>
         )}
       </Modal>

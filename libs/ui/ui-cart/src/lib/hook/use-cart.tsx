@@ -86,8 +86,21 @@ export function useCart(userId: number | undefined) {
   const updateItemQuantity = async (cartItemId: string, delta: number) => {
     try {
       await updateItemQuantityService(cartItemId, delta);
+
+      // Aggiornamento locale (immutabile e preserva ordine)
+      setCarts((prev) =>
+        prev.map((cart) => ({
+          ...cart,
+          items: cart.items.map(
+            (item: { cartItemId: string; quantity: number }) =>
+              item.cartItemId === cartItemId
+                ? { ...item, quantity: item.quantity + delta }
+                : item
+          ),
+        }))
+      );
+
       setMessage({ type: 'success', content: 'Quantity updated!' });
-      await fetchUserCarts();
     } catch {
       setMessage({ type: 'error', content: 'Failed to update quantity.' });
     }
