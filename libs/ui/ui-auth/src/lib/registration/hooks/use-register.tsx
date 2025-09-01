@@ -3,8 +3,20 @@ import { useNavigate } from 'react-router-dom';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { Gender } from '@nextcart/enum';
 
+export interface RegisterFormData {
+  name: string;
+  surname?: string;
+  dateOfBirth: string;
+  placeOfBirth?: string;
+  address?: string;
+  gender: Gender;
+  email: string;
+  password: string;
+  confirmPassword: string;
+}
+
 export function useRegisterForm() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<RegisterFormData>({
     name: '',
     surname: '',
     email: '',
@@ -16,42 +28,44 @@ export function useRegisterForm() {
     address: '',
   });
 
+  const [errors, setErrors] = useState<Partial<Record<keyof RegisterFormData, string>>>({});
   const [errorModalVisible, setErrorModalVisible] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
   const [successModalVisible, setSuccessModalVisible] = useState(false);
 
   const navigate = useNavigate();
 
-  const handleChange = (key: string, value: string) => {
+  const handleChange = (key: keyof RegisterFormData, value: any) => {
     setFormData(prev => ({ ...prev, [key]: value }));
+    setErrors(prev => ({ ...prev, [key]: undefined })); // reset errore quando utente scrive
   };
 
-  const isValidEmail = (email: string) =>
-    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  const isValidEmail = (email: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const validateForm = () => {
-    if (
-      !formData.name ||
-      !formData.email ||
-      !formData.password ||
-      !formData.confirmPassword ||
-      !formData.dateOfBirth ||
-      !formData.gender
-    ) {
-      setErrorMessage('Please fill in all required fields marked with *');
+    const newErrors: Partial<Record<keyof RegisterFormData, string>> = {};
+
+    if (!formData.name) newErrors.name = 'Required';
+    if (!formData.surname) newErrors.surname = 'Required';
+    if (!formData.email) newErrors.email = 'Required';
+    else if (!isValidEmail(formData.email)) newErrors.email = 'Invalid email';
+
+    if (!formData.password) newErrors.password = 'Required';
+    if (!formData.confirmPassword) newErrors.confirmPassword = 'Required';
+    else if (formData.password !== formData.confirmPassword)
+      newErrors.confirmPassword = 'Passwords do not match';
+
+    if (!formData.dateOfBirth) newErrors.dateOfBirth = 'Required';
+    if (!formData.gender) newErrors.gender = 'Required';
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrorMessage('Please correct the highlighted fields');
       setErrorModalVisible(true);
       return false;
     }
-    if (!isValidEmail(formData.email)) {
-      setErrorMessage('Please enter a valid email address');
-      setErrorModalVisible(true);
-      return false;
-    }
-    if (formData.password !== formData.confirmPassword) {
-      setErrorMessage('The passwords do not match');
-      setErrorModalVisible(true);
-      return false;
-    }
+
     return true;
   };
 
@@ -63,20 +77,12 @@ export function useRegisterForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: formData.name,
-          surname: formData.surname,
-          email: formData.email,
-          password: formData.password,
+          ...formData,
           dateOfBirth: new Date(formData.dateOfBirth),
-          placeOfBirth: formData.placeOfBirth,
-          gender: formData.gender,
-          address: formData.address,
         }),
       });
 
       if (!response.ok) throw new Error('Registration failed');
-
-      await response.json();
 
       setFormData({
         name: '',
@@ -103,6 +109,7 @@ export function useRegisterForm() {
 
   return {
     formData,
+    errors,
     errorModalVisible,
     errorMessage,
     successModalVisible,

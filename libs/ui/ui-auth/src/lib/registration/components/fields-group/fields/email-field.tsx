@@ -7,11 +7,12 @@ type EmailFieldProps = {
   value: string;
   onChange: (value: string) => void;
   disabled?: boolean;
+  error?: string; // aggiunto
 };
 
-export function EmailField({ value, onChange, disabled }: EmailFieldProps) {
+export function EmailField({ value, onChange, disabled, error }: EmailFieldProps) {
   return (
-    <FormField label="Email *">
+    <FormField label="Email *" errorText={error}>
       <Input
         type="email"
         value={value}

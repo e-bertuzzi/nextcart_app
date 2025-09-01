@@ -6,8 +6,6 @@ export async function getAllergens() {
     const response = await api.get('/product-allergens');
     // Assumiamo che la risposta sia in response.data
     const data = response.data;
-    console.log("data allergen", data);
-    console.log("allergen",data.map((a: any) => ({ label: a.name, value: a.id })));
 
     return data.map((a: any) => ({
       label: a.allergenName,

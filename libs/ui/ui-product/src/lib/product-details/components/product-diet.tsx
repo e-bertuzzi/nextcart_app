@@ -3,7 +3,6 @@ import { Header, Box, SpaceBetween } from '@cloudscape-design/components';
 import { ProductDiet } from '@nextcart/models';
 
 export function ProductDiets({ diets }: { diets: ProductDiet[] }) {
-    console.log("diete ", diets);
   return (
     <Box padding="l">
       <Header variant="h3">Diets</Header>

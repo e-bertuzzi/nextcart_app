@@ -152,8 +152,6 @@ export function UiProductList() {
         return minOk && maxOk;
       });
 
-    console.log(matchesNutrientConstraint);
-
     const matchesSearch =
       searchQuery.trim() === '' ||
       p.name?.toLowerCase().includes(searchQuery.toLowerCase()) ||

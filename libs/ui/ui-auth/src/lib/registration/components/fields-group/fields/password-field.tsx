@@ -8,11 +8,12 @@ type PasswordFieldProps = {
   onChange: (value: string) => void;
   label?: string;
   disabled?: boolean;
+  error?: string; // aggiunto
 };
 
-export function PasswordField({ value, onChange, label = 'Password *', disabled }: PasswordFieldProps) {
+export function PasswordField({ value, onChange, label = 'Password *', disabled, error }: PasswordFieldProps) {
   return (
-    <FormField label={label}>
+    <FormField label={label} errorText={error}>
       <Input
         type="password"
         value={value}

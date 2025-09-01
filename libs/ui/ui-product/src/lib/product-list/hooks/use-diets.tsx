@@ -24,7 +24,5 @@ export function useDiets() {
       .finally(() => setLoading(false));
   }, []);
 
-  console.log('diete: ', diets);
-
   return { diets, loading, error };
 }

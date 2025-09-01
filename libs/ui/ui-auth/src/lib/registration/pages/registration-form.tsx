@@ -16,6 +16,7 @@ export function UiRegister() {
 
   const {
     formData,
+    errors,
     errorModalVisible,
     errorMessage,
     successModalVisible,
@@ -32,8 +33,14 @@ export function UiRegister() {
           <div className="w-full max-w-xl bg-white shadow-lg rounded-xl p-6">
             <Form>
               <SpaceBetween size="m">
+                <div className="text-sm text-gray-600 text-center">
+                  Fields marked with{' '}
+                  <span className="text-red-600">*</span> are required.
+                </div>
+
                 <RegisterFieldsGroup
                   formData={formData}
+                  errors={errors} // <— aggiungi questa linea
                   onChange={handleChange}
                   disabled={false}
                 />

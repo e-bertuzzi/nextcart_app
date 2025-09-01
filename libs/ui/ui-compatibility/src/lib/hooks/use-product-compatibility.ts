@@ -6,16 +6,11 @@ export function useProductCompatibility(
     product?.productDiets?.map((d: any) => d.dietId || d) || [];
   const userDietLabels = userDiets.map((d) => d.value);
 
-  console.log('Checking product compatibility for:', product?.name);
-  console.log('Product diets:', productDietLabels);
-  console.log('User diets:', userDietLabels);
-
   if (userDietLabels.length === 0)
     return { compatible: true, incompatibleDiets: [] };
 
   // Se il prodotto non ha diete definite, consideralo compatibile
   if (productDietLabels.length === 0) {
-    console.log('Product has no diet info, marking as compatible by default');
     return { compatible: true, incompatibleDiets: [] };
   }
 
@@ -23,7 +18,6 @@ export function useProductCompatibility(
   const incompatibleDiets = userDietLabels.filter(
     (diet) => !productDietLabels.includes(diet)
   );
-  console.log('Incompatible diets:', incompatibleDiets);
 
   return {
     compatible: incompatibleDiets.length === 0,
@@ -39,8 +33,6 @@ export function useProductNutrientCompatibility(
     maxQuantity?: number;
   }[]
 ): { compatible: boolean; violatedNutrients: string[] } {
-  console.log('Product nutrients raw:', product.nutritionalInformationValues);
-  console.log('User constraints raw:', userNutrientConstraints);
 
   if (!userNutrientConstraints || userNutrientConstraints.length === 0) {
     return { compatible: true, violatedNutrients: [] };

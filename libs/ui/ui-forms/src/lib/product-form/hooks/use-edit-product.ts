@@ -47,8 +47,6 @@ export function useEditProduct(productId: string) {
           productService.getProduct(productId), // fetch prodotto esistente
         ]);
 
-        console.log('diete stampate', di);
-
         setCategories(cat);
         setClaims(cl);
         setAllergens(
@@ -100,7 +98,6 @@ export function useEditProduct(productId: string) {
               ) ?? [],
         });
 
-        console.log('Form data set:', formData);
       } catch (error) {
         setMessage({ type: 'error', content: 'Error loading product data.' });
         console.error('Fetch product data error:', error);

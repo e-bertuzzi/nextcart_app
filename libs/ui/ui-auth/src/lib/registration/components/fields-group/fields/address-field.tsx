@@ -9,9 +9,9 @@ type AddressFieldProps = {
   disabled?: boolean;
 };
 
-export function AddressField({ value, onChange, disabled }: AddressFieldProps) {
+export function AddressField({ value, onChange, disabled, error }: AddressFieldProps & { error?: string }) {
   return (
-    <FormField label="Address">
+    <FormField label="Address" errorText={error}>
       <Input
         value={value}
         onChange={(event: InputChangeEvent) => onChange(event.detail.value)}

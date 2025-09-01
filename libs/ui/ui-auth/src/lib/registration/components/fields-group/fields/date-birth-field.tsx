@@ -9,9 +9,9 @@ type DateOfBirthFieldProps = {
   disabled?: boolean;
 };
 
-export function DateOfBirthField({ value, onChange, disabled }: DateOfBirthFieldProps) {
+export function DateOfBirthField({ value, onChange, disabled, error }: DateOfBirthFieldProps & { error?: string }) {
   return (
-    <FormField label="Date of birth *">
+    <FormField label="Date of birth *" errorText={error}>
       <DatePicker
         value={value}
         onChange={(event: DateChangeEvent) => onChange(event.detail.value ?? '')}
