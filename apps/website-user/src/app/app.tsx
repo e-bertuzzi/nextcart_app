@@ -31,6 +31,7 @@ export function App() {
     <UserProvider>
       <Routes>
         <Route element={<LayoutPage />}>
+          <Route path="/" element={<Navigate to="homepage" />} />
           <Route path="/homepage" element={<HomePage />} />
 
           <Route element={<PublicRoute />}>

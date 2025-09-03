@@ -58,6 +58,7 @@ export function CartTable({ carts, onRemoveCart, onViewCart }: Props) {
                   variant="text"
                   color="error"
                   onClick={() => onRemoveCart(cart.cartId)}
+                  sx={{ fontWeight: 'bold'}} 
                 >
                   Remove
                 </Button>

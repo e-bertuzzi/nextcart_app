@@ -99,7 +99,8 @@ export function UserBodyCompositionsTable({
                       variant="outlined"
                       size="small"
                       onClick={() => onEdit(item)}
-                      sx={{ mr: 1 }}
+                      sx={{ mr: 1, fontWeight: 'bold' }}
+                      
                     >
                       Edit
                     </Button>
@@ -108,6 +109,7 @@ export function UserBodyCompositionsTable({
                       color="error"
                       size="small"
                       onClick={() => handleRemoveClick(item.date)}
+                      sx={{ fontWeight: 'bold'}} 
                     >
                       Remove
                     </Button>

@@ -28,7 +28,6 @@ export function UiDietPage() {
   const [confirmOpen, setConfirmOpen] = useState(false);
   const [selectedDietId, setSelectedDietId] = useState<string | null>(null);
 
-  // Normalizza le diete per sicurezza
   const normalizedDiets = selectedDiets.map((d) => ({
     label: d.label ?? '',
     value: d.value ?? '',
@@ -52,11 +51,9 @@ export function UiDietPage() {
 
   return (
     <Container maxWidth="md">
-      {' '}
-      {/* ⚡ maxWidth più contenuto */}
-      <Stack spacing={4} mt={2} alignItems="center">
+      <Stack spacing={3} mt={2} alignItems="center">
         {/* Intestazione */}
-        <Box textAlign={'center'}>
+        <Box textAlign="center">
           <Typography variant="h4" fontWeight="bold" color="green">
             Diets Summary
           </Typography>
@@ -65,14 +62,13 @@ export function UiDietPage() {
           </Typography>
         </Box>
 
-        {/* Messaggio */}
+        {/* Messaggio sopra la tabella */}
         {message && (
           <Box sx={{ width: '100%', maxWidth: 600 }}>
             <Alert
               severity={message.type}
               onClose={() => setMessage(null)}
-              variant='filled'
-              sx={{ width: '100%' }}
+              variant="filled"
             >
               {message.content}
             </Alert>
@@ -86,7 +82,7 @@ export function UiDietPage() {
             p: 3,
             borderRadius: 2,
             width: '100%',
-            maxWidth: 600, // ⚡ limite larghezza della tabella
+            maxWidth: 600,
             overflowX: 'auto',
           }}
         >
@@ -100,8 +96,8 @@ export function UiDietPage() {
           )}
         </Paper>
 
-        {/* Pulsanti */}
-        <Box display="flex" gap={2}>
+        {/* Pulsante centrato con piccolo margine */}
+        <Box display="flex" justifyContent="center" mt={1}>
           <Button
             variant="contained"
             color="primary"
@@ -111,6 +107,7 @@ export function UiDietPage() {
           </Button>
         </Box>
       </Stack>
+
       {/* Modale di conferma */}
       <Dialog
         open={confirmOpen}

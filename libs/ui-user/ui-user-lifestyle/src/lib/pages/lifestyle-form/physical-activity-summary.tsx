@@ -63,7 +63,7 @@ export function UiPhysicalActivityPage() {
   };
 
   return (
-    <Container maxWidth="md" sx={{ mt: 4 }}>
+    <Container maxWidth="md" sx={{ mt: 4, mb: 6 }}>
       {/* Intestazione centrata */}
       <Box textAlign="center" mb={3}>
         <Typography
@@ -81,36 +81,36 @@ export function UiPhysicalActivityPage() {
       </Box>
 
       <FormLayout message={message} setMessage={setMessage}>
-        {userActivities.length === 0 ? (
-          <Typography color="text.secondary">
-            No physical activities logged.
-          </Typography>
-        ) : (
-          <Paper
-            elevation={3}
-            sx={{
-              p: 3,
-              borderRadius: 2,
-              minHeight: 200,
-              width: '100%',
-              overflowX: 'auto',
-            }}
-          >
+        {/* Tabella */}
+        <Paper
+          elevation={3}
+          sx={{
+            p: 3,
+            borderRadius: 2,
+            width: '100%',
+            minHeight: 200,
+            overflowX: 'auto',
+          }}
+        >
+          {userActivities.length === 0 ? (
+            <Typography color="text.secondary" align="center">
+              No physical activities logged.
+            </Typography>
+          ) : (
             <UserPhysicalActivitiesTable
               activities={userActivities}
               onRemove={handleRemoveClick}
             />
-          </Paper>
-        )}
+          )}
+        </Paper>
 
-        {/* Pulsante centrato e più compatto */}
-        <Box display="flex" justifyContent="center" mt={2}>
+        {/* Pulsante separato dalla tabella */}
+        <Box display="flex" justifyContent="center" mt={3}>
           <Button
             variant="contained"
             color="primary"
             onClick={() => navigate('/dashboard/lifestyle/activity/edit')}
-            sx={{ maxWidth: 200 }}
-            fullWidth={false}
+            sx={{ maxWidth: 220 }}
           >
             Add new activity
           </Button>
@@ -140,7 +140,7 @@ function FormLayout({ children, message, setMessage }: any) {
       {message && (
         <Alert
           severity={message.type === 'error' ? 'error' : 'success'}
-          variant='filled'
+          variant="filled"
           onClose={() => setMessage(null)}
         >
           {message.content}

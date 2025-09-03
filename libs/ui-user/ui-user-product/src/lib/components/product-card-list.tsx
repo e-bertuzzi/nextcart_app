@@ -116,6 +116,7 @@ const ProductCard = memo(function ProductCard({
         <Button
           size="small"
           onClick={() => navigate(`/dashboard/products/${product.productId}`)}
+           sx={{ fontWeight: 'bold'}} 
         >
           Details
         </Button>
@@ -123,6 +124,7 @@ const ProductCard = memo(function ProductCard({
           size="small"
           variant="contained"
           onClick={() => onAddToCart(product)}
+          sx={{ fontWeight: 'bold'}} 
         >
           Add to cart
         </Button>

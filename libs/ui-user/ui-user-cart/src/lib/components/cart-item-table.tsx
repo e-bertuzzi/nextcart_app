@@ -111,12 +111,17 @@ export function CartItemsTable({ items, onUpdateQuantity, onRemoveItem }: Props)
                   <TableCell>
                     <Button
                       size="small"
+                      variant='contained'
+                      sx={{ fontWeight: 'bold', mr: 1 }}
                       onClick={() => onUpdateQuantity(item.cartItemId, 1)}
                     >
                       +
                     </Button>
+
                     <Button
                       size="small"
+                      variant='contained'
+                      sx={{ fontWeight: 'bold', mr: 1 }}
                       disabled={item.quantity <= 1}
                       onClick={() => onUpdateQuantity(item.cartItemId, -1)}
                     >
@@ -124,6 +129,7 @@ export function CartItemsTable({ items, onUpdateQuantity, onRemoveItem }: Props)
                     </Button>
                     <Button
                       size="small"
+                      sx={{ fontWeight: 'bold' }}
                       color="error"
                       onClick={() => setItemToRemove(item)}
                     >

@@ -32,7 +32,12 @@ export function UiHealthPage() {
     null
   );
 
-  if (loading) return <CircularProgress />;
+  if (loading)
+    return (
+      <Box display="flex" justifyContent="center" mt={4}>
+        <CircularProgress />
+      </Box>
+    );
 
   if (!user) return <Navigate to="/login" />;
 
@@ -50,66 +55,76 @@ export function UiHealthPage() {
   };
 
   return (
-    <Box mt={1} mx={2}>
-      <Container maxWidth="lg">
-        <Stack spacing={4}>
-          {/* Intestazione centrata */}
-          <Box mb={2} textAlign="center">
-            <Typography
-              variant="h4"
-              component="h1"
-              sx={{ fontWeight: 'bold', color: 'green', mb: 1 }}
-            >
-              Health Conditions Summary
-            </Typography>
-            <Typography variant="subtitle1" color="textSecondary">
-              Review your current health conditions below.
-            </Typography>
-          </Box>
-
-          {/* Messaggio sopra la tabella */}
-          {message && (
-            <Alert
-              severity={message.type}
-              variant='filled'
-              onClose={() => setMessage(null)}
-            >
-              {message.content}
-            </Alert>
-          )}
-
-          {/* Tabella */}
-          <Paper
-            elevation={3}
-            sx={{
-              p: 3,
-              borderRadius: 2,
-              minHeight: 200,
-              width: '100%',
-              overflowX: 'auto',
-            }}
+    <Box
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        py: 4,
+        px: 3,
+      }}
+    >
+      <Container maxWidth="lg" sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        {/* Intestazione centrata */}
+        <Box textAlign="center" mb={3}>
+          <Typography
+            variant="h4"
+            component="h1"
+            sx={{ fontWeight: 'bold', color: 'green', mb: 1 }}
           >
-            {userHealthConditions.length === 0 ? (
-              <Typography>No conditions selected.</Typography>
-            ) : (
-              <UserHealthConditionsTable
-                conditions={userHealthConditions}
-                onRemove={handleRemoveClick}
-              />
-            )}
-          </Paper>
+            Health Conditions Summary
+          </Typography>
+          <Typography variant="subtitle1" color="text.secondary">
+            Review your current health conditions below.
+          </Typography>
+        </Box>
 
-          {/* Pulsante centrato */}
-          <Box display="flex" justifyContent="center">
-            <Button
-              variant="contained"
-              color="primary"
-              onClick={() => navigate('/dashboard/profile/health/edit')}
-            >
-              Change Conditions
-            </Button>
-          </Box>
-        </Stack>
+        {/* Messaggio */}
+        {message && (
+          <Alert
+            severity={message.type}
+            variant="filled"
+            onClose={() => setMessage(null)}
+            sx={{ mb: 2 }}
+          >
+            {message.content}
+          </Alert>
+        )}
+
+        {/* Tabella dentro Paper */}
+        <Paper
+          elevation={3}
+          sx={{
+            p: 3,
+            borderRadius: 2,
+            minHeight: 200,
+            width: '100%',
+            overflowX: 'auto',
+            mb: 3,
+          }}
+        >
+          {userHealthConditions.length === 0 ? (
+            <Typography>No conditions selected.</Typography>
+          ) : (
+            <UserHealthConditionsTable
+              conditions={userHealthConditions}
+              onRemove={handleRemoveClick}
+            />
+          )}
+        </Paper>
+
+        {/* Pulsante centrato con spazio sotto */}
+        <Box display="flex" justifyContent="center" mt={2}>
+  <Button
+    variant="contained"
+    color="primary"
+    onClick={() => navigate('/dashboard/profile/health/edit')}
+    sx={{ maxWidth: 200 }}
+  >
+    Change Conditions
+  </Button>
+</Box>
+
       </Container>
 
       {/* Modale di conferma */}

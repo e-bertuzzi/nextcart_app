@@ -13,7 +13,6 @@ import {
   DialogActions,
   Stack,
   Typography,
-  Snackbar,
 } from '@mui/material';
 import { Navigate, useNavigate } from 'react-router-dom';
 // eslint-disable-next-line @nx/enforce-module-boundaries
@@ -59,32 +58,34 @@ export function UiCartPage() {
   };
 
   return (
-    <Box m={4}>
-      <Container>
-        <Typography variant="h4" fontWeight="bold" color="green" gutterBottom>
-          Your Shopping Carts
-        </Typography>
+    <Container maxWidth="md" sx={{ mt: 4, mb: 6 }}>
+      <Typography variant="h4" fontWeight="bold" color="green" gutterBottom>
+        Your Shopping Carts
+      </Typography>
 
-        <FormLayout message={message} setMessage={setMessage}>
-          {carts.length === 0 ? (
-            <Typography>No carts yet. Click below to create one!</Typography>
-          ) : (
-            <CartTable
-              carts={carts}
-              onRemoveCart={handleRemoveClick}
-              onViewCart={(cartId) => navigate(`/dashboard/cart/${cartId}`)}
-            />
-          )}
+      <FormLayout message={message} setMessage={setMessage}>
+        {carts.length === 0 ? (
+          <Typography>No carts yet. Click below to create one!</Typography>
+        ) : (
+          <CartTable
+            carts={carts}
+            onRemoveCart={handleRemoveClick}
+            onViewCart={(cartId) => navigate(`/dashboard/cart/${cartId}`)}
+          />
+        )}
 
+        {/* Pulsante separato, centrato e compatto */}
+        <Box display="flex" justifyContent="center" mt={3}>
           <Button
             variant="contained"
             color="primary"
             onClick={() => navigate('/dashboard/cart/edit')}
+            sx={{ maxWidth: 180, width: '100%' }}
           >
             Add New Cart
           </Button>
-        </FormLayout>
-      </Container>
+        </Box>
+      </FormLayout>
 
       {/* Dialog di conferma */}
       <Dialog open={confirmOpen} onClose={() => setConfirmOpen(false)}>
@@ -99,14 +100,14 @@ export function UiCartPage() {
           </Button>
         </DialogActions>
       </Dialog>
-    </Box>
+    </Container>
   );
 }
 
 function FormLayout({ children, message, setMessage }: any) {
   return (
     <Stack spacing={3}>
-      {/* Messaggio statico sopra al form */}
+      {/* Messaggio sopra la tabella */}
       {message && (
         <Box minHeight={60}>
           <Alert

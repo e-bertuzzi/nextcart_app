@@ -50,17 +50,15 @@ export function UiBodyPage() {
         >
           Body Composition Summary
         </Typography>
-        {/* Didascalia */}
         <Typography variant="subtitle1" color="text.secondary">
           Track and monitor your body composition over time
         </Typography>
       </Box>
 
-      <FormLayout message={message} setMessage={setMessage}>
+      {/* Layout principale con spazio in fondo */}
+      <FormLayout message={message} setMessage={setMessage} pb={6}>
         {compositions.length === 0 ? (
-          <Typography align="center">
-            No body composition records available.
-          </Typography>
+          <Typography align="center">No body composition records available.</Typography>
         ) : (
           <Paper
             variant="outlined"
@@ -74,8 +72,8 @@ export function UiBodyPage() {
           </Paper>
         )}
 
-        {/* Pulsante centrato */}
-        <Box mt={2} display="flex" justifyContent="center">
+        {/* Pulsante centrato e con margine inferiore */}
+        <Box mt={3} display="flex" justifyContent="center">
           <Button
             variant="contained"
             color="primary"
@@ -93,13 +91,15 @@ function FormLayout({
   children,
   message,
   setMessage,
+  pb = 0, // padding bottom opzionale
 }: {
   children: React.ReactNode;
   message: any;
   setMessage: (msg: any) => void;
+  pb?: number;
 }) {
   return (
-    <Stack spacing={3}>
+    <Stack spacing={3} pb={pb}>
       {message && (
         <Alert
           severity={message.type === 'error' ? 'error' : 'success'}

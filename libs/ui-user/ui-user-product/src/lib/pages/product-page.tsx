@@ -29,6 +29,8 @@ export function UiProductPage() {
         minHeight: 'calc(100vh - 64px)',
         py: 6,
         px: 3,
+        mt: -4,
+        pb: 8,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

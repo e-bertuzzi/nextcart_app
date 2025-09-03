@@ -83,6 +83,7 @@ export function UserPhysicalActivitiesTable({ activities, onRemove }: Props) {
                   color="error"
                   size="small"
                   onClick={() => onRemove(item.physicalActivityId)}
+                  sx={{ fontWeight: 'bold' }}
                 >
                   Remove
                 </Button>
