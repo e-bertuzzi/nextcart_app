@@ -1,0 +1,9 @@
+{
+  "name": "ui-user-auth",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui-user/ui-user-auth/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-user-auth --web",
+  "targets": {}
+}

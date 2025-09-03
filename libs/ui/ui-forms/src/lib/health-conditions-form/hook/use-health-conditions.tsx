@@ -105,12 +105,12 @@ export function useHealthConditions(userId: number | undefined) {
       setMessage({
         type: 'success',
         content:
-          'Health conditions saved successfully! You will be transferred to the summary page in 2 seconds',
+          'Health conditions saved successfully! You will be transferred to the dashboard in 2 seconds',
       });
       fetchUserConditions();
 
       setTimeout(() => {
-        navigate('/health');
+        navigate('/dashboard');
       }, 2000);
     } catch {
       setMessage({ type: 'error', content: 'Error saving health conditions.' });

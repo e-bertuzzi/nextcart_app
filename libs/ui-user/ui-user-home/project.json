@@ -1,0 +1,9 @@
+{
+  "name": "ui-user-home",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui-user/ui-user-home/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-user-home --web",
+  "targets": {}
+}

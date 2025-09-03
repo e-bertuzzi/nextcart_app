@@ -82,7 +82,7 @@ export function usePhysicalActivity(userId?: number) {
       fetchUserActivities();
 
       setTimeout(() => {
-        navigate('/physical-activity');
+        navigate('/dashboard');
       }, 2000);
     } catch {
       setMessage({

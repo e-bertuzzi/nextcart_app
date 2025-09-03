@@ -37,7 +37,7 @@ export function useCart(userId: number | undefined) {
     }
     try {
       const newCart = await createCart({ name, consumerId: userId });
-      setMessage({ type: 'success', content: 'Cart created successfully! You will be redirected to the cart summary page...' });
+      setMessage({ type: 'success', content: 'Cart created successfully!' });
       await fetchUserCarts();
       return newCart;
     } catch {

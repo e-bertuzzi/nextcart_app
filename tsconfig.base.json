@@ -57,6 +57,30 @@
       "@nextcart/ui-navigation": ["libs/ui/ui-navigation/src/index.ts"],
       "@nextcart/ui-product": ["libs/ui/ui-product/src/index.ts"],
       "@nextcart/ui-profile": ["libs/ui/ui-profile/src/index.ts"],
+      "@nextcart/ui-user": ["libs/ui-user/src/index.ts"],
+      "@nextcart/ui-user-auth": ["libs/ui-user/ui-user-auth/src/index.ts"],
+      "@nextcart/ui-user-cart": ["libs/ui-user/ui-user-cart/src/index.ts"],
+      "@nextcart/ui-user-commons": [
+        "libs/ui-user/ui-user-commons/src/index.ts"
+      ],
+      "@nextcart/ui-user-dashboard": [
+        "libs/ui-user/ui-user-dashboard/src/index.ts"
+      ],
+      "@nextcart/ui-user-forms": ["libs/ui-user/ui-user-forms/src/index.ts"],
+      "@nextcart/ui-user-home": ["libs/ui-user/ui-user-home/src/index.ts"],
+      "@nextcart/ui-user-layout": ["libs/ui-user/ui-user-layout/src/index.ts"],
+      "@nextcart/ui-user-lifestyle": [
+        "libs/ui-user/ui-user-lifestyle/src/index.ts"
+      ],
+      "@nextcart/ui-user-navigation": [
+        "libs/ui-user/ui-user-navigation/src/index.ts"
+      ],
+      "@nextcart/ui-user-product": [
+        "libs/ui-user/ui-user-product/src/index.ts"
+      ],
+      "@nextcart/ui-user-profile": [
+        "libs/ui-user/ui-user-profile/src/index.ts"
+      ],
       "@nextcart/web-auth": ["libs/web/auth/src/index.ts"]
     }
   },

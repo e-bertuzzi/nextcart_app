@@ -5,7 +5,7 @@ import { useUser } from '@nextcart/web-auth';
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { api } from '@nextcart/http';
 
-export default function useLogin() {
+export function useLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorModalVisible, setErrorModalVisible] = useState(false);

@@ -1,0 +1,9 @@
+{
+  "name": "ui-user-profile",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui-user/ui-user-profile/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-user-profile --web",
+  "targets": {}
+}

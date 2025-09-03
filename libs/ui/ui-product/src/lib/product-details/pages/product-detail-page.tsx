@@ -44,7 +44,9 @@ export function UiProductDetail() {
         content={
           <ContentLayout
             header={
-              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <div
+                style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}
+              >
                 <Button variant="link" onClick={() => navigate(-1)}>
                   Back
                 </Button>
@@ -70,14 +72,6 @@ export function UiProductDetail() {
             <SpaceBetween size="l">
               <ProductDetailSection product={product} />
 
-              <ExpandableSection headerText="Claim">
-                <ProductClaims claims={product.productClaims || []} />
-              </ExpandableSection>
-
-              <ExpandableSection headerText="Allergens">
-                <ProductAllergens allergens={product.productAllergens || []} />
-              </ExpandableSection>
-
               <ExpandableSection headerText="Diets">
                 <ProductDiets diets={product.productDiets || []} />
               </ExpandableSection>
@@ -86,6 +80,14 @@ export function UiProductDetail() {
                 <ProductNutritionalTable
                   nutritionalInfo={product.nutritionalInformationValues || []}
                 />
+              </ExpandableSection>
+
+              <ExpandableSection headerText="Claim">
+                <ProductClaims claims={product.productClaims || []} />
+              </ExpandableSection>
+
+              <ExpandableSection headerText="Allergens">
+                <ProductAllergens allergens={product.productAllergens || []} />
               </ExpandableSection>
             </SpaceBetween>
           </ContentLayout>
@@ -115,7 +117,7 @@ export function UiProductDetail() {
             </SpaceBetween>
           }
         >
-          Are you sure you want to delete the product <b>{product.name}</b>?  
+          Are you sure you want to delete the product <b>{product.name}</b>?
           This action cannot be undone.
         </Modal>
       )}

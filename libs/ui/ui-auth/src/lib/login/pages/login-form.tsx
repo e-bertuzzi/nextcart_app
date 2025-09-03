@@ -8,7 +8,7 @@ import {
   Container,
 } from '@cloudscape-design/components';
 import { Link, useNavigate } from 'react-router-dom';
-import useLogin from '../hooks/use-login';
+import { useLogin } from '../hooks/use-login';
 import SuccessModal from '../components/modals/success-modal';
 import ErrorModal from '../components/modals/error-modal';
 

@@ -31,7 +31,7 @@ export function useBodyCompositions(userId: number | undefined) {
       fetchCompositions();
 
       setTimeout(() => {
-        navigate('/body-composition');
+        navigate('/dashboard');
       }, 2000);
     } catch {
       setMessage({ type: 'error', content: 'Error saving body composition.' });

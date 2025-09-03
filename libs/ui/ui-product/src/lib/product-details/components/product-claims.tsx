@@ -12,7 +12,7 @@ export function ProductClaims({ claims }: { claims: ProductClaim[] }) {
             console.log(claim);
             return (
               <Box key={index}>
-                {claim.claim.claimsId} - {claim.claim?.description ?? 'Descrizione non disponibile'}
+                {claim.claim.claimId} - {claim.claim?.description ?? 'Descrizione non disponibile'}
               </Box>
             );
           })
