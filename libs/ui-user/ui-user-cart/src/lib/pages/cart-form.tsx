@@ -34,7 +34,7 @@ export function UiCartForm() {
 
   if (!user) return <Navigate to="/login" />;
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (redirectPath: string) => {
     if (!cartName.trim()) {
       setError('Cart name is required.');
       return;
@@ -43,6 +43,9 @@ export function UiCartForm() {
 
     await createNewCart(cartName);
     setCartName('');
+    setTimeout(() => {
+      navigate(redirectPath);
+    }, 2000);
   };
 
   return (
@@ -79,10 +82,28 @@ export function UiCartForm() {
 
             {/* Pulsanti */}
             <Stack direction="row" spacing={2}>
-              <Button variant="contained" color="primary" onClick={handleSubmit}>
-                Save Cart
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => handleSubmit('/dashboard/products')}
+                sx={{ fontWeight: 'bold' }}
+              >
+                Save cart
               </Button>
-              <Button variant="outlined" onClick={() => navigate(-1)}>
+
+              <Button
+                variant="outlined"
+                onClick={() => navigate(-1)}
+                sx={{
+                  color: '#d32f2f', // colore testo più visibile (rosso scuro)
+                  borderColor: '#d32f2f', // colore bordo
+                  fontWeight: 'bold', // testo in grassetto
+                  '&:hover': {
+                    backgroundColor: '#ffebee', // sfondo leggero al passaggio del mouse
+                    borderColor: '#d32f2f',
+                  },
+                }}
+              >
                 Cancel
               </Button>
             </Stack>

@@ -176,7 +176,7 @@ export function ProductCardList({
               id: 'actions',
               content: (item) => (
                 <SpaceBetween direction="horizontal" size="xs">
-                  <Button variant="primary" onClick={() => navigate(`/products/${item.productId}`)}>
+                  <Button variant="primary" onClick={() => navigate(`/dashboard/products/${item.productId}`)}>
                     Details
                   </Button>
                   <Button iconName="add-plus" variant="primary" onClick={() => handleAddToCart(item)}>

@@ -66,7 +66,7 @@ export function UiHealthPage() {
             />
           )}
 
-          <Button variant="primary" onClick={() => navigate('/health/edit')}>
+          <Button variant="primary" onClick={() => navigate('/dashboard/profile/health/edit')}>
             Change conditions
           </Button>
         </FormLayout>

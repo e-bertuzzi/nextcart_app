@@ -65,11 +65,12 @@ export function UiDietEdit() {
       <SpaceBetween direction="horizontal" size="s">
         <Button
           variant="primary"
-          onClick={saveSelectedDiets}
+          onClick={() => saveSelectedDiets('/dashboard')}
           disabled={selectedDiets.length === 0}
         >
           Save Diets
         </Button>
+
         <Button variant="link" onClick={() => navigate(-1)}>
           Cancel
         </Button>

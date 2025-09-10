@@ -73,7 +73,7 @@ export function UiPhysicalActivityPage() {
 
           <Button
             variant="primary"
-            onClick={() => navigate('/physical-activity/edit')}
+            onClick={() => navigate('/dashboard/lifestyle/activity/edit')}
           >
             Add new activity
           </Button>

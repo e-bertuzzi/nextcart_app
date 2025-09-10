@@ -110,7 +110,7 @@ export function UiPhysicalActivityPage() {
             variant="contained"
             color="primary"
             onClick={() => navigate('/dashboard/lifestyle/activity/edit')}
-            sx={{ maxWidth: 220 }}
+            sx={{ maxWidth: 220, fontWeight: 'bold' }}
           >
             Add new activity
           </Button>

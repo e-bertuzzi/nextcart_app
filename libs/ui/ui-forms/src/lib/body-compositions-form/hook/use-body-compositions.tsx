@@ -21,17 +21,17 @@ export function useBodyCompositions(userId: number | undefined) {
     }
   };
 
-  const saveComposition = async (dto: { date: string | Date; weight?: number; height?: number }) => {
+  const saveComposition = async (dto: { date: string | Date; weight?: number; height?: number }, redirectPath: string) => {
     try {
       await createOrUpdateBodyComposition(userId, dto);
       setMessage({
         type: 'success',
-        content: 'Body composition saved successfully! You will be transferred to the summary page in 2 seconds',
+        content: 'Body composition saved successfully! You will be transferred in 2 seconds',
       });
       fetchCompositions();
 
       setTimeout(() => {
-        navigate('/dashboard');
+        navigate(redirectPath);
       }, 2000);
     } catch {
       setMessage({ type: 'error', content: 'Error saving body composition.' });

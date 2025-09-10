@@ -30,19 +30,19 @@ export function UiDashboard() {
               <DashboardCard
                 label="Personal Data"
                 iconName="user-profile"
-                href="/edit-profile"
+                href="/dashboard/profile/edit-profile"
                 description="Manage your personal data"
               />
               <DashboardCard
                 label="Health"
                 iconName="heart"
-                href="/health"
+                href="/dashboard/profile/health"
                 description="Track your health records"
               />
               <DashboardCard
                 label="Diet"
                 iconName="cutlery"
-                href="/diet"
+                href="/dashboard/profile/diet"
                 description="Monitor your food intake"
               />
               <DashboardCard
@@ -66,13 +66,13 @@ export function UiDashboard() {
               <DashboardCard
                 label="Physical Activity"
                 iconName="bicycle"
-                href="/physical-activity"
+                href="/dashboard/lifestyle/activity"
                 description="Track your workouts"
               />
               <DashboardCard
                 label="Body Composition"
                 iconName="scale"
-                href="/body-composition"
+                href="/dashboard/lifestyle/body"
                 description="Analyze your body metrics"
               />
             </DashboardGrid>
@@ -85,13 +85,13 @@ export function UiDashboard() {
               <DashboardCard
                 label="Products List"
                 iconName="shopping-bag"
-                href="/products"
+                href="/dashboard/products/list"
                 description="View product list"
               />
               <DashboardCard
                 label="Cart Section"
                 iconName="shopping-cart"
-                href="/cart"
+                href="/dashboard/cart"
                 description="View cart list"
               />
               {user?.role === Role.isAdmin && (

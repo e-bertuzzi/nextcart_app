@@ -71,7 +71,7 @@ export function UiCartPage() {
             />
           )}
 
-          <Button variant="primary" onClick={() => navigate('/cart/create')}>
+          <Button variant="primary" onClick={() => navigate('/dashboard/cart/create')}>
             Add New Cart
           </Button>
         </FormLayout>

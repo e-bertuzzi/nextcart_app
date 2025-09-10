@@ -42,25 +42,25 @@ export function App() {
 
           <Route element={<PrivateRoute allowedRoles={[Role.isAdmin]} />}>
             <Route path="/products/add" element={<ProductAddForm />} />
-            <Route path="/products/:id/edit" element={<ProductEditForm />} />
+            <Route path="/dashboard/products/:id/edit" element={<ProductEditForm />} />
             <Route path="/products/check" element={<ProductCheckPage />} />
           </Route>
 
           <Route element={<PrivateRoute />}>
-            <Route path="/edit-profile" element={<EditProfilePage />} />
             <Route path="/dashboard" element={<DashboardPage />} />
-            <Route path="/health" element={<HealthPage />} />
-            <Route path="/health/edit" element={<HealthEdit />} />
-            <Route path="/diet" element={<DietPage/>} />
-            <Route path="/diet/edit" element={<DietEdit/>} />
-            <Route path="/body-composition" element={<BodyPage/>} />
-            <Route path="/body-composition/edit" element={<BodyEdit/>} />
-            <Route path="/physical-activity" element={<PhysicalActivityPage/>} />
-            <Route path="/physical-activity/edit" element={<PhysicalActivityEdit/>} />
-            <Route path='/products' element={<ProductListPage/>} />
-            <Route path="/products/:productId" element={<ProductDetailPage />} />
-            <Route path="/cart" element={<CartPage />} />
-            <Route path="/cart/create" element={<CartEdit />} />
+            <Route path="/dashboard/profile/edit-profile" element={<EditProfilePage />} />
+            <Route path="/dashboard/profile/health" element={<HealthPage />} />
+            <Route path="/dashboard/profile/health/edit" element={<HealthEdit />} />
+            <Route path="/dashboard/profile/diet" element={<DietPage />} />
+            <Route path="/dashboard/profile/diet/edit" element={<DietEdit/>} />
+            <Route path="/dashboard/lifestyle/body" element={<BodyPage/>} />
+            <Route path="/dashboard/lifestyle/body/edit" element={<BodyEdit/>} />
+            <Route path="/dashboard/lifestyle/activity" element={<PhysicalActivityPage/>} />
+            <Route path="/dashboard/lifestyle/activity/edit" element={<PhysicalActivityEdit/>} />
+            <Route path="/dashboard/products/list" element={<ProductListPage/>} />
+            <Route path="/dashboard/products/:productId" element={<ProductDetailPage />} />
+            <Route path="/dashboard/cart" element={<CartPage />} />
+            <Route path="/dashboard/cart/create" element={<CartEdit />} />
             <Route path="/cart/:cartId" element={<CartDetail />} />
           </Route>
           

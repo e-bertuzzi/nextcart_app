@@ -97,7 +97,7 @@ export function useHealthConditions(userId: number | undefined) {
 
   const navigate = useNavigate();
 
-  const saveSelectedConditions = async () => {
+  const saveSelectedConditions = async (redirectPath: string) => {
     try {
       const allIds = getSelectedConditionIds().filter((id) => id !== '0');
 
@@ -105,12 +105,12 @@ export function useHealthConditions(userId: number | undefined) {
       setMessage({
         type: 'success',
         content:
-          'Health conditions saved successfully! You will be transferred to the dashboard in 2 seconds',
+          'Health conditions saved successfully! You will be transferred in 2 seconds',
       });
       fetchUserConditions();
 
       setTimeout(() => {
-        navigate('/dashboard');
+        navigate(redirectPath);
       }, 2000);
     } catch {
       setMessage({ type: 'error', content: 'Error saving health conditions.' });

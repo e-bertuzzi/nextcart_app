@@ -88,7 +88,9 @@ export function ProductFilters({
             {categories.map((opt) => (
               <MenuItem key={opt.value} value={opt.value}>
                 <Checkbox
-                  checked={selectedCategories.some((c) => c.value === opt.value)}
+                  checked={selectedCategories.some(
+                    (c) => c.value === opt.value
+                  )}
                 />
                 <ListItemText primary={opt.label} />
               </MenuItem>
@@ -217,7 +219,18 @@ export function ProductFilters({
         </FormControl>
 
         <Box>
-          <Button variant="outlined" onClick={onReset}>
+          <Button
+            variant="outlined"
+            onClick={onReset}
+            sx={{
+              color: '#BF4019', // colore del testo
+              borderColor: '#BF4019', // colore del bordo
+              '&:hover': {
+                backgroundColor: '#ffece0', // opzionale, colore di sfondo al hover
+                borderColor: '#BF4019',
+              },
+            }}
+          >
             Reset filters
           </Button>
         </Box>

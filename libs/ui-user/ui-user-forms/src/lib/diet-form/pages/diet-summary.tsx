@@ -102,6 +102,7 @@ export function UiDietPage() {
             variant="contained"
             color="primary"
             onClick={() => navigate('/dashboard/profile/diet/edit')}
+            sx={{ fontWeight: 'bold' }} // testo in grassetto
           >
             Change Diets
           </Button>

@@ -128,7 +128,10 @@ export function UiPhysicalActivityEdit() {
             {/* Pulsanti visibili sempre */}
             <SpaceBetween direction="horizontal" size="s">
               {step >= 3 && (
-                <Button variant="primary" onClick={saveActivity}>
+                <Button
+                  variant="primary"
+                  onClick={() => saveActivity('/dashboard')}
+                >
                   Save Activity
                 </Button>
               )}

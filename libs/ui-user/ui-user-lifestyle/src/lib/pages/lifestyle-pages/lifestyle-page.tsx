@@ -11,14 +11,14 @@ export function UiLifestylePage() {
       label: 'Physical Activity',
       icon: <FaBicycle size={36} />,
       path: '/dashboard/lifestyle/activity',
-      gradient: 'linear-gradient(135deg, #2e7d32 30%, #66bb6a 100%)',
+      color: '#4caf50',
       description: 'Track your workouts',
     },
     {
       label: 'Body Composition',
       icon: <FaWeight size={36} />,
       path: '/dashboard/lifestyle/body',
-      gradient: 'linear-gradient(135deg, #388e3c 30%, #81c784 100%)',
+      color: '#4caf50',
       description: 'Analyze your body metrics',
     },
   ];
@@ -68,8 +68,7 @@ export function UiLifestylePage() {
               flex: '1 1 300px', // min 220px, cresce e si restringe
               height: 200,
               borderRadius: 4,
-              background: card.gradient,
-              color: 'white',
+              background: card.color,
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',

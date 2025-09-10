@@ -1,4 +1,13 @@
-import { Table, TableHead, TableBody, TableRow, TableCell, TableContainer, Paper, Button } from '@mui/material';
+import {
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
+  TableContainer,
+  Paper,
+  Button,
+} from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 interface Cart {
@@ -22,10 +31,18 @@ export function CartTable({ carts, onRemoveCart, onViewCart }: Props) {
       <Table stickyHeader>
         <TableHead>
           <TableRow>
-            <TableCell><b>Cart Name</b></TableCell>
-            <TableCell><b>Created At</b></TableCell>
-            <TableCell><b>Number of Products</b></TableCell>
-            <TableCell><b>Actions</b></TableCell>
+            <TableCell>
+              <b>Cart Name</b>
+            </TableCell>
+            <TableCell>
+              <b>Created At</b>
+            </TableCell>
+            <TableCell>
+              <b>Number of Products</b>
+            </TableCell>
+            <TableCell>
+              <b>Actions</b>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -39,6 +56,14 @@ export function CartTable({ carts, onRemoveCart, onViewCart }: Props) {
                       ? onViewCart(cart.cartId)
                       : navigate(`/dashboard/cart/${cart.cartId}`)
                   }
+                  sx={{
+                    fontWeight: 'bold', // testo in grassetto
+                    color: '#2e7d32', // verde scuro
+                    '&:hover': {
+                      backgroundColor: 'rgba(46, 125, 50, 0.08)', // leggero sfondo verde al hover
+                      borderColor: '#1b5e20', // bordo più scuro al hover
+                    },
+                  }}
                 >
                   {cart.name}
                 </Button>
@@ -51,14 +76,17 @@ export function CartTable({ carts, onRemoveCart, onViewCart }: Props) {
                 })}
               </TableCell>
               <TableCell>
-                {cart.items.reduce((sum, item) => sum + (item.quantity ?? 0), 0)}
+                {cart.items.reduce(
+                  (sum, item) => sum + (item.quantity ?? 0),
+                  0
+                )}
               </TableCell>
               <TableCell>
                 <Button
-                  variant="text"
+                  variant="outlined"
                   color="error"
+                  size="small"
                   onClick={() => onRemoveCart(cart.cartId)}
-                  sx={{ fontWeight: 'bold'}} 
                 >
                   Remove
                 </Button>

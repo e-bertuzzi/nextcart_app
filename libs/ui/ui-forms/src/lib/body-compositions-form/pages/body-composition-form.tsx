@@ -67,7 +67,7 @@ export function UiBodyEdit() {
       height: formData.height ? parseFloat(formData.height) : undefined,
     };
 
-    saveComposition(dto);
+    saveComposition(dto, "/dashboard");
   };
 
   if (loading) return <Spinner />;

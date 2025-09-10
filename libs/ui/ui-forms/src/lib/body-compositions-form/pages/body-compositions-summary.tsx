@@ -54,7 +54,7 @@ export function UiBodyPage() {
 
           <Button
             variant="primary"
-            onClick={() => navigate('/body-composition/edit')}
+            onClick={() => navigate('/dashboard/lifestyle/body/edit')}
           >
             Add new body compositon
           </Button>

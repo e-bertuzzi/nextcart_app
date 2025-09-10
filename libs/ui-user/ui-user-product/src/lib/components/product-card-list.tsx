@@ -74,7 +74,6 @@ function ProductHeader({
   );
 }
 
-/** ✅ Card memoizzata */
 const ProductCard = memo(function ProductCard({
   product,
   userDiets,
@@ -116,7 +115,7 @@ const ProductCard = memo(function ProductCard({
         <Button
           size="small"
           onClick={() => navigate(`/dashboard/products/${product.productId}`)}
-           sx={{ fontWeight: 'bold'}} 
+           sx={{ fontWeight: 'bold', color: '#317A38'}} 
         >
           Details
         </Button>
@@ -133,7 +132,6 @@ const ProductCard = memo(function ProductCard({
   );
 });
 
-/** ✅ Dialog separato */
 function AddToCartDialog({
   open,
   onClose,
@@ -240,7 +238,6 @@ function AddToCartDialog({
   );
 }
 
-/** ✅ Lista prodotti ottimizzata */
 export function ProductCardList({
   products,
   userDiets,

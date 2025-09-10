@@ -50,20 +50,19 @@ export function UiPhysicalActivityEdit() {
 
   return (
     <Container maxWidth="sm" sx={{ mt: 4 }}>
-        <Typography
-          variant="h4"
-          sx={{ fontWeight: 700, mb: 3, textAlign: 'center', color: 'green' }}
-        >
-          Add Physical Activity
-        </Typography>
+      <Typography
+        variant="h4"
+        sx={{ fontWeight: 700, mb: 3, textAlign: 'center', color: 'green' }}
+      >
+        Add Physical Activity
+      </Typography>
       <Paper sx={{ p: 4, borderRadius: 3, boxShadow: 3 }}>
-
         <Stack spacing={3}>
           {/* Messaggi */}
           {message && (
             <Alert
               severity={message.type}
-              variant='filled'
+              variant="filled"
               onClose={() => setMessage(null)}
             >
               {message.content}
@@ -102,9 +101,9 @@ export function UiPhysicalActivityEdit() {
               label="Select specific activity"
               value={specificActivity?.value || ''}
               onChange={(e) => {
-                const option = specificOptions.find(
-                  (o) => o.value === e.target.value
-                ) || null;
+                const option =
+                  specificOptions.find((o) => o.value === e.target.value) ||
+                  null;
                 setSpecificActivity(option);
                 setStep(3);
               }}
@@ -143,11 +142,27 @@ export function UiPhysicalActivityEdit() {
           {/* Pulsanti */}
           <Stack direction="row" spacing={2} justifyContent="flex-end">
             {step >= 3 && (
-              <Button variant="contained" color="primary" onClick={saveActivity}>
+              <Button
+                variant="contained"
+                color="primary"
+                onClick={() => saveActivity('/dashboard/lifestyle')}
+              >
                 Save Activity
               </Button>
             )}
-            <Button variant="outlined" onClick={() => navigate(-1)}>
+            <Button
+              variant="outlined"
+              onClick={() => navigate(-1)}
+              sx={{
+                color: '#d32f2f', // colore testo più visibile (rosso scuro)
+                borderColor: '#d32f2f', // colore bordo
+                fontWeight: 'bold', // testo in grassetto
+                '&:hover': {
+                  backgroundColor: '#ffebee', // sfondo leggero al passaggio del mouse
+                  borderColor: '#d32f2f',
+                },
+              }}
+            >
               Cancel
             </Button>
           </Stack>

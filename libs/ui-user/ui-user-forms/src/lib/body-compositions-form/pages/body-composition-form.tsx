@@ -69,7 +69,7 @@ export function UiBodyEdit() {
       height: formData.height ? parseFloat(formData.height) : undefined,
     };
 
-    saveComposition(dto);
+    saveComposition(dto, "/dashboard/lifestyle");
   };
 
   if (loading)
@@ -94,7 +94,7 @@ export function UiBodyEdit() {
           {message && (
             <Alert
               severity={message.type === 'error' ? 'error' : 'success'}
-              variant='filled'
+              variant="filled"
               onClose={() => setMessage?.(null)}
               sx={{ width: '100%' }}
             >
@@ -147,10 +147,27 @@ export function UiBodyEdit() {
 
               {/* Pulsanti */}
               <Box display="flex" gap={2}>
-                <Button variant="contained" color="primary" onClick={handleSubmit}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  onClick={handleSubmit}
+                  sx={{fontWeight: 'bold'}}
+                >
                   Save Body Composition
                 </Button>
-                <Button variant="outlined" onClick={() => navigate(-1)}>
+                <Button
+                  variant="outlined"
+                  onClick={() => navigate(-1)}
+                  sx={{
+                    color: '#d32f2f', // colore testo più visibile (rosso scuro)
+                    borderColor: '#d32f2f', // colore bordo
+                    fontWeight: 'bold', // testo in grassetto
+                    '&:hover': {
+                      backgroundColor: '#ffebee', // sfondo leggero al passaggio del mouse
+                      borderColor: '#d32f2f',
+                    },
+                  }}
+                >
                   Cancel
                 </Button>
               </Box>

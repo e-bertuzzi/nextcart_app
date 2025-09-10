@@ -28,7 +28,7 @@ export function UiCartForm() {
 
   if (!user) return <Navigate to="/login" />;
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (redirectPath: string) => {
     if (!cartName.trim()) {
       setError('Cart name is required.');
       return;
@@ -38,8 +38,8 @@ export function UiCartForm() {
     await createNewCart(cartName); // ✅ usa l'hook aggiornato
     setCartName(''); // pulisce il form
     setTimeout(() => {
-    navigate('/cart');
-  }, 2000);
+      navigate(redirectPath);
+    }, 2000);
   };
 
   return (
@@ -68,9 +68,13 @@ export function UiCartForm() {
           </FormField>
 
           <SpaceBetween direction="horizontal" size="s">
-            <Button variant="primary" onClick={handleSubmit}>
+            <Button
+              variant="primary"
+              onClick={() => handleSubmit('/dashboard')}
+            >
               Save Cart
             </Button>
+
             <Button variant="link" onClick={() => navigate(-1)}>
               Cancel
             </Button>

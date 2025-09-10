@@ -123,8 +123,10 @@ export function UiHealthEdit() {
               {step === 3 && (
                 <Button
                   variant="primary"
-                  onClick={saveSelectedConditions}
-                  disabled={!selectedAgeCondition}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    saveSelectedConditions('/dashboard'); // async ma non "ritorni" la Promise
+                  }}
                 >
                   Save
                 </Button>

@@ -56,7 +56,10 @@ export function UiDietEdit() {
         <Stack spacing={3}>
           {/* Intestazione */}
           <Box>
-            <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'green' }}>
+            <Typography
+              variant="h4"
+              sx={{ fontWeight: 'bold', color: 'green' }}
+            >
               Manage Diets
             </Typography>
           </Box>
@@ -85,7 +88,9 @@ export function UiDietEdit() {
                 label="Select Diets" // ✅ per far "shrink" l'etichetta
                 renderValue={(selected) =>
                   selected
-                    .map((v) => availableDiets.find((d) => d.value === v)?.label)
+                    .map(
+                      (v) => availableDiets.find((d) => d.value === v)?.label
+                    )
                     .join(', ')
                 }
                 MenuProps={{
@@ -97,7 +102,11 @@ export function UiDietEdit() {
               >
                 {availableDiets.map((diet) => (
                   <MenuItem key={diet.value} value={diet.value}>
-                    <Checkbox checked={selectedDiets.some((d) => d.value === diet.value)} />
+                    <Checkbox
+                      checked={selectedDiets.some(
+                        (d) => d.value === diet.value
+                      )}
+                    />
                     <ListItemText primary={diet.label} />
                   </MenuItem>
                 ))}
@@ -110,12 +119,24 @@ export function UiDietEdit() {
             <Button
               variant="contained"
               color="primary"
-              onClick={saveSelectedDiets}
+              onClick={() => saveSelectedDiets("/dashboard/profile")}
               disabled={selectedDiets.length === 0}
             >
               Save Diets
             </Button>
-            <Button variant="outlined" onClick={() => navigate(-1)}>
+            <Button
+              variant="outlined"
+              onClick={() => navigate(-1)}
+              sx={{
+                color: '#d32f2f', // colore testo più visibile (rosso scuro)
+                borderColor: '#d32f2f', // colore bordo
+                fontWeight: 'bold', // testo in grassetto
+                '&:hover': {
+                  backgroundColor: '#ffebee', // sfondo leggero al passaggio del mouse
+                  borderColor: '#d32f2f',
+                },
+              }}
+            >
               Cancel
             </Button>
           </Box>

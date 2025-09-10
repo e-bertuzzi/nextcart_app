@@ -80,7 +80,7 @@ export function UiCartPage() {
             variant="contained"
             color="primary"
             onClick={() => navigate('/dashboard/cart/edit')}
-            sx={{ maxWidth: 180, width: '100%' }}
+            sx={{ maxWidth: 180, width: '100%', fontWeight: 'bold' }}
           >
             Add New Cart
           </Button>

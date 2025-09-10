@@ -11,14 +11,14 @@ export function UiProductPage() {
       label: 'Products List',
       icon: <FaShoppingBag size={36} />,
       path: '/dashboard/products/list',
-      gradient: 'linear-gradient(135deg, #2e7d32 30%, #66bb6a 100%)',
+      color: '#4caf50',
       description: 'View product list',
     },
     {
       label: 'Cart Section',
       icon: <FaShoppingCart size={36} />,
       path: '/dashboard/cart',
-      gradient: 'linear-gradient(135deg, #388e3c 30%, #81c784 100%)',
+      color: '#4caf50',
       description: 'View cart list',
     },
   ];
@@ -68,8 +68,7 @@ export function UiProductPage() {
               flex: '1 1 300px', // min 300px, cresce e si restringe
               height: 200,
               borderRadius: 4,
-              background: card.gradient,
-              color: 'white',
+              background: card.color,
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',

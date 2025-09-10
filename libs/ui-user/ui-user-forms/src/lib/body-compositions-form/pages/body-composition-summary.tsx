@@ -78,6 +78,7 @@ export function UiBodyPage() {
             variant="contained"
             color="primary"
             onClick={() => navigate('/dashboard/lifestyle/body/edit')}
+            sx={{fontWeight: 'bold'}}
           >
             Add new body composition
           </Button>

@@ -60,7 +60,7 @@ export function usePhysicalActivity(userId?: number) {
 
 
   // Salva nuova attività fisica
-  const saveActivity = async () => {
+  const saveActivity = async (redirectPath: string) => {
     try {
       if (!selectedActivity || !durationMinutes || !date) {
         setMessage({ type: 'error', content: 'Completa tutti i campi.' });
@@ -77,12 +77,12 @@ export function usePhysicalActivity(userId?: number) {
 
       setMessage({
         type: 'success',
-        content: 'Physical activities saved successfully! You will be transferred to the summary page in 2 seconds',
+        content: 'Physical activities saved successfully! You will be transferred in 2 seconds',
       });
       fetchUserActivities();
 
       setTimeout(() => {
-        navigate('/dashboard');
+        navigate(redirectPath);
       }, 2000);
     } catch {
       setMessage({

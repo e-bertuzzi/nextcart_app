@@ -99,17 +99,26 @@ export function UserBodyCompositionsTable({
                       variant="outlined"
                       size="small"
                       onClick={() => onEdit(item)}
-                      sx={{ mr: 1, fontWeight: 'bold' }}
-                      
+                      sx={{
+                        mr: 1,
+                        fontWeight: 'bold',
+                        color: '#2e7d32', // verde scuro per il testo
+                        borderColor: '#2e7d32', // verde scuro per il bordo
+                        '&:hover': {
+                          backgroundColor: 'rgba(46, 125, 50, 0.08)', // sfondo leggero verde al passaggio del mouse
+                          borderColor: '#1b5e20', // bordo leggermente più scuro al hover
+                        },
+                      }}
                     >
                       Edit
                     </Button>
+
                     <Button
                       variant="outlined"
                       color="error"
                       size="small"
                       onClick={() => handleRemoveClick(item.date)}
-                      sx={{ fontWeight: 'bold'}} 
+                      sx={{ fontWeight: 'bold' }}
                     >
                       Remove
                     </Button>

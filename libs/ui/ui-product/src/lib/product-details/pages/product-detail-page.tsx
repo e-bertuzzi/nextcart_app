@@ -56,7 +56,7 @@ export function UiProductDetail() {
                     <Button
                       variant="primary"
                       onClick={() =>
-                        window.location.assign(`/products/${productId}/edit`)
+                        window.location.assign(`/dashboard/products/${productId}/edit`)
                       }
                     >
                       Edit Product

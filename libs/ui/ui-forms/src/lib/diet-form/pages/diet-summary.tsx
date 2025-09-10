@@ -75,7 +75,7 @@ export function UiDietPage() {
         </Box>
       )}
 
-      <Button variant="primary" onClick={() => navigate('/diet/edit')}>
+      <Button variant="primary" onClick={() => navigate('/dashboard/profile/diet/edit')}>
         Change diets
       </Button>
 

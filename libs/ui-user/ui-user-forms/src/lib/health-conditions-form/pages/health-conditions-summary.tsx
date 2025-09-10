@@ -64,7 +64,10 @@ export function UiHealthPage() {
         px: 3,
       }}
     >
-      <Container maxWidth="lg" sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+      <Container
+        maxWidth="lg"
+        sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}
+      >
         {/* Intestazione centrata */}
         <Box textAlign="center" mb={3}>
           <Typography
@@ -115,16 +118,15 @@ export function UiHealthPage() {
 
         {/* Pulsante centrato con spazio sotto */}
         <Box display="flex" justifyContent="center" mt={2}>
-  <Button
-    variant="contained"
-    color="primary"
-    onClick={() => navigate('/dashboard/profile/health/edit')}
-    sx={{ maxWidth: 200 }}
-  >
-    Change Conditions
-  </Button>
-</Box>
-
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => navigate('/dashboard/profile/health/edit')}
+            sx={{ maxWidth: 200, fontWeight: 'bold' }}
+          >
+            Change Conditions
+          </Button>
+        </Box>
       </Container>
 
       {/* Modale di conferma */}

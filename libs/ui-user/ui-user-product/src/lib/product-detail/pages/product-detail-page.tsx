@@ -55,10 +55,11 @@ export function UiProductDetail() {
     <Box p={2}>
       {/* Header con pulsanti Back/Edit/Delete */}
       <Box display="flex" alignItems="center" gap={2} mb={2}>
+        {/*
         <Button variant="text" onClick={() => navigate(-1)}>
           &larr; Back
         </Button>
-
+        */}
         {/*
         {user?.role === Role.isAdmin && (
           <>

@@ -38,7 +38,7 @@ export function UiLogin() {
     if (successModalVisible) {
       const timer = setTimeout(() => {
         setSuccessModalVisible(false);
-        navigate('/homepage');
+        navigate('/dashboard');
       }, 2000);
       return () => clearTimeout(timer);
     }
