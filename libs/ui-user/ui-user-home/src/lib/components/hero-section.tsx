@@ -1,7 +1,7 @@
 import { Box, Typography, Container } from '@mui/material';
 
 export const HeroSection = () => (
-  <Container maxWidth="md" sx={{ textAlign: 'center', py: 10 }}>
+  <Container maxWidth="md" sx={{ textAlign: 'center', py: 6 }}>
     <Typography variant="h3" component="h1" fontWeight="bold" gutterBottom>
       Welcome to <Box component="span" color="success.dark">NextCart</Box>
     </Typography>

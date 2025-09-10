@@ -34,7 +34,7 @@ export function UiLayout() {
     '/dashboard/lifestyle/activity/edit',
     '/dashboard/profile/health/edit',
     '/dashboard/profile/diet/edit',
-    '/dashboard/lifestyle/body/edit'
+    '/dashboard/lifestyle/body/edit',
   ]; // rotte da escludere
 
   const shouldShowBackButton = (path: string) => {
@@ -103,7 +103,7 @@ export function UiLayout() {
             display: 'flex',
             alignItems: 'flex-start',
             justifyContent: 'center',
-            overflow: 'hidden',
+            overflowY: 'auto', // scroll verticale solo se serve
             pt: 2,
           }}
         >

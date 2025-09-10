@@ -74,8 +74,6 @@ export function UiCartDetailPage() {
   if (!cart) return <Typography>Cart not found.</Typography>;
 
   const cartItemsWithWarnings = cart.items.map((item: any) => {
-    // ⚠️ i tuoi hook qui generano un warning perché usati in map,
-    // ma mantengo la logica invariata
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { compatible: dietCompatible } = useProductCompatibility(
       item.product,
